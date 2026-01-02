@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Maximize2, Minimize2 } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 import type { StudyFile } from '../data/structure';
 
 interface DocumentViewerProps {
@@ -9,22 +9,16 @@ interface DocumentViewerProps {
 }
 
 export function DocumentViewer({ file, onClose }: DocumentViewerProps) {
-  const [isFullscreen, setIsFullscreen] = useState(false);
-
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        if (isFullscreen) {
-          setIsFullscreen(false);
-        } else {
-          onClose();
-        }
+        onClose();
       }
     };
 
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
-  }, [onClose, isFullscreen]);
+  }, [onClose]);
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -56,55 +50,34 @@ export function DocumentViewer({ file, onClose }: DocumentViewerProps) {
           {/* Backdrop */}
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
 
-          {/* Modal */}
+          {/* Modal - Full viewport */}
           <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className={`relative bg-[#1a1a2e] rounded-2xl shadow-2xl overflow-hidden flex flex-col ${
-              isFullscreen ? 'fixed inset-4' : 'w-full max-w-6xl h-[85vh]'
-            }`}
+            className="fixed inset-0 bg-[#1a1a2e] flex flex-col"
           >
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                  <span className="text-lg">📄</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white">{file.name}</h3>
-                  <p className="text-sm text-gray-400">{file.path}</p>
-                </div>
-              </div>
+            <div className="flex items-center justify-between px-4 py-2 border-b border-white/10">
+              <h3 className="text-sm font-medium text-gray-300 truncate max-w-[70%]">{file.name}</h3>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 <a
                   href={getFilePath(file.path)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
+                  className="p-1.5 rounded-md hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
                   title="Open in new tab"
                 >
-                  <ExternalLink className="w-5 h-5" />
+                  <ExternalLink className="w-4 h-4" />
                 </a>
                 <button
-                  onClick={() => setIsFullscreen(!isFullscreen)}
-                  className="p-2 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
-                  title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
-                >
-                  {isFullscreen ? (
-                    <Minimize2 className="w-5 h-5" />
-                  ) : (
-                    <Maximize2 className="w-5 h-5" />
-                  )}
-                </button>
-                <button
                   onClick={onClose}
-                  className="p-2 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
+                  className="p-1.5 rounded-md hover:bg-white/10 text-gray-400 hover:text-white transition-colors cursor-pointer"
                   title="Close (Esc)"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4" />
                 </button>
               </div>
             </div>

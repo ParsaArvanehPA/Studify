@@ -50,7 +50,7 @@ export function SessionCard({ session, courseColor, index, onFileClick }: Sessio
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.05 + fileIndex * 0.02 }}
             onClick={() => onFileClick(file)}
-            className={`w-full flex items-center gap-3 p-3 rounded-lg border transition-all text-left group ${getFileStyle(file.name)}`}
+            className={`w-full flex items-center gap-3 p-3 rounded-lg border transition-all text-left group cursor-pointer ${getFileStyle(file.name)}`}
           >
             {getFileIcon(file.name)}
             <span className="flex-1 text-sm text-gray-300 group-hover:text-white truncate">

@@ -134,10 +134,10 @@ export function HomePage() {
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <span className="text-2xl">🔍</span>
+            <span className="text-2xl">🤖</span>
             <div>
-              <p className="font-medium text-white">Full Screen</p>
-              <p className="text-sm text-gray-400">Press Esc to close, or use the expand button</p>
+              <p className="font-medium text-white">AI Generated</p>
+              <p className="text-sm text-gray-400">Content is AI-generated and may contain errors. Always verify.</p>
             </div>
           </div>
         </div>
