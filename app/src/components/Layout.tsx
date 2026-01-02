@@ -33,7 +33,7 @@ export function Layout() {
                 </Link>
               )}
               <a
-                href="https://github.com"
+                href="https://drive.google.com/drive/folders/145FEzdtEZkUxRus7G_mNkKcRngqaNN44?dmr=1&ec=wgc-drive-hero-goto"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 rounded-lg glass glass-hover transition-all text-sm text-gray-300 hover:text-white"
