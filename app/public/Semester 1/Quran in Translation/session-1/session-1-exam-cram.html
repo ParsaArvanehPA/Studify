@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM CRAM: Session 1 - Surah An-Nisa (9-12)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-info {
+            font-size: 0.95em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .exam-alert {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #856404;
+        }
+
+        h2 {
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            padding: 10px 15px;
+            font-weight: 700;
+            border-radius: 3px;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.15em;
+            margin: 20px 0 12px 0;
+            font-weight: 700;
+        }
+
+        h4 {
+            color: #667eea;
+            font-size: 1em;
+            margin: 15px 0 8px 0;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 8px 0;
+        }
+
+        .quick-fact {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 3px;
+        }
+
+        .quick-fact strong {
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .memorize {
+            background-color: #fff3e0;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .must-know {
+            background-color: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .arabic-quick {
+            font-family: 'Amiri', serif;
+            font-size: 1.3em;
+            text-align: right;
+            direction: rtl;
+            color: #1a1a1a;
+            background-color: #f8f9fa;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 3px;
+            border-left: 4px solid #667eea;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .formula-box {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+
+        .number-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.85em;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        strong {
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .cheat-sheet {
+            background-color: #f0f9ff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 2px dashed #667eea;
+        }
+
+        .cheat-sheet h3 {
+            color: #764ba2;
+            margin-top: 0;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ EXAM CRAM ⚡</h1>
+            <div class="meta-info">
+                Session 1: Surah An-Nisa (Verses 9-12)<br>
+                Quick Review | Key Facts | Must-Know Items
+            </div>
+        </header>
+
+        <div class="exam-alert">
+            ⏱️ <strong>EXAM TIP:</strong> Focus on verse numbers, key terms, inheritance ratios, and historical context. These are most commonly tested!
+        </div>
+
+        <h2>📋 Fast Facts - Surah Overview</h2>
+
+        <div class="quick-fact">
+            <strong>Name:</strong> An-Nisa (النساء) = "The Women"
+        </div>
+
+        <div class="quick-fact">
+            <strong>Type:</strong> Medinan Surah (revealed AFTER Hijrah)
+        </div>
+
+        <div class="quick-fact">
+            <strong>Chapter Number:</strong> #4 in Quran
+        </div>
+
+        <div class="quick-fact">
+            <strong>Total Verses:</strong> 176 verses
+        </div>
+
+        <div class="quick-fact">
+            <strong>Main Topics:</strong> Women's rights, inheritance, orphans, marriage, family law
+        </div>
+
+        <div class="must-know">
+            <strong>🔥 MEMORIZE:</strong> Verses 9-12 deal with INHERITANCE LAW and protection of ORPHANS
+        </div>
+
+        <h2>📖 Verse 9 - Quick Summary</h2>
+
+        <div class="arabic-quick">
+            وَ لْيَخْشَ الَّذِينَ لَوْ تَرَكُوا مِنْ خَلْفِهِمْ ذُرِّيَّةً ضِعافاً خافُوا عَلَيْهِمْ...
+        </div>
+
+        <div class="memorize">
+            <span class="number-badge">V.9</span> <strong>Key Message:</strong> Be fearful if you would leave weak offspring behind → So fear God and speak justly
+        </div>
+
+        <div class="must-know">
+            <strong>🎯 TESTABLE TERM:</strong> ذُرِّيَّةً ضِعافاً (Dhurriyyatan Di'āfan) = "Weak offspring"
+        </div>
+
+        <div class="must-know">
+            <strong>🎯 TESTABLE TERM:</strong> قَوْلاً سَدِيداً (Qawlan Sadīdan) = "Appropriate/just speech"
+        </div>
+
+        <h3>What This Verse Does:</h3>
+        <ul>
+            <li>✅ Creates EMPATHY - imagine if YOUR kids were vulnerable</li>
+            <li>✅ Commands conscious treatment of orphans</li>
+            <li>✅ Demands JUST speech when discussing inheritance</li>
+        </ul>
+
+        <h2>📖 Verse 10 - Quick Summary</h2>
+
+        <div class="arabic-quick">
+            إِنَّ الَّذِينَ يَأْكُلُونَ أَمْوالَ الْيَتامى‏ ظُلْماً إِنَّما يَأْكُلُونَ فِي بُطُونِهِمْ ناراً...
+        </div>
+
+        <div class="memorize">
+            <span class="number-badge">V.10</span> <strong>Key Message:</strong> Those who eat orphans' property = eating FIRE into their bellies → Will burn in blazing fire
+        </div>
+
+        <div class="must-know">
+            <strong>🔥 EXTREME PUNISHMENT:</strong> Exploiting orphans = Major sin with severe hellfire punishment
+        </div>
+
+        <h3>Key Terms to Know:</h3>
+        <table>
+            <tr>
+                <th>Arabic</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td>يَأْكُلُونَ (Ya'kulūn)</td>
+                <td>"Devour" - aggressive consumption</td>
+            </tr>
+            <tr>
+                <td>أَمْوالَ الْيَتامى (Amwāl al-Yatāmā)</td>
+                <td>"Property of orphans"</td>
+            </tr>
+            <tr>
+                <td>ناراً (Nāran)</td>
+                <td>"Fire"</td>
+            </tr>
+            <tr>
+                <td>سَعِيراً (Sa'īran)</td>
+                <td>"Blazing fire/Inferno"</td>
+            </tr>
+        </table>
+
+        <h2>📖 Verse 11 - INHERITANCE MATH (VERY TESTABLE!)</h2>
+
+        <div class="exam-alert">
+            ⚠️ <strong>EXAM WARNING:</strong> Inheritance calculations are FREQUENTLY tested! Memorize the ratios!
+        </div>
+
+        <h3>🧮 Children's Shares</h3>
+
+        <div class="formula-box">
+            SONS vs DAUGHTERS: Son = 2 × Daughter's share
+        </div>
+
+        <table>
+            <tr>
+                <th>Scenario</th>
+                <th>Heir</th>
+                <th>Share</th>
+            </tr>
+            <tr>
+                <td>Only 1 daughter (no sons)</td>
+                <td>Daughter</td>
+                <td><strong>1/2</strong> of estate</td>
+            </tr>
+            <tr>
+                <td>2+ daughters (no sons)</td>
+                <td>Daughters (shared)</td>
+                <td><strong>2/3</strong> of estate</td>
+            </tr>
+            <tr>
+                <td>Mixed sons & daughters</td>
+                <td>Son : Daughter</td>
+                <td><strong>2:1 ratio</strong></td>
+            </tr>
+        </table>
+
+        <h3>🧮 Parents' Shares</h3>
+
+        <table>
+            <tr>
+                <th>Parent</th>
+                <th>Condition</th>
+                <th>Share</th>
+            </tr>
+            <tr>
+                <td>Father</td>
+                <td>Deceased has children</td>
+                <td><strong>1/6</strong></td>
+            </tr>
+            <tr>
+                <td>Mother</td>
+                <td>Deceased has children</td>
+                <td><strong>1/6</strong></td>
+            </tr>
+            <tr>
+                <td>Mother</td>
+                <td>No children, only parents inherit</td>
+                <td><strong>1/3</strong></td>
+            </tr>
+            <tr>
+                <td>Mother</td>
+                <td>Deceased has siblings</td>
+                <td><strong>1/6</strong></td>
+            </tr>
+        </table>
+
+        <div class="must-know">
+            <strong>🎯 PRIORITY ORDER:</strong> 1st = Pay DEBTS → 2nd = Execute BEQUESTS (max 1/3) → 3rd = Distribute INHERITANCE
+        </div>
+
+        <div class="memorize">
+            <strong>KEY PHRASE:</strong> "You know not which of them are nearest to you in benefit" - Shows human knowledge is LIMITED, divine wisdom is SUPERIOR
+        </div>
+
+        <h3>Why 2:1 Ratio? (Common Exam Question)</h3>
+
+        <div class="quick-fact">
+            <strong>Answer:</strong> Males have FINANCIAL OBLIGATIONS (must support wife, children, family). Females have NO obligations (wealth is 100% theirs, husband must support them). The 2:1 ratio balances RESPONSIBILITY, not VALUE.
+        </div>
+
+        <h2>📖 Verse 12 - Spousal Inheritance (TESTABLE!)</h2>
+
+        <h3>🧮 Husband's Share from Wife's Estate</h3>
+
+        <table>
+            <tr>
+                <th>Condition</th>
+                <th>Husband Gets</th>
+            </tr>
+            <tr>
+                <td>Wife has NO children</td>
+                <td><strong>1/2</strong></td>
+            </tr>
+            <tr>
+                <td>Wife has children</td>
+                <td><strong>1/4</strong></td>
+            </tr>
+        </table>
+
+        <h3>🧮 Wife's Share from Husband's Estate</h3>
+
+        <table>
+            <tr>
+                <th>Condition</th>
+                <th>Wife Gets</th>
+            </tr>
+            <tr>
+                <td>Husband has NO children</td>
+                <td><strong>1/4</strong></td>
+            </tr>
+            <tr>
+                <td>Husband has children</td>
+                <td><strong>1/8</strong></td>
+            </tr>
+        </table>
+
+        <div class="must-know">
+            <strong>⚠️ NOTE:</strong> If multiple wives (max 4 in Islam), they SHARE the 1/4 or 1/8 equally among them
+        </div>
+
+        <h3>🧮 Kalālah Inheritance</h3>
+
+        <div class="memorize">
+            <strong>DEFINITION:</strong> كَلالَةً (Kalālah) = Person who dies with NO parents and NO children (only collateral relatives like siblings)
+        </div>
+
+        <table>
+            <tr>
+                <th>Siblings</th>
+                <th>Share</th>
+            </tr>
+            <tr>
+                <td>1 sibling (brother OR sister)</td>
+                <td><strong>1/6</strong></td>
+            </tr>
+            <tr>
+                <td>2+ siblings</td>
+                <td><strong>1/3</strong> (shared equally)</td>
+            </tr>
+        </table>
+
+        <div class="must-know">
+            <strong>🎯 KEY PRINCIPLE:</strong> غَيْرَ مُضَارٍّ (Ghayra Mudārrin) = "Without causing harm" - Bequests/debts must NOT harm rightful heirs!
+        </div>
+
+        <h3>Divine Attributes at End of V.12</h3>
+
+        <div class="quick-fact">
+            <strong>عَلِيمٌ حَلِيمٌ ('Alīmun Halīmun):</strong>
+            <ul>
+                <li>عَلِيمٌ = All-Knowing (knows your true intentions)</li>
+                <li>حَلِيمٌ = Forbearing (gives time for repentance)</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Cheat Sheet - Must Memorize</h2>
+
+        <div class="cheat-sheet">
+            <h3>📝 Quick Reference Table</h3>
+            <table>
+                <tr>
+                    <th>Heir</th>
+                    <th>Share(s)</th>
+                </tr>
+                <tr>
+                    <td><strong>Son</strong></td>
+                    <td>2× daughter's share</td>
+                </tr>
+                <tr>
+                    <td><strong>1 Daughter alone</strong></td>
+                    <td>1/2</td>
+                </tr>
+                <tr>
+                    <td><strong>2+ Daughters</strong></td>
+                    <td>2/3 (shared)</td>
+                </tr>
+                <tr>
+                    <td><strong>Father (w/ children)</strong></td>
+                    <td>1/6</td>
+                </tr>
+                <tr>
+                    <td><strong>Mother (w/ children)</strong></td>
+                    <td>1/6</td>
+                </tr>
+                <tr>
+                    <td><strong>Mother (no children, only parents)</strong></td>
+                    <td>1/3</td>
+                </tr>
+                <tr>
+                    <td><strong>Mother (w/ siblings)</strong></td>
+                    <td>1/6</td>
+                </tr>
+                <tr>
+                    <td><strong>Husband (wife no children)</strong></td>
+                    <td>1/2</td>
+                </tr>
+                <tr>
+                    <td><strong>Husband (wife has children)</strong></td>
+                    <td>1/4</td>
+                </tr>
+                <tr>
+                    <td><strong>Wife (husband no children)</strong></td>
+                    <td>1/4</td>
+                </tr>
+                <tr>
+                    <td><strong>Wife (husband has children)</strong></td>
+                    <td>1/8</td>
+                </tr>
+                <tr>
+                    <td><strong>1 Sibling (kalālah)</strong></td>
+                    <td>1/6</td>
+                </tr>
+                <tr>
+                    <td><strong>2+ Siblings (kalālah)</strong></td>
+                    <td>1/3 (shared)</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>⚡ Historical Context - Pre-Islamic vs Islamic</h2>
+
+        <table>
+            <tr>
+                <th>Aspect</th>
+                <th>Pre-Islamic Arabia</th>
+                <th>After These Verses</th>
+            </tr>
+            <tr>
+                <td><strong>Women</strong></td>
+                <td>❌ NO inheritance rights</td>
+                <td>✅ Fixed legal shares</td>
+            </tr>
+            <tr>
+                <td><strong>Children</strong></td>
+                <td>❌ Only adult males</td>
+                <td>✅ All children get shares</td>
+            </tr>
+            <tr>
+                <td><strong>Orphans</strong></td>
+                <td>❌ Property seized by strong relatives</td>
+                <td>✅ Protected with severe warnings</td>
+            </tr>
+            <tr>
+                <td><strong>Basis</strong></td>
+                <td>❌ Power & ability to fight</td>
+                <td>✅ Family ties & needs</td>
+            </tr>
+            <tr>
+                <td><strong>Widows</strong></td>
+                <td>❌ Treated as property</td>
+                <td>✅ 1/4 or 1/8 of estate</td>
+            </tr>
+        </table>
+
+        <div class="must-know">
+            <strong>🔥 REVOLUTIONARY FACT:</strong> These verses (7th century) granted women property rights CENTURIES before many Western nations!
+        </div>
+
+        <h2>📚 Key Vocabulary - Flashcard Style</h2>
+
+        <div class="cheat-sheet">
+            <h3>Arabic Terms You MUST Know</h3>
+
+            <div class="memorize">
+                <strong>1. ذُرِّيَّةً ضِعافاً</strong> (Dhurriyyatan Di'āfan) = Weak offspring
+            </div>
+
+            <div class="memorize">
+                <strong>2. قَوْلاً سَدِيداً</strong> (Qawlan Sadīdan) = Just/appropriate speech
+            </div>
+
+            <div class="memorize">
+                <strong>3. أَمْوالَ الْيَتامى</strong> (Amwāl al-Yatāmā) = Property of orphans
+            </div>
+
+            <div class="memorize">
+                <strong>4. سَعِيراً</strong> (Sa'īran) = Blazing fire/inferno
+            </div>
+
+            <div class="memorize">
+                <strong>5. فَرِيضَةً</strong> (Farīdatan) = Divine obligation/prescribed duty
+            </div>
+
+            <div class="memorize">
+                <strong>6. كَلالَةً</strong> (Kalālatan) = Dies with no parents/children
+            </div>
+
+            <div class="memorize">
+                <strong>7. غَيْرَ مُضَارٍّ</strong> (Ghayra Mudārrin) = Without causing harm
+            </div>
+
+            <div class="memorize">
+                <strong>8. عَلِيمٌ حَلِيمٌ</strong> ('Alīmun Halīmun) = All-Knowing, Forbearing
+            </div>
+        </div>
+
+        <h2>🎓 Exam Strategy Tips</h2>
+
+        <div class="exam-alert">
+            <strong>✏️ LIKELY EXAM QUESTIONS:</strong>
+        </div>
+
+        <ol>
+            <li><strong>Define Kalālah</strong> → Person who dies leaving neither parents nor children</li>
+            <li><strong>What is the son:daughter inheritance ratio?</strong> → 2:1</li>
+            <li><strong>Wife's share if husband has children?</strong> → 1/8</li>
+            <li><strong>Husband's share if wife has NO children?</strong> → 1/2</li>
+            <li><strong>What does verse 10 warn against?</strong> → Consuming orphans' property unjustly</li>
+            <li><strong>Priority order for estate distribution?</strong> → Debts → Bequests (max 1/3) → Inheritance</li>
+            <li><strong>Share of single daughter (no brothers)?</strong> → 1/2</li>
+            <li><strong>Share of 2+ daughters (no brothers)?</strong> → 2/3 (shared)</li>
+            <li><strong>Mother's share if deceased has children?</strong> → 1/6</li>
+            <li><strong>What does "غَيْرَ مُضَارٍّ" mean?</strong> → Without causing harm (no harming heirs with bequests)</li>
+        </ol>
+
+        <h2>⚡ Last-Minute Review</h2>
+
+        <div class="must-know">
+            <h3>If You Remember NOTHING ELSE, Remember These:</h3>
+            <ul>
+                <li>✅ Verse 9 = EMPATHY for vulnerable offspring</li>
+                <li>✅ Verse 10 = SEVERE punishment for exploiting orphans</li>
+                <li>✅ Verse 11 = CHILDREN'S inheritance (2:1 ratio, daughters get 1/2 or 2/3)</li>
+                <li>✅ Verse 12 = SPOUSAL inheritance (1/2, 1/4, 1/8 depending on children)</li>
+                <li>✅ Kalālah = No parents/children, only siblings (1/6 or 1/3)</li>
+                <li>✅ Priority: DEBTS → BEQUESTS → INHERITANCE</li>
+                <li>✅ "No harm" principle = Can't use bequests to cheat heirs</li>
+            </ul>
+        </div>
+
+        <div class="cheat-sheet">
+            <h3>🔢 Quick Math Formulas</h3>
+            <div class="formula-box">
+                Son = 2 × Daughter
+            </div>
+            <div class="formula-box">
+                1 Daughter alone = 1/2
+            </div>
+            <div class="formula-box">
+                2+ Daughters = 2/3
+            </div>
+            <div class="formula-box">
+                Husband (no kids) = 1/2 | Husband (w/ kids) = 1/4
+            </div>
+            <div class="formula-box">
+                Wife (no kids) = 1/4 | Wife (w/ kids) = 1/8
+            </div>
+            <div class="formula-box">
+                Parents (w/ children) = 1/6 each
+            </div>
+        </div>
+
+        <div class="exam-alert">
+            <strong>🎯 FINAL TIP:</strong> Practice calculating inheritance shares with different scenarios. Draw family trees and calculate each person's share. This is the #1 way to ace inheritance questions!
+        </div>
+
+    </div>
+</body>
+</html>

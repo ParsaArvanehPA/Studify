@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Translated News - Comprehensive Study Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        header {
+            border-bottom: 4px solid #1e4620;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #1e4620;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .meta-info {
+            background-color: #f0fdf4;
+            padding: 15px;
+            border-left: 4px solid #059669;
+            margin: 20px 0;
+        }
+
+        .meta-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        h2 {
+            color: #1e4620;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #059669;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #059669;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: #1e4620;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .concept-box {
+            background-color: #ecfdf5;
+            border-left: 5px solid #059669;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .concept-box h4 {
+            color: #1e4620;
+            margin-top: 0;
+        }
+
+        .scholar-box {
+            background-color: #f8f9fa;
+            border: 2px solid #1e4620;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .scholar-box strong {
+            color: #1e4620;
+        }
+
+        .important {
+            background-color: #fff4e6;
+            border-left: 5px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .key-term {
+            background-color: #f0fdf4;
+            border: 2px dashed #10b981;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: white;
+        }
+
+        th {
+            background-color: #1e4620;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        blockquote {
+            border-left: 4px solid #059669;
+            margin: 20px 0;
+            padding: 15px 20px;
+            background-color: #f9fafb;
+            font-style: italic;
+            color: #555;
+        }
+
+        .glossary {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+
+        .glossary dt {
+            font-weight: bold;
+            color: #1e4620;
+            margin-top: 15px;
+        }
+
+        .glossary dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .case-study {
+            background-color: #fef3c7;
+            border: 3px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .case-study h4 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .concept-box, .scholar-box, .case-study, table {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reading Translated News</h1>
+            <div class="meta-info">
+                <p><strong>Author:</strong> Claire Scammell</p>
+                <p><strong>Source:</strong> Bielsa, Esperança (Ed.). (2022). <em>The Routledge Handbook of Translation and Globalization</em>, Chapter 17</p>
+                <p><strong>Topic:</strong> Reader-Response Research in News Translation</p>
+                <p><strong>Study Focus:</strong> Reception studies, focus groups, readability, translation awareness, cosmopolitan openness</p>
+            </div>
+        </header>
+
+        <section id="introduction">
+            <h2>Introduction: The Need for Reception Studies in News Translation</h2>
+
+            <p>This chapter addresses a significant gap in translation studies: the limited research on how readers actually receive and process translated news. While considerable attention has been devoted to analyzing news translation production—examining how journalists and translators work, institutional constraints, and translation strategies—relatively little empirical research has investigated the reader's perspective.</p>
+
+            <div class="concept-box">
+                <h4>Central Argument</h4>
+                <p>Understanding news translation requires moving beyond production-oriented studies to examine how readers engage with, comprehend, and respond to translated news texts. Reader-response research can illuminate questions about readability, translation awareness, cultural openness, and the effectiveness of different translation strategies in news contexts.</p>
+            </div>
+
+            <p>The chapter draws on Claire Scammell's empirical research using focus groups to investigate British readers' responses to a foreignized approach in Reuters news translation. This case study demonstrates how reader-response methods can contribute to theoretical debates about news translation strategies and their effects.</p>
+
+            <div class="scholar-box">
+                <p><strong>Bielsa & Bassnett (2009)</strong> argued that news translation operates under distinctive constraints—tight deadlines, institutional gatekeeping, collective authorship—that differentiate it from literary translation. However, their work focused primarily on production rather than reception.</p>
+            </div>
+        </section>
+
+        <section id="theoretical-framework">
+            <h2>Theoretical Framework: Reception Studies and Translation</h2>
+
+            <h3>The Production-Reception Gap in Translation Studies</h3>
+
+            <p>Translation studies has historically exhibited a "production bias," focusing predominantly on translators, translation processes, and textual analysis while paying less attention to how readers actually receive translated texts. This imbalance is particularly pronounced in news translation research.</p>
+
+            <div class="important">
+                <p><strong>The Reception Gap:</strong> While scholars have theorized about how translation strategies might affect readers—for instance, whether domestication or foreignization better serves readers—empirical evidence about actual reader responses remains scarce.</p>
+            </div>
+
+            <h3>Reader-Response Theory and Translation</h3>
+
+            <div class="concept-box">
+                <h4>Reader-Response Criticism</h4>
+                <p>Reader-response theory, emerging from literary studies, emphasizes that meaning is not simply embedded in texts but is constructed through the interaction between texts and readers. Applied to translation, this perspective suggests that understanding how translations "work" requires examining real readers' engagements with translated texts.</p>
+            </div>
+
+            <div class="scholar-box">
+                <p><strong>Mason (2009)</strong> advocated for empirical reader-response research in translation studies, arguing that assumptions about how translation strategies affect readers need to be tested through systematic investigation of actual reader reactions.</p>
+            </div>
+
+            <h3>News Translation: Institutional and Textual Contexts</h3>
+
+            <div class="scholar-box">
+                <p><strong>Bielsa & Bassnett (2009)</strong> identified distinctive features of news translation:
+                <ul style="margin-top: 8px;">
+                    <li><strong>Gatekeeping:</strong> Editorial selection determines which international news gets translated and published</li>
+                    <li><strong>Tight deadlines:</strong> Speed requirements shape translation practices</li>
+                    <li><strong>Collective production:</strong> Multiple agents (correspondents, translators, editors) collaborate</li>
+                    <li><strong>Institutional constraints:</strong> News values and organizational policies influence translation</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="scholar-box">
+                <p><strong>Baker (2006)</strong> introduced the concept of "narratives" in translation studies, analyzing how translation participates in constructing and circulating narratives about political events, identities, and conflicts. Translated news is a key site where such narratives operate.</p>
+            </div>
+
+            <h3>Translation Strategies in News Contexts</h3>
+
+            <p>Debates about translation strategies—particularly domestication versus foreignization—take on specific characteristics in news translation:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Application in News</th>
+                        <th>Potential Effects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Domestication</strong></td>
+                        <td>Adapting foreign news to local conventions, contexts, and expectations; explaining cultural references</td>
+                        <td>May facilitate comprehension but risk ethnocentrism; erasing cultural specificity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Foreignization</strong></td>
+                        <td>Preserving foreign names, terms, cultural references; maintaining source-language markers</td>
+                        <td>May promote cosmopolitan awareness but risk incomprehension or reader alienation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="important">
+                <p><strong>Key Question:</strong> Does foreignization in news translation promote "cosmopolitan openness" by exposing readers to cultural difference, or does it create barriers to comprehension? Reader-response research can help answer this question empirically.</p>
+            </div>
+        </section>
+
+        <section id="research-methods">
+            <h2>Research Methods for Studying News Translation Reception</h2>
+
+            <h3>Overview of Reader-Response Methodologies</h3>
+
+            <p>Several methodological approaches can be employed to investigate how readers respond to translated news:</p>
+
+            <div class="key-term">
+                <p><strong>Focus Groups:</strong> Facilitated group discussions where participants read and discuss translated news texts, sharing their interpretations, reactions, and comprehension difficulties. Enables rich qualitative data about reader meaning-making processes.</p>
+            </div>
+
+            <div class="key-term">
+                <p><strong>Eye-Tracking:</strong> Technology that monitors where readers look on the page and how long they fixate on specific textual elements. Can reveal which aspects of translated texts attract attention or cause processing difficulties.</p>
+            </div>
+
+            <div class="key-term">
+                <p><strong>Comprehension Tests:</strong> Questionnaires or assessments measuring readers' understanding of translated news content. Can quantify comprehension levels associated with different translation strategies.</p>
+            </div>
+
+            <div class="key-term">
+                <p><strong>Think-Aloud Protocols:</strong> Participants verbalize their thoughts while reading translated news, providing real-time access to their interpretive processes, reactions, and comprehension strategies.</p>
+            </div>
+
+            <div class="key-term">
+                <p><strong>Surveys:</strong> Large-scale questionnaires gathering data about readers' attitudes toward translated news, their awareness of translation, and their preferences regarding translation approaches.</p>
+            </div>
+
+            <h3>Methodological Considerations and Challenges</h3>
+
+            <h4>Ecological Validity</h4>
+
+            <div class="important">
+                <p><strong>Challenge:</strong> Research settings (labs, focus group rooms) differ from natural news reading contexts. Readers in studies may be more reflective and attentive than readers encountering news in everyday life.</p>
+            </div>
+
+            <p><strong>Potential Solutions:</strong></p>
+            <ul>
+                <li>Using authentic news texts rather than artificially constructed examples</li>
+                <li>Situating research in natural reading environments when possible</li>
+                <li>Acknowledging limitations and framing findings appropriately</li>
+            </ul>
+
+            <h4>Sample Representativeness</h4>
+
+            <div class="important">
+                <p><strong>Challenge:</strong> Small, non-representative samples may limit generalizability of findings. News readers are diverse in terms of education, linguistic competence, cultural background, and news literacy.</p>
+            </div>
+
+            <p><strong>Potential Solutions:</strong></p>
+            <ul>
+                <li>Careful documentation of participant characteristics</li>
+                <li>Acknowledging scope and limitations of findings</li>
+                <li>Complementing qualitative studies with larger-scale quantitative research</li>
+            </ul>
+
+            <h4>Translation Awareness</h4>
+
+            <div class="important">
+                <p><strong>Challenge:</strong> Readers are often unaware that news has been translated, which may affect their responses. Making translation visible in research contexts may alter natural reading processes.</p>
+            </div>
+
+            <p><strong>Potential Solutions:</strong></p>
+            <ul>
+                <li>Testing whether informing readers about translation affects responses</li>
+                <li>Comparing responses from translation-aware vs. translation-unaware readers</li>
+                <li>Investigating factors that increase translation awareness in natural contexts</li>
+            </ul>
+        </section>
+
+        <section id="case-study">
+            <h2>Case Study: Reader Responses to Foreignized Reuters News</h2>
+
+            <div class="case-study">
+                <h4>Research Context and Design</h4>
+                <p>Claire Scammell conducted focus group research investigating British readers' responses to a foreignized approach employed by Reuters in their news translation. The study examined whether preserving foreign names, terms, and cultural references promoted cosmopolitan openness or created comprehension barriers.</p>
+            </div>
+
+            <h3>Reuters' Foreignization Approach</h3>
+
+            <p>Reuters, a major international news agency, has historically employed a relatively foreignized translation approach characterized by:</p>
+
+            <ul>
+                <li><strong>Retaining Foreign Names:</strong> Preserving original forms of personal names, place names, and institutional names rather than anglicizing them</li>
+                <li><strong>Maintaining Cultural References:</strong> Keeping references to foreign political contexts, cultural practices, and historical events with minimal explanation</li>
+                <li><strong>Preserving Terminology:</strong> Using foreign political, legal, and institutional terms when English equivalents might not capture precise meanings</li>
+                <li><strong>Limited Contextualization:</strong> Providing minimal background information or explanatory additions for international audiences</li>
+            </ul>
+
+            <div class="concept-box">
+                <h4>Rationale for Foreignization</h4>
+                <p>Reuters' approach reflects several assumptions: (1) international news readers possess or should develop cosmopolitan knowledge; (2) excessive domestication risks distorting foreign political and cultural contexts; (3) preserving specificity serves journalistic accuracy; (4) readers can use contextual clues and supplementary information seeking to understand unfamiliar references.</p>
+            </div>
+
+            <h3>Focus Group Methodology</h3>
+
+            <h4>Participant Recruitment</h4>
+
+            <p>Scammell recruited British readers with varying levels of education and news consumption habits. Participants were:</p>
+            <ul>
+                <li>Native English speakers living in the UK</li>
+                <li>Regular consumers of international news from various sources</li>
+                <li>Varied in age, educational background, and occupational profiles</li>
+            </ul>
+
+            <h4>Research Procedure</h4>
+
+            <ol>
+                <li><strong>Text Selection:</strong> Scammell selected Reuters news articles about French politics (specifically coverage of Nicolas Sarkozy and French political contexts) that exemplified foreignization strategies.</li>
+
+                <li><strong>Reading Phase:</strong> Participants individually read the selected news articles.</li>
+
+                <li><strong>Group Discussion:</strong> Facilitated discussion explored participants' comprehension, interpretations, reactions to foreign references, and overall assessment of the texts.</li>
+
+                <li><strong>Probing Questions:</strong> The facilitator asked specific questions about unfamiliar terms, names, and cultural references to assess comprehension and explore strategies participants used to make sense of foreign elements.</li>
+            </ol>
+
+            <h3>Key Findings</h3>
+
+            <h4>1. Variable Comprehension of Foreign References</h4>
+
+            <p>Participants exhibited varying levels of comprehension regarding foreign political terms, institutional names, and cultural references in the Reuters texts:</p>
+
+            <div class="scholar-box">
+                <p><strong>Highly Educated/News-Literate Readers:</strong> Demonstrated strong familiarity with French political contexts, correctly interpreting institutional references and political dynamics with minimal difficulty.</p>
+            </div>
+
+            <div class="scholar-box">
+                <p><strong>Less Educated/Casual News Readers:</strong> Struggled with specific institutional names, political terminology, and cultural references, sometimes constructing incorrect interpretations or abandoning efforts to fully understand complex passages.</p>
+            </div>
+
+            <div class="important">
+                <p><strong>Implication:</strong> Foreignization may inadvertently create a two-tier readership: cosmopolitan, highly educated readers for whom foreignization poses few barriers, and less specialized readers who experience comprehension difficulties. This raises equity questions about access to international news.</p>
+            </div>
+
+            <h4>2. Contextual Inference Strategies</h4>
+
+            <p>Participants employed various strategies to make sense of unfamiliar foreign references:</p>
+
+            <ul>
+                <li><strong>Contextual Guessing:</strong> Using surrounding text to infer approximate meanings of unfamiliar terms</li>
+                <li><strong>Analogical Reasoning:</strong> Drawing parallels to familiar British political institutions or concepts</li>
+                <li><strong>Skipping:</strong> Moving past incomprehensible elements while maintaining general comprehension of the article's main points</li>
+                <li><strong>External Information Seeking:</strong> Some participants mentioned they would search online for unfamiliar terms (though this wasn't possible during focus groups)</li>
+            </ul>
+
+            <blockquote>
+                "I didn't know exactly what [French institutional term] meant, but I gathered it was some kind of government body. I just kept reading and got the general gist of what was happening politically."
+            </blockquote>
+
+            <h4>3. Translation Awareness</h4>
+
+            <p>A striking finding was participants' limited awareness that they were reading translated texts:</p>
+
+            <div class="important">
+                <p><strong>Low Translation Awareness:</strong> Most participants did not initially realize the Reuters articles were translations from French sources. This "translator invisibility" in news contexts meant readers attributed any comprehension difficulties to their own knowledge gaps rather than translation choices.</p>
+            </div>
+
+            <p>When explicitly informed that the texts were translations, some participants:</p>
+            <ul>
+                <li>Reconsidered their initial assessments of text quality</li>
+                <li>Became more forgiving of awkward phrasing or dense references</li>
+                <li>Expressed interest in how translation affected news representation</li>
+            </ul>
+
+            <h4>4. Attitudes Toward Foreignization</h4>
+
+            <p>Participants expressed mixed attitudes when asked explicitly about the retention of foreign names and terms:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attitude</th>
+                        <th>Rationale</th>
+                        <th>Participant Profile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Positive/Appreciative</strong></td>
+                        <td>Valued authenticity; appreciated exposure to foreign political cultures; saw foreignization as educationally valuable</td>
+                        <td>Highly educated; cosmopolitan orientation; high news literacy</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Neutral/Pragmatic</strong></td>
+                        <td>Accepted foreign references as inevitable in international news; willing to tolerate some incomprehension for general understanding</td>
+                        <td>Moderate education; regular news consumers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Negative/Frustrated</strong></td>
+                        <td>Experienced foreignization as barrier; wanted more explanation and contextualization; felt excluded by specialized terminology</td>
+                        <td>Lower news literacy; less familiarity with international politics</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>5. Cosmopolitan Openness: Mixed Evidence</h4>
+
+            <p>The research question of whether foreignization promotes cosmopolitan openness yielded nuanced results:</p>
+
+            <div class="concept-box">
+                <h4>Supporting Evidence</h4>
+                <p>Some participants valued exposure to foreign political contexts in their specificity, expressing that foreignization helped them understand France "on its own terms" rather than through British frames of reference. These readers demonstrated curiosity about unfamiliar references and appreciated the opportunity to expand their cultural knowledge.</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>Contradicting Evidence</h4>
+                <p>Other participants experienced foreignization as alienating, creating distance from the news content rather than engagement. Comprehension difficulties sometimes led to disengagement, with readers losing interest in stories they found too difficult to follow. For these readers, excessive foreignization hindered rather than promoted cosmopolitan awareness.</p>
+            </div>
+
+            <div class="important">
+                <p><strong>Conditional Effect:</strong> Whether foreignization promotes cosmopolitan openness appears to depend on readers' existing cultural capital, news literacy, and educational background. Foreignization may reinforce existing inequalities in access to international news rather than democratizing cosmopolitan awareness.</p>
+            </div>
+        </section>
+
+        <section id="theoretical-implications">
+            <h2>Theoretical and Practical Implications</h2>
+
+            <h3>Rethinking the Domestication-Foreignization Debate</h3>
+
+            <p>The empirical findings complicate theoretical assumptions about translation strategies in news contexts:</p>
+
+            <div class="scholar-box">
+                <p><strong>Beyond Binary Oppositions:</strong> The research suggests that domestication vs. foreignization should not be understood as absolute oppositions but as poles on a continuum. Effective news translation may require strategic combinations, domesticating some elements while foreignizing others depending on context.</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>Differential Effects by Reader Segment</h4>
+                <p>Translation strategies do not affect all readers uniformly. What works for highly educated, cosmopolitan readers may create barriers for others. This raises normative questions: Should news translation target specialist readers, general audiences, or attempt to serve both?</p>
+            </div>
+
+            <h3>Implications for News Translation Practice</h3>
+
+            <p>The research offers several practical implications for news translators and editors:</p>
+
+            <ol>
+                <li><strong>Contextualization:</strong> Providing brief contextual information for unfamiliar political or cultural references can mitigate comprehension difficulties without excessive domestication.</li>
+
+                <li><strong>Strategic Foreignization:</strong> Retaining foreign terms for concepts without direct English equivalents while domesticating more translatable elements.</li>
+
+                <li><strong>Audience Awareness:</strong> Considering the target readership's likely familiarity with source culture contexts when making translation decisions.</li>
+
+                <li><strong>Paratextual Support:</strong> Using glossaries, footnotes, or hyperlinks (in digital contexts) to explain foreign references without disrupting text flow.</li>
+
+                <li><strong>Translation Visibility:</strong> Making translation more visible in news contexts might help readers develop translation awareness and interpretive strategies for engaging with foreign references.</li>
+            </ol>
+
+            <h3>Implications for Translation Theory</h3>
+
+            <div class="important">
+                <p><strong>Empirical Grounding:</strong> The research demonstrates the value of empirically investigating theoretical claims about translation effects. Assumptions about how strategies like foreignization affect readers benefit from testing through reader-response research.</p>
+            </div>
+
+            <div class="important">
+                <p><strong>Reception as Co-Construction:</strong> Translation meaning is not simply encoded in textual choices but emerges through interaction between translated texts and readers' interpretive resources, cultural knowledge, and reading strategies.</p>
+            </div>
+        </section>
+
+        <section id="future-directions">
+            <h2>Future Research Directions</h2>
+
+            <h3>Expanding Methodological Approaches</h3>
+
+            <p>The chapter identifies several promising directions for future reader-response research in news translation:</p>
+
+            <div class="key-term">
+                <p><strong>Multi-Method Studies:</strong> Combining focus groups with eye-tracking, comprehension tests, and surveys to triangulate findings and capture different dimensions of reader responses.</p>
+            </div>
+
+            <div class="key-term">
+                <p><strong>Comparative Research:</strong> Investigating reader responses across different language pairs, cultural contexts, and news topics to identify patterns and variations in how translation strategies affect reception.</p>
+            </div>
+
+            <div class="key-term">
+                <p><strong>Digital Environments:</strong> Studying how readers engage with translated news in digital contexts, where hyperlinks, multimedia, and interactive features may alter reading processes.</p>
+            </div>
+
+            <div class="key-term">
+                <p><strong>Longitudinal Studies:</strong> Tracking whether and how readers' translation awareness and strategies for engaging with foreign references change over time with exposure to translated news.</p>
+            </div>
+
+            <h3>Broadening Theoretical Frameworks</h3>
+
+            <div class="scholar-box">
+                <p><strong>Fairclough's Critical Discourse Analysis (CDA):</strong> Integrating CDA approaches (Fairclough 2003) with reader-response research could illuminate how readers interpret ideological dimensions of translated news and how translation affects critical reading practices.</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>Translation and News Literacy</h4>
+                <p>Future research might investigate the relationship between translation awareness and news literacy. Does understanding that news is translated affect readers' critical engagement with news content? Can translation awareness be cultivated as a component of news literacy education?</p>
+            </div>
+
+            <h3>Addressing Equity and Access</h3>
+
+            <p>The finding that foreignization may create differential access based on cultural capital raises important questions about equity in international news translation:</p>
+
+            <ul>
+                <li>How can news translation balance authenticity with accessibility?</li>
+                <li>What responsibility do news organizations have to diverse readerships with varying levels of cosmopolitan knowledge?</li>
+                <li>Can paratextual or multimodal strategies democratize access to international news without excessive domestication?</li>
+            </ul>
+        </section>
+
+        <section id="key-scholars">
+            <h2>Key Scholars and Their Contributions</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Scholar</th>
+                        <th>Year(s)</th>
+                        <th>Key Contribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Esperança Bielsa & Susan Bassnett</td>
+                        <td>2009</td>
+                        <td>Analyzed distinctive features of news translation: gatekeeping, tight deadlines, collective production, institutional constraints</td>
+                    </tr>
+                    <tr>
+                        <td>Mona Baker</td>
+                        <td>2006</td>
+                        <td>Introduced narrative theory to translation studies; analyzed how translation constructs and circulates narratives about political events</td>
+                    </tr>
+                    <tr>
+                        <td>Ian Mason</td>
+                        <td>2009</td>
+                        <td>Advocated for empirical reader-response research in translation studies to test assumptions about translation effects</td>
+                    </tr>
+                    <tr>
+                        <td>Norman Fairclough</td>
+                        <td>2003</td>
+                        <td>Developed critical discourse analysis (CDA) framework for analyzing ideological dimensions of texts including news</td>
+                    </tr>
+                    <tr>
+                        <td>Claire Scammell</td>
+                        <td>Various</td>
+                        <td>Conducted empirical reader-response research on foreignization in Reuters news translation using focus groups</td>
+                    </tr>
+                    <tr>
+                        <td>Lawrence Venuti</td>
+                        <td>1995, 2008</td>
+                        <td>Theorized domestication vs. foreignization; concept of translator invisibility applicable to news translation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="glossary">
+            <div class="glossary">
+                <h2>Glossary of Key Terms</h2>
+
+                <dl>
+                    <dt>Reader-Response Research</dt>
+                    <dd>Empirical investigation of how actual readers engage with, comprehend, and interpret texts, including translated texts.</dd>
+
+                    <dt>Reception Studies</dt>
+                    <dd>Research focusing on how texts are received by audiences, emphasizing that meaning emerges through interaction between texts and readers.</dd>
+
+                    <dt>Foreignization (in News Translation)</dt>
+                    <dd>Translation strategy preserving foreign names, terms, and cultural references with minimal adaptation to target culture conventions.</dd>
+
+                    <dt>Domestication (in News Translation)</dt>
+                    <dd>Translation strategy adapting foreign news to local conventions, contexts, and expectations, often through explanation and contextualization.</dd>
+
+                    <dt>Cosmopolitan Openness</dt>
+                    <dd>Orientation of curiosity and receptivity toward foreign cultures and perspectives; theorized benefit of foreignization in news translation.</dd>
+
+                    <dt>Translation Awareness</dt>
+                    <dd>Readers' consciousness that they are engaging with translated rather than originally authored texts.</dd>
+
+                    <dt>Focus Groups</dt>
+                    <dd>Qualitative research method involving facilitated group discussions where participants share interpretations and reactions to texts.</dd>
+
+                    <dt>Eye-Tracking</dt>
+                    <dd>Research technology monitoring readers' eye movements to reveal attention patterns and processing difficulties.</dd>
+
+                    <dt>Comprehension Tests</dt>
+                    <dd>Assessments measuring readers' understanding of text content, used to quantify comprehension associated with different translation strategies.</dd>
+
+                    <dt>News Translation</dt>
+                    <dd>Translation of news and journalistic content across languages, characterized by tight deadlines, gatekeeping, and institutional constraints.</dd>
+
+                    <dt>Gatekeeping</dt>
+                    <dd>Editorial processes determining which international news gets selected, translated, and published for target audiences.</dd>
+
+                    <dt>Cultural Capital</dt>
+                    <dd>Knowledge, skills, and educational resources that enable individuals to navigate cultural contexts; affects ability to comprehend foreignized news.</dd>
+
+                    <dt>Translator Invisibility</dt>
+                    <dd>Phenomenon where translation work goes unnoticed by readers, who may not realize they are reading translated texts.</dd>
+
+                    <dt>Narratives (Baker)</dt>
+                    <dd>Frameworks for making sense of events and identities; translation participates in constructing and circulating narratives about political and social phenomena.</dd>
+
+                    <dt>Critical Discourse Analysis (CDA)</dt>
+                    <dd>Analytical approach (Fairclough) examining how language constructs social relations, ideologies, and power dynamics.</dd>
+
+                    <dt>News Literacy</dt>
+                    <dd>Ability to critically evaluate news sources, identify credible information, and understand news production processes.</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section id="summary">
+            <h2>Summary and Conclusion</h2>
+
+            <p>This chapter makes a compelling case for reader-response research as an essential component of news translation studies. Several key arguments and findings emerge:</p>
+
+            <div class="concept-box">
+                <h4>Central Conclusions</h4>
+                <ol>
+                    <li><strong>Production-Reception Gap:</strong> Translation studies, including news translation research, has focused disproportionately on production while neglecting reception. Understanding how translation "works" requires empirical investigation of actual reader responses.</li>
+
+                    <li><strong>Differential Effects:</strong> Translation strategies do not affect all readers uniformly. The focus group research revealed that foreignization had different effects depending on readers' education, cultural capital, and news literacy, potentially reinforcing inequalities in access to international news.</li>
+
+                    <li><strong>Complex Relationship with Cosmopolitan Openness:</strong> The assumption that foreignization promotes cosmopolitan awareness requires qualification. While some readers valued exposure to foreign specificity, others experienced it as alienating. The effect appears conditional on readers' existing resources and orientations.</li>
+
+                    <li><strong>Limited Translation Awareness:</strong> Readers often do not realize they are reading translated news, which affects how they interpret comprehension difficulties and assess text quality. Increasing translation visibility might cultivate more sophisticated reading strategies.</li>
+
+                    <li><strong>Need for Strategic Approaches:</strong> Rather than absolute domestication or foreignization, effective news translation may require strategic combinations and contextual sensitivity to target readership characteristics.</li>
+                </ol>
+            </div>
+
+            <p>The chapter demonstrates the value of empirical methods—particularly focus groups—for investigating theoretical claims about translation effects. By examining how British readers actually responded to foreignized Reuters news about France, Scammell provides evidence-based insights that complicate theoretical assumptions and offer practical guidance.</p>
+
+            <p>However, the research also highlights methodological challenges: ecological validity (research settings differ from natural reading contexts), sample representativeness, and the complex relationship between translation awareness and "natural" reading processes. Future research must address these challenges while expanding the scope of reader-response studies to other translation strategies, language pairs, and news contexts.</p>
+
+            <blockquote>
+                "Understanding translation requires understanding readers. The meaning of translated news emerges not simply from translators' choices but from the interaction between translated texts and readers' interpretive resources, cultural knowledge, and engagement strategies. Reception research is essential for a complete account of how news translation operates in globalized media ecologies."
+            </blockquote>
+
+            <p>Ultimately, the chapter calls for a more balanced approach to news translation research that integrates production and reception perspectives. By attending to how readers actually engage with translated news, translation scholars and practitioners can develop more nuanced, evidence-based approaches that balance authenticity, accessibility, and cosmopolitan awareness in international news communication.</p>
+        </section>
+    </div>
+</body>
+</html>

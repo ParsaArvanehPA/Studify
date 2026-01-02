@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation in Literary Magazines - EXAM CRAM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+            color: white;
+            padding: 20px;
+            margin: -30px -30px 25px -30px;
+            border-radius: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+        }
+
+        .exam-focus {
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+
+        h2 {
+            color: #1a365d;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 6px;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.2em;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        .definitions-table {
+            background-color: #f8f9fa;
+            border: 2px solid #1a365d;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .definitions-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .definitions-table th {
+            background-color: #1a365d;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+
+        .definitions-table td {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        .definitions-table tr:nth-child(even) {
+            background-color: #f0f4f8;
+        }
+
+        .key-theories {
+            background-color: #e6f2ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .key-theories ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .key-theories li {
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+
+        .exam-tip {
+            background-color: #fff4e6;
+            border: 2px solid #f59e0b;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        .exam-tip strong {
+            color: #92400e;
+        }
+
+        .critical-point {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 12px;
+            margin: 12px 0;
+            font-size: 0.95em;
+        }
+
+        .scholar-reference {
+            background-color: #f0fdf4;
+            border: 2px solid #10b981;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .scholar-reference table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+
+        .scholar-reference th {
+            background-color: #10b981;
+            color: white;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .scholar-reference td {
+            padding: 6px 8px;
+            border: 1px solid #ddd;
+        }
+
+        .quick-list {
+            columns: 2;
+            column-gap: 20px;
+            margin: 12px 0;
+        }
+
+        .quick-list li {
+            break-inside: avoid;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+
+        .exam-questions {
+            background-color: #f3e8ff;
+            border: 2px solid #8b5cf6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .exam-questions ol {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .exam-questions li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .checklist {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .checklist ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li {
+            padding: 6px 0;
+            font-size: 0.95em;
+        }
+
+        .checklist li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.9em;
+        }
+
+        th {
+            background-color: #1a365d;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .definitions-table, .exam-tip, .exam-questions {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Translation in Literary Magazines - EXAM CRAM</h1>
+            <div class="exam-focus">
+                <strong>📌 Source:</strong> Bielsa (2022), Ch. 13 | <strong>Authors:</strong> Roig-Sanz, Fólica, Ikoff<br>
+                <strong>🔑 Focus:</strong> Periodicals, Big Translation History, MapModern Project, Transnational Networks
+            </div>
+        </header>
+
+        <section id="essential-definitions">
+            <h2>📌 Essential Definitions</h2>
+
+            <div class="definitions-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Term</th>
+                            <th>Definition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Big Translation History (BTH)</strong></td>
+                            <td>Methodological approach combining large-scale quantitative data analysis with qualitative interpretation to identify patterns across extensive translation corpora</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Periodical Publications</strong></td>
+                            <td>Magazines, journals, newspapers published on cyclical schedules; key sites for translation and cultural exchange</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Domestication</strong></td>
+                            <td>Translation strategy adapting foreign texts to target culture norms and conventions (Venuti)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Foreignization</strong></td>
+                            <td>Translation strategy preserving source culture markers to challenge target culture assumptions (Venuti)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transnational Networks</strong></td>
+                            <td>Structured relationships among cultural agents transcending national boundaries, facilitating text circulation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cultural Mediators</strong></td>
+                            <td>Multilingual individuals bridging different linguistic/cultural communities through translation and editing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>World Literary Space</strong></td>
+                            <td>Casanova's concept: international literary field structured by unequal power relations between central/peripheral languages</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MapModern</strong></td>
+                            <td>Digital humanities project mapping Hispanic/Lusophone periodical cultures and translation networks (1898-1959)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="key-theories">
+            <h2>🔑 Key Theories & Concepts</h2>
+
+            <div class="key-theories">
+                <h3>1. Periodical Turn in Translation Studies</h3>
+                <ul>
+                    <li>Recognition that magazines/journals were active agents shaping cultural modernity, not just text repositories</li>
+                    <li>Requires moving beyond traditional bibliographic approaches</li>
+                    <li>Translation in periodicals differs from book translation: temporal dynamics, collective production, paratextual framing</li>
+                </ul>
+            </div>
+
+            <div class="key-theories">
+                <h3>2. Big Translation History (BTH) Approach</h3>
+                <ul>
+                    <li>Combines "distant reading" (large-scale quantitative) with "close reading" (qualitative interpretation)</li>
+                    <li>Enabled by digital humanities tools and databases</li>
+                    <li>Emphasizes: systematic corpus analysis, network mapping, quantitative + qualitative methods, transnational perspectives</li>
+                    <li>Challenges focus on individual translators/canonical texts</li>
+                </ul>
+            </div>
+
+            <div class="key-theories">
+                <h3>3. Transnational Networks Theory</h3>
+                <ul>
+                    <li>Translation operated through structured networks of agents and institutions</li>
+                    <li>Types of actors: cultural mediators, institutional brokers, exile communities</li>
+                    <li>Network analysis reveals centrality, clusters, temporal evolution</li>
+                    <li>Periodicals = material infrastructure supporting networks</li>
+                </ul>
+            </div>
+
+            <div class="key-theories">
+                <h3>4. World Literary Space (Casanova)</h3>
+                <ul>
+                    <li>Unequal field with dominant (central) vs. dominated (peripheral) languages/literatures</li>
+                    <li>Translation = mechanism of consecration for peripheral literatures</li>
+                    <li>MapModern confirms center-periphery dynamics BUT also reveals South-South connections</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="critical-points">
+            <h2>⚡ Critical Points for Exams</h2>
+
+            <div class="critical-point">
+                <strong>📌 Distinctive Features of Periodical Translation:</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>Temporal Dynamics:</strong> Cyclical publication schedules create different pressures than book publishing</li>
+                    <li><strong>Collective Production:</strong> Multiple actors (editors, translators, publishers) collaborate within institutions</li>
+                    <li><strong>Paratextual Framing:</strong> Rich paratexts (editorials, notes, illustrations) shape reception</li>
+                    <li><strong>Hybridity:</strong> Mix genres, languages, cultural materials; translation alongside original production</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>📌 Functions of Translation in Periodicals:</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Cultural mediation: introducing foreign literatures/ideas to local audiences</li>
+                    <li>Literary experimentation: laboratories for testing new forms/styles</li>
+                    <li>Network building: creating transnational connections</li>
+                    <li>Canon formation: editorial selection influences emerging canons</li>
+                    <li>Political intervention: serving political/ideological purposes</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>📌 Methodological Challenges:</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>Archival dispersal:</strong> Periodicals scattered across multiple collections</li>
+                    <li><strong>Digitization gaps:</strong> Many remain undigitized or poorly indexed</li>
+                    <li><strong>Attribution problems:</strong> Translations often unsigned/pseudonymous</li>
+                    <li><strong>Fragmentary evidence:</strong> Missing issues; incomplete runs</li>
+                </ul>
+            </div>
+
+            <div class="exam-tip">
+                <strong>⚡ EXAM TIP:</strong> Be prepared to discuss HOW digital humanities methods address traditional methodological challenges (database creation, network visualization, text analysis, geo-spatial mapping, metadata standards).
+            </div>
+        </section>
+
+        <section id="comparison-table">
+            <h2>📊 Comparison Tables</h2>
+
+            <h3>Domestication vs. Foreignization</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Domestication</th>
+                        <th>Foreignization</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Strategy</strong></td>
+                        <td>Adapts foreign text to target culture</td>
+                        <td>Preserves source culture markers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Goal</strong></td>
+                        <td>Readability, fluency, cultural assimilation</td>
+                        <td>Cultural diversity, challenge target assumptions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Effect</strong></td>
+                        <td>May erase cultural difference</td>
+                        <td>Promotes cosmopolitan openness</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scholar</strong></td>
+                        <td colspan="2">Lawrence Venuti (1995, 2008)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Book Translation vs. Periodical Translation</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Book Translation</th>
+                        <th>Periodical Translation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Temporal Pattern</strong></td>
+                        <td>Single publication event</td>
+                        <td>Cyclical schedules (weekly/monthly)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Production</strong></td>
+                        <td>Often individual translator</td>
+                        <td>Collective (editors, translators, publishers)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Context</strong></td>
+                        <td>Standalone text</td>
+                        <td>Rich paratexts; mixed with other materials</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Attribution</strong></td>
+                        <td>Usually clear</td>
+                        <td>Often anonymous/pseudonymous</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Distant Reading vs. Close Reading</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Approach</th>
+                        <th>Strengths</th>
+                        <th>Limitations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Distant Reading</strong></td>
+                        <td>Large-scale quantitative analysis</td>
+                        <td>Reveals patterns, trends across large corpora</td>
+                        <td>May lose specific contexts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Close Reading</strong></td>
+                        <td>Detailed qualitative interpretation</td>
+                        <td>Attentive to context, nuance, specificity</td>
+                        <td>Limited scope/scale</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BTH (Combined)</strong></td>
+                        <td>Mixed methods</td>
+                        <td>Best of both approaches</td>
+                        <td>Requires careful balancing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="mapmodern-case">
+            <h2>🔬 MapModern Case Study - Key Points</h2>
+
+            <div class="exam-tip">
+                <strong>⚡ HIGH-PROBABILITY EXAM TOPIC:</strong> Be ready to explain the MapModern project's objectives, methodology, and key findings!
+            </div>
+
+            <h3>Project Overview</h3>
+            <ul class="quick-list">
+                <li><strong>Full Name:</strong> Mapping Hispanic/Lusophone Modernity</li>
+                <li><strong>Period:</strong> 1898-1959</li>
+                <li><strong>Type:</strong> Digital humanities initiative</li>
+                <li><strong>Goal:</strong> Map translation role in Hispanic/Lusophone periodicals</li>
+                <li><strong>Method:</strong> Database + network analysis + geo-spatial mapping</li>
+            </ul>
+
+            <h3>Database Structure (4 Key Entities)</h3>
+            <ol>
+                <li><strong>Periodicals:</strong> Magazines, journals, newspapers (title, dates, location, language)</li>
+                <li><strong>Translated Texts:</strong> Individual translations (source author, translator, language, genre)</li>
+                <li><strong>Agents:</strong> Translators, editors, writers (name, nationality, roles, affiliations)</li>
+                <li><strong>Institutions:</strong> Publishers, cultural organizations (name, location, orientation)</li>
+            </ol>
+
+            <h3>Major Findings</h3>
+            <div class="critical-point">
+                <strong>1. Translation as Network Building:</strong> Not random/isolated; operated through structured networks of mediators
+            </div>
+
+            <div class="critical-point">
+                <strong>2. Geographic Patterns:</strong> Center-periphery dynamics confirmed BUT also South-South connections bypassing European centers
+            </div>
+
+            <div class="critical-point">
+                <strong>3. Temporal Patterns - Three Periods:</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>1898-1918: Modernist experimentation; high French-to-Spanish translation</li>
+                    <li>1918-1939: Interwar avant-gardes; multiple European languages; political translation</li>
+                    <li>1939-1959: Post-war shifts due to censorship and exile</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>4. Genre Preferences:</strong> Poetry & short fiction (high); essays/criticism (medium); serialized novels (lower)
+            </div>
+        </section>
+
+        <section id="scholars">
+            <h2>👥 Scholar Reference Table</h2>
+
+            <div class="scholar-reference">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scholar</th>
+                            <th>Year</th>
+                            <th>Key Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Casanova</strong></td>
+                            <td>1999, 2002</td>
+                            <td>World literary space; unequal field; translation as consecration</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Venuti</strong></td>
+                            <td>1995, 2008</td>
+                            <td>Domestication vs. foreignization; translator invisibility</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bielsa & Bassnett</strong></td>
+                            <td>2009</td>
+                            <td>Translation in news/media; institutional contexts; collective production</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Schäffner</strong></td>
+                            <td>2012</td>
+                            <td>Translation in communicative events and institutional frameworks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ehrlicher</strong></td>
+                            <td>2020</td>
+                            <td>Periodicals as platforms for intercultural transfer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moretti</strong></td>
+                            <td>2000, 2013</td>
+                            <td>Distant reading methodology; quantitative literary history</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="exam-checklist">
+            <h2>✓ Pre-Exam Checklist</h2>
+
+            <div class="checklist">
+                <ul>
+                    <li>Can define Big Translation History (BTH) and explain its mixed-methods approach</li>
+                    <li>Can explain how periodical translation differs from book translation (4 features)</li>
+                    <li>Can list 5 functions of translation in periodicals</li>
+                    <li>Can differentiate domestication vs. foreignization with examples</li>
+                    <li>Can explain Casanova's world literary space concept</li>
+                    <li>Can describe MapModern project: objectives, methodology, database structure</li>
+                    <li>Can identify MapModern's 4 major findings</li>
+                    <li>Can list 4 methodological challenges in studying periodical translation</li>
+                    <li>Can explain how digital humanities methods address these challenges</li>
+                    <li>Can name and date 6 key scholars with their contributions</li>
+                    <li>Can discuss transnational networks and types of network actors</li>
+                    <li>Can explain the three temporal periods identified by MapModern (1898-1959)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="exam-questions">
+            <h2>❓ High-Probability Exam Questions</h2>
+
+            <div class="exam-questions">
+                <ol>
+                    <li><strong>Define Big Translation History (BTH) and explain how it differs from traditional translation history approaches.</strong></li>
+
+                    <li><strong>Discuss the distinctive features of translation in periodical publications compared to book translation. (Provide at least 3 features)</strong></li>
+
+                    <li><strong>Explain the MapModern project: What are its main objectives, methodology, and key findings?</strong></li>
+
+                    <li><strong>Compare and contrast domestication and foreignization as translation strategies. Which scholar developed these concepts?</strong></li>
+
+                    <li><strong>What are the main methodological challenges in studying translation in periodicals? How do digital humanities methods address these challenges?</strong></li>
+
+                    <li><strong>Discuss Casanova's concept of "world literary space." How does MapModern's data both confirm and complicate this model?</strong></li>
+
+                    <li><strong>Explain the role of cultural mediators in transnational translation networks. Provide examples from the chapter.</strong></li>
+
+                    <li><strong>What functions did translation serve in periodical publications? Discuss at least 3 functions.</strong></li>
+
+                    <li><strong>Analyze the three temporal periods identified by MapModern research (1898-1918, 1918-1939, 1939-1959). What characterized each period?</strong></li>
+
+                    <li><strong>How did the "periodical turn" in translation studies change scholarly approaches to translation history?</strong></li>
+                </ol>
+            </div>
+
+            <div class="exam-tip">
+                <strong>⚡ ESSAY STRATEGY:</strong> For essay questions, structure answers as: (1) Clear definition/thesis, (2) 2-3 main points with scholar citations and dates, (3) MapModern example if relevant, (4) Critical reflection on implications/limitations.
+            </div>
+        </section>
+    </div>
+</body>
+</html>
