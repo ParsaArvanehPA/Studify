@@ -134,7 +134,7 @@ export function HomePage() {
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <span className="text-2xl">🤖</span>
+            <Sparkles className="w-6 h-6 text-blue-400 mt-0.5" />
             <div>
               <p className="font-medium text-white">AI Generated</p>
               <p className="text-sm text-gray-400">Content is AI-generated and may contain errors. Always verify.</p>
