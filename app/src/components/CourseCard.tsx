@@ -28,8 +28,8 @@ export function CourseCard({ course, semesterId, index }: CourseCardProps) {
           <div className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
 
           {/* Icon */}
-          <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${course.color} flex items-center justify-center mb-4 shadow-lg`}>
-            <span className="text-2xl">{course.icon}</span>
+          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${course.color} flex items-center justify-center mb-4`}>
+            <span className="text-xl">{course.icon}</span>
           </div>
 
           {/* Content */}
@@ -56,10 +56,10 @@ export function CourseCard({ course, semesterId, index }: CourseCardProps) {
 
           {/* Action */}
           <div className="flex items-center justify-between mt-auto">
-            <span className="text-sm text-indigo-400 group-hover:text-indigo-300">
+            <span className="text-sm text-gray-400 group-hover:text-gray-300">
               View sessions
             </span>
-            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all" />
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-gray-300 group-hover:translate-x-1 transition-all" />
           </div>
         </motion.div>
       </Link>

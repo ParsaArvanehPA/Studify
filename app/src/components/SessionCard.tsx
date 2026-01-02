@@ -12,16 +12,16 @@ interface SessionCardProps {
 export function SessionCard({ session, courseColor, index, onFileClick }: SessionCardProps) {
   const getFileIcon = (fileName: string) => {
     if (fileName.toLowerCase().includes('exam') || fileName.toLowerCase().includes('cram')) {
-      return <Zap className="w-4 h-4 text-amber-400" />;
+      return <Zap className="w-4 h-4 text-amber-300/80" />;
     }
-    return <BookOpen className="w-4 h-4 text-indigo-400" />;
+    return <BookOpen className="w-4 h-4 text-gray-400" />;
   };
 
   const getFileStyle = (fileName: string) => {
     if (fileName.toLowerCase().includes('exam') || fileName.toLowerCase().includes('cram')) {
-      return 'border-amber-500/30 hover:border-amber-500/50 hover:bg-amber-500/10';
+      return 'border-amber-400/20 hover:border-amber-400/40 hover:bg-amber-400/5';
     }
-    return 'border-indigo-500/30 hover:border-indigo-500/50 hover:bg-indigo-500/10';
+    return 'border-white/10 hover:border-white/20 hover:bg-white/5';
   };
 
   return (
@@ -32,9 +32,9 @@ export function SessionCard({ session, courseColor, index, onFileClick }: Sessio
       className="glass rounded-xl overflow-hidden"
     >
       {/* Header */}
-      <div className={`px-4 py-3 bg-gradient-to-r ${courseColor} bg-opacity-20`}>
-        <h4 className="font-semibold text-white flex items-center gap-2">
-          <span className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-sm">
+      <div className="px-4 py-3 bg-white/5 border-b border-white/10">
+        <h4 className="font-medium text-gray-200 flex items-center gap-2">
+          <span className={`w-7 h-7 rounded-md bg-gradient-to-br ${courseColor} flex items-center justify-center text-xs text-white`}>
             {index + 1}
           </span>
           {session.name}

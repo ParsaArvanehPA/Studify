@@ -31,8 +31,8 @@ export function SemesterCard({ semester, index }: SemesterCardProps) {
           <div className={`absolute inset-0 bg-gradient-to-br ${semester.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
 
           {/* Icon */}
-          <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${semester.color} flex items-center justify-center mb-4 shadow-lg`}>
-            <span className="text-3xl">{semester.icon}</span>
+          <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4">
+            <span className="text-2xl">{semester.icon}</span>
           </div>
 
           {/* Content */}
@@ -67,10 +67,10 @@ export function SemesterCard({ semester, index }: SemesterCardProps) {
 
           {/* Action */}
           <div className="flex items-center justify-between">
-            <span className="text-sm text-indigo-400 group-hover:text-indigo-300">
+            <span className="text-sm text-gray-400 group-hover:text-gray-300">
               View courses
             </span>
-            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all" />
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-gray-300 group-hover:translate-x-1 transition-all" />
           </div>
         </motion.div>
       </Link>

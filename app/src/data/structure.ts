@@ -32,13 +32,13 @@ export const studyData: Semester[] = [
     id: 'semester-1',
     name: 'Semester 1',
     icon: '📚',
-    color: 'from-indigo-500 to-purple-600',
+    color: 'from-slate-600 to-slate-700',
     courses: [
       {
         id: 'creative-writing',
         name: 'Creative Writing',
         icon: '✍️',
-        color: 'from-pink-500 to-rose-600',
+        color: 'from-rose-400/70 to-pink-500/70',
         description: 'Learn the art of creative expression through writing',
         sessions: [
           {
@@ -90,7 +90,7 @@ export const studyData: Semester[] = [
         id: 'critical-discourse',
         name: 'Critical Discourse Analysis',
         icon: '🔍',
-        color: 'from-cyan-500 to-blue-600',
+        color: 'from-sky-400/70 to-cyan-500/70',
         description: 'Analyzing language in social and political contexts',
         sessions: [
           {
@@ -120,7 +120,7 @@ export const studyData: Semester[] = [
         id: 'news-translation',
         name: 'News Translation',
         icon: '📰',
-        color: 'from-amber-500 to-orange-600',
+        color: 'from-amber-400/70 to-orange-400/70',
         description: 'Translating news content across languages',
         sessions: [
           {
@@ -223,7 +223,7 @@ export const studyData: Semester[] = [
         id: 'quran-translation',
         name: 'Quran in Translation',
         icon: '📖',
-        color: 'from-emerald-500 to-teal-600',
+        color: 'from-emerald-400/70 to-teal-500/70',
         description: 'Study of Quranic translation methodologies',
         sessions: [
           {
@@ -295,7 +295,7 @@ export const studyData: Semester[] = [
         id: 'research',
         name: 'The Way of Research',
         icon: '🔬',
-        color: 'from-violet-500 to-purple-600',
+        color: 'from-violet-400/70 to-indigo-500/70',
         description: 'Research methodologies and academic writing',
         sessions: [
           {
