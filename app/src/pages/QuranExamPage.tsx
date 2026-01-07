@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Search, BookOpen, X } from 'lucide-react';
 
 // Function to normalize Arabic text for display and Farsi keyboard search
@@ -1239,7 +1239,7 @@ const prayerGuide = [
     section: 'Before Starting',
     sectionFarsi: 'قبل از شروع',
     steps: [
-      { title: 'Intention (Niyyah)', farsi: 'نیت', type: 'Pillar', desc: 'You do not say this out loud. You simply decide in your heart something like:', quote: '"I intend to perform four units (rak\'ahs) of the [Ẓuhr / \'Aṣr / \'Ishā\'] prayer for the sake of Allah."' },
+      { title: 'Intention (Niyyah)', farsi: 'نیت', type: 'Pillar', desc: 'You do not say this out loud. You simply decide in your heart something like:', quote: '"I intend to perform four units (rak\'ahs) of the [Zuhr / \'Asr / \'Isha\'] prayer for the sake of Allah."' },
     ]
   },
   {
@@ -1247,23 +1247,23 @@ const prayerGuide = [
     sectionFarsi: 'رکعت اول',
     steps: [
       { title: 'Standing facing the Qiblah', farsi: 'ایستادن رو به قبله', type: 'Pillar', desc: 'Stand upright, facing the direction of the Ka\'bah (qiblah), calmly.' },
-      { title: 'Opening Takbīr (Takbīrat al-Iḥrām)', farsi: 'تکبیرة الاحرام', type: 'Pillar', desc: 'Raise your hands (recommended) and say:', quote: '"Allah is the Greatest."' },
+      { title: 'Opening Takbir (Takbirat al-Ihram)', farsi: 'تکبیرة الاحرام', type: 'Pillar', desc: 'Raise your hands (recommended) and say:', quote: '"Allah is the Greatest."' },
       { title: 'Optional Opening Supplication', farsi: 'دعای استفتاح (مستحب)', type: 'Recommended', desc: 'You may say:', quote: '"Glory be to You, O Allah, and praise be to You. Blessed is Your Name, exalted is Your Majesty, and there is no god but You."' },
-      { title: 'Recitation: al-Fātiḥah', farsi: 'قرائت حمد', type: 'Obligatory (Pillar in Shia)', quote: '"In the Name of Allah, the Entirely Merciful, the Especially Merciful. All praise belongs to Allah, Lord of all worlds. The Entirely Merciful, the Especially Merciful. Master of the Day of Judgment. You alone we worship, and You alone we ask for help. Guide us to the straight path – the path of those whom You have blessed, not of those who incur anger, nor of those who go astray."' },
-      { title: 'Recitation: Another Surah (e.g., Ikhlāṣ)', farsi: 'قرائت سوره (مثلاً توحید)', type: 'Obligatory', quote: '"In the Name of Allah, the Entirely Merciful, the Especially Merciful. Say: He is Allah, One. Allah, the Self-Sufficient. He neither begets nor is born, and there is none comparable to Him."' },
-      { title: 'Bowing (Rukū\')', farsi: 'رکوع', type: 'Pillar', desc: 'Bend forward, hands on knees. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
-      { title: 'Rising from Rukū\'', farsi: 'قیام بعد از رکوع', type: 'Pillar', desc: 'Rise back to standing. You may say:', quote: '"Allah hears the one who praises Him."' },
-      { title: 'First Prostration (Sujūd 1)', farsi: 'سجده اول', type: 'Pillar', desc: 'Forehead on ground. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
+      { title: 'Recitation: al-Fatihah', farsi: 'قرائت حمد', type: 'Obligatory (Pillar in Shia)', quote: '"In the Name of Allah, the Entirely Merciful, the Especially Merciful. All praise belongs to Allah, Lord of all worlds. The Entirely Merciful, the Especially Merciful. Master of the Day of Judgment. You alone we worship, and You alone we ask for help. Guide us to the straight path – the path of those whom You have blessed, not of those who incur anger, nor of those who go astray."' },
+      { title: 'Recitation: Another Surah (e.g., Ikhlas)', farsi: 'قرائت سوره (مثلاً توحید)', type: 'Obligatory', quote: '"In the Name of Allah, the Entirely Merciful, the Especially Merciful. Say: He is Allah, One. Allah, the Self-Sufficient. He neither begets nor is born, and there is none comparable to Him."' },
+      { title: 'Bowing (Ruku\')', farsi: 'رکوع', type: 'Pillar', desc: 'Bend forward, hands on knees. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Rising from Ruku\'', farsi: 'قیام بعد از رکوع', type: 'Pillar', desc: 'Rise back to standing. You may say:', quote: '"Allah hears the one who praises Him."' },
+      { title: 'First Prostration (Sujud 1)', farsi: 'سجده اول', type: 'Pillar', desc: 'Forehead on ground. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
       { title: 'Sitting between Prostrations', farsi: 'نشستن بین دو سجده', type: 'Part of Pillar', desc: 'Sit up calmly. Recommended to say:', quote: '"I seek forgiveness from Allah, my Lord, and I turn to Him."' },
-      { title: 'Second Prostration (Sujūd 2)', farsi: 'سجده دوم', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
+      { title: 'Second Prostration (Sujud 2)', farsi: 'سجده دوم', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
     ]
   },
   {
     section: 'Rak\'ah 2',
     sectionFarsi: 'رکعت دوم',
     steps: [
-      { title: 'Standing and Recitation', farsi: 'قیام و قرائت', type: 'Obligatory', desc: 'Recite al-Fātiḥah, then another surah (e.g., Ikhlāṣ).' },
-      { title: 'Rukū\' (Bowing)', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Standing and Recitation', farsi: 'قیام و قرائت', type: 'Obligatory', desc: 'Recite al-Fatihah, then another surah (e.g., Ikhlas).' },
+      { title: 'Ruku\' (Bowing)', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
       { title: 'Two Prostrations', farsi: 'دو سجده', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
       { title: 'Sitting for Tashahhud', farsi: 'نشستن برای تشهد', type: 'Obligatory', quote: '"I bear witness that there is no god except Allah, alone, without partner. And I bear witness that Muhammad is His servant and His messenger. O Allah, send Your blessings upon Muhammad and the family of Muhammad."' },
     ]
@@ -1272,8 +1272,8 @@ const prayerGuide = [
     section: 'Rak\'ah 3',
     sectionFarsi: 'رکعت سوم',
     steps: [
-      { title: 'Standing Recitation', farsi: 'قیام و قرائت (حمد یا تسبیحات)', type: 'Choose One', desc: 'Either al-Fātiḥah OR Four Glorifications (3x):', quote: '"Glory be to Allah, and praise be to Allah, and there is no god except Allah, and Allah is the Greatest."' },
-      { title: 'Rukū\'', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Standing Recitation', farsi: 'قیام و قرائت (حمد یا تسبیحات)', type: 'Choose One', desc: 'Either al-Fatihah OR Four Glorifications (3x):', quote: '"Glory be to Allah, and praise be to Allah, and there is no god except Allah, and Allah is the Greatest."' },
+      { title: 'Ruku\'', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
       { title: 'Two Prostrations', farsi: 'دو سجده', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
     ]
   },
@@ -1281,31 +1281,31 @@ const prayerGuide = [
     section: 'Rak\'ah 4',
     sectionFarsi: 'رکعت چهارم',
     steps: [
-      { title: 'Standing Recitation', farsi: 'قیام و قرائت (حمد یا تسبیحات)', type: 'Choose One', desc: 'Either al-Fātiḥah OR Four Glorifications (3x).' },
-      { title: 'Rukū\'', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Standing Recitation', farsi: 'قیام و قرائت (حمد یا تسبیحات)', type: 'Choose One', desc: 'Either al-Fatihah OR Four Glorifications (3x).' },
+      { title: 'Ruku\'', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
       { title: 'Two Prostrations', farsi: 'دو سجده', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
     ]
   },
   {
-    section: 'Final Tashahhud and Salām',
+    section: 'Final Tashahhud and Salam',
     sectionFarsi: 'تشهد و سلام پایانی',
     steps: [
       { title: 'Final Tashahhud', farsi: 'تشهد آخر', type: 'Obligatory', quote: '"I bear witness that there is no god except Allah, alone, without partner. And I bear witness that Muhammad is His servant and His messenger. O Allah, send Your blessings upon Muhammad and the family of Muhammad."' },
-      { title: 'Salām (Ending)', farsi: 'سلام نماز', type: 'Obligatory', quote: '"Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. Peace be upon you all, and the mercy of Allah and His blessings."' },
+      { title: 'Salam (Ending)', farsi: 'سلام نماز', type: 'Obligatory', quote: '"Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. Peace be upon you all, and the mercy of Allah and His blessings."' },
     ]
   },
 ];
 
 const prayerPillars = [
   { name: 'Intention (Niyyah)', desc: 'Intending in the heart the specific prayer for the sake of Allah.', farsi: 'نیت' },
-  { name: 'Opening Takbīr', desc: 'Saying "Allah is the Greatest" at the start.', farsi: 'تکبیرة الاحرام' },
-  { name: 'Standing (Qiyām)', desc: 'Being upright while saying takbīr and reciting.', farsi: 'قیام' },
-  { name: 'Recitation of al-Fātiḥah', desc: 'In the first two rak\'ahs (pillar in Shia fiqh).', farsi: 'قرائت حمد' },
-  { name: 'Bowing (Rukū\')', desc: 'Proper bowing with stillness and glorification.', farsi: 'رکوع' },
-  { name: 'Rising from Rukū\'', desc: 'Returning to full standing after bowing.', farsi: 'قیام بعد از رکوع' },
-  { name: 'Two Prostrations (Sujūd)', desc: 'Both prostrations with stillness and glorification.', farsi: 'سجود' },
-  { name: 'Order (Tartīb)', desc: 'Doing actions in correct sequence.', farsi: 'ترتیب' },
-  { name: 'Continuity (Muwālāt)', desc: 'No long unnecessary breaks between actions.', farsi: 'موالات' },
+  { name: 'Opening Takbir', desc: 'Saying "Allah is the Greatest" at the start.', farsi: 'تکبیرة الاحرام' },
+  { name: 'Standing (Qiyam)', desc: 'Being upright while saying takbir and reciting.', farsi: 'قیام' },
+  { name: 'Recitation of al-Fatihah', desc: 'In the first two rak\'ahs (pillar in Shia fiqh).', farsi: 'قرائت حمد' },
+  { name: 'Bowing (Ruku\')', desc: 'Proper bowing with stillness and glorification.', farsi: 'رکوع' },
+  { name: 'Rising from Ruku\'', desc: 'Returning to full standing after bowing.', farsi: 'قیام بعد از رکوع' },
+  { name: 'Two Prostrations (Sujud)', desc: 'Both prostrations with stillness and glorification.', farsi: 'سجود' },
+  { name: 'Order (Tartib)', desc: 'Doing actions in correct sequence.', farsi: 'ترتیب' },
+  { name: 'Continuity (Muwalat)', desc: 'No long unnecessary breaks between actions.', farsi: 'موالات' },
 ];
 
 // Farsi Key Terms
@@ -1431,6 +1431,19 @@ export function QuranExamPage() {
   // Show prayer section if no search or has matches
   const showPrayerSection = !searchQuery.trim() || hasPrayerMatches;
 
+  // Scroll to first result when search changes
+  useEffect(() => {
+    if (!searchQuery.trim()) return;
+
+    // Small delay to ensure DOM is updated
+    setTimeout(() => {
+      const firstResult = document.getElementById('first-search-result');
+      if (firstResult) {
+        firstResult.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+    }, 0);
+  }, [searchQuery, filteredVerses, filteredPrayerGuide]);
+
   return (
     <div className="min-h-screen py-8 px-4">
       <div className="max-w-5xl mx-auto">
@@ -1449,6 +1462,9 @@ export function QuranExamPage() {
 
           if (!verses || verses.length === 0) return null;
 
+          // Check if this section contains the first result
+          const firstVerseId = filteredVerses.length > 0 ? filteredVerses[0].id : null;
+
           return (
             <section
               key={session.id}
@@ -1463,7 +1479,9 @@ export function QuranExamPage() {
                   {verses.map((verse) => (
                     <div
                       key={verse.id}
+                      id={searchQuery.trim() && verse.id === firstVerseId ? 'first-search-result' : undefined}
                       className="glass rounded-xl p-5 border border-white/5"
+                      style={{ scrollMarginTop: '80px' }}
                     >
                       {/* Arabic Text with Verse Reference */}
                       <div
@@ -1492,8 +1510,9 @@ export function QuranExamPage() {
         {/* Prayer Guide Section */}
         {showPrayerSection && (
           <section
-            id="prayer-guide"
+            id={searchQuery.trim() && filteredVerses.length === 0 && hasPrayerMatches ? 'first-search-result' : 'prayer-guide'}
             className="mb-12"
+            style={{ scrollMarginTop: '80px' }}
           >
             <div className="glass rounded-2xl p-6">
               <h2 className="text-2xl font-bold text-white mb-2">Prayer Guide</h2>
@@ -1565,7 +1584,7 @@ export function QuranExamPage() {
               {/* Pillars Summary */}
               {filteredPillars.length > 0 && (
                 <div className="mt-6 glass rounded-xl p-4 border border-amber-500/20">
-                  <h3 className="text-lg font-semibold text-amber-400 mb-3">Pillars (Arkān) / <span style={{ fontFamily: 'Vazirmatn, sans-serif' }}>ارکان نماز</span></h3>
+                  <h3 className="text-lg font-semibold text-amber-400 mb-3">Pillars (Arkan) / <span style={{ fontFamily: 'Vazirmatn, sans-serif' }}>ارکان نماز</span></h3>
                   <p className="text-gray-500 text-xs mb-3">If a pillar is left out, prayer is invalid</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {filteredPillars.map((pillar, index) => (
