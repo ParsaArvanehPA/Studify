@@ -1278,21 +1278,16 @@ export function QuranExamPage() {
                       transition={{ delay: 0.05 * verseIndex }}
                       className="glass rounded-xl p-5 border border-white/5"
                     >
-                      {/* Verse Reference */}
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-medium">
-                          {verse.verseNumber}
-                        </span>
-                        <span className="text-gray-400 text-sm">{verse.surahEnglish}</span>
-                      </div>
-
-                      {/* Arabic Text (normalized for Farsi keyboard) */}
+                      {/* Arabic Text with Verse Reference */}
                       <div
                         className="text-lg md:text-xl text-white mb-3 text-right font-arabic"
                         dir="rtl"
                         style={{ fontFamily: 'Amiri, serif', lineHeight: '1.8' }}
                       >
                         {normalizeArabic(verse.arabic)}
+                        <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-sans mr-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+                          {verse.verseNumber}
+                        </span>
                       </div>
 
                       {/* English Translation */}
