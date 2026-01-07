@@ -1070,18 +1070,12 @@ export function QuranExamPage() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="flex items-center gap-3 mb-6"
         >
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center shadow-lg">
-              <BookOpen className="w-8 h-8 text-white" />
-            </div>
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center shadow-lg">
+            <BookOpen className="w-5 h-5 text-white" />
           </div>
-          <h1 className="text-4xl font-bold gradient-text mb-4">Quran Exam Materials</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Arabic verses with English translations (Irving) for exam preparation.
-            All verses are displayed without diacritical marks (harakat) for easier reading.
-          </p>
+          <h1 className="text-2xl font-bold gradient-text">Quran Exam Materials</h1>
         </motion.div>
 
         {/* Session Index */}
@@ -1169,7 +1163,7 @@ export function QuranExamPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="fixed bottom-0 left-0 right-0 p-4 bg-[#0f0f1a] border-t border-white/10"
+          className="fixed bottom-0 left-0 right-0 p-4 bg-[#0f0f1a] border-t border-white/10 z-50"
         >
           <div className="max-w-3xl mx-auto">
             <div className="relative">
