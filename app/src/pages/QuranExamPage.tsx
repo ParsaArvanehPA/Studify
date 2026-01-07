@@ -1341,12 +1341,63 @@ const farsiPrayerNotes = [
 export function QuranExamPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [selectionMenu, setSelectionMenu] = useState<{ x: number; y: number; text: string } | null>(null);
+  const [selectionCopied, setSelectionCopied] = useState(false);
 
   const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
   };
+
+  const copySelectedText = () => {
+    if (selectionMenu) {
+      navigator.clipboard.writeText(selectionMenu.text);
+      setSelectionCopied(true);
+      setTimeout(() => {
+        setSelectionMenu(null);
+        setSelectionCopied(false);
+        window.getSelection()?.removeAllRanges();
+      }, 300);
+    }
+  };
+
+  // Handle text selection
+  useEffect(() => {
+    const handleSelection = () => {
+      const selection = window.getSelection();
+      const selectedText = selection?.toString().trim();
+
+      if (selectedText && selectedText.length > 0) {
+        const range = selection?.getRangeAt(0);
+        const rect = range?.getBoundingClientRect();
+        if (rect) {
+          setSelectionMenu({
+            x: rect.left + rect.width / 2,
+            y: rect.top - 10,
+            text: selectedText
+          });
+        }
+      } else {
+        setSelectionMenu(null);
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.selection-menu')) {
+        setSelectionMenu(null);
+      }
+    };
+
+    document.addEventListener('mouseup', handleSelection);
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mouseup', handleSelection);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   // Filter verses based on search query with fault tolerance
   const filteredVerses = useMemo(() => {
@@ -1657,6 +1708,26 @@ export function QuranExamPage() {
         {/* Spacer for fixed search bar */}
         <div className="h-24" />
       </div>
+
+      {/* Selection Copy Menu */}
+      {selectionMenu && (
+        <div
+          className="selection-menu fixed z-[100] transform -translate-x-1/2 -translate-y-full"
+          style={{ left: selectionMenu.x, top: selectionMenu.y }}
+        >
+          <button
+            onClick={copySelectedText}
+            className="flex items-center gap-2 px-3 py-2 bg-gray-800 border border-white/20 rounded-lg shadow-xl hover:bg-gray-700 transition-colors cursor-pointer"
+          >
+            {selectionCopied ? (
+              <Check className="w-4 h-4 text-emerald-400" />
+            ) : (
+              <Copy className="w-4 h-4 text-white" />
+            )}
+            <span className="text-white text-sm">{selectionCopied ? 'Copied' : 'Copy'}</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
