@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { GraduationCap, Home, BookOpen } from 'lucide-react';
+import { GraduationCap, Home, BookOpen, ScrollText } from 'lucide-react';
 
 export function Layout() {
   const location = useLocation();
@@ -32,6 +32,13 @@ export function Layout() {
                   <span className="hidden sm:inline">Home</span>
                 </Link>
               )}
+              <Link
+                to="/exam-materials"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg glass glass-hover transition-all text-sm text-gray-300 hover:text-white"
+              >
+                <ScrollText className="w-4 h-4" />
+                <span className="hidden sm:inline">Exam Materials</span>
+              </Link>
               <a
                 href="https://drive.google.com/drive/folders/145FEzdtEZkUxRus7G_mNkKcRngqaNN44?dmr=1&ec=wgc-drive-hero-goto"
                 target="_blank"
