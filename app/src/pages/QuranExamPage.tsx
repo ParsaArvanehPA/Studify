@@ -19,8 +19,10 @@ function normalizeArabic(text: string): string {
   result = result.replace(/ك/g, 'ک');
   // Normalize teh marbuta (ة) to heh (ه)
   result = result.replace(/ة/g, 'ه');
-  // Break lam-lam ligature by inserting Zero Width Non-Joiner
+  // Break lam-lam ligature by inserting Zero Width Non-Joiner, but preserve الله
+  result = result.replace(/الله/g, '___ALLAH___');
   result = result.replace(/لل/g, 'ل\u200Cل');
+  result = result.replace(/___ALLAH___/g, 'الله');
   return result;
 }
 
