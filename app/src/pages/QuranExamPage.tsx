@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, BookOpen, X, Copy, Check } from 'lucide-react';
+import { Search, BookOpen, X, Copy, Check, Languages } from 'lucide-react';
 
 // Function to normalize Arabic text for display and Farsi keyboard search
 function normalizeArabic(text: string): string {
@@ -1343,6 +1343,8 @@ export function QuranExamPage() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [selectionMenu, setSelectionMenu] = useState<{ x: number; y: number; text: string } | null>(null);
   const [selectionCopied, setSelectionCopied] = useState(false);
+  const [translation, setTranslation] = useState<string | null>(null);
+  const [isTranslating, setIsTranslating] = useState(false);
 
   const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
@@ -1359,6 +1361,31 @@ export function QuranExamPage() {
         setSelectionCopied(false);
         window.getSelection()?.removeAllRanges();
       }, 300);
+    }
+  };
+
+  const translateSelectedText = async () => {
+    if (selectionMenu && !isTranslating) {
+      setIsTranslating(true);
+      setTranslation('Translating...');
+
+      try {
+        const text = encodeURIComponent(selectionMenu.text);
+        const response = await fetch(
+          `https://api.mymemory.translated.net/get?q=${text}&langpair=ar|en`
+        );
+        const data = await response.json();
+
+        if (data.responseStatus === 200 && data.responseData?.translatedText) {
+          setTranslation(data.responseData.translatedText);
+        } else {
+          setTranslation('Translation failed. Try again.');
+        }
+      } catch (error) {
+        setTranslation('Network error. Check connection.');
+      } finally {
+        setIsTranslating(false);
+      }
     }
   };
 
@@ -1380,6 +1407,7 @@ export function QuranExamPage() {
         }
       } else {
         setSelectionMenu(null);
+        setTranslation(null);
       }
     };
 
@@ -1387,6 +1415,7 @@ export function QuranExamPage() {
       const target = e.target as HTMLElement;
       if (!target.closest('.selection-menu')) {
         setSelectionMenu(null);
+        setTranslation(null);
       }
     };
 
@@ -1715,17 +1744,39 @@ export function QuranExamPage() {
           className="selection-menu fixed z-[100] transform -translate-x-1/2 -translate-y-full"
           style={{ left: selectionMenu.x, top: selectionMenu.y }}
         >
-          <button
-            onClick={copySelectedText}
-            className="flex items-center gap-2 px-3 py-2 bg-gray-800 border border-white/20 rounded-lg shadow-xl hover:bg-gray-700 transition-colors cursor-pointer"
-          >
-            {selectionCopied ? (
-              <Check className="w-4 h-4 text-emerald-400" />
-            ) : (
-              <Copy className="w-4 h-4 text-white" />
+          <div className="bg-gray-800 border border-white/20 rounded-lg shadow-xl overflow-hidden">
+            <div className="flex items-center gap-1">
+              <button
+                onClick={copySelectedText}
+                className="flex items-center gap-2 px-3 py-2 hover:bg-gray-700 transition-colors cursor-pointer"
+              >
+                {selectionCopied ? (
+                  <Check className="w-4 h-4 text-emerald-400" />
+                ) : (
+                  <Copy className="w-4 h-4 text-white" />
+                )}
+                <span className="text-white text-sm">{selectionCopied ? 'Copied' : 'Copy'}</span>
+              </button>
+              <div className="w-px h-6 bg-white/20" />
+              <button
+                onClick={translateSelectedText}
+                disabled={isTranslating}
+                className="flex items-center gap-2 px-3 py-2 hover:bg-gray-700 transition-colors cursor-pointer disabled:opacity-50"
+              >
+                {isTranslating ? (
+                  <div className="w-4 h-4 border-2 border-sky-400 border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  <Languages className="w-4 h-4 text-sky-400" />
+                )}
+                <span className="text-white text-sm">{isTranslating ? 'Translating...' : 'Translate'}</span>
+              </button>
+            </div>
+            {translation && (
+              <div className="px-3 py-2 border-t border-white/10 max-w-sm">
+                <p className="text-emerald-400 text-sm leading-relaxed">{translation}</p>
+              </div>
             )}
-            <span className="text-white text-sm">{selectionCopied ? 'Copied' : 'Copy'}</span>
-          </button>
+          </div>
         </div>
       )}
     </div>
