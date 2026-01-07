@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, BookOpen, X } from 'lucide-react';
 
@@ -38,6 +38,40 @@ function normalizeForSearch(text: string): string {
   // Remove ZWNJ for search matching
   result = result.replace(/\u200C/g, '');
   return result;
+}
+
+// Function to highlight search matches in text
+function highlightText(text: string, query: string, isArabic: boolean = false): React.ReactNode {
+  if (!query.trim()) return text;
+
+  const normalizedQuery = isArabic ? normalizeForSearch(query) : query.toLowerCase();
+  const normalizedText = isArabic ? normalizeForSearch(text) : text.toLowerCase();
+
+  if (!normalizedText.includes(normalizedQuery)) return text;
+
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let searchIndex = 0;
+
+  while ((searchIndex = normalizedText.indexOf(normalizedQuery, lastIndex)) !== -1) {
+    // Add text before match
+    if (searchIndex > lastIndex) {
+      parts.push(text.slice(lastIndex, searchIndex));
+    }
+    // Add highlighted match
+    parts.push(
+      <mark key={searchIndex} className="bg-yellow-500/40 text-inherit rounded px-0.5">
+        {text.slice(searchIndex, searchIndex + normalizedQuery.length)}
+      </mark>
+    );
+    lastIndex = searchIndex + normalizedQuery.length;
+  }
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts;
 }
 
 interface QuranVerse {
@@ -1284,7 +1318,7 @@ export function QuranExamPage() {
                         dir="rtl"
                         style={{ fontFamily: 'Amiri, serif', lineHeight: '1.8' }}
                       >
-                        {normalizeArabic(verse.arabic)}
+                        {highlightText(normalizeArabic(verse.arabic), searchQuery, true)}
                         <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-sans mr-2" style={{ fontFamily: 'Inter, sans-serif' }}>
                           {verse.verseNumber}
                         </span>
@@ -1292,7 +1326,7 @@ export function QuranExamPage() {
 
                       {/* English Translation */}
                       <div className="text-gray-300 leading-relaxed border-t border-white/10 pt-4">
-                        {verse.translation}
+                        {highlightText(verse.translation, searchQuery)}
                       </div>
                     </motion.div>
                   ))}
@@ -1322,7 +1356,7 @@ export function QuranExamPage() {
                     {filteredFarsiNotes.map((note, index) => (
                       <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
                         <span className="text-sky-400">•</span>
-                        <span style={{ fontFamily: 'Vazirmatn, sans-serif' }}>{note}</span>
+                        <span style={{ fontFamily: 'Vazirmatn, sans-serif' }}>{highlightText(note, searchQuery, true)}</span>
                       </li>
                     ))}
                   </ul>
@@ -1359,16 +1393,16 @@ export function QuranExamPage() {
                         {section.steps.map((step, stepIndex) => (
                           <div key={stepIndex} className="pl-4 border-l-2 border-emerald-500/30">
                             <div className="flex flex-wrap items-center gap-2 mb-1">
-                              <span className="text-white font-medium text-sm">{step.title}</span>
+                              <span className="text-white font-medium text-sm">{highlightText(step.title, searchQuery)}</span>
                               {step.farsi && (
-                                <span className="text-emerald-300 text-sm" style={{ fontFamily: 'Vazirmatn, sans-serif' }}>({step.farsi})</span>
+                                <span className="text-emerald-300 text-sm" style={{ fontFamily: 'Vazirmatn, sans-serif' }}>({highlightText(step.farsi, searchQuery, true)})</span>
                               )}
                               <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs">
                                 {step.type}
                               </span>
                             </div>
-                            {step.desc && <p className="text-gray-400 text-sm mb-1">{step.desc}</p>}
-                            {step.quote && <p className="text-gray-300 text-sm italic">{step.quote}</p>}
+                            {step.desc && <p className="text-gray-400 text-sm mb-1">{highlightText(step.desc, searchQuery)}</p>}
+                            {step.quote && <p className="text-gray-300 text-sm italic">{highlightText(step.quote, searchQuery)}</p>}
                           </div>
                         ))}
                       </div>
@@ -1387,9 +1421,9 @@ export function QuranExamPage() {
                       <div key={index} className="flex items-start gap-2">
                         <span className="text-amber-400 text-sm">{index + 1}.</span>
                         <div>
-                          <span className="text-white text-sm font-medium">{pillar.name}</span>
-                          <span className="text-amber-300 text-xs mr-1" dir="rtl" style={{ fontFamily: 'Vazirmatn, sans-serif' }}> ({pillar.farsi})</span>
-                          <span className="text-gray-400 text-sm"> - {pillar.desc}</span>
+                          <span className="text-white text-sm font-medium">{highlightText(pillar.name, searchQuery)}</span>
+                          <span className="text-amber-300 text-xs mr-1" dir="rtl" style={{ fontFamily: 'Vazirmatn, sans-serif' }}> ({highlightText(pillar.farsi, searchQuery, true)})</span>
+                          <span className="text-gray-400 text-sm"> - {highlightText(pillar.desc, searchQuery)}</span>
                         </div>
                       </div>
                     ))}
