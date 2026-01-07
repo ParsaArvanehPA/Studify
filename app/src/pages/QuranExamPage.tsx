@@ -1032,6 +1032,75 @@ const sessionGroups = [
   { id: 'session-6', name: 'Session 6', description: 'Surah Al-Buruj (85:1-22)' },
 ];
 
+// Prayer Guide Data
+const prayerGuide = [
+  {
+    section: 'Before Starting',
+    steps: [
+      { title: 'Intention (Niyyah)', type: 'Pillar', desc: 'You do not say this out loud. You simply decide in your heart something like:', quote: '"I intend to perform four units (rak\'ahs) of the [Ẓuhr / \'Aṣr / \'Ishā\'] prayer for the sake of Allah."' },
+    ]
+  },
+  {
+    section: 'Rak\'ah 1',
+    steps: [
+      { title: 'Standing facing the Qiblah', type: 'Pillar', desc: 'Stand upright, facing the direction of the Ka\'bah (qiblah), calmly.' },
+      { title: 'Opening Takbīr (Takbīrat al-Iḥrām)', type: 'Pillar', desc: 'Raise your hands (recommended) and say:', quote: '"Allah is the Greatest."' },
+      { title: 'Optional Opening Supplication', type: 'Recommended', desc: 'You may say:', quote: '"Glory be to You, O Allah, and praise be to You. Blessed is Your Name, exalted is Your Majesty, and there is no god but You."' },
+      { title: 'Recitation: al-Fātiḥah', type: 'Obligatory (Pillar in Shia)', quote: '"In the Name of Allah, the Entirely Merciful, the Especially Merciful. All praise belongs to Allah, Lord of all worlds. The Entirely Merciful, the Especially Merciful. Master of the Day of Judgment. You alone we worship, and You alone we ask for help. Guide us to the straight path – the path of those whom You have blessed, not of those who incur anger, nor of those who go astray."' },
+      { title: 'Recitation: Another Surah (e.g., Ikhlāṣ)', type: 'Obligatory', quote: '"In the Name of Allah, the Entirely Merciful, the Especially Merciful. Say: He is Allah, One. Allah, the Self-Sufficient. He neither begets nor is born, and there is none comparable to Him."' },
+      { title: 'Bowing (Rukū\')', type: 'Pillar', desc: 'Bend forward, hands on knees. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Rising from Rukū\'', type: 'Pillar', desc: 'Rise back to standing. You may say:', quote: '"Allah hears the one who praises Him."' },
+      { title: 'First Prostration (Sujūd 1)', type: 'Pillar', desc: 'Forehead on ground. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
+      { title: 'Sitting between Prostrations', type: 'Part of Pillar', desc: 'Sit up calmly. Recommended to say:', quote: '"I seek forgiveness from Allah, my Lord, and I turn to Him."' },
+      { title: 'Second Prostration (Sujūd 2)', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
+    ]
+  },
+  {
+    section: 'Rak\'ah 2',
+    steps: [
+      { title: 'Standing and Recitation', type: 'Obligatory', desc: 'Recite al-Fātiḥah, then another surah (e.g., Ikhlāṣ).' },
+      { title: 'Rukū\' (Bowing)', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Two Prostrations', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
+      { title: 'Sitting for Tashahhud', type: 'Obligatory', quote: '"I bear witness that there is no god except Allah, alone, without partner. And I bear witness that Muhammad is His servant and His messenger. O Allah, send Your blessings upon Muhammad and the family of Muhammad."' },
+    ]
+  },
+  {
+    section: 'Rak\'ah 3',
+    steps: [
+      { title: 'Standing Recitation', type: 'Choose One', desc: 'Either al-Fātiḥah OR Four Glorifications (3x):', quote: '"Glory be to Allah, and praise be to Allah, and there is no god except Allah, and Allah is the Greatest."' },
+      { title: 'Rukū\'', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Two Prostrations', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
+    ]
+  },
+  {
+    section: 'Rak\'ah 4',
+    steps: [
+      { title: 'Standing Recitation', type: 'Choose One', desc: 'Either al-Fātiḥah OR Four Glorifications (3x).' },
+      { title: 'Rukū\'', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Two Prostrations', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
+    ]
+  },
+  {
+    section: 'Final Tashahhud and Salām',
+    steps: [
+      { title: 'Final Tashahhud', type: 'Obligatory', quote: '"I bear witness that there is no god except Allah, alone, without partner. And I bear witness that Muhammad is His servant and His messenger. O Allah, send Your blessings upon Muhammad and the family of Muhammad."' },
+      { title: 'Salām (Ending)', type: 'Obligatory', quote: '"Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. Peace be upon you all, and the mercy of Allah and His blessings."' },
+    ]
+  },
+];
+
+const prayerPillars = [
+  { name: 'Intention (Niyyah)', desc: 'Intending in the heart the specific prayer for the sake of Allah.' },
+  { name: 'Opening Takbīr', desc: 'Saying "Allah is the Greatest" at the start.' },
+  { name: 'Standing (Qiyām)', desc: 'Being upright while saying takbīr and reciting.' },
+  { name: 'Recitation of al-Fātiḥah', desc: 'In the first two rak\'ahs (pillar in Shia fiqh).' },
+  { name: 'Bowing (Rukū\')', desc: 'Proper bowing with stillness and glorification.' },
+  { name: 'Rising from Rukū\'', desc: 'Returning to full standing after bowing.' },
+  { name: 'Two Prostrations (Sujūd)', desc: 'Both prostrations with stillness and glorification.' },
+  { name: 'Order (Tartīb)', desc: 'Doing actions in correct sequence.' },
+  { name: 'Continuity (Muwālāt)', desc: 'No long unnecessary breaks between actions.' },
+];
+
 export function QuranExamPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -1135,6 +1204,57 @@ export function QuranExamPage() {
             </motion.section>
           );
         })}
+
+        {/* Prayer Guide Section */}
+        <motion.section
+          id="prayer-guide"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-12"
+        >
+          <div className="glass rounded-2xl p-6">
+            <h2 className="text-2xl font-bold text-white mb-2">Prayer Guide</h2>
+            <p className="text-emerald-400 mb-6">Four-Rak'ah Prayer (Shia Practice)</p>
+
+            <div className="space-y-6">
+              {prayerGuide.map((section, sectionIndex) => (
+                <div key={sectionIndex} className="glass rounded-xl p-4 border border-white/5">
+                  <h3 className="text-lg font-semibold text-purple-400 mb-3">{section.section}</h3>
+                  <div className="space-y-3">
+                    {section.steps.map((step, stepIndex) => (
+                      <div key={stepIndex} className="pl-4 border-l-2 border-emerald-500/30">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-white font-medium text-sm">{step.title}</span>
+                          <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs">
+                            {step.type}
+                          </span>
+                        </div>
+                        {step.desc && <p className="text-gray-400 text-sm mb-1">{step.desc}</p>}
+                        {step.quote && <p className="text-gray-300 text-sm italic">{step.quote}</p>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Pillars Summary */}
+            <div className="mt-6 glass rounded-xl p-4 border border-amber-500/20">
+              <h3 className="text-lg font-semibold text-amber-400 mb-3">Pillars (Arkān) - If left out, prayer is invalid</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {prayerPillars.map((pillar, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <span className="text-amber-400 text-sm">{index + 1}.</span>
+                    <div>
+                      <span className="text-white text-sm font-medium">{pillar.name}</span>
+                      <span className="text-gray-400 text-sm"> - {pillar.desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.section>
 
         {/* Search Bar - Fixed at bottom */}
         <motion.div
