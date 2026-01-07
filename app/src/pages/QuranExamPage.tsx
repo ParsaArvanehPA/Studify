@@ -1428,6 +1428,13 @@ export function QuranExamPage() {
     };
   }, []);
 
+  // Auto-translate when text is selected
+  useEffect(() => {
+    if (selectionMenu && selectionMenu.text) {
+      translateSelectedText();
+    }
+  }, [selectionMenu]);
+
   // Filter verses based on search query with fault tolerance
   const filteredVerses = useMemo(() => {
     if (!searchQuery.trim()) return quranVerses;
