@@ -1550,7 +1550,7 @@ export function QuranExamPage() {
         </div>
 
         {/* Verses Sections */}
-        {sessionGroups.map((session, sessionIndex) => {
+        {sessionGroups.map((session) => {
           const sessionKey = session.name;
           const verses = groupedVerses[sessionKey];
 

@@ -65,7 +65,9 @@
       "mcp__playwright__browser_close",
       "mcp__playwright__browser_press_key",
       "Bash(npm run dev:*)",
-      "mcp__playwright__browser_type"
+      "mcp__playwright__browser_type",
+      "Bash(cmd /c \"cd /d D:\\\\Projects\\\\Studify\\\\app && npm run build\")",
+      "Bash(git add:*)"
     ]
   }
 }
