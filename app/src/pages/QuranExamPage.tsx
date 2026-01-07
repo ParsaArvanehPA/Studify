@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, BookOpen, X } from 'lucide-react';
+import { Search, BookOpen, X, Copy, Check } from 'lucide-react';
 
 // Function to normalize Arabic text for display and Farsi keyboard search
 function normalizeArabic(text: string): string {
@@ -269,7 +269,7 @@ const quranVerses: QuranVerse[] = [
     surahEnglish: 'An-Nisa (The Women)',
     verseNumber: '4:10',
     arabic: 'إِنَّ الَّذِينَ يَأْكُلُونَ أَمْوَالَ الْيَتَامَىٰ ظُلْمًا إِنَّمَا يَأْكُلُونَ فِي بُطُونِهِمْ نَارًا وَسَيَصْلَوْنَ سَعِيرًا',
-    translation: 'Those who consume orphans\' property wrongfully merely eat fire in their bellies, and they will roast in a blaze.',
+    translation: 'Those who consume orphans property wrongfully merely eat fire in their bellies, and they will roast in a blaze.',
     session: 'Session 1'
   },
   {
@@ -295,7 +295,7 @@ const quranVerses: QuranVerse[] = [
   {
     id: 'maidah-94',
     surah: 'المائدة',
-    surahEnglish: 'Al-Ma\'idah (The Table Spread)',
+    surahEnglish: 'Al-Maidah (The Table Spread)',
     verseNumber: '5:94',
     arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا لَيَبْلُوَنَّكُمُ اللَّهُ بِشَيْءٍ مِنَ الصَّيْدِ تَنَالُهُ أَيْدِيكُمْ وَرِمَاحُكُمْ لِيَعْلَمَ اللَّهُ مَنْ يَخَافُهُ بِالْغَيْبِ فَمَنِ اعْتَدَىٰ بَعْدَ ذَٰلِكَ فَلَهُ عَذَابٌ أَلِيمٌ',
     translation: 'You who believe, God will test you with some game that your hands and lances may reach, so God may know who fears Him despite the unseen. Anyone who transgresses after that will have painful torment.',
@@ -304,7 +304,7 @@ const quranVerses: QuranVerse[] = [
   {
     id: 'maidah-105',
     surah: 'المائدة',
-    surahEnglish: 'Al-Ma\'idah (The Table Spread)',
+    surahEnglish: 'Al-Maidah (The Table Spread)',
     verseNumber: '5:105',
     arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا عَلَيْكُمْ أَنْفُسَكُمْ لَا يَضُرُّكُمْ مَنْ ضَلَّ إِذَا اهْتَدَيْتُمْ إِلَى اللَّهِ مَرْجِعُكُمْ جَمِيعًا فَيُنَبِّئُكُمْ بِمَا كُنْتُمْ تَعْمَلُونَ',
     translation: 'You who believe, you are responsible only for yourselves. Anyone who has gone astray will not harm you, provided you are guided. Unto God will you all return, and He will notify you about whatever you have been doing.',
@@ -313,7 +313,7 @@ const quranVerses: QuranVerse[] = [
   {
     id: 'maidah-106',
     surah: 'المائدة',
-    surahEnglish: 'Al-Ma\'idah (The Table Spread)',
+    surahEnglish: 'Al-Maidah (The Table Spread)',
     verseNumber: '5:106',
     arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا شَهَادَةُ بَيْنِكُمْ إِذَا حَضَرَ أَحَدَكُمُ الْمَوْتُ حِينَ الْوَصِيَّةِ اثْنَانِ ذَوَا عَدْلٍ مِنْكُمْ أَوْ آخَرَانِ مِنْ غَيْرِكُمْ إِنْ أَنْتُمْ ضَرَبْتُمْ فِي الْأَرْضِ فَأَصَابَتْكُمْ مُصِيبَةُ الْمَوْتِ تَحْبِسُونَهُمَا مِنْ بَعْدِ الصَّلَاةِ فَيُقْسِمَانِ بِاللَّهِ إِنِ ارْتَبْتُمْ لَا نَشْتَرِي بِهِ ثَمَنًا وَلَوْ كَانَ ذَا قُرْبَىٰ وَلَا نَكْتُمُ شَهَادَةَ اللَّهِ إِنَّا إِذًا لَمِنَ الْآثِمِينَ',
     translation: 'You who believe, testimony between you when death appears for one of you at the time of making a bequest should consist of two just persons from among yourselves or two others who are strangers, if you are traveling around the earth and the calamity of death befalls you. Detain them both after prayer and let them both swear by God if you have any doubts: "We shall not sell it for any price even though some near relative is involved. We will not hide God\'s testimony; otherwise we would be sinners."',
@@ -322,7 +322,7 @@ const quranVerses: QuranVerse[] = [
   {
     id: 'maidah-107',
     surah: 'المائدة',
-    surahEnglish: 'Al-Ma\'idah (The Table Spread)',
+    surahEnglish: 'Al-Maidah (The Table Spread)',
     verseNumber: '5:107',
     arabic: 'فَإِنْ عُثِرَ عَلَىٰ أَنَّهُمَا اسْتَحَقَّا إِثْمًا فَآخَرَانِ يَقُومَانِ مَقَامَهُمَا مِنَ الَّذِينَ اسْتَحَقَّ عَلَيْهِمُ الْأَوْلَيَانِ فَيُقْسِمَانِ بِاللَّهِ لَشَهَادَتُنَا أَحَقُّ مِنْ شَهَادَتِهِمَا وَمَا اعْتَدَيْنَا إِنَّا إِذًا لَمِنَ الظَّالِمِينَ',
     translation: 'If it is discovered that either of them has deserved the charge of a sin, then two others shall stand up in their stead from among the ones who were sinned against, the two nearest ones, and they shall both swear by God: "Our testimony is truer than either of their testimonies, and we have not transgressed; otherwise we would be wrongdoers."',
@@ -331,7 +331,7 @@ const quranVerses: QuranVerse[] = [
   {
     id: 'maidah-108',
     surah: 'المائدة',
-    surahEnglish: 'Al-Ma\'idah (The Table Spread)',
+    surahEnglish: 'Al-Maidah (The Table Spread)',
     verseNumber: '5:108',
     arabic: 'ذَٰلِكَ أَدْنَىٰ أَنْ يَأْتُوا بِالشَّهَادَةِ عَلَىٰ وَجْهِهَا أَوْ يَخَافُوا أَنْ تُرَدَّ أَيْمَانٌ بَعْدَ أَيْمَانِهِمْ وَاتَّقُوا اللَّهَ وَاسْمَعُوا وَاللَّهُ لَا يَهْدِي الْقَوْمَ الْفَاسِقِينَ',
     translation: 'That is more likely to make them produce testimony in its proper form, or fear that other oaths may be taken to refute their own oaths. Heed God and listen! God does not guide depraved folk.',
@@ -340,7 +340,7 @@ const quranVerses: QuranVerse[] = [
   {
     id: 'maidah-109',
     surah: 'المائدة',
-    surahEnglish: 'Al-Ma\'idah (The Table Spread)',
+    surahEnglish: 'Al-Maidah (The Table Spread)',
     verseNumber: '5:109',
     arabic: 'يَوْمَ يَجْمَعُ اللَّهُ الرُّسُلَ فَيَقُولُ مَاذَا أُجِبْتُمْ قَالُوا لَا عِلْمَ لَنَا إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ',
     translation: 'Someday God will gather the messengers together and say: "What response did you receive?" They will say: "We have no knowledge; You are the Knower of Unseen things."',
@@ -628,7 +628,7 @@ const quranVerses: QuranVerse[] = [
     surahEnglish: 'Al-Fajr (The Dawn)',
     verseNumber: '89:6',
     arabic: 'أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ',
-    translation: 'Have you not seen how your Lord dealt with \'Ad,',
+    translation: 'Have you not seen how your Lord dealt with Ad,',
     session: 'Session 4'
   },
   {
@@ -1225,7 +1225,7 @@ const quranVerses: QuranVerse[] = [
 // Group verses by session
 const sessionGroups = [
   { id: 'session-1', name: 'Session 1', description: 'Surah An-Nisa (4:9-12)' },
-  { id: 'session-2', name: 'Session 2', description: 'Surah Al-Ma\'idah (5:94, 105-109)' },
+  { id: 'session-2', name: 'Session 2', description: 'Surah Al-Maidah (5:94, 105-109)' },
   { id: 'session-2.1', name: 'Session 2.1', description: 'Ayat Al-Kursi (2:255-257)' },
   { id: 'session-3', name: 'Session 3', description: 'Surah Al-Insan (76:1-22)' },
   { id: 'session-4', name: 'Session 4', description: 'Surah Al-Fajr (89:1-30)' },
@@ -1239,50 +1239,50 @@ const prayerGuide = [
     section: 'Before Starting',
     sectionFarsi: 'قبل از شروع',
     steps: [
-      { title: 'Intention (Niyyah)', farsi: 'نیت', type: 'Pillar', desc: 'You do not say this out loud. You simply decide in your heart something like:', quote: '"I intend to perform four units (rak\'ahs) of the [Zuhr / \'Asr / \'Isha\'] prayer for the sake of Allah."' },
+      { title: 'Intention (Niyyah)', farsi: 'نیت', type: 'Pillar', desc: 'You do not say this out loud. You simply decide in your heart something like:', quote: '"I intend to perform four units (rakahs) of the [Zuhr / Asr / Isha] prayer for the sake of Allah."' },
     ]
   },
   {
-    section: 'Rak\'ah 1',
+    section: 'Rakah 1',
     sectionFarsi: 'رکعت اول',
     steps: [
-      { title: 'Standing facing the Qiblah', farsi: 'ایستادن رو به قبله', type: 'Pillar', desc: 'Stand upright, facing the direction of the Ka\'bah (qiblah), calmly.' },
+      { title: 'Standing facing the Qiblah', farsi: 'ایستادن رو به قبله', type: 'Pillar', desc: 'Stand upright, facing the direction of the Kabah (qiblah), calmly.' },
       { title: 'Opening Takbir (Takbirat al-Ihram)', farsi: 'تکبیرة الاحرام', type: 'Pillar', desc: 'Raise your hands (recommended) and say:', quote: '"Allah is the Greatest."' },
       { title: 'Optional Opening Supplication', farsi: 'دعای استفتاح (مستحب)', type: 'Recommended', desc: 'You may say:', quote: '"Glory be to You, O Allah, and praise be to You. Blessed is Your Name, exalted is Your Majesty, and there is no god but You."' },
       { title: 'Recitation: al-Fatihah', farsi: 'قرائت حمد', type: 'Obligatory (Pillar in Shia)', quote: '"In the Name of Allah, the Entirely Merciful, the Especially Merciful. All praise belongs to Allah, Lord of all worlds. The Entirely Merciful, the Especially Merciful. Master of the Day of Judgment. You alone we worship, and You alone we ask for help. Guide us to the straight path – the path of those whom You have blessed, not of those who incur anger, nor of those who go astray."' },
       { title: 'Recitation: Another Surah (e.g., Ikhlas)', farsi: 'قرائت سوره (مثلاً توحید)', type: 'Obligatory', quote: '"In the Name of Allah, the Entirely Merciful, the Especially Merciful. Say: He is Allah, One. Allah, the Self-Sufficient. He neither begets nor is born, and there is none comparable to Him."' },
-      { title: 'Bowing (Ruku\')', farsi: 'رکوع', type: 'Pillar', desc: 'Bend forward, hands on knees. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
-      { title: 'Rising from Ruku\'', farsi: 'قیام بعد از رکوع', type: 'Pillar', desc: 'Rise back to standing. You may say:', quote: '"Allah hears the one who praises Him."' },
+      { title: 'Bowing (Ruku)', farsi: 'رکوع', type: 'Pillar', desc: 'Bend forward, hands on knees. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Rising from Ruku', farsi: 'قیام بعد از رکوع', type: 'Pillar', desc: 'Rise back to standing. You may say:', quote: '"Allah hears the one who praises Him."' },
       { title: 'First Prostration (Sujud 1)', farsi: 'سجده اول', type: 'Pillar', desc: 'Forehead on ground. Say at least once (3x recommended):', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
       { title: 'Sitting between Prostrations', farsi: 'نشستن بین دو سجده', type: 'Part of Pillar', desc: 'Sit up calmly. Recommended to say:', quote: '"I seek forgiveness from Allah, my Lord, and I turn to Him."' },
       { title: 'Second Prostration (Sujud 2)', farsi: 'سجده دوم', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
     ]
   },
   {
-    section: 'Rak\'ah 2',
+    section: 'Rakah 2',
     sectionFarsi: 'رکعت دوم',
     steps: [
       { title: 'Standing and Recitation', farsi: 'قیام و قرائت', type: 'Obligatory', desc: 'Recite al-Fatihah, then another surah (e.g., Ikhlas).' },
-      { title: 'Ruku\' (Bowing)', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Ruku (Bowing)', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
       { title: 'Two Prostrations', farsi: 'دو سجده', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
       { title: 'Sitting for Tashahhud', farsi: 'نشستن برای تشهد', type: 'Obligatory', quote: '"I bear witness that there is no god except Allah, alone, without partner. And I bear witness that Muhammad is His servant and His messenger. O Allah, send Your blessings upon Muhammad and the family of Muhammad."' },
     ]
   },
   {
-    section: 'Rak\'ah 3',
+    section: 'Rakah 3',
     sectionFarsi: 'رکعت سوم',
     steps: [
       { title: 'Standing Recitation', farsi: 'قیام و قرائت (حمد یا تسبیحات)', type: 'Choose One', desc: 'Either al-Fatihah OR Four Glorifications (3x):', quote: '"Glory be to Allah, and praise be to Allah, and there is no god except Allah, and Allah is the Greatest."' },
-      { title: 'Ruku\'', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Ruku', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
       { title: 'Two Prostrations', farsi: 'دو سجده', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
     ]
   },
   {
-    section: 'Rak\'ah 4',
+    section: 'Rakah 4',
     sectionFarsi: 'رکعت چهارم',
     steps: [
       { title: 'Standing Recitation', farsi: 'قیام و قرائت (حمد یا تسبیحات)', type: 'Choose One', desc: 'Either al-Fatihah OR Four Glorifications (3x).' },
-      { title: 'Ruku\'', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
+      { title: 'Ruku', farsi: 'رکوع', type: 'Pillar', quote: '"Glory be to my Lord, the Most Great, and praise is His."' },
       { title: 'Two Prostrations', farsi: 'دو سجده', type: 'Pillar', quote: '"Glory be to my Lord, the Most High, and praise is His."' },
     ]
   },
@@ -1300,9 +1300,9 @@ const prayerPillars = [
   { name: 'Intention (Niyyah)', desc: 'Intending in the heart the specific prayer for the sake of Allah.', farsi: 'نیت' },
   { name: 'Opening Takbir', desc: 'Saying "Allah is the Greatest" at the start.', farsi: 'تکبیرة الاحرام' },
   { name: 'Standing (Qiyam)', desc: 'Being upright while saying takbir and reciting.', farsi: 'قیام' },
-  { name: 'Recitation of al-Fatihah', desc: 'In the first two rak\'ahs (pillar in Shia fiqh).', farsi: 'قرائت حمد' },
-  { name: 'Bowing (Ruku\')', desc: 'Proper bowing with stillness and glorification.', farsi: 'رکوع' },
-  { name: 'Rising from Ruku\'', desc: 'Returning to full standing after bowing.', farsi: 'قیام بعد از رکوع' },
+  { name: 'Recitation of al-Fatihah', desc: 'In the first two rakahs (pillar in Shia fiqh).', farsi: 'قرائت حمد' },
+  { name: 'Bowing (Ruku)', desc: 'Proper bowing with stillness and glorification.', farsi: 'رکوع' },
+  { name: 'Rising from Ruku', desc: 'Returning to full standing after bowing.', farsi: 'قیام بعد از رکوع' },
   { name: 'Two Prostrations (Sujud)', desc: 'Both prostrations with stillness and glorification.', farsi: 'سجود' },
   { name: 'Order (Tartib)', desc: 'Doing actions in correct sequence.', farsi: 'ترتیب' },
   { name: 'Continuity (Muwalat)', desc: 'No long unnecessary breaks between actions.', farsi: 'موالات' },
@@ -1311,7 +1311,7 @@ const prayerPillars = [
 // Farsi Key Terms
 const farsiPrayerTerms = [
   { term: 'نماز', meaning: 'Prayer (Salah)' },
-  { term: 'رکعت', meaning: 'Unit of prayer (Rak\'ah)' },
+  { term: 'رکعت', meaning: 'Unit of prayer (Rakah)' },
   { term: 'نیت', meaning: 'Intention (Niyyah)' },
   { term: 'تکبیرة الاحرام', meaning: 'Opening Takbir' },
   { term: 'قیام', meaning: 'Standing' },
@@ -1320,7 +1320,7 @@ const farsiPrayerTerms = [
   { term: 'سجود', meaning: 'Prostration' },
   { term: 'تشهد', meaning: 'Testimony/Witnessing' },
   { term: 'سلام', meaning: 'Greeting (ending prayer)' },
-  { term: 'قبله', meaning: 'Direction of Ka\'bah' },
+  { term: 'قبله', meaning: 'Direction of Kabah' },
   { term: 'واجب', meaning: 'Obligatory' },
   { term: 'رکن', meaning: 'Pillar' },
   { term: 'مستحب', meaning: 'Recommended' },
@@ -1340,6 +1340,13 @@ const farsiPrayerNotes = [
 
 export function QuranExamPage() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  const copyToClipboard = (text: string, id: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
 
   // Filter verses based on search query with fault tolerance
   const filteredVerses = useMemo(() => {
@@ -1496,8 +1503,21 @@ export function QuranExamPage() {
                       </div>
 
                       {/* English Translation */}
-                      <div className="text-gray-300 leading-relaxed border-t border-white/10 pt-4">
-                        {highlightText(verse.translation, searchQuery)}
+                      <div className="flex items-start gap-3 border-t border-white/10 pt-4">
+                        <div className="text-gray-300 leading-relaxed flex-1">
+                          {highlightText(verse.translation, searchQuery)}
+                        </div>
+                        <button
+                          onClick={() => copyToClipboard(verse.translation, verse.id)}
+                          className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white shrink-0 cursor-pointer"
+                          title="Copy translation"
+                        >
+                          {copiedId === verse.id ? (
+                            <Check className="w-4 h-4 text-emerald-400" />
+                          ) : (
+                            <Copy className="w-4 h-4" />
+                          )}
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -1620,7 +1640,7 @@ export function QuranExamPage() {
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
