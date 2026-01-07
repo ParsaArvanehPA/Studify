@@ -1078,28 +1078,6 @@ export function QuranExamPage() {
           <h1 className="text-2xl font-bold gradient-text">Quran Exam Materials</h1>
         </motion.div>
 
-        {/* Session Index */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="glass rounded-xl p-4 mb-6"
-        >
-          <h2 className="text-sm font-semibold text-gray-400 mb-2">Sessions</h2>
-          <div className="flex flex-wrap gap-2">
-            {sessionGroups.map((session) => (
-              <a
-                key={session.id}
-                href={`#${session.id}`}
-                className="glass glass-hover rounded-lg px-3 py-1.5 transition-all text-xs"
-              >
-                <span className="text-emerald-400 font-medium">{session.name}</span>
-                <span className="text-gray-500 ml-1.5">{session.description}</span>
-              </a>
-            ))}
-          </div>
-        </motion.div>
-
         {/* Verses Sections */}
         {sessionGroups.map((session, sessionIndex) => {
           const sessionKey = session.name;
@@ -1139,9 +1117,9 @@ export function QuranExamPage() {
 
                       {/* Arabic Text (normalized for Farsi keyboard) */}
                       <div
-                        className="text-2xl md:text-3xl leading-loose text-white mb-4 text-right font-arabic"
+                        className="text-lg md:text-xl text-white mb-3 text-right font-arabic"
                         dir="rtl"
-                        style={{ fontFamily: 'Amiri, serif', lineHeight: '2.5' }}
+                        style={{ fontFamily: 'Amiri, serif', lineHeight: '1.8' }}
                       >
                         {normalizeArabic(verse.arabic)}
                       </div>
@@ -1167,18 +1145,19 @@ export function QuranExamPage() {
         >
           <div className="max-w-3xl mx-auto">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
+                dir="rtl"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search verses (Arabic, English, Surah name, verse number...)"
-                className="w-full pl-12 pr-12 py-4 rounded-xl bg-[#1a1a2e] border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 transition-all"
+                placeholder="جستجوی آیات (عربی، انگلیسی، نام سوره، شماره آیه...)"
+                className="w-full pr-12 pl-12 py-4 rounded-xl bg-[#1a1a2e] border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 transition-all"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
