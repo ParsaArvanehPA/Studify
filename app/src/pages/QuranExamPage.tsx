@@ -1090,15 +1090,45 @@ const prayerGuide = [
 ];
 
 const prayerPillars = [
-  { name: 'Intention (Niyyah)', desc: 'Intending in the heart the specific prayer for the sake of Allah.' },
-  { name: 'Opening Takbīr', desc: 'Saying "Allah is the Greatest" at the start.' },
-  { name: 'Standing (Qiyām)', desc: 'Being upright while saying takbīr and reciting.' },
-  { name: 'Recitation of al-Fātiḥah', desc: 'In the first two rak\'ahs (pillar in Shia fiqh).' },
-  { name: 'Bowing (Rukū\')', desc: 'Proper bowing with stillness and glorification.' },
-  { name: 'Rising from Rukū\'', desc: 'Returning to full standing after bowing.' },
-  { name: 'Two Prostrations (Sujūd)', desc: 'Both prostrations with stillness and glorification.' },
-  { name: 'Order (Tartīb)', desc: 'Doing actions in correct sequence.' },
-  { name: 'Continuity (Muwālāt)', desc: 'No long unnecessary breaks between actions.' },
+  { name: 'Intention (Niyyah)', desc: 'Intending in the heart the specific prayer for the sake of Allah.', farsi: 'نیت' },
+  { name: 'Opening Takbīr', desc: 'Saying "Allah is the Greatest" at the start.', farsi: 'تکبیرة الاحرام' },
+  { name: 'Standing (Qiyām)', desc: 'Being upright while saying takbīr and reciting.', farsi: 'قیام' },
+  { name: 'Recitation of al-Fātiḥah', desc: 'In the first two rak\'ahs (pillar in Shia fiqh).', farsi: 'قرائت حمد' },
+  { name: 'Bowing (Rukū\')', desc: 'Proper bowing with stillness and glorification.', farsi: 'رکوع' },
+  { name: 'Rising from Rukū\'', desc: 'Returning to full standing after bowing.', farsi: 'قیام بعد از رکوع' },
+  { name: 'Two Prostrations (Sujūd)', desc: 'Both prostrations with stillness and glorification.', farsi: 'سجود' },
+  { name: 'Order (Tartīb)', desc: 'Doing actions in correct sequence.', farsi: 'ترتیب' },
+  { name: 'Continuity (Muwālāt)', desc: 'No long unnecessary breaks between actions.', farsi: 'موالات' },
+];
+
+// Farsi Key Terms
+const farsiPrayerTerms = [
+  { term: 'نماز', meaning: 'Prayer (Salah)' },
+  { term: 'رکعت', meaning: 'Unit of prayer (Rak\'ah)' },
+  { term: 'نیت', meaning: 'Intention (Niyyah)' },
+  { term: 'تکبیرة الاحرام', meaning: 'Opening Takbir' },
+  { term: 'قیام', meaning: 'Standing' },
+  { term: 'قرائت', meaning: 'Recitation' },
+  { term: 'رکوع', meaning: 'Bowing' },
+  { term: 'سجود', meaning: 'Prostration' },
+  { term: 'تشهد', meaning: 'Testimony/Witnessing' },
+  { term: 'سلام', meaning: 'Greeting (ending prayer)' },
+  { term: 'قبله', meaning: 'Direction of Ka\'bah' },
+  { term: 'واجب', meaning: 'Obligatory' },
+  { term: 'رکن', meaning: 'Pillar' },
+  { term: 'مستحب', meaning: 'Recommended' },
+  { term: 'تسبیحات اربعه', meaning: 'Four Glorifications' },
+];
+
+const farsiPrayerNotes = [
+  'نماز ظهر و عصر و عشا هر کدام ۴ رکعت هستند',
+  'در رکعت اول و دوم باید حمد و سوره خوانده شود',
+  'در رکعت سوم و چهارم میتوان حمد یا تسبیحات اربعه خواند',
+  'تسبیحات اربعه: سبحان الله والحمد لله ولا اله الا الله والله اکبر (۳ بار)',
+  'ذکر رکوع: سبحان ربی العظیم و بحمده',
+  'ذکر سجود: سبحان ربی الاعلی و بحمده',
+  'بعد از رکعت دوم و چهارم تشهد خوانده میشود',
+  'نماز با سلام تمام میشود',
 ];
 
 export function QuranExamPage() {
@@ -1131,6 +1161,70 @@ export function QuranExamPage() {
     });
     return groups;
   }, [filteredVerses]);
+
+  // Filter prayer guide based on search query
+  const filteredPrayerGuide = useMemo(() => {
+    if (!searchQuery.trim()) return prayerGuide;
+
+    const query = searchQuery.toLowerCase().trim();
+    const normalizedQuery = normalizeForSearch(searchQuery);
+
+    return prayerGuide.map(section => ({
+      ...section,
+      steps: section.steps.filter(step =>
+        step.title.toLowerCase().includes(query) ||
+        step.type.toLowerCase().includes(query) ||
+        (step.desc && step.desc.toLowerCase().includes(query)) ||
+        (step.quote && step.quote.toLowerCase().includes(query))
+      )
+    })).filter(section => section.steps.length > 0);
+  }, [searchQuery]);
+
+  // Filter Farsi notes based on search query
+  const filteredFarsiNotes = useMemo(() => {
+    if (!searchQuery.trim()) return farsiPrayerNotes;
+
+    const normalizedQuery = normalizeForSearch(searchQuery);
+    return farsiPrayerNotes.filter(note =>
+      normalizeForSearch(note).includes(normalizedQuery)
+    );
+  }, [searchQuery]);
+
+  // Filter Farsi terms based on search query
+  const filteredFarsiTerms = useMemo(() => {
+    if (!searchQuery.trim()) return farsiPrayerTerms;
+
+    const query = searchQuery.toLowerCase().trim();
+    const normalizedQuery = normalizeForSearch(searchQuery);
+    return farsiPrayerTerms.filter(item =>
+      normalizeForSearch(item.term).includes(normalizedQuery) ||
+      item.meaning.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
+
+  // Filter pillars based on search query
+  const filteredPillars = useMemo(() => {
+    if (!searchQuery.trim()) return prayerPillars;
+
+    const query = searchQuery.toLowerCase().trim();
+    const normalizedQuery = normalizeForSearch(searchQuery);
+    return prayerPillars.filter(pillar =>
+      pillar.name.toLowerCase().includes(query) ||
+      pillar.desc.toLowerCase().includes(query) ||
+      normalizeForSearch(pillar.farsi).includes(normalizedQuery)
+    );
+  }, [searchQuery]);
+
+  // Check if prayer section has any matches
+  const hasPrayerMatches = searchQuery.trim() && (
+    filteredPrayerGuide.length > 0 ||
+    filteredFarsiNotes.length > 0 ||
+    filteredFarsiTerms.length > 0 ||
+    filteredPillars.length > 0
+  );
+
+  // Show prayer section if no search or has matches
+  const showPrayerSection = !searchQuery.trim() || hasPrayerMatches;
 
   return (
     <div className="min-h-screen py-8 px-4">
@@ -1206,55 +1300,94 @@ export function QuranExamPage() {
         })}
 
         {/* Prayer Guide Section */}
-        <motion.section
-          id="prayer-guide"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-12"
-        >
-          <div className="glass rounded-2xl p-6">
-            <h2 className="text-2xl font-bold text-white mb-2">Prayer Guide</h2>
-            <p className="text-emerald-400 mb-6">Four-Rak'ah Prayer (Shia Practice)</p>
+        {showPrayerSection && (
+          <motion.section
+            id="prayer-guide"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-12"
+          >
+            <div className="glass rounded-2xl p-6">
+              <h2 className="text-2xl font-bold text-white mb-2">Prayer Guide</h2>
+              <p className="text-emerald-400 mb-4">Four-Rak'ah Prayer (Shia Practice)</p>
 
-            <div className="space-y-6">
-              {prayerGuide.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="glass rounded-xl p-4 border border-white/5">
-                  <h3 className="text-lg font-semibold text-purple-400 mb-3">{section.section}</h3>
-                  <div className="space-y-3">
-                    {section.steps.map((step, stepIndex) => (
-                      <div key={stepIndex} className="pl-4 border-l-2 border-emerald-500/30">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-white font-medium text-sm">{step.title}</span>
-                          <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs">
-                            {step.type}
-                          </span>
-                        </div>
-                        {step.desc && <p className="text-gray-400 text-sm mb-1">{step.desc}</p>}
-                        {step.quote && <p className="text-gray-300 text-sm italic">{step.quote}</p>}
+              {/* Farsi Key Notes */}
+              {filteredFarsiNotes.length > 0 && (
+                <div className="glass rounded-xl p-4 border border-sky-500/20 mb-6">
+                  <h3 className="text-lg font-semibold text-sky-400 mb-3" dir="rtl" style={{ fontFamily: 'Vazirmatn, sans-serif' }}>نکات کلیدی نماز</h3>
+                  <ul className="space-y-2" dir="rtl">
+                    {filteredFarsiNotes.map((note, index) => (
+                      <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
+                        <span className="text-sky-400">•</span>
+                        <span style={{ fontFamily: 'Vazirmatn, sans-serif' }}>{note}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Farsi Terms */}
+              {filteredFarsiTerms.length > 0 && (
+                <div className="glass rounded-xl p-4 border border-purple-500/20 mb-6">
+                  <h3 className="text-lg font-semibold text-purple-400 mb-3">Key Terms / <span style={{ fontFamily: 'Vazirmatn, sans-serif' }}>اصطلاحات</span></h3>
+                  <div className="flex flex-wrap gap-2">
+                    {filteredFarsiTerms.map((item, index) => (
+                      <div key={index} className="px-3 py-1.5 rounded-lg bg-purple-500/10 border border-purple-500/20">
+                        <span className="text-purple-300 text-sm" dir="rtl" style={{ fontFamily: 'Vazirmatn, sans-serif' }}>{item.term}</span>
+                        <span className="text-gray-500 text-xs mx-1">-</span>
+                        <span className="text-gray-400 text-xs">{item.meaning}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              )}
 
-            {/* Pillars Summary */}
-            <div className="mt-6 glass rounded-xl p-4 border border-amber-500/20">
-              <h3 className="text-lg font-semibold text-amber-400 mb-3">Pillars (Arkān) - If left out, prayer is invalid</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {prayerPillars.map((pillar, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <span className="text-amber-400 text-sm">{index + 1}.</span>
-                    <div>
-                      <span className="text-white text-sm font-medium">{pillar.name}</span>
-                      <span className="text-gray-400 text-sm"> - {pillar.desc}</span>
+              {filteredPrayerGuide.length > 0 && (
+                <div className="space-y-6">
+                  {filteredPrayerGuide.map((section, sectionIndex) => (
+                    <div key={sectionIndex} className="glass rounded-xl p-4 border border-white/5">
+                      <h3 className="text-lg font-semibold text-purple-400 mb-3">{section.section}</h3>
+                      <div className="space-y-3">
+                        {section.steps.map((step, stepIndex) => (
+                          <div key={stepIndex} className="pl-4 border-l-2 border-emerald-500/30">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="text-white font-medium text-sm">{step.title}</span>
+                              <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs">
+                                {step.type}
+                              </span>
+                            </div>
+                            {step.desc && <p className="text-gray-400 text-sm mb-1">{step.desc}</p>}
+                            {step.quote && <p className="text-gray-300 text-sm italic">{step.quote}</p>}
+                          </div>
+                        ))}
+                      </div>
                     </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Pillars Summary */}
+              {filteredPillars.length > 0 && (
+                <div className="mt-6 glass rounded-xl p-4 border border-amber-500/20">
+                  <h3 className="text-lg font-semibold text-amber-400 mb-3">Pillars (Arkān) / <span style={{ fontFamily: 'Vazirmatn, sans-serif' }}>ارکان نماز</span></h3>
+                  <p className="text-gray-500 text-xs mb-3">If a pillar is left out, prayer is invalid</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {filteredPillars.map((pillar, index) => (
+                      <div key={index} className="flex items-start gap-2">
+                        <span className="text-amber-400 text-sm">{index + 1}.</span>
+                        <div>
+                          <span className="text-white text-sm font-medium">{pillar.name}</span>
+                          <span className="text-amber-300 text-xs mr-1" dir="rtl" style={{ fontFamily: 'Vazirmatn, sans-serif' }}> ({pillar.farsi})</span>
+                          <span className="text-gray-400 text-sm"> - {pillar.desc}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              )}
             </div>
-          </div>
-        </motion.section>
+          </motion.section>
+        )}
 
         {/* Search Bar - Fixed at bottom */}
         <motion.div
