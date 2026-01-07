@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import { Search, BookOpen, X } from 'lucide-react';
 
 // Function to normalize Arabic text for display and Farsi keyboard search
@@ -42,38 +41,204 @@ function normalizeForSearch(text: string): string {
   return result;
 }
 
-// Function to highlight search matches in text
+// Find best fuzzy match position in text
+function findFuzzyMatchPosition(text: string, query: string): { start: number; end: number } | null {
+  const words = text.split(/\s+/);
+  const queryLower = query.toLowerCase();
+  let position = 0;
+
+  for (const word of words) {
+    const wordLower = word.toLowerCase();
+    // Check for substring match first
+    if (wordLower.includes(queryLower)) {
+      const subIndex = wordLower.indexOf(queryLower);
+      return { start: position + subIndex, end: position + subIndex + queryLower.length };
+    }
+    // Check for fuzzy match
+    const maxDistance = queryLower.length <= 4 ? 1 : 2;
+    if (levenshteinDistance(wordLower, queryLower) <= maxDistance) {
+      return { start: position, end: position + word.length };
+    }
+    position += word.length + 1; // +1 for space
+  }
+  return null;
+}
+
+// Function to highlight search matches in text (supports exact and fuzzy matching)
 function highlightText(text: string, query: string, isArabic: boolean = false): React.ReactNode {
-  if (!query.trim()) return text;
+  if (!query.trim() || query.length < 2) return text;
 
   const normalizedQuery = isArabic ? normalizeForSearch(query) : query.toLowerCase();
   const normalizedText = isArabic ? normalizeForSearch(text) : text.toLowerCase();
 
-  if (!normalizedText.includes(normalizedQuery)) return text;
+  // Try exact match first
+  if (normalizedText.includes(normalizedQuery)) {
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let searchIndex = 0;
 
-  const parts: React.ReactNode[] = [];
-  let lastIndex = 0;
-  let searchIndex = 0;
-
-  while ((searchIndex = normalizedText.indexOf(normalizedQuery, lastIndex)) !== -1) {
-    // Add text before match
-    if (searchIndex > lastIndex) {
-      parts.push(text.slice(lastIndex, searchIndex));
+    while ((searchIndex = normalizedText.indexOf(normalizedQuery, lastIndex)) !== -1) {
+      if (searchIndex > lastIndex) {
+        parts.push(text.slice(lastIndex, searchIndex));
+      }
+      parts.push(
+        <mark key={searchIndex} className="bg-yellow-500/40 text-inherit rounded px-0.5">
+          {text.slice(searchIndex, searchIndex + normalizedQuery.length)}
+        </mark>
+      );
+      lastIndex = searchIndex + normalizedQuery.length;
     }
-    // Add highlighted match
-    parts.push(
-      <mark key={searchIndex} className="bg-yellow-500/40 text-inherit rounded px-0.5">
-        {text.slice(searchIndex, searchIndex + normalizedQuery.length)}
-      </mark>
-    );
-    lastIndex = searchIndex + normalizedQuery.length;
-  }
-  // Add remaining text
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex));
+    }
+    return parts;
   }
 
-  return parts;
+  // Try phonetic match for non-Arabic text
+  if (!isArabic && query.length >= 3) {
+    const phoneticText = phoneticNormalize(text);
+    const phoneticQuery = phoneticNormalize(query);
+    if (phoneticText.includes(phoneticQuery)) {
+      // Find approximate position using phonetic normalized text
+      const phoneticIndex = phoneticText.indexOf(phoneticQuery);
+      // Estimate original position (rough approximation)
+      const ratio = phoneticIndex / phoneticText.length;
+      const estimatedStart = Math.floor(ratio * text.length);
+      const estimatedEnd = Math.min(text.length, estimatedStart + query.length + 3);
+
+      return (
+        <>
+          {text.slice(0, estimatedStart)}
+          <mark className="bg-yellow-500/40 text-inherit rounded px-0.5">
+            {text.slice(estimatedStart, estimatedEnd)}
+          </mark>
+          {text.slice(estimatedEnd)}
+        </>
+      );
+    }
+  }
+
+  // Try fuzzy match
+  if (query.length >= 3) {
+    const fuzzyMatch = findFuzzyMatchPosition(text, query);
+    if (fuzzyMatch) {
+      return (
+        <>
+          {text.slice(0, fuzzyMatch.start)}
+          <mark className="bg-yellow-500/40 text-inherit rounded px-0.5">
+            {text.slice(fuzzyMatch.start, fuzzyMatch.end)}
+          </mark>
+          {text.slice(fuzzyMatch.end)}
+        </>
+      );
+    }
+  }
+
+  return text;
+}
+
+// Levenshtein distance for fuzzy matching
+function levenshteinDistance(a: string, b: string): number {
+  const matrix: number[][] = [];
+
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
+
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1, // substitution
+          matrix[i][j - 1] + 1,     // insertion
+          matrix[i - 1][j] + 1      // deletion
+        );
+      }
+    }
+  }
+
+  return matrix[b.length][a.length];
+}
+
+// Check if query fuzzy matches any word in text
+function fuzzyMatchWords(text: string, query: string, maxDistance: number = 2): boolean {
+  const words = text.toLowerCase().split(/\s+/);
+  const queryLower = query.toLowerCase();
+
+  // Adjust max distance based on query length
+  const adjustedMaxDistance = queryLower.length <= 4 ? 1 : maxDistance;
+
+  return words.some(word => {
+    // Skip very short words
+    if (word.length < 2) return false;
+    // Exact substring match
+    if (word.includes(queryLower) || queryLower.includes(word)) return true;
+    // Fuzzy match
+    return levenshteinDistance(word, queryLower) <= adjustedMaxDistance;
+  });
+}
+
+// Phonetic normalization for transliteration variants
+function phoneticNormalize(str: string): string {
+  return str.toLowerCase()
+    // Vowel normalizations
+    .replace(/oo|ou|uu/g, 'u')
+    .replace(/ee|ei|ii/g, 'i')
+    .replace(/aa|ah|a'/g, 'a')
+    // Consonant normalizations for Arabic/Islamic terms
+    .replace(/kh/g, 'k')
+    .replace(/gh/g, 'g')
+    .replace(/sh/g, 's')
+    .replace(/th/g, 't')
+    .replace(/dh/g, 'd')
+    .replace(/q/g, 'k')
+    .replace(/'/g, '')
+    .replace(/`/g, '')
+    // Common transliteration variants
+    .replace(/salat|salah|salaat/g, 'salat')
+    .replace(/ruku|rukoo|rukou/g, 'ruku')
+    .replace(/sujud|sujood|sajda|sajdah/g, 'sujud')
+    .replace(/quran|kuran|qoran/g, 'quran')
+    .replace(/takbir|takbeer/g, 'takbir')
+    .replace(/fatiha|fatihah|fateha/g, 'fatiha');
+}
+
+// Check if query phonetically matches text
+function phoneticMatch(text: string, query: string): boolean {
+  const normalizedText = phoneticNormalize(text);
+  const normalizedQuery = phoneticNormalize(query);
+  return normalizedText.includes(normalizedQuery);
+}
+
+// Combined fault-tolerant matching
+function faultTolerantMatch(text: string, query: string, isArabic: boolean = false): boolean {
+  if (!query.trim() || query.length < 2) return false;
+
+  const queryLower = query.toLowerCase().trim();
+  const textLower = text.toLowerCase();
+
+  // 1. Exact match (fastest)
+  if (textLower.includes(queryLower)) return true;
+
+  // 2. Normalized match for Arabic/Farsi
+  if (isArabic) {
+    const normalizedText = normalizeForSearch(text);
+    const normalizedQuery = normalizeForSearch(query);
+    if (normalizedText.includes(normalizedQuery)) return true;
+  }
+
+  // 3. Phonetic match (for transliteration variants)
+  if (!isArabic && query.length >= 3 && phoneticMatch(text, query)) return true;
+
+  // 4. Fuzzy match (for typos) - only for queries >= 3 chars
+  if (query.length >= 3 && fuzzyMatchWords(text, query)) return true;
+
+  return false;
 }
 
 interface QuranVerse {
@@ -1176,18 +1341,17 @@ const farsiPrayerNotes = [
 export function QuranExamPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Filter verses based on search query
+  // Filter verses based on search query with fault tolerance
   const filteredVerses = useMemo(() => {
     if (!searchQuery.trim()) return quranVerses;
 
-    const query = searchQuery.toLowerCase().trim();
-    const normalizedQuery = normalizeForSearch(searchQuery);
+    const query = searchQuery.trim();
     return quranVerses.filter(verse =>
-      normalizeForSearch(verse.arabic).includes(normalizedQuery) ||
-      verse.translation.toLowerCase().includes(query) ||
+      faultTolerantMatch(verse.arabic, query, true) ||
+      faultTolerantMatch(verse.translation, query) ||
       verse.verseNumber.includes(query) ||
-      verse.surahEnglish.toLowerCase().includes(query) ||
-      verse.session.toLowerCase().includes(query)
+      faultTolerantMatch(verse.surahEnglish, query) ||
+      faultTolerantMatch(verse.session, query)
     );
   }, [searchQuery]);
 
@@ -1204,58 +1368,55 @@ export function QuranExamPage() {
     return groups;
   }, [filteredVerses]);
 
-  // Filter prayer guide based on search query
+  // Filter prayer guide based on search query with fault tolerance
   const filteredPrayerGuide = useMemo(() => {
     if (!searchQuery.trim()) return prayerGuide;
 
-    const query = searchQuery.toLowerCase().trim();
-    const normalizedQuery = normalizeForSearch(searchQuery);
+    const query = searchQuery.trim();
 
     return prayerGuide.map(section => ({
       ...section,
       steps: section.steps.filter(step =>
-        step.title.toLowerCase().includes(query) ||
-        step.type.toLowerCase().includes(query) ||
-        (step.desc && step.desc.toLowerCase().includes(query)) ||
-        (step.quote && step.quote.toLowerCase().includes(query)) ||
-        (step.farsi && normalizeForSearch(step.farsi).includes(normalizedQuery)) ||
-        (section.sectionFarsi && normalizeForSearch(section.sectionFarsi).includes(normalizedQuery))
+        faultTolerantMatch(step.title, query) ||
+        faultTolerantMatch(step.type, query) ||
+        (step.desc && faultTolerantMatch(step.desc, query)) ||
+        (step.quote && faultTolerantMatch(step.quote, query)) ||
+        (step.farsi && faultTolerantMatch(step.farsi, query, true)) ||
+        (section.sectionFarsi && faultTolerantMatch(section.sectionFarsi, query, true))
       )
     })).filter(section => section.steps.length > 0);
   }, [searchQuery]);
 
-  // Filter Farsi notes based on search query
+  // Filter Farsi notes based on search query with fault tolerance
   const filteredFarsiNotes = useMemo(() => {
     if (!searchQuery.trim()) return farsiPrayerNotes;
 
-    const normalizedQuery = normalizeForSearch(searchQuery);
+    const query = searchQuery.trim();
     return farsiPrayerNotes.filter(note =>
-      normalizeForSearch(note).includes(normalizedQuery)
+      faultTolerantMatch(note, query, true)
     );
   }, [searchQuery]);
 
-  // Filter Farsi terms based on search query
+  // Filter Farsi terms based on search query with fault tolerance
   const filteredFarsiTerms = useMemo(() => {
     if (!searchQuery.trim()) return farsiPrayerTerms;
 
-    const query = searchQuery.toLowerCase().trim();
-    const normalizedQuery = normalizeForSearch(searchQuery);
+    const query = searchQuery.trim();
     return farsiPrayerTerms.filter(item =>
-      normalizeForSearch(item.term).includes(normalizedQuery) ||
-      item.meaning.toLowerCase().includes(query)
+      faultTolerantMatch(item.term, query, true) ||
+      faultTolerantMatch(item.meaning, query)
     );
   }, [searchQuery]);
 
-  // Filter pillars based on search query
+  // Filter pillars based on search query with fault tolerance
   const filteredPillars = useMemo(() => {
     if (!searchQuery.trim()) return prayerPillars;
 
-    const query = searchQuery.toLowerCase().trim();
-    const normalizedQuery = normalizeForSearch(searchQuery);
+    const query = searchQuery.trim();
     return prayerPillars.filter(pillar =>
-      pillar.name.toLowerCase().includes(query) ||
-      pillar.desc.toLowerCase().includes(query) ||
-      normalizeForSearch(pillar.farsi).includes(normalizedQuery)
+      faultTolerantMatch(pillar.name, query) ||
+      faultTolerantMatch(pillar.desc, query) ||
+      faultTolerantMatch(pillar.farsi, query, true)
     );
   }, [searchQuery]);
 
@@ -1274,16 +1435,12 @@ export function QuranExamPage() {
     <div className="min-h-screen py-8 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-3 mb-6"
-        >
+        <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center shadow-lg">
             <BookOpen className="w-5 h-5 text-white" />
           </div>
           <h1 className="text-2xl font-bold gradient-text">Quran Exam Materials</h1>
-        </motion.div>
+        </div>
 
         {/* Verses Sections */}
         {sessionGroups.map((session, sessionIndex) => {
@@ -1293,12 +1450,9 @@ export function QuranExamPage() {
           if (!verses || verses.length === 0) return null;
 
           return (
-            <motion.section
+            <section
               key={session.id}
               id={session.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * (sessionIndex + 1) }}
               className="mb-12"
             >
               <div className="glass rounded-2xl p-6">
@@ -1306,12 +1460,9 @@ export function QuranExamPage() {
                 <p className="text-emerald-400 mb-6">{session.description}</p>
 
                 <div className="space-y-6">
-                  {verses.map((verse, verseIndex) => (
-                    <motion.div
+                  {verses.map((verse) => (
+                    <div
                       key={verse.id}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.05 * verseIndex }}
                       className="glass rounded-xl p-5 border border-white/5"
                     >
                       {/* Arabic Text with Verse Reference */}
@@ -1330,20 +1481,18 @@ export function QuranExamPage() {
                       <div className="text-gray-300 leading-relaxed border-t border-white/10 pt-4">
                         {highlightText(verse.translation, searchQuery)}
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
-            </motion.section>
+            </section>
           );
         })}
 
         {/* Prayer Guide Section */}
         {showPrayerSection && (
-          <motion.section
+          <section
             id="prayer-guide"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             className="mb-12"
           >
             <div className="glass rounded-2xl p-6">
@@ -1433,16 +1582,11 @@ export function QuranExamPage() {
                 </div>
               )}
             </div>
-          </motion.section>
+          </section>
         )}
 
         {/* Search Bar - Fixed at bottom */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="fixed bottom-0 left-0 right-0 p-4 bg-[#0f0f1a] border-t border-white/10 z-50"
-        >
+        <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#0f0f1a] border-t border-white/10 z-50">
           <div className="max-w-3xl mx-auto">
             <div className="relative">
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -1469,7 +1613,7 @@ export function QuranExamPage() {
               </div>
             )}
           </div>
-        </motion.div>
+        </div>
 
         {/* Spacer for fixed search bar */}
         <div className="h-24" />
