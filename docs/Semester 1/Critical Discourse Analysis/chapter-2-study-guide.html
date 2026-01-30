@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 2: Discourse & Social Context</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        header {
+            background-color: #6a4c93;
+            color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        .meta-info {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: #6a4c93;
+            font-size: 1.6em;
+            margin: 35px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #9d84b7;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #8b72aa;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #6a4c93;
+            font-size: 1.1em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .concept-box {
+            background-color: #f3e5f5;
+            border-left: 5px solid #9d84b7;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .concept-box h4 {
+            color: #6a4c93;
+            margin-top: 0;
+        }
+
+        .key-term {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .key-term strong {
+            color: #6a4c93;
+            font-size: 1.05em;
+        }
+
+        .important {
+            background-color: #fce4ec;
+            border-left: 5px solid #c2185b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .scholar-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .scholar-box h4 {
+            color: #6a4c93;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .case-study {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .case-study h4 {
+            color: #6a4c93;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .example {
+            background-color: #fff9e6;
+            border-left: 5px solid #fbc02d;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .example h5 {
+            color: #6a4c93;
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .ai-explanation {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            color: #4c1d95;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #a78bfa;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+        }
+
+        .ai-explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #c4b5fd;
+            color: #6b21a8;
+        }
+
+        .ai-explanation-header img {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        .ai-explanation p {
+            margin: 10px 0;
+            line-height: 1.9;
+        }
+
+        .ai-explanation ul, .ai-explanation ol {
+            margin: 12px 0;
+            padding-left: 25px;
+        }
+
+        .ai-explanation li {
+            margin: 8px 0;
+        }
+
+        .ai-explanation strong {
+            color: #7c3aed;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th {
+            background-color: #6a4c93;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        blockquote {
+            border-left: 4px solid #9d84b7;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        strong {
+            color: #6a4c93;
+        }
+
+        em {
+            color: #8b72aa;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Session 2: Discourse & Social Context</h1>
+            <div class="meta-info">
+                Critical Discourse Analysis | Chapter 2 - Context and Meaning<br>
+                Signs, Context, Pragmatics, and Institutional Discourse
+            </div>
+        </header>
+
+        <blockquote>
+            "The force and cogency of most language behaviour derives from the firm grip it has on the ever-recurrent typical situations in the life of social groups." — J.R. Firth (1937)
+        </blockquote>
+
+        <h2>1. Sign, Context, and Meaning</h2>
+
+        <div class="concept-box">
+            <h4>The Fundamental Principle</h4>
+            <p><strong>Meaning is created when a sign occurs in a specific context.</strong> The same sign can have completely different meanings depending on the context in which it appears.</p>
+        </div>
+
+        <div class="example">
+            <h5>Examples of Context-Dependent Meaning:</h5>
+            <ul>
+                <li><strong>Red flag on a beach:</strong> Danger/no swimming</li>
+                <li><strong>Red flag at a demonstration:</strong> Political symbol (socialism/communism)</li>
+                <li><strong>Cross (X) on student work:</strong> Error/incorrect answer</li>
+                <li><strong>Cross (X) on a ballot:</strong> Selection/vote</li>
+                <li><strong>"I love you" from mother:</strong> Parental affection</li>
+                <li><strong>"I love you" from romantic partner:</strong> Romantic love</li>
+            </ul>
+        </div>
+
+        <div class="key-term">
+            <strong>Semiosis:</strong> The relationship of sign to meaning — the process by which something comes to stand for something else.
+        </div>
+
+        <div class="key-term">
+            <strong>Semiotics:</strong> The study of signs and sign systems — how meaning is made and understood through signs.
+        </div>
+
+        <h3>1.1 Performatives</h3>
+
+        <div class="concept-box">
+            <h4>What are Performatives?</h4>
+            <p>A <strong>performative</strong> is an utterance that IS an act of doing something. The words themselves perform the action simply by being spoken in the appropriate context.</p>
+        </div>
+
+        <div class="example">
+            <h5>Examples of Performatives:</h5>
+            <ul>
+                <li>"I now pronounce you husband and wife" (performs the marriage)</li>
+                <li>"I promise to return your book" (performs the promise)</li>
+                <li>"I bet you five dollars" (performs the bet)</li>
+                <li>"I name this ship the Queen Mary" (performs the naming)</li>
+                <li>"I sentence you to five years" (performs the sentencing)</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <strong>Critical Condition:</strong> Performatives ONLY work when the right conditions are met:
+            <ul>
+                <li>The speaker must have the authority to perform the act</li>
+                <li>The circumstances must be appropriate</li>
+                <li>The proper procedures must be followed</li>
+            </ul>
+            <p><strong>Example:</strong> "I now pronounce you husband and wife" only works if said by an authorized person in a real ceremony — NOT if said by an actor in a play or by someone without legal authority.</p>
+        </div>
+
+        <h3>1.2 Meaning vs. Sense vs. Reference</h3>
+
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>Meaning</strong></td>
+                <td>Dictionary definition of words (inherent, context-free meaning)</td>
+                <td>"Dog" = four-legged domesticated animal</td>
+            </tr>
+            <tr>
+                <td><strong>Sense</strong></td>
+                <td>Full discoursal meaning in context (communicative function)</td>
+                <td>"What a dog!" (insult about a person)</td>
+            </tr>
+            <tr>
+                <td><strong>Reference</strong></td>
+                <td>Who or what is actually referred to (real-world entity)</td>
+                <td>"The dog" = that specific animal over there</td>
+            </tr>
+            <tr>
+                <td><strong>Meaning Potential</strong></td>
+                <td>All possible meanings available in a language system (SFL concept)</td>
+                <td>All the ways "dog" can be used in English</td>
+            </tr>
+        </table>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Understanding the Distinction
+            </span>
+            <p><strong>Why does this matter for CDA?</strong></p>
+
+            <p>Consider the phrase "freedom fighters":</p>
+
+            <ul>
+                <li><strong>Meaning:</strong> People who fight for freedom (dictionary definition)</li>
+                <li><strong>Sense:</strong> Could be positive (heroes) or ironic (terrorists calling themselves this)</li>
+                <li><strong>Reference:</strong> Which specific group is being described?</li>
+            </ul>
+
+            <p>CDA is particularly interested in <strong>sense</strong> because the same words with the same meaning can carry very different ideological messages depending on context.</p>
+
+            <p><strong>Consider:</strong> "Terrorist" vs. "Freedom fighter" vs. "Rebel" vs. "Insurgent" — these might refer to the SAME group, but the sense is completely different!</p>
+        </div>
+
+        <h2>2. Socially Shared Knowledge (Mutual Knowledge)</h2>
+
+        <div class="concept-box">
+            <h4>What is Mutual Knowledge?</h4>
+            <p><strong>Socially Shared Knowledge</strong> (also called <em>Mutual Knowledge</em>) is the knowledge that participants use in any communicative act. Without shared knowledge, communication breaks down.</p>
+        </div>
+
+        <div class="concept-box">
+            <h4>Seven Types of Mutual Knowledge</h4>
+            <ol>
+                <li><strong>Subject matter facts:</strong> Knowledge about the topic being discussed</li>
+                <li><strong>Cultural knowledge:</strong> Festivals, customs, legal system, historical events</li>
+                <li><strong>Social roles & hierarchies:</strong> How people are expected to behave in different roles</li>
+                <li><strong>Institutional practices:</strong> Workplace norms, school procedures, genre conventions</li>
+                <li><strong>Moral values:</strong> What the group considers right/wrong, appropriate/inappropriate</li>
+                <li><strong>Co-text & context:</strong> What has already been said in this specific event</li>
+                <li><strong>Individual participants:</strong> Knowledge about the specific people involved</li>
+            </ol>
+        </div>
+
+        <div class="important">
+            <strong>CDA Critical Point:</strong> All seven categories incorporate issues of <em>identity</em> and <em>power</em>. The value systems of a social group constitute its <em>ideology</em>. When shared knowledge includes biased assumptions, those biases become "invisible" and seem like "common sense."
+        </div>
+
+        <h3>2.1 Cultural Assumptions</h3>
+
+        <div class="case-study">
+            <h4>Case Study: Hidden Assumptions in Advertising</h4>
+            <p><strong>Common cultural assumptions exploited by advertisers:</strong></p>
+            <ul>
+                <li>"Looking young is desirable" → anti-aging products</li>
+                <li>"Big is good" → supersized products, growth economics</li>
+                <li>"Natural is better" → "organic" and "natural" labeling</li>
+                <li>"Experts know best" → "9 out of 10 dentists recommend..."</li>
+                <li>"New is improved" → constant product updates</li>
+            </ul>
+            <p><strong>CDA insight:</strong> These assumptions are often accepted without question because they're part of shared cultural knowledge. Advertisers and propagandists exploit these to manipulate.</p>
+        </div>
+
+        <h2>3. Purposeful Communication (Pragmatics)</h2>
+
+        <div class="key-term">
+            <strong>Pragmatics:</strong> The branch of linguistics studying aspects of language and communication that cannot be explained by linguistics alone. Includes: reference, communicative function, presupposition, and implicature.
+        </div>
+
+        <h3>3.1 Learning Discourse</h3>
+
+        <div class="concept-box">
+            <h4>How We Learn to Communicate</h4>
+            <ul>
+                <li>We learn to recognize common discourse events</li>
+                <li>We learn unspoken rules of conversation</li>
+                <li>We learn appropriate behavior (varies by social group)</li>
+                <li>We become familiar with genres (some through exposure, others through explicit teaching)</li>
+            </ul>
+        </div>
+
+        <div class="key-term">
+            <strong>Genres:</strong> Text types socially constructed over time to fulfill social functions. They follow agreed social rules and customs learned through education or contact. Examples: academic essay, job application, wedding speech, tweet, news article.
+        </div>
+
+        <h2>4. Reference, Identity, and Role</h2>
+
+        <div class="concept-box">
+            <h4>Grammatical Reference</h4>
+            <p>Reference is crucial for <strong>text cohesion</strong>. It allows pronouns to substitute for nouns (she, he, I, they) and pro-forms for other elements (here, there, that, then).</p>
+        </div>
+
+        <h3>4.1 Self vs. Other</h3>
+
+        <div class="concept-box">
+            <h4>Identity Construction Through Language</h4>
+            <ul>
+                <li><strong>Self:</strong> We identify with our own social groupings</li>
+                <li><strong>Other:</strong> We place ourselves in opposition to other groups</li>
+                <li>We choose how closely to identify with different groups</li>
+                <li>We play multiple roles: profession, religion, nation, family, interests</li>
+            </ul>
+        </div>
+
+        <h3>4.2 Pronouns and Identity</h3>
+
+        <table>
+            <tr>
+                <th>Speaker</th>
+                <th>Use of "We"</th>
+                <th>Identity Constructed</th>
+            </tr>
+            <tr>
+                <td>E.M. Forster (anti-Nazi speech)</td>
+                <td>"We" = British anti-Nazis ("mongrels")</td>
+                <td>Creates in-group vs. Nazis</td>
+            </tr>
+            <tr>
+                <td>Countee Cullen (Black poet)</td>
+                <td>"We" = Oppressed Black Americans</td>
+                <td>Excludes non-Black Americans</td>
+            </tr>
+            <tr>
+                <td>James Baldwin</td>
+                <td>"We" = All people (Black & White) resisting racism</td>
+                <td>Broader identity transcending race</td>
+            </tr>
+        </table>
+
+        <div class="important">
+            <strong>CDA Analytical Point:</strong> Always ask WHO is included/excluded by pronouns like "we," "us," "they," "them." This reveals identity positioning and power relationships. A politician's use of "we" may include or exclude the audience depending on context.
+        </div>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Practical Analysis Tip
+            </span>
+            <p><strong>When you encounter "we" in a text, ask:</strong></p>
+
+            <ol>
+                <li><strong>Inclusive "we":</strong> Does it include the reader/listener?</li>
+                <li><strong>Exclusive "we":</strong> Does it exclude the reader/listener?</li>
+                <li><strong>Royal "we":</strong> Does it really mean "I"?</li>
+                <li><strong>Generic "we":</strong> Does it mean "people in general"?</li>
+            </ol>
+
+            <p><strong>Example Analysis:</strong></p>
+            <p>"We need to protect our borders from them."</p>
+            <ul>
+                <li><strong>"We"</strong> = citizens (included)</li>
+                <li><strong>"Our"</strong> = national possession</li>
+                <li><strong>"Them"</strong> = outsiders, immigrants (excluded, othered)</li>
+            </ul>
+
+            <p>This simple sentence constructs an <strong>us/them</strong> divide — a key feature of exclusionary discourse.</p>
+        </div>
+
+        <h2>5. Grice's Co-operative Principle and Maxims</h2>
+
+        <div class="scholar-box">
+            <h4>H.P. Grice (1975)</h4>
+            <p>British philosopher who proposed that conversation works because participants follow an unspoken <strong>Co-operative Principle</strong>.</p>
+        </div>
+
+        <div class="concept-box">
+            <h4>The Co-operative Principle (CP)</h4>
+            <blockquote>
+                "Make your conversational contribution such as is required, at the stage at which it occurs, by the accepted purpose of the talk exchange in which you are engaged."
+            </blockquote>
+            <p><strong>In simple terms:</strong> Say what is appropriate for the conversation at hand.</p>
+        </div>
+
+        <h3>5.1 The Four Maxims</h3>
+
+        <table>
+            <tr>
+                <th>Maxim</th>
+                <th>Simple Rule</th>
+                <th>Detailed Requirements</th>
+            </tr>
+            <tr>
+                <td><strong>QUANTITY</strong></td>
+                <td>Say enough, but not too much</td>
+                <td>1) Be as informative as required<br>2) Don't be more informative than required</td>
+            </tr>
+            <tr>
+                <td><strong>QUALITY</strong></td>
+                <td>Tell the truth</td>
+                <td>1) Don't say what you believe to be false<br>2) Don't say what you lack evidence for</td>
+            </tr>
+            <tr>
+                <td><strong>RELATION</strong></td>
+                <td>Be relevant</td>
+                <td>Make contributions relevant to the current exchange</td>
+            </tr>
+            <tr>
+                <td><strong>MANNER</strong></td>
+                <td>Be clear</td>
+                <td>1) Avoid obscurity<br>2) Avoid ambiguity<br>3) Be brief<br>4) Be orderly</td>
+            </tr>
+        </table>
+
+        <div class="important">
+            <strong>Memory Aid:</strong> "Queen Makes Really Quiet" = Quality, Manner, Relation, Quantity
+        </div>
+
+        <h3>5.2 Implicature</h3>
+
+        <div class="key-term">
+            <strong>Implicature:</strong> Meaning that is evident although not explicitly stated — "reading between the lines." Implicature relies on the Co-operative Principle to work.
+        </div>
+
+        <div class="example">
+            <h5>Example of Implicature:</h5>
+            <p><strong>A:</strong> "Is John a good student?"</p>
+            <p><strong>B:</strong> "He attends class regularly."</p>
+            <p><strong>Implicature:</strong> B didn't say John is a good student. By only mentioning attendance, B implies that's all they can positively say — suggesting John is NOT particularly good academically.</p>
+        </div>
+
+        <h3>5.3 Violating vs. Flouting Maxims</h3>
+
+        <table>
+            <tr>
+                <th>Violating a Maxim</th>
+                <th>Flouting a Maxim</th>
+            </tr>
+            <tr>
+                <td>Deliberately breaking the maxim</td>
+                <td>Blatantly and obviously failing to fulfill it</td>
+            </tr>
+            <tr>
+                <td>Intent: to deceive or mislead</td>
+                <td>Intent: to trigger implicature</td>
+            </tr>
+            <tr>
+                <td>The hearer doesn't notice the breach</td>
+                <td>The hearer notices and draws conclusions</td>
+            </tr>
+            <tr>
+                <td>Example: Lying</td>
+                <td>Example: Irony, sarcasm, exaggeration</td>
+            </tr>
+        </table>
+
+        <div class="case-study">
+            <h4>Case Study: Flouting for Irony</h4>
+            <p><strong>Context:</strong> A book review of a young footballer's autobiography</p>
+            <p><strong>Reviewer's statement:</strong> "I would equate it with the first folio of Shakespeare."</p>
+            <p><strong>Analysis:</strong> This flouts the Quality maxim — the reviewer cannot possibly believe this is true. Readers recognize this as blatant overstatement and understand it as <strong>sarcasm/mockery</strong>.</p>
+        </div>
+
+        <div class="concept-box">
+            <h4>Clash of Maxims</h4>
+            <p>Sometimes two maxims come into conflict, and we must choose which to follow.</p>
+            <p><strong>Example:</strong></p>
+            <p><strong>A:</strong> "Where exactly is Tallinn?"</p>
+            <p><strong>B:</strong> "In one of the Baltic States."</p>
+            <p><strong>Analysis:</strong> B fails the Quantity maxim (not informative enough) in order to observe Quality maxim (doesn't claim to know exactly which Baltic state).</p>
+        </div>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Maxims in CDA Analysis
+            </span>
+            <p><strong>Why are Grice's maxims important for CDA?</strong></p>
+
+            <p>Politicians, advertisers, and propagandists regularly <strong>violate</strong> maxims while pretending to observe them:</p>
+
+            <p><strong>Quality violations:</strong></p>
+            <ul>
+                <li>"The economy has never been stronger" (while data shows recession)</li>
+                <li>Statistics taken out of context</li>
+            </ul>
+
+            <p><strong>Quantity violations:</strong></p>
+            <ul>
+                <li>Giving too little information to hide problems</li>
+                <li>Overwhelming with irrelevant detail to obscure key facts</li>
+            </ul>
+
+            <p><strong>Relation violations:</strong></p>
+            <ul>
+                <li>Answering a different question than asked ("pivoting")</li>
+                <li>Introducing unrelated topics to distract</li>
+            </ul>
+
+            <p><strong>Manner violations:</strong></p>
+            <ul>
+                <li>Using jargon to confuse</li>
+                <li>Being deliberately vague</li>
+            </ul>
+
+            <p><strong>CDA Task:</strong> Identify when these violations occur and whose interests they serve.</p>
+        </div>
+
+        <h2>6. Analysis of Context</h2>
+
+        <h3>6.1 Two Levels of Context</h3>
+
+        <table>
+            <tr>
+                <th>Context of Culture</th>
+                <th>Context of Situation</th>
+            </tr>
+            <tr>
+                <td>Traditions of the community</td>
+                <td>Setting (physical/social environment)</td>
+            </tr>
+            <tr>
+                <td>Institutions</td>
+                <td>Identity of participants</td>
+            </tr>
+            <tr>
+                <td>Discourse communities</td>
+                <td>Direct production of meanings</td>
+            </tr>
+            <tr>
+                <td>Historical context</td>
+                <td>Specific instance of communication</td>
+            </tr>
+            <tr>
+                <td>Knowledge base of society</td>
+                <td>Power relationships present</td>
+            </tr>
+            <tr>
+                <td>Under continuous long-term change</td>
+                <td>Changes with each contribution</td>
+            </tr>
+        </table>
+
+        <div class="important">
+            <strong>Critical Insight:</strong> Context is <em>dynamic</em>, not static. Language use is PART OF context (this is circular but unavoidable). Language and context are <strong>inextricably bound</strong> in meaning production — each shapes the other.
+        </div>
+
+        <h3>6.2 Practical Context Analysis Checklist</h3>
+
+        <div class="concept-box">
+            <h4>What the Analyst Should Identify:</h4>
+            <ol>
+                <li><strong>Setting:</strong> Place(s) where the event occurs</li>
+                <li><strong>Time:</strong> When the event occurs and its temporal aspects</li>
+                <li><strong>Mode & Medium:</strong> Face-to-face, TV, written, illustrated, digital, etc.</li>
+                <li><strong>Participants:</strong> Who is involved and what roles they play</li>
+                <li><strong>Topic/s:</strong> What is being discussed, distance from topics</li>
+                <li><strong>Purpose:</strong> Goals of the discourse event and participants</li>
+                <li><strong>Attitude:</strong> Participants' orientations toward subject and each other</li>
+                <li><strong>Dynamics:</strong> How events, participants, and topics change during discourse</li>
+                <li><strong>Genre:</strong> What type of text/discourse is this?</li>
+            </ol>
+        </div>
+
+        <h3>6.3 Levels of Delicacy</h3>
+
+        <div class="example">
+            <h5>Example: Topic Specification</h5>
+            <p>Topic can move from general to specific depending on analytical purpose:</p>
+            <p><strong>Engineering → Electrical engineering → Electrical supply systems → Electrical circuits → Contact breakers → Danger factors in obsolete contact breakers</strong></p>
+            <p>Which level is relevant depends on the analyst's purpose and the text being analyzed.</p>
+        </div>
+
+        <h3>6.4 Phatic Communion</h3>
+
+        <div class="key-term">
+            <strong>Phatic Communion:</strong> Greetings and expressions that establish contact or solidarity, rather than conveying propositional content about the world.
+        </div>
+
+        <div class="example">
+            <h5>Examples of Phatic Expressions:</h5>
+            <ul>
+                <li>"Hello!" / "Hi there!"</li>
+                <li>"How are you?" (not expecting detailed answer)</li>
+                <li>"Nice weather, isn't it?"</li>
+                <li>"See you later!"</li>
+                <li>"Take care!"</li>
+                <li>"Cheers!"</li>
+            </ul>
+            <p><strong>Function:</strong> These maintain social bonds and "oil the wheels" of interaction rather than transmit information.</p>
+        </div>
+
+        <h2>7. Institutional Constraints</h2>
+
+        <div class="concept-box">
+            <h4>Institutional Discourse</h4>
+            <p>Institutions impose <strong>constraints</strong> on discourse practices. They create specific text types with stated purposes and pre-formatted structures.</p>
+        </div>
+
+        <div class="case-study">
+            <h4>Examples of Institutional Discourse Constraints</h4>
+            <table>
+                <tr>
+                    <th>Institution</th>
+                    <th>Discourse Constraints</th>
+                </tr>
+                <tr>
+                    <td><strong>Hotels</strong></td>
+                    <td>Training in specific "scripts," "house style" for guest interaction</td>
+                </tr>
+                <tr>
+                    <td><strong>Legal System</strong></td>
+                    <td>Court procedures, contract formats, will templates, cross-examination rules</td>
+                </tr>
+                <tr>
+                    <td><strong>Business</strong></td>
+                    <td>Meeting protocols, report formats, email conventions</td>
+                </tr>
+                <tr>
+                    <td><strong>Education</strong></td>
+                    <td>Lecture formats, essay structures, grading language</td>
+                </tr>
+                <tr>
+                    <td><strong>Healthcare</strong></td>
+                    <td>Consultation scripts, medical record formats, consent procedures</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="important">
+            <strong>CDA Critical Point:</strong> Institutional discourses are crucial for CDA because the <strong>power structure of a nation or group is enshrined here</strong>. The context of discourse is not just reflected by but is <strong>CREATED BY</strong> discourse itself.
+        </div>
+
+        <h3>7.1 Core vs. Fringe Genres</h3>
+
+        <table>
+            <tr>
+                <th>Core Genres</th>
+                <th>Fringe Genres</th>
+            </tr>
+            <tr>
+                <td>Central institutional genres</td>
+                <td>Draw on and adapt central genres</td>
+            </tr>
+            <tr>
+                <td>Highly regulated, formal</td>
+                <td>More flexible adaptations</td>
+            </tr>
+            <tr>
+                <td>Court procedures, legal documents</td>
+                <td>Newspaper court reports, insurance contracts</td>
+            </tr>
+            <tr>
+                <td>Academic journal articles</td>
+                <td>Popular science writing</td>
+            </tr>
+        </table>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Chapter Summary: From Context to Power
+            </span>
+            <p><strong>What have we learned in this chapter?</strong></p>
+
+            <p><strong>1. Meaning requires context</strong></p>
+            <ul>
+                <li>Signs don't mean anything in isolation</li>
+                <li>The same words mean different things in different contexts</li>
+                <li>Performatives only work with the right conditions</li>
+            </ul>
+
+            <p><strong>2. Shared knowledge enables communication</strong></p>
+            <ul>
+                <li>Seven types of mutual knowledge underpin understanding</li>
+                <li>Cultural assumptions can be exploited by propagandists</li>
+                <li>Ideology is embedded in what we take for granted</li>
+            </ul>
+
+            <p><strong>3. Pronouns construct identity</strong></p>
+            <ul>
+                <li>"We" and "they" create in-groups and out-groups</li>
+                <li>Identity positioning is a form of power</li>
+                <li>The same speaker can shift identity through pronouns</li>
+            </ul>
+
+            <p><strong>4. The Co-operative Principle reveals hidden meaning</strong></p>
+            <ul>
+                <li>We expect others to be informative, truthful, relevant, and clear</li>
+                <li>Violations deceive; flouting creates implicature</li>
+                <li>Politicians often violate maxims strategically</li>
+            </ul>
+
+            <p><strong>5. Institutions shape discourse</strong></p>
+            <ul>
+                <li>Institutional constraints regulate what can be said and how</li>
+                <li>Power structures are encoded in institutional genres</li>
+                <li>Context is not just setting — it's created by discourse itself</li>
+            </ul>
+
+            <p><strong>Key insight:</strong> Context is never innocent. Who controls the context controls the meaning. CDA examines how powerful groups shape contexts to their advantage.</p>
+        </div>
+
+        <h2>8. Key Theorists and Contributions</h2>
+
+        <div class="scholar-box">
+            <h4>J.R. Firth (1937)</h4>
+            <p><strong>Contribution:</strong> Context of situation — emphasized that meaning depends on setting, participants, and behavior in context.</p>
+        </div>
+
+        <div class="scholar-box">
+            <h4>H.P. Grice (1975)</h4>
+            <p><strong>Contribution:</strong> Co-operative Principle and four conversational maxims — explained how implicit meaning works.</p>
+        </div>
+
+        <div class="scholar-box">
+            <h4>J.L. Austin (1950s)</h4>
+            <p><strong>Contribution:</strong> Speech act theory and performatives — showed that saying can be doing.</p>
+        </div>
+
+        <div class="scholar-box">
+            <h4>M.A.K. Halliday (SFL)</h4>
+            <p><strong>Contribution:</strong> Meaning potential and systematic attention to social context in linguistic analysis.</p>
+        </div>
+
+        <h2>9. Summary: Key Points to Remember</h2>
+
+        <div class="important">
+            <strong>Essential Takeaways from Chapter 2:</strong>
+            <ul>
+                <li>Meaning is created by signs in context — same sign, different context = different meaning</li>
+                <li>Performatives are utterances that DO things (but need proper conditions)</li>
+                <li>Distinguish: Meaning (dictionary) vs. Sense (contextual) vs. Reference (real-world)</li>
+                <li>Seven types of mutual knowledge enable communication</li>
+                <li>Pronouns (we/they) construct identity and us/them divides</li>
+                <li>Grice's Co-operative Principle: Quantity, Quality, Relation, Manner</li>
+                <li>Violating maxims = deception; Flouting maxims = implicature (irony, sarcasm)</li>
+                <li>Context of Culture vs. Context of Situation</li>
+                <li>Context is dynamic — language shapes context as context shapes language</li>
+                <li>Institutional discourse encodes power structures</li>
+                <li>Phatic communion maintains social bonds without conveying information</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

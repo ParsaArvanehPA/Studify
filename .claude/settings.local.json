@@ -67,7 +67,9 @@
       "Bash(npm run dev:*)",
       "mcp__playwright__browser_type",
       "Bash(cmd /c \"cd /d D:\\\\Projects\\\\Studify\\\\app && npm run build\")",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: add copy & translate on text selection\n\n- Add floating menu on text selection with Copy and Translate buttons\n- Auto-translate Arabic text using MyMemory API\n- Add copy button next to English translations\n- Remove apostrophes from transliteration \\(Ruku, Rakah, etc.\\)\n- Build for GitHub Pages deployment\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
     ]
   }
 }

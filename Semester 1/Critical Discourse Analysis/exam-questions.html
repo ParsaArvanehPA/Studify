@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDA Exam Questions & Answers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        header {
+            background-color: #a0616a;
+            color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        .meta-info {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: #a0616a;
+            font-size: 1.6em;
+            margin: 35px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #c06c84;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #c06c84;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #a0616a;
+            font-size: 1.1em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .question-box {
+            background-color: #fce4ec;
+            border-left: 5px solid #c06c84;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .question-box h4 {
+            color: #a0616a;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .answer-box {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 15px 0 30px 0;
+            border-radius: 3px;
+        }
+
+        .answer-box h4 {
+            color: #2e7d32;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .key-term {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .key-term strong {
+            color: #a0616a;
+            font-size: 1.05em;
+        }
+
+        .important {
+            background-color: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .example {
+            background-color: #fff9e6;
+            border-left: 5px solid #fbc02d;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .example h5 {
+            color: #a0616a;
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .tips-box {
+            background-color: #f3e5f5;
+            border-left: 5px solid #9c27b0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .tips-box h4 {
+            color: #7b1fa2;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th {
+            background-color: #a0616a;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        blockquote {
+            border-left: 4px solid #c06c84;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        strong {
+            color: #a0616a;
+        }
+
+        em {
+            color: #c06c84;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .chapter-divider {
+            background-color: #a0616a;
+            color: white;
+            padding: 15px 20px;
+            margin: 40px 0 20px 0;
+            border-radius: 5px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .question-box {
+                page-break-inside: avoid;
+            }
+
+            .answer-box {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CDA Exam Questions & Answers</h1>
+            <div class="meta-info">
+                Critical Discourse Analysis | Chapters 1-3 Review<br>
+                Practice Questions for Exam Preparation
+            </div>
+        </header>
+
+        <div class="important">
+            <strong>How to Use This Guide:</strong> Read each question first and try to answer it before looking at the answer. This active recall method helps strengthen your memory and understanding.
+        </div>
+
+        <!-- CHAPTER 1 -->
+        <div class="chapter-divider">Chapter 1: Background & Theory</div>
+
+        <h2>Definition & Core Concepts</h2>
+
+        <div class="question-box">
+            <h4>Question 1</h4>
+            <p>Define Critical Discourse Analysis (CDA) and explain its main objectives.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Definition:</strong> Critical Discourse Analysis (CDA) is the systematic study of how language is used to persuade, manipulate, and control individuals and social groups. It focuses on language as a controlling force in society and its role in maintaining or changing social structures.</p>
+            <p><strong>Main Objectives:</strong></p>
+            <ul>
+                <li><strong>Practical:</strong> Analyze discourse practices that reflect/construct social problems; investigate how ideologies become "frozen" in language; increase awareness to address injustice and power misuse</li>
+                <li><strong>Theoretical:</strong> Demonstrate language's significance in power relations; investigate how meaning is created in context; examine the role of speaker/writer purpose and authorial stance</li>
+            </ul>
+            <p><strong>Key Goals:</strong> Develop awareness of language and ideology; understand how discourse controls society; question conventional discourses; work towards social justice.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 2</h4>
+            <p>What is the difference between "critical" in CDA and "critical" in everyday usage? Why is this distinction important?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Everyday usage:</strong> "Critical" often means negative evaluation or fault-finding.</p>
+            <p><strong>In CDA:</strong> "Critical" means <em>critique</em> — systematic analysis that can be positive OR negative. For example, CDA can analyze successful resistance movements (positive) just as well as oppressive propaganda (negative).</p>
+            <p><strong>Why important:</strong> This distinction is crucial because CDA is not about negativity — it's about examining underlying structures, assumptions, and power relations in ANY discourse. The goal is understanding and awareness, not judgment.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 3</h4>
+            <p>List and explain the six different meanings of the term "discourse."</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Meaning</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><strong>Broad</strong></td>
+                    <td>All symbolic interaction including spoken, written, visual communication (films, music, gestures)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>Spoken</strong></td>
+                    <td>Simply spoken interaction, as opposed to written</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>vs. Text</strong></td>
+                    <td>The whole act of communication including both production and comprehension</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>Institutional</strong></td>
+                    <td>Communication in specific contexts (legal discourse, medical discourse, scientific discourse)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>A discourse</strong></td>
+                    <td>A particular long text like a lecture or sermon (NOT commonly used in CDA)</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>Multi-modal</strong></td>
+                    <td>Uses more than one mode (words + pictures + music together)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 4</h4>
+            <p>What are the Seven Standards of Textuality proposed by Beaugrande & Dressler? Explain each briefly.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <ol>
+                <li><strong>Cohesion:</strong> How words and sentences connect in sequence through grammatical links (pronouns, conjunctions, etc.)</li>
+                <li><strong>Coherence:</strong> Cognitive relations, logical connections, and mutual knowledge that make a text "make sense"</li>
+                <li><strong>Acceptability:</strong> Appropriateness to the cultural setting and audience expectations</li>
+                <li><strong>Intentionality:</strong> The producer's purpose and goals in creating the text</li>
+                <li><strong>Informativity:</strong> Suitable balance of new information vs. given information</li>
+                <li><strong>Situationality:</strong> Relevance to the specific situation in which text is used</li>
+                <li><strong>Intertextuality:</strong> Reliance on and reference to previous texts</li>
+            </ol>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 5</h4>
+            <p>Compare and contrast "Speech Community" and "Discourse Community."</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <table>
+                <tr>
+                    <th>Speech Community</th>
+                    <th>Discourse Community</th>
+                </tr>
+                <tr>
+                    <td>Share language features (dialect, accent)</td>
+                    <td>May never meet face-to-face</td>
+                </tr>
+                <tr>
+                    <td>Frequently interact in person</td>
+                    <td>Conscious, chosen participation</td>
+                </tr>
+                <tr>
+                    <td>Usually accident of birth/location</td>
+                    <td>Deliberate membership based on interest</td>
+                </tr>
+                <tr>
+                    <td><em>Example: Geordie dialect speakers in Newcastle</em></td>
+                    <td><em>Example: Medical researchers worldwide, online gaming communities</em></td>
+                </tr>
+            </table>
+            <p><strong>Key difference:</strong> Speech communities are formed by geography/birth; discourse communities are formed by shared purpose/interest.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 6</h4>
+            <p>Define "ideology" and "frames" in the context of CDA. How are they related?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Ideology:</strong> A set of beliefs and attitudes shared by a social group, often <em>unconscious</em> and taken for granted. Ideologies can be hidden in single words (e.g., "democracy," "freedom," "collateral damage").</p>
+            <p><strong>Frames:</strong> Mental structures that shape how we see the world (concept from George Lakoff). Frames are triggered by words and are culture-specific cognitive models. Example: "cricket" triggers a frame including pitch, bat, ball, umpire, wicket.</p>
+            <p><strong>Relationship:</strong> Frames are the building blocks of ideology. When certain frames are repeatedly activated (e.g., "immigrants as flood/invasion"), they shape ideological worldviews. Ideologies are maintained through the consistent use of certain frames.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 7</h4>
+            <p>What does "making strange" mean in CDA? Why is it an important analytical skill?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Definition:</strong> "Making strange" is the practice of observing familiar customs as an outsider would — stepping back from normalized practices to see them with fresh eyes.</p>
+            <p><strong>Importance:</strong></p>
+            <ul>
+                <li>Helps identify practices that have become so familiar they seem "natural"</li>
+                <li>Reveals hidden power relations in everyday discourse</li>
+                <li>Enables denormalization of problematic practices</li>
+            </ul>
+            <p><strong>Example:</strong> Traditional marriage vows required women to "obey and serve" — this was so normalized it seemed unremarkable. "Making strange" revealed the gender inequality, leading to change.</p>
+        </div>
+
+        <!-- CHAPTER 2 -->
+        <div class="chapter-divider">Chapter 2: Discourse & Social Context</div>
+
+        <h2>Context & Meaning</h2>
+
+        <div class="question-box">
+            <h4>Question 8</h4>
+            <p>Explain the relationship between sign, context, and meaning. Provide examples.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Core principle:</strong> Meaning is created when a sign occurs in a specific context. The same sign can have completely different meanings in different contexts.</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li><strong>Red flag on beach:</strong> Danger/no swimming</li>
+                <li><strong>Red flag at demonstration:</strong> Political symbol (socialism)</li>
+                <li><strong>Cross (X) on student work:</strong> Error/incorrect</li>
+                <li><strong>Cross (X) on ballot:</strong> Selection/vote</li>
+            </ul>
+            <p><strong>Key insight:</strong> Signs don't carry fixed meanings — context determines meaning.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 9</h4>
+            <p>What are performatives? What conditions must be met for them to work?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Definition:</strong> Performatives are utterances that IS an act of doing something — the words themselves perform the action simply by being spoken.</p>
+            <p><strong>Examples:</strong> "I promise...", "I bet...", "I pronounce you husband and wife", "I sentence you to..."</p>
+            <p><strong>Conditions (Felicity Conditions):</strong></p>
+            <ul>
+                <li>The speaker must have the <strong>authority</strong> to perform the act</li>
+                <li>The <strong>circumstances</strong> must be appropriate</li>
+                <li>The proper <strong>procedures</strong> must be followed</li>
+            </ul>
+            <p><strong>Example of failure:</strong> "I pronounce you husband and wife" said by an actor in a play does NOT perform a marriage because the conditions aren't met.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 10</h4>
+            <p>Differentiate between meaning, sense, and reference. Why is this distinction important for CDA?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <table>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                    <th>Example with "dog"</th>
+                </tr>
+                <tr>
+                    <td><strong>Meaning</strong></td>
+                    <td>Dictionary definition (context-free)</td>
+                    <td>Four-legged domesticated animal</td>
+                </tr>
+                <tr>
+                    <td><strong>Sense</strong></td>
+                    <td>Full discoursal meaning in context</td>
+                    <td>"What a dog!" (insult about a person)</td>
+                </tr>
+                <tr>
+                    <td><strong>Reference</strong></td>
+                    <td>Who/what is actually referred to</td>
+                    <td>"The dog" = that specific animal there</td>
+                </tr>
+            </table>
+            <p><strong>Importance for CDA:</strong> CDA focuses on <em>sense</em> because the same words with the same dictionary meaning can carry very different ideological messages in context. Example: "terrorist" vs. "freedom fighter" might refer to the same group but carry opposite senses.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 11</h4>
+            <p>List and explain the seven types of Socially Shared Knowledge (Mutual Knowledge).</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <ol>
+                <li><strong>Subject matter facts:</strong> Knowledge about the topic being discussed</li>
+                <li><strong>Cultural knowledge:</strong> Festivals, customs, legal system, historical events</li>
+                <li><strong>Social roles & hierarchies:</strong> How people are expected to behave in different roles</li>
+                <li><strong>Institutional practices:</strong> Workplace norms, school procedures, genre conventions</li>
+                <li><strong>Moral values:</strong> What the group considers right/wrong, appropriate/inappropriate</li>
+                <li><strong>Co-text & context:</strong> What has already been said in this specific event</li>
+                <li><strong>Individual participants:</strong> Knowledge about the specific people involved</li>
+            </ol>
+            <p><strong>CDA insight:</strong> All these categories incorporate issues of identity and power. When shared knowledge includes biased assumptions, those biases become invisible "common sense."</p>
+        </div>
+
+        <h2>Grice's Co-operative Principle</h2>
+
+        <div class="question-box">
+            <h4>Question 12</h4>
+            <p>State Grice's Co-operative Principle and list the four maxims with explanations.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Co-operative Principle:</strong> "Make your conversational contribution such as is required, at the stage at which it occurs, by the accepted purpose of the talk exchange in which you are engaged."</p>
+            <p><strong>The Four Maxims:</strong></p>
+            <table>
+                <tr>
+                    <th>Maxim</th>
+                    <th>Rule</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td><strong>Quantity</strong></td>
+                    <td>Say enough, not too much</td>
+                    <td>Be as informative as required; don't be more informative than required</td>
+                </tr>
+                <tr>
+                    <td><strong>Quality</strong></td>
+                    <td>Tell the truth</td>
+                    <td>Don't say what you believe false; don't say what lacks evidence</td>
+                </tr>
+                <tr>
+                    <td><strong>Relation</strong></td>
+                    <td>Be relevant</td>
+                    <td>Make contributions relevant to current exchange</td>
+                </tr>
+                <tr>
+                    <td><strong>Manner</strong></td>
+                    <td>Be clear</td>
+                    <td>Avoid obscurity; avoid ambiguity; be brief; be orderly</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 13</h4>
+            <p>What is the difference between violating and flouting a maxim? Give examples of each.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <table>
+                <tr>
+                    <th>Violating</th>
+                    <th>Flouting</th>
+                </tr>
+                <tr>
+                    <td>Deliberately breaking the maxim</td>
+                    <td>Blatantly and obviously failing to fulfill it</td>
+                </tr>
+                <tr>
+                    <td><strong>Intent:</strong> To deceive or mislead</td>
+                    <td><strong>Intent:</strong> To trigger implicature</td>
+                </tr>
+                <tr>
+                    <td>The hearer doesn't notice the breach</td>
+                    <td>The hearer notices and draws conclusions</td>
+                </tr>
+                <tr>
+                    <td><em>Example: Lying about your whereabouts</em></td>
+                    <td><em>Example: Sarcasm, irony, exaggeration</em></td>
+                </tr>
+            </table>
+            <p><strong>Flouting example:</strong> A book review saying a footballer's autobiography is "equal to Shakespeare's first folio" — obviously untrue, so readers understand it as mockery (flouting Quality for sarcasm).</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 14</h4>
+            <p>What is implicature? How does it rely on the Co-operative Principle?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Implicature:</strong> Meaning that is evident although not explicitly stated — "reading between the lines."</p>
+            <p><strong>How it works:</strong> Implicature relies on the assumption that speakers are following the Co-operative Principle. When something seems to violate a maxim, we look for an implied meaning that makes the utterance cooperative.</p>
+            <p><strong>Example:</strong></p>
+            <ul>
+                <li><strong>A:</strong> "Is John a good student?"</li>
+                <li><strong>B:</strong> "He attends class regularly."</li>
+                <li><strong>Implicature:</strong> B didn't directly answer, only mentioning attendance. We infer that's all B can positively say — implying John is NOT particularly good academically.</li>
+            </ul>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 15</h4>
+            <p>Explain the difference between "Context of Culture" and "Context of Situation."</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <table>
+                <tr>
+                    <th>Context of Culture</th>
+                    <th>Context of Situation</th>
+                </tr>
+                <tr>
+                    <td>Traditions of the community</td>
+                    <td>Setting (physical/social environment)</td>
+                </tr>
+                <tr>
+                    <td>Institutions</td>
+                    <td>Identity of participants</td>
+                </tr>
+                <tr>
+                    <td>Discourse communities</td>
+                    <td>Specific instance of communication</td>
+                </tr>
+                <tr>
+                    <td>Historical context</td>
+                    <td>Power relationships present</td>
+                </tr>
+                <tr>
+                    <td>Under continuous long-term change</td>
+                    <td>Changes with each contribution</td>
+                </tr>
+            </table>
+            <p><strong>Key insight:</strong> Context is dynamic, not static. Language use is PART OF context — language and context shape each other.</p>
+        </div>
+
+        <!-- CHAPTER 3 -->
+        <div class="chapter-divider">Chapter 3: Positioning & Point of View</div>
+
+        <h2>Stance & Authorial Position</h2>
+
+        <div class="question-box">
+            <h4>Question 16</h4>
+            <p>What is "stance" in CDA? Describe the three types of stance with examples.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Stance:</strong> The authorial position taken in a text, reflecting attitude toward subject matter and audience. Can be conscious or unconscious.</p>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td><strong>Conscious-Explicit</strong></td>
+                    <td>Deliberate positioning, openly revealed</td>
+                    <td>Film reviews, opinion pieces, critical essays</td>
+                </tr>
+                <tr>
+                    <td><strong>Conscious-Hidden</strong></td>
+                    <td>Deliberate positioning, concealed</td>
+                    <td>Advertising, promotional letters, propaganda</td>
+                </tr>
+                <tr>
+                    <td><strong>Unconscious</strong></td>
+                    <td>Unaware positioning, reveals ideology</td>
+                    <td>Racist/sexist discourse, biased reporting</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 17</h4>
+            <p>What is "synthetic personalization" (Fairclough)? How is it used in promotional texts?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Synthetic personalization:</strong> The practice of mass communication disguising itself as personal communication — a letter sent to millions is written as if it's just for you.</p>
+            <p><strong>Techniques used:</strong></p>
+            <ul>
+                <li><strong>Simulated friendship:</strong> First names, informal tone</li>
+                <li><strong>Pseudo-intimacy:</strong> "We know you...", "You deserve..."</li>
+                <li><strong>False scarcity:</strong> "Limited time", "Only for you"</li>
+                <li><strong>Flattery:</strong> "As a valued customer..."</li>
+                <li><strong>Positive presupposition:</strong> "When you order..." (not "if")</li>
+            </ul>
+            <p><strong>Purpose:</strong> Create trust and intimacy to manipulate the reader while hiding commercial intent.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 18</h4>
+            <p>Explain Van Dijk's "Ideological Square." How does it appear in discriminatory discourse?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>The Ideological Square:</strong> A pattern identified by Van Dijk in ideologically biased discourse:</p>
+            <ol>
+                <li><strong>Emphasize OUR good qualities</strong></li>
+                <li><strong>Emphasize THEIR bad qualities</strong></li>
+                <li><strong>Mitigate (downplay) OUR bad qualities</strong></li>
+                <li><strong>Mitigate (downplay) THEIR good qualities</strong></li>
+            </ol>
+            <p><strong>Example in racist discourse:</strong></p>
+            <ul>
+                <li>"We are hardworking and law-abiding" (emphasize our good)</li>
+                <li>"They are criminals and freeloaders" (emphasize their bad)</li>
+                <li>"Our mistakes are understandable" (mitigate our bad)</li>
+                <li>"Even when they succeed, it's through unfair advantage" (mitigate their good)</li>
+            </ul>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 19</h4>
+            <p>List five markers of sexist discourse and explain how each functions.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <ol>
+                <li><strong>Generic Masculine:</strong> Using "he/him" as universal ("Each student should bring his book") — excludes women linguistically</li>
+                <li><strong>Asymmetric Address:</strong> "Mr. Smith and Janet" — unequal naming conventions</li>
+                <li><strong>Semantic Derogation:</strong> Female terms acquire negative connotations (master/mistress, bachelor/spinster)</li>
+                <li><strong>Role Stereotyping:</strong> "Female doctor", "male nurse" — marking non-stereotypical roles as unusual</li>
+                <li><strong>Appearance Focus:</strong> Describing women's looks when irrelevant ("The attractive scientist...")</li>
+            </ol>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 20</h4>
+            <p>How do passive voice and nominalization hide agency in texts? Provide examples.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Passive Voice:</strong> Removes the agent from the sentence.</p>
+            <ul>
+                <li><strong>Active:</strong> "Police shot protesters" — clear who did the shooting</li>
+                <li><strong>Passive:</strong> "Protesters were shot" — who shot them? Hidden.</li>
+            </ul>
+            <p><strong>Nominalization:</strong> Turns actions into abstract nouns, obscuring actors.</p>
+            <ul>
+                <li><strong>Verb form:</strong> "Colonial forces killed indigenous people"</li>
+                <li><strong>Nominalized:</strong> "The colonization led to population decline" — who colonized? Who died? How?</li>
+            </ul>
+            <p><strong>Effect:</strong> Both techniques obscure responsibility. Events appear to happen without anyone causing them. This is common in political and historical discourse to avoid assigning blame.</p>
+        </div>
+
+        <h2>Analysis Practice</h2>
+
+        <div class="question-box">
+            <h4>Question 21 (Analysis Practice)</h4>
+            <p>Analyze the following text for stance and ideological positioning:</p>
+            <blockquote>"We must protect our borders from those who would destroy our way of life."</blockquote>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Pronoun Analysis:</strong></p>
+            <ul>
+                <li><strong>"We"</strong> — inclusive of citizens, creates in-group</li>
+                <li><strong>"Our borders/our way of life"</strong> — possessive, claims ownership</li>
+                <li><strong>"Those who"</strong> — vague othering, enemy unspecified</li>
+            </ul>
+            <p><strong>Modality:</strong> "Must" — strong obligation, no alternative presented</p>
+            <p><strong>Presuppositions:</strong></p>
+            <ul>
+                <li>There IS a threat (presupposed, not proven)</li>
+                <li>There IS a unified "way of life" (presupposes homogeneous culture)</li>
+                <li>"They" want to "destroy" (attributes intent)</li>
+            </ul>
+            <p><strong>Stance:</strong> Conscious-explicit nationalist positioning with us/them construction. Creates fear and solidarity simultaneously.</p>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 22 (Analysis Practice)</h4>
+            <p>Compare these two ways of describing the same event:</p>
+            <p>A: "Australia was discovered by Captain Cook in 1770."</p>
+            <p>B: "British forces invaded Aboriginal lands in 1770."</p>
+            <p>What does each framing reveal about ideological stance?</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Version A Analysis:</strong></p>
+            <ul>
+                <li><strong>"Discovered"</strong> — implies land was empty, unknown</li>
+                <li><strong>Ignores</strong> 60,000+ years of indigenous presence</li>
+                <li><strong>Stance:</strong> Eurocentric, colonial perspective</li>
+                <li><strong>Effect:</strong> Legitimizes colonization, erases indigenous history</li>
+            </ul>
+            <p><strong>Version B Analysis:</strong></p>
+            <ul>
+                <li><strong>"Invaded"</strong> — implies prior occupation, violence</li>
+                <li><strong>"Aboriginal lands"</strong> — acknowledges indigenous ownership</li>
+                <li><strong>Stance:</strong> Indigenous perspective, anti-colonial</li>
+                <li><strong>Effect:</strong> Challenges colonial narrative, restores agency</li>
+            </ul>
+            <p><strong>Key insight:</strong> Same event, completely different framing. Lexical choice reveals ideological stance. Neither is "neutral" — both carry ideology.</p>
+        </div>
+
+        <h2>Summary Questions</h2>
+
+        <div class="question-box">
+            <h4>Question 23</h4>
+            <p>What analytical framework would you use to identify authorial stance in a text? List at least seven elements to examine.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <p><strong>Nine-Point Stance Analysis Framework:</strong></p>
+            <ol>
+                <li><strong>Pronoun Use:</strong> Who is "we"? Who is "they"? Inclusive or exclusive?</li>
+                <li><strong>Modality:</strong> Certainty markers (must, will, should, might, could)</li>
+                <li><strong>Evaluative Language:</strong> Adjectives and adverbs expressing judgment</li>
+                <li><strong>Presuppositions:</strong> What is assumed as shared knowledge?</li>
+                <li><strong>Voice:</strong> Active (shows agency) vs. Passive (hides agency)</li>
+                <li><strong>Lexical Choices:</strong> Word selection reveals ideology (terrorist vs. freedom fighter)</li>
+                <li><strong>Metaphors:</strong> Conceptual frameworks used (flood, invasion, disease)</li>
+                <li><strong>What's Absent:</strong> Whose voices are silenced? What's not said?</li>
+                <li><strong>Genre Expectations:</strong> How does text conform to or deviate from norms?</li>
+            </ol>
+        </div>
+
+        <div class="question-box">
+            <h4>Question 24</h4>
+            <p>Name three key CDA theorists and their main contributions/focus areas.</p>
+        </div>
+
+        <div class="answer-box">
+            <h4>Answer</h4>
+            <table>
+                <tr>
+                    <th>Theorist</th>
+                    <th>Focus Area</th>
+                    <th>Key Contribution</th>
+                </tr>
+                <tr>
+                    <td><strong>Teun van Dijk</strong></td>
+                    <td>Racism and prejudice</td>
+                    <td>Ideological Square; analysis of racist discourse in media and politics</td>
+                </tr>
+                <tr>
+                    <td><strong>Norman Fairclough</strong></td>
+                    <td>Global capitalism</td>
+                    <td>Synthetic personalization; three-dimensional CDA framework (text, discourse practice, social practice)</td>
+                </tr>
+                <tr>
+                    <td><strong>George Lakoff</strong></td>
+                    <td>Cognitive linguistics</td>
+                    <td>Conceptual metaphor theory; frames and their role in political discourse</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Exam Tips</h2>
+
+        <div class="tips-box">
+            <h4>How to Answer CDA Exam Questions</h4>
+            <ol>
+                <li><strong>Define terms precisely:</strong> Use the technical vocabulary from the course</li>
+                <li><strong>Always give examples:</strong> Abstract concepts need concrete illustrations</li>
+                <li><strong>Connect to power:</strong> CDA is fundamentally about power relations</li>
+                <li><strong>Quote from texts:</strong> When analyzing, cite specific words/phrases</li>
+                <li><strong>Consider what's absent:</strong> What's NOT said is often as important as what IS said</li>
+                <li><strong>Reference theorists:</strong> Van Dijk, Fairclough, Grice, Lakoff — mention them when relevant</li>
+                <li><strong>Avoid being judgmental:</strong> CDA is about analysis, not personal opinion</li>
+            </ol>
+        </div>
+
+        <div class="tips-box">
+            <h4>Key Terms to Memorize</h4>
+            <ul>
+                <li>CDA / Critical Linguistics / Critical Discourse Studies</li>
+                <li>Seven Standards of Textuality</li>
+                <li>Speech Community vs. Discourse Community</li>
+                <li>Ideology, Frames, Archive</li>
+                <li>Performatives, Speech Acts</li>
+                <li>Meaning vs. Sense vs. Reference</li>
+                <li>Grice's Co-operative Principle and Four Maxims</li>
+                <li>Implicature, Violating vs. Flouting</li>
+                <li>Context of Culture vs. Context of Situation</li>
+                <li>Stance (Conscious-Explicit, Conscious-Hidden, Unconscious)</li>
+                <li>Synthetic Personalization</li>
+                <li>Ideological Square</li>
+                <li>Nominalization, Passive Voice</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
