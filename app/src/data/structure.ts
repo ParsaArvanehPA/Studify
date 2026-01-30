@@ -97,21 +97,27 @@ export const studyData: Semester[] = [
             id: 'chapter-1',
             name: 'Chapter 1',
             files: [
-              { name: 'Study Guide', path: 'Semester 1/Critical Discourse Analysis/chapter-1-summary.html', type: 'html' },
+              { name: 'Study Guide', path: 'Semester 1/Critical Discourse Analysis/chapter-1-study-guide.html', type: 'html' },
             ]
           },
           {
             id: 'chapter-2',
             name: 'Chapter 2',
             files: [
-              { name: 'Study Guide', path: 'Semester 1/Critical Discourse Analysis/chapter-2-summary.html', type: 'html' },
+              { name: 'Study Guide', path: 'Semester 1/Critical Discourse Analysis/chapter-2-study-guide.html', type: 'html' },
             ]
           },
           {
             id: 'chapter-3',
             name: 'Chapter 3',
             files: [
-              { name: 'Study Guide', path: 'Semester 1/Critical Discourse Analysis/chapter-3-summary.html', type: 'html' },
+              { name: 'Study Guide', path: 'Semester 1/Critical Discourse Analysis/chapter-3-study-guide.html', type: 'html' },
+            ]
+          },{
+            id: 'exam-questions',
+            name: 'Exam questions',
+            files: [
+              { name: 'Exam questions', path: 'Semester 1/Critical Discourse Analysis/exam-questions.html', type: 'html' },
             ]
           },
         ]
