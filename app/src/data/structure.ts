@@ -309,6 +309,7 @@ export const studyData: Semester[] = [
             name: 'Session 1',
             files: [
               { name: 'Study Guide', path: 'Semester 1/The Way of Research/session-1/session-1-study-guide.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-1/session-1-qa.html', type: 'html' },
             ]
           },
           {
@@ -316,6 +317,7 @@ export const studyData: Semester[] = [
             name: 'Session 2',
             files: [
               { name: 'Study Guide', path: 'Semester 1/The Way of Research/session-2/session-2-study-guide.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-2/session-2-qa.html', type: 'html' },
             ]
           },
           {
@@ -323,6 +325,7 @@ export const studyData: Semester[] = [
             name: 'Session 3',
             files: [
               { name: 'Study Guide', path: 'Semester 1/The Way of Research/session-3/session-3-study-guide.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-3/session-3-qa.html', type: 'html' },
             ]
           },
           {
@@ -330,6 +333,7 @@ export const studyData: Semester[] = [
             name: 'Session 4',
             files: [
               { name: 'Study Guide', path: 'Semester 1/The Way of Research/session-4/session-4-study-guide.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-4/session-4-qa.html', type: 'html' },
             ]
           },
           {
@@ -337,6 +341,7 @@ export const studyData: Semester[] = [
             name: 'Session 5',
             files: [
               { name: 'Study Guide', path: 'Semester 1/The Way of Research/session-5/session-5-study-guide.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-5/session-5-qa.html', type: 'html' },
             ]
           },
           {
@@ -344,6 +349,31 @@ export const studyData: Semester[] = [
             name: 'Session 6',
             files: [
               { name: 'Study Guide', path: 'Semester 1/The Way of Research/session-6/session-6-study-guide.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-6/session-6-qa.html', type: 'html' },
+            ]
+          },
+          {
+            id: 'session-7',
+            name: 'Session 7',
+            files: [
+              { name: 'Summary', path: 'Semester 1/The Way of Research/session-7/session-7-summary.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-7/session-7-qa.html', type: 'html' },
+            ]
+          },
+          {
+            id: 'session-8',
+            name: 'Session 8',
+            files: [
+              { name: 'Summary', path: 'Semester 1/The Way of Research/session-8/session-8-summary.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-8/session-8-qa.html', type: 'html' },
+            ]
+          },
+          {
+            id: 'session-9',
+            name: 'Session 9',
+            files: [
+              { name: 'Summary', path: 'Semester 1/The Way of Research/session-9/session-9-summary.html', type: 'html' },
+              { name: 'Q&A', path: 'Semester 1/The Way of Research/session-9/session-9-qa.html', type: 'html' },
             ]
           },
         ]
