@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جلسه ۱ - روش تحقیق در ترجمه</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <title>راهنمای مطالعه: جلسه اول - روش تحقیق در ترجمه</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c5282;
+            --accent-color: #4299e1;
+            --text-color: #1a1a1a;
+            --background-color: #ffffff;
+            --box-background: #f8f9fa;
+            --key-term-color: #e67e22;
+            --important-color: #c2185b;
+            --case-study-color: #27ae60;
+            --example-color: #f39c12;
+            --scholar-color: #6c757d;
+            --ai-color: #8b5cf6;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,98 +27,232 @@
         }
 
         body {
-            font-family: Vazirmatn, Tahoma, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: #f5f5f5;
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.9;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-size: 16px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 40px 24px;
         }
 
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 30px;
-            border-radius: 5px;
-            margin-bottom: 30px;
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            line-height: 1.5;
         }
 
-        header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
-
-        .meta-info {
-            font-size: 1.1em;
-            opacity: 0.9;
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
         }
 
         h2 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 48px 0 24px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-color);
         }
 
         h3 {
-            color: #3498db;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 32px 0 16px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 16px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
         }
 
         .concept-box {
-            background: #e8f4f8;
-            border-right: 5px solid #3498db;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 3px;
+            background-color: var(--box-background);
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .concept-box h3, .concept-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
         }
 
         .key-term {
-            background: #fff3e0;
-            border-right: 5px solid #ff9800;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 3px;
+            background-color: #fef3e2;
+            border-right: 5px solid var(--key-term-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .key-term strong {
+            color: var(--key-term-color);
         }
 
         .important {
-            background: #fce4ec;
-            border-right: 5px solid #c2185b;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 3px;
+            background-color: #fdf2f8;
+            border-right: 5px solid var(--important-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
         }
 
-        .scholar-box {
-            background: #f0f0f0;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
+        .important strong, .important h3 {
+            color: var(--important-color);
         }
 
         .case-study {
-            background: #e8f5e9;
-            border-right: 5px solid #4caf50;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 3px;
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .case-study strong, .case-study h4 {
+            color: var(--case-study-color);
+        }
+
+        .example {
+            background-color: #fffbeb;
+            border-right: 5px solid var(--example-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .example strong {
+            color: var(--example-color);
+        }
+
+        .scholar-box {
+            background-color: #f8f9fa;
+            border-right: 5px solid var(--scholar-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .scholar-box strong, .scholar-box h3, .scholar-box h4 {
+            color: var(--scholar-color);
+        }
+
+        .ai-box {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-right: 5px solid var(--ai-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+        }
+
+        .ai-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #c4b5fd;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #6b21a8;
+        }
+
+        .ai-box-header img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .ai-box p {
+            color: #4c1d95;
+            margin: 12px 0;
+        }
+
+        .ai-box ul, .ai-box ol {
+            color: #4c1d95;
+            margin: 12px 24px 12px 0;
+        }
+
+        .ai-box li {
+            margin: 8px 0;
+        }
+
+        .ai-box strong {
+            color: #7c3aed;
+        }
+
+        .question-box {
+            background-color: #ebf8ff;
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .question-box strong {
+            color: var(--primary-color);
+        }
+
+        .answer-box {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 20px 24px;
+            margin: 8px 0 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .answer-box strong {
+            color: var(--case-study-color);
         }
 
         ul, ol {
-            margin-right: 25px;
-            margin-bottom: 15px;
+            margin: 16px 24px 16px 0;
         }
 
         li {
             margin-bottom: 8px;
+        }
+
+        .chapter-divider {
+            text-align: center;
+            margin: 64px 0;
+            position: relative;
+        }
+
+        .chapter-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+        }
+
+        .chapter-divider span {
+            background-color: var(--background-color);
+            padding: 0 24px;
+            position: relative;
+            color: var(--primary-color);
+            font-weight: 600;
         }
 
         table {
@@ -115,101 +261,69 @@
             margin: 20px 0;
         }
 
-        th {
-            background: #2c3e50;
-            color: white;
+        th, td {
+            border: 1px solid #ddd;
             padding: 12px;
             text-align: right;
         }
 
-        td {
-            border: 1px solid #ddd;
-            padding: 12px;
+        th {
+            background-color: var(--primary-color);
+            color: white;
         }
 
         tr:nth-child(even) {
-            background: #f9f9f9;
+            background-color: #f8f9fa;
         }
 
         blockquote {
-            border-right: 4px solid #3498db;
+            border-right: 4px solid var(--accent-color);
             padding-right: 20px;
             margin: 20px 0;
             font-style: italic;
             color: #555;
         }
 
-        .ai-explanation {
-            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
-            color: #4c1d95;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 8px;
-            border-right: 5px solid #a78bfa;
-            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
-        }
-
-        .ai-explanation-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.1em;
-            margin-bottom: 12px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #c4b5fd;
-            color: #6b21a8;
-        }
-
-        .ai-explanation-header img {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-        }
-
-        .ai-explanation p {
-            margin: 10px 0;
-            line-height: 1.9;
-        }
-
-        .ai-explanation ul, .ai-explanation ol {
-            margin: 12px 0;
-            padding-right: 25px;
-        }
-
-        .ai-explanation li {
-            margin: 8px 0;
-        }
-
-        .ai-explanation strong {
-            color: #7c3aed;
-            font-weight: 600;
-        }
-
         @media print {
-            body {
-                background-color: white;
-            }
-
             .container {
                 max-width: 100%;
+                padding: 20px;
             }
 
             h2 {
                 page-break-after: avoid;
+            }
+
+            .concept-box, .key-term, .important, .case-study, .example, .scholar-box, .question-box, .answer-box, .ai-box {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>جلسه ۱: معرفی درس و مبانی اولیه</h1>
-            <div class="meta-info">
-                روش تحقیق در ترجمه | کارشناسی ارشد مطالعات ترجمه<br>
-                جلسه معارفه و مقدمات
-            </div>
-        </header>
+        <h1>روش تحقیق در ترجمه</h1>
+        <p class="subtitle">جلسه اول: معرفی درس و مبانی اولیه | کارشناسی ارشد مطالعات ترجمه - دانشگاه تهران</p>
+
+        <div class="chapter-divider"><span>مروری بر محتوای جلسه</span></div>
 
         <h2>۱. اطلاعات کلی درس</h2>
 
@@ -297,13 +411,11 @@
             <p><strong>اهمیت چرخش‌ها:</strong> با هر چرخش، موضوع مطالعه، روش مطالعه، و چرایی مطالعه ترجمه تغییر می‌کند. متدولوژی عوض می‌شود.</p>
         </div>
 
-        <div class="ai-explanation">
-            <span class="ai-explanation-header">
-                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="icon">
-                توضیح تکمیلی
-            </span>
-            <p><strong>چرا چرخش‌ها (Turns) برای شما مهم هستند؟</strong></p>
-
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                <span>توضیح تکمیلی: چرا چرخش‌ها برای شما مهم هستند؟</span>
+            </div>
             <p>تصور کنید دارید یک ترجمه را تحلیل می‌کنید. سؤال اصلی این است: <strong>از چه زاویه‌ای نگاه می‌کنید؟</strong></p>
 
             <p><strong>مثال عملی:</strong> ترجمه فارسی رمان "۱۹۸۴" جورج اورول</p>
@@ -484,12 +596,12 @@
             <p><strong>نتیجه:</strong> داستان کاملاً متفاوتی شد!</p>
         </div>
 
-        <div class="ai-explanation">
-            <span class="ai-explanation-header">
-                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="icon">
-                توضیح تکمیلی
-            </span>
-            <p><strong>معمای بزرگ: وفاداری به متن یا وفاداری به فرهنگ؟</strong></p>
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                <span>توضیح تکمیلی: معمای بزرگ وفاداری</span>
+            </div>
+            <p><strong>وفاداری به متن یا وفاداری به فرهنگ؟</strong></p>
 
             <p>مثال‌های یوجین نایدا یک سؤال اخلاقی بزرگ را مطرح می‌کنند که هر مترجمی باید با آن دست‌وپنجه نرم کند:</p>
 
@@ -615,11 +727,11 @@
             <p><strong>نتیجه:</strong> این "خرابکاری" در حوزه مطالعات ادبی، ترجمه‌های خوب و خلاق محسوب می‌شوند</p>
         </div>
 
-        <div class="ai-explanation">
-            <span class="ai-explanation-header">
-                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="icon">
-                جمع‌بندی: سفر از مترجم به پژوهشگر
-            </span>
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                <span>جمع‌بندی: سفر از مترجم به پژوهشگر</span>
+            </div>
             <p><strong>این جلسه چه چیزی به شما یاد داد؟</strong></p>
 
             <p>این جلسه یک <strong>تحول ذهنی</strong> ایجاد می‌کند - شما دیگر به ترجمه مثل گذشته نگاه نمی‌کنید. بیایید ببینیم چطور:</p>
@@ -709,6 +821,87 @@
             <h3>هدف نهایی</h3>
             <p>تبدیل شدن به <strong>معمار فکر</strong> و <strong>معمار اندیشه</strong> در حوزه مطالعات ترجمه</p>
             <p>هر پژوهشگر یک "آجر" به ساختمان دانش اضافه می‌کند - سهم شما چیست؟</p>
+        </div>
+
+        <div class="chapter-divider"><span>سوالات امتحانی</span></div>
+
+        <h2>پرسش و پاسخ برای آمادگی امتحان</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱:</strong> تفاوت اصلی بین دوره کارشناسی و کارشناسی ارشد در رشته ترجمه چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> در دوره کارشناسی تمرکز بر <strong>پرکتیس</strong> (عمل ترجمه) است و هدف تبدیل دانشجو از «نام» به «مترجم» است. اما در کارشناسی ارشد، فرض بر این است که دانشجو با پرکتیس ترجمه آشناست و تمرکز بر <strong>پژوهش</strong> و تولید فکر درباره ترجمه است. هدف تبدیل به «پژوهشگر ترجمه» است.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۲:</strong> رشته مطالعات ترجمه کی و کجا و توسط چه کسی پایه‌گذاری شد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> رشته مطالعات ترجمه در سال <strong>۱۹۷۲</strong> در <strong>دانشگاه کپنهاگن</strong> توسط <strong>جیمز هولمز</strong> (شهروند هلندی-آمریکایی) پایه‌گذاری شد. این رشته از سنت اروپایی برخاسته است.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۳:</strong> چهار مورد از چرخش‌های اصلی در مطالعات ترجمه را نام ببرید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چرخش‌های اصلی عبارتند از: ۱) <strong>چرخش زبانی</strong> (Linguistic Turn)، ۲) <strong>چرخش فرهنگی</strong> (Cultural Turn)، ۳) <strong>چرخش اجتماعی</strong> (Social Turn)، ۴) <strong>چرخش گفتمانی</strong> (Discursive Turn)، ۵) چرخش روایی، ۶) چرخش فضایی، ۷) چرخش تاریخی، ۸) چرخش تصویری، ۹) چرخش حافظه‌ای.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۴:</strong> تفاوت رویکرد Source-Oriented و Target-Oriented در ترجمه چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> رویکرد <strong>Source-Oriented</strong> (متن‌مبدأ محور) بر وفاداری به متن اصلی و نویسنده تأکید دارد. در مقابل، رویکرد <strong>Target-Oriented</strong> (متن‌مقصد محور) بر وفاداری به خواننده مقصد و کارکرد ترجمه در فرهنگ مقصد تأکید می‌کند. نظریه‌های فانکشنالیستی و پساساختارگرایی به‌طور کلی وفاداری به سورس را زیر سوال می‌برند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۵:</strong> یوجین نایدا چه تخصصی داشت و چرا این تخصص در ترجمه کتاب مقدس مهم بود؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> یوجین نایدا متخصص <strong>قوم‌شناسی (Ethnography) و انسان‌شناسی</strong> بود، نه زبان‌شناسی. این تخصص به او کمک کرد بفهمد چرا ترجمه کتاب مقدس برای برخی اقوام (مثل سرخپوستان ونزوئلا) تأثیر مورد انتظار را نداشت. او فهمید که مفاهیمی مثل «بره» برای اسکیموها معنا ندارد و باید با معادل‌های فرهنگی مثل «فُک دریایی» جایگزین شود.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۶:</strong> میرزا حبیب اصفهانی چگونه از ترجمه به عنوان ابزار مقاومت استفاده کرد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> میرزا حبیب کتاب «سرگذشت حاجی بابای اصفهانی» نوشته جیمز موریه (که نگاه توهین‌آمیزی به ایرانیان داشت) را به فارسی ترجمه کرد. او نه تنها فحش‌های موجود را حفظ کرد، بلکه <strong>تعداد و غلظت آنها را بیشتر کرد</strong> تا شوک بیشتری در خوانندگان ایجاد کند. هدف او بیدار کردن ایرانیان از خواب غفلت بود و این ترجمه نقش مهمی در تحریک مردم به سمت انقلاب مشروطه داشت.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۷:</strong> منظور از «مترجم به مثابه خرابکار» چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> مترجم خلاق و صاحب‌سبک کسی است که قواعد را «تخریب» می‌کند. این خرابکاری می‌تواند سه نوع باشد: ۱) <strong>خرابکاری زبانی</strong> (تخریب قواعد زبان برای خلاقیت ادبی)، ۲) <strong>خرابکاری گفتمانی</strong> (تخریب قواعد گفتمانی برای نوآوری)، ۳) <strong>خرابکاری ایدئولوژیک</strong> (تخریب هنجارهای ایدئولوژیک برای مقاومت فرهنگی). این خرابکاری‌ها در مطالعات ادبی، ترجمه‌های خلاق و ارزشمند محسوب می‌شوند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۸:</strong> چرا با هر «چرخش» جدید در مطالعات ترجمه، متدولوژی پژوهش تغییر می‌کند؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> هر چرخش، نگاه و درک متفاوتی از چیستی ترجمه ارائه می‌دهد. با هر چرخش، <strong>موضوع مطالعه</strong> (چه چیزی را مطالعه کنیم)، <strong>روش مطالعه</strong> (چگونه مطالعه کنیم)، و <strong>چرایی مطالعه</strong> (برای چه هدفی) تغییر می‌کند. مثلاً در چرخش زبانی، تمرکز بر مقایسه ST و TT از منظر زبان‌شناسی است، اما در چرخش فرهنگی، به تولید، توزیع، و مصرف ترجمه در جامعه توجه می‌شود.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۹:</strong> سه کارکرد مهم ترجمه (به جز انتقال معنا) را نام ببرید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> ۱) <strong>تولید انقلاب:</strong> مانند نقش ترجمه در انقلاب مشروطه ایران. ۲) <strong>تولید مقاومت:</strong> مانند ترجمه شکسپیر توسط برادران دی‌کامپوس برای صدا دادن به قوم توپی. ۳) <strong>ایجاد شوک فرهنگی:</strong> معرفی گفتمان‌های جدید و متضاد با ایدئولوژی مسلط جامعه. ۴) <strong>گفتگوی میان‌فرهنگی:</strong> برقراری ارتباط بین دو فرهنگ بیگانه.
+        </div>
+
+        <div class="concept-box">
+            <h4>نکات کلیدی برای مرور</h4>
+            <ul>
+                <li>تاریخ تولد رشته: <strong>۱۹۷۲</strong> - محل: <strong>کپنهاگ</strong> - بنیانگذار: <strong>جیمز هولمز</strong></li>
+                <li>تفاوت کارشناسی (پرکتیس) و کارشناسی ارشد (پژوهش)</li>
+                <li>چرخش‌ها: زبانی، فرهنگی، اجتماعی، گفتمانی، روایی، فضایی، تاریخی، تصویری، حافظه‌ای</li>
+                <li>دو رویکرد: <strong>Source-Oriented</strong> vs <strong>Target-Oriented</strong></li>
+                <li>نایدا: آنتروپولوژیست، مثال بره و فک دریایی</li>
+                <li>ترجمه به عنوان مقاومت: میرزا حبیب، برادران دی‌کامپوس</li>
+                <li>مترجم خرابکار: خرابکاری زبانی، گفتمانی، ایدئولوژیک</li>
+                <li>منبع: کتاب خوانش‌های تازه از فرهنگ - دانشگاه علامه طباطبایی</li>
+            </ul>
         </div>
 
     </div>

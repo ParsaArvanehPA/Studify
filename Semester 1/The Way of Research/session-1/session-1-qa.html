@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جلسه ۱: پرسش و پاسخ - مقدمه‌ای بر روش تحقیق در ترجمه</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --accent-color: #4299e1;
+            --text-color: #1a1a1a;
+            --background-color: #ffffff;
+            --box-background: #f8f9fa;
+            --question-color: #2c5282;
+            --answer-color: #27ae60;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 48px 0 24px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .question-box {
+            background-color: #ebf8ff;
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .question-box strong {
+            color: var(--primary-color);
+            font-size: 1.05rem;
+        }
+
+        .answer-box {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--answer-color);
+            padding: 20px 24px;
+            margin: 8px 0 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .answer-box strong {
+            color: var(--answer-color);
+        }
+
+        ul, ol {
+            margin: 16px 24px 16px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .chapter-divider {
+            text-align: center;
+            margin: 64px 0;
+            position: relative;
+        }
+
+        .chapter-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+        }
+
+        .chapter-divider span {
+            background-color: var(--background-color);
+            padding: 0 24px;
+            position: relative;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media print {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .question-box, .answer-box {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>جلسه ۱: پرسش و پاسخ</h1>
+        <p class="subtitle">مقدمه‌ای بر روش تحقیق در ترجمه | کارشناسی ارشد مطالعات ترجمه</p>
+
+        <div class="chapter-divider"><span>مبانی رشته و تاریخچه</span></div>
+
+        <h2>تاریخچه رشته ترجمه</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱:</strong> تاریخ و محل تولد رشته مطالعات ترجمه به عنوان یک رشته دانشگاهی چه زمانی و کجا بود؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> تاریخ تولد رشته ترجمه سال <strong>۱۹۷۲</strong> میلادی و محل تولد آن <strong>دانشگاه کپنهاگ</strong> در دانمارک است. فردی که این رشته را پایه‌گذاری کرد <strong>جیمز هولمز</strong> (James Holmes) بود که دو تابعیتی هلندی و آمریکایی داشت.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۲:</strong> تفاوت اصلی بین دوره کارشناسی و کارشناسی ارشد در رشته ترجمه چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> در دوره <strong>کارشناسی</strong> تمرکز روی پرکتیس (عمل) است؛ یعنی فرض بر این است که دانشجو قرار است از یک غیرمترجم تبدیل به مترجم شود. اما در <strong>کارشناسی ارشد</strong> فرض بر این است که دانشجو با ترجمه آشنایی دارد و کنشگر حوزه ترجمه است، و حالا قرار است در مورد این کنش <strong>پژوهش</strong> کند.
+        </div>
+
+        <h2>ماهیت ترجمه</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۳:</strong> ترجمه چه نوع کنشی است و چه وجوهی دارد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> ترجمه وجوه متکثری دارد و نمی‌توان آن را به یکی از موارد زیر محدود کرد:
+            <ul>
+                <li>کنش <strong>زبانی</strong> (Linguistic Practice)</li>
+                <li>کنش معطوف به <strong>ایدئولوژی</strong></li>
+                <li>کنش معطوف به <strong>ارتباط</strong> (Communication)</li>
+                <li>کنش معطوف به <strong>مقاومت</strong> (Resistance)</li>
+            </ul>
+            هر کدام از این تصورها ذهنیت و ادراک متفاوتی ایجاد می‌کند و همه این‌ها با هم در ترجمه وجود دارند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۴:</strong> چرا صرف دانش زبان‌شناسی برای پژوهش در ترجمه کافی نیست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چون ترجمه از سطح خُرد (زبانی) شروع می‌شود و به سطح کلان می‌رسد که در آن فورس‌های متکثری سر کار هستند از جمله فورس‌های <strong>فرهنگی</strong> و <strong>اجتماعی</strong>. برای پژوهش در ترجمه علاوه بر دانش زبان‌شناسی به دانش‌های دیگری مانند مردم‌شناسی (اتنوگرافی)، جامعه‌شناسی و مطالعات فرهنگی نیاز داریم.
+        </div>
+
+        <h2>چرخش‌های رشته ترجمه</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۵:</strong> چرخش‌های مهم در رشته ترجمه کدامند؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> از سال ۱۹۷۲ تا کنون چرخش‌های مختلفی در رشته ترجمه اتفاق افتاده است:
+            <ul>
+                <li><strong>چرخش زبانی</strong> (Linguistic Turn)</li>
+                <li><strong>چرخش فرهنگی</strong> (Cultural Turn)</li>
+                <li><strong>چرخش اجتماعی</strong> (Social Turn)</li>
+                <li><strong>چرخش روایی</strong> (Narrative Turn)</li>
+                <li><strong>چرخش فضایی</strong> (Spatial Turn)</li>
+                <li><strong>چرخش تاریخی</strong> (Historical Turn)</li>
+                <li><strong>چرخش تصویری</strong></li>
+                <li><strong>چرخش حافظه‌ای</strong> (Memory Turn)</li>
+            </ul>
+            با هر چرخشی، موضوع مطالعه، روش مطالعه، و چرایی مطالعه ترجمه تغییر می‌کند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۶:</strong> در چرخش زبانی، درک ما از ترجمه چگونه بود و چه روشی برای پژوهش استفاده می‌شد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> در چرخش زبانی، ترجمه صرفاً یک <strong>کنش زبان‌شناختی</strong> در نظر گرفته می‌شد و روش پژوهش عمدتاً <strong>مقایسه متن مبدأ و مقصد</strong> (Source-Target Comparison) بود. در این رویکرد، متن‌های ادبی مانند نمایشنامه و رمان را با ترجمه‌هایشان مقایسه می‌کردند و عمدتاً از نظریه‌های زبان‌شناسی تغذیه می‌کردند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۷:</strong> چرخش فرهنگی چه تغییری در نگرش به ترجمه ایجاد کرد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چرخش فرهنگی نشان داد که صرف تسلط بر دو زبان، مترجم را به مترجم خوب تبدیل نمی‌کند. دانش‌ها و مهارت‌هایی <strong>فراتر از زبان</strong> لازم است. اگر مترجم به اسکوپوس (هدف) ترجمه توجه نکند و تمام تمرکزش بر جنبه زبانی باشد، در حرفه ترجمه شکست می‌خورد.
+        </div>
+
+        <h2>نمونه‌های کاربردی</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۸:</strong> داستان ترجمه کتاب مقدس برای سرخ‌پوستان ونزوئلا توسط یوجین نایدا چه درسی به ما می‌دهد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> نایدا به عنوان سرپرست انجمن ترجمه کتاب مقدس متوجه شد که وقتی آیه‌های مربوط به به صلیب کشیده شدن حضرت مسیح را برای بومیان ونزوئلا ترجمه کردند، هیچ واکنش عاطفی نشان ندادند. علت این بود که <strong>اسکیماها</strong> (طرحواره‌های ذهنی) آن‌ها متفاوت بود. مثلاً مفهوم «قهرمان» برای آن‌ها کسی بود که در میدان رزم بجنگد و شهید شود، نه کسی که به صلیب کشیده شود.
+            <br><br>
+            همچنین استعاره «بره» (نماد معصومیت) برای آن‌ها هیچ تصویر ذهنی نداشت چون در عمرشان بره ندیده بودند. به جای آن از حیوانات آشنای فرهنگ اسکیمویی مثل «سیل» استفاده کردند. این نشان می‌دهد که مترجم باید <strong>طرحواره‌های ذهنی</strong> مخاطب را در نظر بگیرد.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۹:</strong> چرا در ترجمه یک داستان آلمانی به انگلیسی، پایان‌بندی داستان تغییر داده شد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> در داستان آلمانی، شخصیت اصلی (یک خرگوش) در انتهای داستان می‌میرد. این موضوع در آلمان پذیرفته شده است چون آلمانی‌ها معتقدند کودکان باید از همان ابتدا با مفهوم مرگ آشنا شوند. اما در انگلستان، بحث درباره مرگ با کودکان <strong>تابو</strong> است. برای همین در ترجمه انگلیسی، پایان‌بندی تغییر کرد: خرگوش از ارتفاعی سقوط می‌کند، پایش می‌شکند و به بیمارستان می‌رود، اما نمی‌میرد.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۱۰:</strong> ترجمه میرزا حبیب اصفهانی از کتاب «سرگذشت حاجی بابای اصفهانی» چه نقشی در انقلاب مشروطه داشت؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> کتاب اصلی که توسط جیمز موریه (کاردار سفارت انگلیس) نوشته شده بود، نگاهی بسیار توهین‌آمیز و تحقیرآمیز به ایرانی‌ها داشت. میرزا حبیب اصفهانی در ترجمه خود نه تنها این فحش‌ها را حذف نکرد، بلکه <strong>تعداد و غلظت فحش‌ها را بیشتر کرد</strong>. هدفش ایجاد شوک در انسان ایرانی بود تا از خواب غفلت بیدار شود و ببیند دنیا چه نگاهی به ایرانی دارد. نتیجه این ترجمه، تحریک مردم به انقلاب و پیوستن به صف مشروطه‌طلبان بود.
+        </div>
+
+        <h2>انواع پژوهش در ترجمه</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱۱:</strong> سه دسته اصلی پژوهش در ترجمه بر اساس نقشه جیمز هولمز کدامند؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong>
+            <ol>
+                <li><strong>پژوهش محصول‌محور</strong> (Product-Oriented): ترجمه‌ها چه هستند؟</li>
+                <li><strong>پژوهش فرایندمحور</strong> (Process-Oriented): ترجمه‌ها چگونه تولید می‌شوند؟</li>
+                <li><strong>پژوهش کارکردمحور</strong> (Function-Oriented): ترجمه‌ها چه می‌کنند؟ چه نقشی ایفا می‌کنند؟</li>
+            </ol>
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۱۲:</strong> منبع اصلی درس روش تحقیق در ترجمه چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> کتاب «خوانش‌های تازه از فرهنگ بر اساس چرخش‌های علوم انسانی» که دبیر آن خانم دکتر فرحزاد است و توسط انتشارات دانشگاه علامه طباطبایی چاپ شده است. این کتاب هر فصلش روی یکی از چرخش‌های رشته ترجمه تمرکز دارد.
+        </div>
+
+    </div>
+</body>
+</html>

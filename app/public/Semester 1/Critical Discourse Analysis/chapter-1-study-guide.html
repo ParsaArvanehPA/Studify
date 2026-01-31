@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 1: Background & Theory of CDA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        .meta-info {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.6em;
+            margin: 35px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #1976d2;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .concept-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .concept-box h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .key-term {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .key-term strong {
+            color: #2c3e50;
+            font-size: 1.05em;
+        }
+
+        .important {
+            background-color: #fce4ec;
+            border-left: 5px solid #c2185b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .scholar-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .scholar-box h4 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .case-study {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .case-study h4 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .example {
+            background-color: #fff9e6;
+            border-left: 5px solid #fbc02d;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .example h5 {
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .ai-explanation {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            color: #1565c0;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #2196f3;
+            box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+        }
+
+        .ai-explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #90caf9;
+            color: #0d47a1;
+        }
+
+        .ai-explanation-header img {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        .ai-explanation p {
+            margin: 10px 0;
+            line-height: 1.9;
+        }
+
+        .ai-explanation ul, .ai-explanation ol {
+            margin: 12px 0;
+            padding-left: 25px;
+        }
+
+        .ai-explanation li {
+            margin: 8px 0;
+        }
+
+        .ai-explanation strong {
+            color: #1565c0;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        em {
+            color: #1976d2;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Session 1: Background & Theory of CDA</h1>
+            <div class="meta-info">
+                Critical Discourse Analysis | Chapter 1 - Introduction to CDA<br>
+                Foundations, Methods, and Key Concepts
+            </div>
+        </header>
+
+        <h2>1. What is Critical Discourse Analysis?</h2>
+
+        <div class="concept-box">
+            <h4>Core Definition</h4>
+            <p><strong>Critical Discourse Analysis (CDA)</strong> is the systematic study of how language is used to <em>persuade</em>, <em>manipulate</em>, and <em>control</em> individuals and social groups. It focuses on language as a controlling force in society and its role in maintaining or changing social structures.</p>
+        </div>
+
+        <div class="key-term">
+            <strong>Alternative Names:</strong> CDA is also referred to as <em>Critical Linguistics</em> or <em>Critical Discourse Studies (CDS)</em>. These terms are often used interchangeably in academic literature.
+        </div>
+
+        <blockquote>
+            "Social action and discourse are inextricably linked." — Scollon (2001)
+        </blockquote>
+
+        <h3>1.1 Key Goals of CDA</h3>
+
+        <div class="concept-box">
+            <h4>The Four Pillars of CDA</h4>
+            <ul>
+                <li><strong>Develop awareness</strong> of the relationship between language and ideology</li>
+                <li><strong>Understand</strong> how discourse controls and shapes society</li>
+                <li><strong>Question</strong> traditional roles in conventional discourses</li>
+                <li><strong>Work towards</strong> social justice and positive change</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <strong>Critical Note:</strong> The word "critical" in CDA does NOT mean negative evaluation. It means <em>critique</em> — which can be positive (e.g., analyzing successful resistance movements) or negative. Critical analysis examines the underlying structures, assumptions, and power relations in any discourse.
+        </div>
+
+        <h2>2. The Multidisciplinary Nature of CDA</h2>
+
+        <div class="concept-box">
+            <h4>Understanding Discourse</h4>
+            <p><strong>Discourse</strong> encompasses all forms of symbolic human interaction, including:</p>
+            <ul>
+                <li>Language (spoken and written)</li>
+                <li>Gesture and body language</li>
+                <li>Pictures and images</li>
+                <li>Films and videos</li>
+                <li>Music and sound</li>
+            </ul>
+        </div>
+
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Contribution to CDA</th>
+            </tr>
+            <tr>
+                <td><strong>Linguistics</strong></td>
+                <td>Provides tools for analyzing language structures and patterns</td>
+            </tr>
+            <tr>
+                <td><strong>Sociology</strong></td>
+                <td>Offers frameworks for understanding social structures and power</td>
+            </tr>
+            <tr>
+                <td><strong>Psychology</strong></td>
+                <td>Helps understand cognitive processes in discourse comprehension</td>
+            </tr>
+            <tr>
+                <td><strong>Anthropology</strong></td>
+                <td>Provides cultural context and ethnographic methods</td>
+            </tr>
+            <tr>
+                <td><strong>Literary Theory</strong></td>
+                <td>Contributes textual analysis techniques</td>
+            </tr>
+            <tr>
+                <td><strong>Sociolinguistics</strong></td>
+                <td>Examines language variation in social contexts</td>
+            </tr>
+        </table>
+
+        <div class="scholar-box">
+            <h4>Systemic Functional Linguistics (SFL)</h4>
+            <p>CDA heavily draws from <strong>Systemic Functional Linguistics</strong> developed by M.A.K. Halliday. SFL is particularly valuable because it explicitly considers <em>social context</em> in language analysis.</p>
+            <p><strong>Key insight:</strong> Language choices are not random but are systematically related to social functions and contexts.</p>
+        </div>
+
+        <h3>2.1 CDA vs. Traditional Linguistics</h3>
+
+        <table>
+            <tr>
+                <th>Aspect</th>
+                <th>Traditional Linguistics</th>
+                <th>CDA</th>
+            </tr>
+            <tr>
+                <td><strong>Focus</strong></td>
+                <td>Language for its own sake</td>
+                <td>Language for social goals</td>
+            </tr>
+            <tr>
+                <td><strong>Objectivity</strong></td>
+                <td>Claims complete objectivity</td>
+                <td>Acknowledges analyst's position and biases</td>
+            </tr>
+            <tr>
+                <td><strong>Scope</strong></td>
+                <td>How language works structurally</td>
+                <td>How language maintains/changes social structures</td>
+            </tr>
+            <tr>
+                <td><strong>Methods</strong></td>
+                <td>Purely linguistic analysis</td>
+                <td>Multidisciplinary approach</td>
+            </tr>
+            <tr>
+                <td><strong>Goal</strong></td>
+                <td>Describe language systems</td>
+                <td>Expose power relations and work for change</td>
+            </tr>
+        </table>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Deeper Understanding
+            </span>
+            <p><strong>Why does this distinction matter for your research?</strong></p>
+
+            <p>Think of it this way: Traditional linguistics is like studying how a car engine works. CDA is like studying <strong>where the car is going, who is driving, and why they chose that route.</strong></p>
+
+            <p><strong>Practical Example:</strong></p>
+            <ul>
+                <li><strong>Traditional analysis:</strong> "The sentence 'Protesters clashed with police' uses active voice with the subject 'protesters'."</li>
+                <li><strong>CDA analysis:</strong> "Why is 'protesters' placed as the agent? This makes them appear responsible for the violence. Compare: 'Police clashed with protesters' - same event, different framing, different responsibility assignment."</li>
+            </ul>
+
+            <p><strong>Key Takeaway:</strong> CDA asks not just "How does this language work?" but "What work is this language doing in society?"</p>
+        </div>
+
+        <h2>3. CDA Methods</h2>
+
+        <div class="concept-box">
+            <h4>Four Key Research Methods</h4>
+            <ol>
+                <li><strong>Context Analysis:</strong> Examine the social setting in which discourse occurs</li>
+                <li><strong>Observational Techniques:</strong> Recording and transcribing natural language in use</li>
+                <li><strong>Participant Observation:</strong> Researcher takes an active role in the target community</li>
+                <li><strong>Use of Informants:</strong> Experts explain discourse practices to researchers</li>
+            </ol>
+        </div>
+
+        <h3>3.1 Practical Applications of CDA</h3>
+
+        <table>
+            <tr>
+                <th>Area</th>
+                <th>Focus</th>
+                <th>Impact</th>
+            </tr>
+            <tr>
+                <td><strong>Advertising</strong></td>
+                <td>Persuasive language, truth distortion, manipulation</td>
+                <td>Empowers consumers to resist marketing pressure</td>
+            </tr>
+            <tr>
+                <td><strong>Forensic Linguistics</strong></td>
+                <td>Legal discourse, confessions, cross-examination</td>
+                <td>Establishes justice, creates fairer legal practices</td>
+            </tr>
+            <tr>
+                <td><strong>Medical Discourse</strong></td>
+                <td>Doctor-patient communication patterns</td>
+                <td>Improves healthcare delivery and patient outcomes</td>
+            </tr>
+            <tr>
+                <td><strong>Media Analysis</strong></td>
+                <td>News framing, bias, representation</td>
+                <td>Promotes media literacy and critical consumption</td>
+            </tr>
+            <tr>
+                <td><strong>Political Discourse</strong></td>
+                <td>Propaganda, election rhetoric, policy language</td>
+                <td>Supports democratic participation and accountability</td>
+            </tr>
+        </table>
+
+        <div class="case-study">
+            <h4>Case Study: Advertising Analysis</h4>
+            <p><strong>Context:</strong> A skincare advertisement claims: "9 out of 10 dermatologists recommend our product."</p>
+            <p><strong>CDA Questions:</strong></p>
+            <ul>
+                <li>How were these dermatologists selected? (sampling bias)</li>
+                <li>What question were they actually asked?</li>
+                <li>Who funded the study?</li>
+                <li>What cultural assumptions does this exploit? (authority, expertise)</li>
+            </ul>
+            <p><strong>Result:</strong> CDA reveals how statistical language creates false authority and exploits trust in expertise.</p>
+        </div>
+
+        <h2>4. Principles of CDA</h2>
+
+        <div class="concept-box">
+            <h4>Core Principles</h4>
+            <ul>
+                <li><strong>Self-Critical:</strong> Analysts acknowledge their own position and biases (no claim to complete objectivity)</li>
+                <li><strong>Ethical Practice:</strong> Proper permission, privacy protection, and responsible reporting</li>
+                <li><strong>Tolerance:</strong> Accept varied approaches from multiple theoretical sources</li>
+                <li><strong>International:</strong> Welcomes contributions from many cultures and countries</li>
+                <li><strong>Power-Focused:</strong> Central understanding that discourse = power & control</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <strong>The Self-Reflexive Principle:</strong> Unlike traditional linguistics, CDA practitioners openly acknowledge that complete objectivity is impossible. Every analyst brings their own worldview, experiences, and values to their analysis. This honesty is seen as a strength, not a weakness.
+        </div>
+
+        <h2>5. Key Terms and Definitions</h2>
+
+        <h3>5.1 The Six Meanings of DISCOURSE</h3>
+
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Meaning</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Broad:</strong> All symbolic interaction (spoken, written, visual)</td>
+                <td>Including films, music, gestures</td>
+            </tr>
+            <tr>
+                <td><strong>2</strong></td>
+                <td><strong>Spoken:</strong> Simply spoken interaction (vs. written)</td>
+                <td>Conversations, speeches, dialogues</td>
+            </tr>
+            <tr>
+                <td><strong>3</strong></td>
+                <td><strong>vs. Text:</strong> Whole act of communication (production + comprehension)</td>
+                <td>The complete communicative event</td>
+            </tr>
+            <tr>
+                <td><strong>4</strong></td>
+                <td><strong>Institutional:</strong> Communication in specific contexts</td>
+                <td>Legal discourse, medical discourse, scientific discourse</td>
+            </tr>
+            <tr>
+                <td><strong>5</strong></td>
+                <td><strong>A discourse:</strong> A particular long text (NOT commonly used in CDA)</td>
+                <td>A lecture, a sermon</td>
+            </tr>
+            <tr>
+                <td><strong>6</strong></td>
+                <td><strong>Multi-modal:</strong> Uses more than one mode</td>
+                <td>Words + pictures + music together</td>
+            </tr>
+        </table>
+
+        <h3>5.2 Text vs. Discourse</h3>
+
+        <div class="key-term">
+            <strong>Text:</strong> The product of discourse. It is the linguistic record of a communicative event (electronic recording or written document). A text must meet the <em>7 Standards of Textuality</em> to be considered a proper text.
+        </div>
+
+        <div class="concept-box">
+            <h4>Seven Standards of Textuality (Beaugrande & Dressler)</h4>
+            <ol>
+                <li><strong>Cohesion:</strong> How words and sentences connect in sequence (grammatical links)</li>
+                <li><strong>Coherence:</strong> Cognitive relations, logical connections, mutual knowledge</li>
+                <li><strong>Acceptability:</strong> Appropriateness to cultural setting and audience expectations</li>
+                <li><strong>Intentionality:</strong> The producer's purpose and goals</li>
+                <li><strong>Informativity:</strong> Suitable degree of new vs. given information</li>
+                <li><strong>Situationality:</strong> Relevance to the specific situation</li>
+                <li><strong>Intertextuality:</strong> Reliance on and reference to previous texts</li>
+            </ol>
+        </div>
+
+        <div class="example">
+            <h5>Example: Cohesion vs. Coherence</h5>
+            <p><strong>Cohesive but not coherent:</strong> "The cat sat on the mat. Mats are made of fiber. Fiber is important for digestion. Digestion occurs in the stomach." (Grammatically connected, but no logical unity)</p>
+            <p><strong>Coherent but low cohesion:</strong> "A: What time is it? B: The bus just left." (No grammatical link, but perfectly coherent in context)</p>
+        </div>
+
+        <h3>5.3 Domain, Social Practice, and Genre</h3>
+
+        <div class="key-term">
+            <strong>Domain:</strong> A socially recognized context containing specific social practices and genres. Examples: science, law, education, BBC, university.
+        </div>
+
+        <div class="key-term">
+            <strong>Social Practice:</strong> Human behaviors following social conventions with some degree of freedom. A single instance is called a <em>social event</em> or <em>speech event</em>. Examples: business meetings, religious services, classroom teaching.
+        </div>
+
+        <div class="key-term">
+            <strong>Genre:</strong> A specific product of social practice. A culturally recognized discourse form with agreed structures. Examples: novel, poem, lecture, letter, business report, news article.
+        </div>
+
+        <h3>5.4 Speech Community vs. Discourse Community</h3>
+
+        <table>
+            <tr>
+                <th>Speech Community</th>
+                <th>Discourse Community</th>
+            </tr>
+            <tr>
+                <td>Share language features</td>
+                <td>May never meet face-to-face</td>
+            </tr>
+            <tr>
+                <td>Frequently interact in person</td>
+                <td>Conscious, chosen participation</td>
+            </tr>
+            <tr>
+                <td>Usually accident of birth/location</td>
+                <td>Deliberate membership</td>
+            </tr>
+            <tr>
+                <td><em>Example: Geordie dialect speakers</em></td>
+                <td><em>Example: Medical researchers, online communities</em></td>
+            </tr>
+        </table>
+
+        <h3>5.5 Other Essential Terms</h3>
+
+        <div class="key-term">
+            <strong>Speech Acts:</strong> Utterances that perform actions simply by being spoken. Theory developed by J.L. Austin in the 1950s. Examples: promise, instruction, bet, pronouncement of marriage. Note: Speech acts may be interpreted differently than intended.
+        </div>
+
+        <div class="key-term">
+            <strong>Ideology:</strong> A set of beliefs and attitudes shared by a social group. Often <em>unconscious</em> and taken for granted. Can be hidden in single words (e.g., "democracy," "freedom," "peacekeeping," "collateral damage").
+        </div>
+
+        <div class="key-term">
+            <strong>Frames:</strong> Mental structures that shape how we see the world (concept from George Lakoff). Frames are triggered by words and are culture-specific cognitive models. Example: The word "cricket" triggers a frame including: pitch, ball, bat, umpire, wicket, innings.
+        </div>
+
+        <div class="key-term">
+            <strong>Archive:</strong> The set of frames handed down in a culture, shared by group members. It facilitates in-group communication but can hinder cross-group communication.
+        </div>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Connecting the Concepts
+            </span>
+            <p><strong>How do these terms work together?</strong></p>
+
+            <p>Imagine you're analyzing a <strong>news report about immigration</strong>:</p>
+
+            <ul>
+                <li><strong>Domain:</strong> News media / journalism</li>
+                <li><strong>Genre:</strong> News report</li>
+                <li><strong>Discourse Community:</strong> Journalists, editors, news consumers</li>
+                <li><strong>Ideology:</strong> May contain hidden assumptions about national identity, economy, security</li>
+                <li><strong>Frames:</strong> "Flood of immigrants" (triggers water/disaster frame), "Immigration crisis" (triggers emergency frame)</li>
+            </ul>
+
+            <p><strong>CDA would ask:</strong></p>
+            <ol>
+                <li>What frames are being activated? (disaster, invasion, burden)</li>
+                <li>Whose ideology is being expressed? (government, opposition, media owners)</li>
+                <li>What speech acts are performed? (warning, criticism, fear-mongering)</li>
+                <li>What is NOT said? (immigrant contributions, historical context)</li>
+            </ol>
+        </div>
+
+        <h2>6. Language and Institutions</h2>
+
+        <div class="concept-box">
+            <h4>The Concept of "Making Strange"</h4>
+            <p><strong>Making Strange</strong> is the practice of observing familiar customs as an outsider would. This is an essential skill for critical analysis. It involves stepping back from normalized practices to see them with fresh eyes.</p>
+        </div>
+
+        <div class="case-study">
+            <h4>Case Study: Marriage Ceremony Language</h4>
+            <p><strong>Traditional vow:</strong> The bride was required to promise to "obey and serve" — a requirement not placed on the groom.</p>
+            <p><strong>CDA analysis:</strong> This linguistic asymmetry reflected and reinforced gender inequality. The practice was so normalized that it seemed "natural."</p>
+            <p><strong>Change:</strong> Through "making strange" and critical awareness, this practice became <em>denormalized</em>, leading to more equal modern vows.</p>
+        </div>
+
+        <div class="key-term">
+            <strong>Normalization:</strong> When customs, practices, or language use become so familiar they seem unremarkable or "natural." CDA's job is to challenge normalized practices and expose the power relations they encode.
+        </div>
+
+        <div class="example">
+            <h5>Example: Generic Pronouns</h5>
+            <p><strong>Old rule:</strong> "He embraces female" — using masculine pronouns as generic (e.g., "Each student should bring his book")</p>
+            <p><strong>Change:</strong> Through critical awareness, this was denormalized. Now singular "they" is widely accepted ("Each student should bring their book")</p>
+            <p><strong>Lesson:</strong> Language that seems "natural" often encodes ideology. Change is possible through awareness.</p>
+        </div>
+
+        <h2>7. What Makes CDA "Critical"?</h2>
+
+        <h3>7.1 Non-Critical vs. Critical Discourse Analysis</h3>
+
+        <table>
+            <tr>
+                <th>Non-Critical DA</th>
+                <th>Critical DA</th>
+            </tr>
+            <tr>
+                <td>Identify how people use language</td>
+                <td>View discourse as product AND producer of society</td>
+            </tr>
+            <tr>
+                <td>Develop analysis methods</td>
+                <td>Question texts AND the processes that create them</td>
+            </tr>
+            <tr>
+                <td>Build communication theories</td>
+                <td>Commit to social concerns and change</td>
+            </tr>
+            <tr>
+                <td>Describe what IS</td>
+                <td>Ask why things are this way and how they could be different</td>
+            </tr>
+        </table>
+
+        <h3>7.2 Objectives of CDA</h3>
+
+        <div class="concept-box">
+            <h4>Practical Objectives</h4>
+            <ul>
+                <li>Analyze discourse practices that reflect or construct social problems</li>
+                <li>Investigate how ideologies become "frozen" in language</li>
+                <li>Increase awareness to address injustice, prejudice, and power misuse</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h4>Theoretical Objectives</h4>
+            <ul>
+                <li>Demonstrate language's significance in power relations</li>
+                <li>Investigate how meaning is created in context</li>
+                <li>Examine the role of speaker/writer purpose and authorial stance</li>
+            </ul>
+        </div>
+
+        <h2>8. Key Researchers in CDA</h2>
+
+        <div class="scholar-box">
+            <h4>Teun van Dijk</h4>
+            <p><strong>Focus:</strong> Racism and prejudice in discourse</p>
+            <p><strong>Key contributions:</strong> Analysis of how racist ideologies are reproduced through everyday discourse, news media, and political speech.</p>
+        </div>
+
+        <div class="scholar-box">
+            <h4>Norman Fairclough</h4>
+            <p><strong>Focus:</strong> Global capitalism and "new capitalism"</p>
+            <p><strong>Key contributions:</strong> Three-dimensional framework for CDA (text, discourse practice, social practice). Concept of synthetic personalization in marketing.</p>
+        </div>
+
+        <div class="scholar-box">
+            <h4>Robert de Beaugrande</h4>
+            <p><strong>Focus:</strong> Ecological issues and discourse</p>
+            <p><strong>Key contributions:</strong> Seven standards of textuality. Application of CDA to environmental discourse.</p>
+        </div>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Summary: The CDA Mindset
+            </span>
+            <p><strong>What does it mean to "think like a CDA analyst"?</strong></p>
+
+            <p>After studying this chapter, you should develop a new way of seeing language:</p>
+
+            <p><strong>1. Nothing is neutral</strong></p>
+            <ul>
+                <li>Every word choice carries meaning beyond dictionary definition</li>
+                <li>Even "objective" texts contain hidden positions</li>
+                <li>Silence (what's NOT said) is as important as what IS said</li>
+            </ul>
+
+            <p><strong>2. Language creates reality</strong></p>
+            <ul>
+                <li>How we name things shapes how we think about them</li>
+                <li>Discourse doesn't just reflect society — it shapes society</li>
+                <li>Change the discourse, change the world</li>
+            </ul>
+
+            <p><strong>3. Power is everywhere</strong></p>
+            <ul>
+                <li>Who gets to speak? Who is silenced?</li>
+                <li>Whose frames become "common sense"?</li>
+                <li>What ideologies are normalized as "natural"?</li>
+            </ul>
+
+            <p><strong>4. Analysis is action</strong></p>
+            <ul>
+                <li>CDA is not just academic — it's a tool for social change</li>
+                <li>By exposing hidden power, we enable resistance</li>
+                <li>Awareness is the first step to transformation</li>
+            </ul>
+
+            <p><strong>Remember:</strong> You are now equipped to look beneath the surface of any text and ask: "Whose interests does this serve? What power relations does this maintain? What alternatives are silenced?"</p>
+        </div>
+
+        <h2>9. Summary: Key Points to Remember</h2>
+
+        <div class="important">
+            <strong>Essential Takeaways from Chapter 1:</strong>
+            <ul>
+                <li>CDA studies language as a tool of power and social control</li>
+                <li>It is multidisciplinary, drawing from linguistics, sociology, psychology, and more</li>
+                <li>CDA analysts acknowledge their own biases (self-reflexivity)</li>
+                <li>Key terms: discourse (6 meanings), text, genre, domain, ideology, frames</li>
+                <li>Seven standards of textuality: cohesion, coherence, acceptability, intentionality, informativity, situationality, intertextuality</li>
+                <li>"Critical" means critique, not negative — CDA works for social justice</li>
+                <li>"Making strange" helps denormalize problematic practices</li>
+                <li>Main theorists: van Dijk (racism), Fairclough (capitalism), de Beaugrande (ecology)</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

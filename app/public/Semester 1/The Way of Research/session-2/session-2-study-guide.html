@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جلسه ۲ - روش تحقیق در ترجمه</title>
+    <title>جلسه ۲: داده، مسئله و مفهوم‌سازی در پژوهش ترجمه</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-color: #6a4c93;
+            --accent-color: #9d84b7;
+            --secondary-color: #8b72aa;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: Vazirmatn, Tahoma, sans-serif;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
             line-height: 1.8;
             color: #333;
-            background: #f5f5f5;
+            background-color: #f5f5f5;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             padding: 20px;
@@ -30,40 +32,37 @@
         }
 
         header {
-            background: #6a4c93;
+            background: var(--primary-color);
             color: white;
             padding: 30px;
             border-radius: 5px;
             margin-bottom: 30px;
         }
 
-        header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
-
-        .meta-info {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
+        header h1 { font-size: 2em; margin-bottom: 10px; }
+        .meta-info { font-size: 1.1em; opacity: 0.9; }
 
         h2 {
-            color: #6a4c93;
-            border-bottom: 3px solid #9d84b7;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
             padding-bottom: 10px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin: 35px 0 20px 0;
+            font-size: 1.5em;
         }
 
-        h3 {
-            color: #8b72aa;
-            margin-top: 20px;
-            margin-bottom: 10px;
+        h3 { color: var(--secondary-color); margin: 25px 0 15px 0; font-size: 1.2em; }
+
+        .overview-box {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-right: 5px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
         }
 
         .concept-box {
-            background: #f3e5f5;
-            border-right: 5px solid #9d84b7;
+            background: #f8f9fa;
+            border-right: 5px solid var(--accent-color);
             padding: 20px;
             margin: 20px 0;
             border-radius: 3px;
@@ -85,13 +84,6 @@
             border-radius: 3px;
         }
 
-        .scholar-box {
-            background: #f0f0f0;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-
         .case-study {
             background: #e8f5e9;
             border-right: 5px solid #4caf50;
@@ -100,66 +92,12 @@
             border-radius: 3px;
         }
 
-        ul, ol {
-            margin-right: 25px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th {
-            background: #6a4c93;
-            color: white;
-            padding: 12px;
-            text-align: right;
-        }
-
-        td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: right;
-        }
-
-        tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-
-        .example {
-            background-color: #fff9e6;
-            padding: 15px;
-            margin: 15px 0;
-            border-right: 5px solid #fbc02d;
-            border-radius: 3px;
-        }
-
-        blockquote {
-            border-right: 4px solid #9d84b7;
-            padding-right: 20px;
-            margin: 20px 0;
-            font-style: italic;
-            color: #555;
-        }
-
-        strong {
-            color: #6a4c93;
-        }
-
         .ai-explanation {
-            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
-            color: #4c1d95;
+            background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%);
+            border-right: 5px solid #17a2b8;
             padding: 20px;
             margin: 25px 0;
-            border-radius: 8px;
-            border-right: 5px solid #a78bfa;
-            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+            border-radius: 5px;
         }
 
         .ai-explanation-header {
@@ -168,88 +106,109 @@
             gap: 10px;
             font-weight: 700;
             font-size: 1.1em;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #c4b5fd;
-            color: #6b21a8;
+            border-bottom: 2px solid #bee5eb;
+            color: #0c5460;
         }
 
-        .ai-explanation-header img {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
+        .ai-explanation-header img { width: 22px; height: 22px; }
+
+        .question-box {
+            background: #ebf8ff;
+            border-right: 5px solid var(--primary-color);
+            padding: 15px;
+            margin: 20px 0 8px 0;
+            border-radius: 3px;
         }
 
-        .ai-explanation p {
-            margin: 10px 0;
-            line-height: 1.9;
+        .answer-box {
+            background: #f0fdf4;
+            border-right: 5px solid #4caf50;
+            padding: 15px;
+            margin: 0 0 20px 0;
+            border-radius: 3px;
         }
 
-        .ai-explanation ul, .ai-explanation ol {
-            margin: 12px 0;
-            padding-right: 25px;
+        ul, ol { margin: 15px 25px 15px 0; }
+        li { margin: 8px 0; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
 
-        .ai-explanation li {
-            margin: 8px 0;
+        th {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: right;
         }
 
-        .ai-explanation strong {
-            color: #7c3aed;
-            font-weight: 600;
+        td { border: 1px solid #ddd; padding: 12px; text-align: right; }
+        tr:nth-child(even) { background: #f9f9f9; }
+
+        blockquote {
+            border-right: 4px solid var(--accent-color);
+            padding-right: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
         }
+
+        strong { color: var(--primary-color); }
 
         @media print {
-            body {
-                background-color: white;
-            }
-
-            .container {
-                max-width: 100%;
-            }
-
-            h2 {
-                page-break-after: avoid;
-            }
+            body { background: white; }
+            .container { max-width: 100%; }
+            h2 { page-break-after: avoid; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>جلسه ۲: داده در پژوهش و مفهوم‌سازی</h1>
-            <div class="meta-info">
-                روش تحقیق در ترجمه | کارشناسی ارشد مطالعات ترجمه<br>
-                شروع رسمی درس - داده، مسئله، و کانسپت‌ها
-            </div>
+            <h1>جلسه ۲: داده، مسئله و مفهوم‌سازی</h1>
+            <div class="meta-info">روش تحقیق در ترجمه | کارشناسی ارشد مطالعات ترجمه</div>
         </header>
+
+        <div class="overview-box">
+            <h3>نمای کلی جلسه</h3>
+            <p>این جلسه شروع رسمی درس است و مفاهیم پایه‌ای پژوهش در ترجمه را معرفی می‌کند:</p>
+            <ul>
+                <li><strong>داده:</strong> نقطه شروع و منبع قدرت پژوهشگر</li>
+                <li><strong>تولید فکر:</strong> تبدیل داده خام به دانش از طریق تحلیل</li>
+                <li><strong>مسئله vs پرابلماتیک:</strong> تفاوت مسائل عینی و ذهنی</li>
+                <li><strong>توصیف vs تبیین:</strong> حرکت از سطح به عمق</li>
+                <li><strong>کانسپت‌ها:</strong> زبان مشترک آکادمیک</li>
+            </ul>
+            <p><strong>نکته کلیدی:</strong> هدف کارشناسی ارشد یادگیری ترجمه نیست، بلکه تبدیل شدن به <em>پژوهشگر</em> است.</p>
+        </div>
 
         <h2>۱. داده: اساس هر پژوهش</h2>
 
         <div class="important">
-            <h3>اهمیت داده (Data)</h3>
-            <blockquote>
-                "اولین دارایی ارزشمند هر پژوهشگری همان داده است. هر کسی دیتا دارد قدرت دارد، هر کسی دیتا نداره فاقد قدرت است."
-            </blockquote>
+            <blockquote>«اولین دارایی ارزشمند هر پژوهشگری داده است. هر کسی دیتا دارد قدرت دارد، هر کسی دیتا ندارد فاقد قدرت است.»</blockquote>
         </div>
 
         <div class="concept-box">
-            <h3>داده چیست؟</h3>
+            <h3>ویژگی‌های داده</h3>
             <ul>
                 <li><strong>تعریف:</strong> نقطه شروع هر پژوهش</li>
                 <li><strong>ماهیت:</strong> داده‌ها خودشان معنا ندارند - پژوهشگر آنها را معنادار می‌کند</li>
                 <li><strong>کارکرد:</strong> مصالح تولید فکر</li>
-                <li><strong>ارزش:</strong> داده‌ها "مادیفای" شده‌اند - ارزش کالایی پیدا کرده‌اند</li>
+                <li><strong>ارزش:</strong> داده‌ها «کالایی» شده‌اند و ارزش اقتصادی دارند</li>
             </ul>
         </div>
 
         <div class="key-term">
-            <h3>رسالت پژوهشگر نسبت به داده</h3>
+            <strong>رسالت پژوهشگر نسبت به داده:</strong>
             <ul>
-                <li>شناخت منشأ و خاستگاه داده - داده از کجا می‌آید؟</li>
-                <li>گردآوری داده - داده را کجا پیدا کنیم؟</li>
-                <li>تحلیل و تفسیر داده - با داده‌ها چه کار می‌شود کرد؟</li>
-                <li>معنادار کردن داده - کنار هم قرار دادن و تولید فکر</li>
+                <li>شناخت منشأ و خاستگاه داده</li>
+                <li>گردآوری داده</li>
+                <li>تحلیل و تفسیر داده</li>
+                <li>معنادار کردن داده → تولید فکر</li>
             </ul>
         </div>
 
@@ -257,538 +216,250 @@
 
         <div class="concept-box">
             <h3>فرآیند تولید فکر</h3>
-            <p><strong>داده → پردازش → تحلیل → تفسیر → تولید دانش</strong></p>
-
-            <p>فکر مثل یک ساختمان است - آجر آجر باید روی هم چیده شود و این کار نیازمند <strong>معماری</strong> است.</p>
+            <p style="text-align: center; font-size: 1.1em;">
+                <strong>داده ← پردازش ← تحلیل ← تفسیر ← تولید دانش</strong>
+            </p>
+            <p>فکر مثل ساختمان است - آجر آجر باید روی هم چیده شود و نیازمند <strong>معماری</strong> است.</p>
         </div>
 
         <div class="important">
             <h3>پژوهشگر = معمار فکر</h3>
+            <p>فکری که تولید می‌کنیم باید:</p>
             <ul>
-                <li>هر پژوهشگر یک "آجر" به ساختمان دانش اضافه می‌کند</li>
-                <li>فکری که تولید می‌کنیم باید:
-                    <ul>
-                        <li><strong>پخته</strong> باشد</li>
-                        <li><strong>روشمند</strong> باشد</li>
+                <li><strong>پخته</strong> باشد</li>
+                <li><strong>روشمند</strong> باشد</li>
                 <li><strong>مبتنی بر نظریه</strong> باشد</li>
-                    </ul>
-                </li>
-                <li>معماری فکر هرچه خلاقانه‌تر → دانش ارزشمندتر</li>
             </ul>
         </div>
 
-        <h3>۲.۱. متن آکادمیک vs انشا</h3>
-
         <table>
-            <tr>
-                <th>ویژگی</th>
-                <th>انشا (مدرسه)</th>
-                <th>متن آکادمیک</th>
-            </tr>
-            <tr>
-                <td>ماهیت</td>
-                <td>Open - آزاد و بدون قاعده مشخص</td>
-                <td>دارای اجزا و مؤلفه‌های استاندارد</td>
-            </tr>
-            <tr>
-                <td>هنجارها</td>
-                <td>هنجار خاصی ندارد</td>
-                <td>باید استانداردهای آکادمیک رعایت شود</td>
-            </tr>
-            <tr>
-                <td>خلاقیت</td>
-                <td>خلاقیت ادبی</td>
-                <td>خلاقیت در چارچوب علمی</td>
-            </tr>
-            <tr>
-                <td>زبان</td>
-                <td>زبان روزمره یا ادبی</td>
-                <td>زبان تخصصی و کانسپچوال</td>
-            </tr>
+            <tr><th>ویژگی</th><th>انشا (مدرسه)</th><th>متن آکادمیک</th></tr>
+            <tr><td>ماهیت</td><td>آزاد و بدون قاعده</td><td>دارای استانداردها</td></tr>
+            <tr><td>زبان</td><td>روزمره یا ادبی</td><td>تخصصی و کانسپچوال</td></tr>
+            <tr><td>خلاقیت</td><td>ادبی</td><td>در چارچوب علمی</td></tr>
         </table>
 
-        <h2>۳. مسئله (Problem) vs پرابلماتیک (Problematique)</h2>
+        <h2>۳. مسئله vs پرابلماتیک</h2>
 
         <div class="key-term">
-            <h3>تعریف اساسی در ترجمه</h3>
-            <p><strong>ترجمه = بازتولید یک Original Text</strong></p>
-            <p>بنابراین در ترجمه همیشه یک <strong>دوگانگی</strong> (Opposition) وجود دارد:</p>
-            <ul>
-                <li><strong>ST</strong> - Source Text (متن مبدأ)</li>
-                <li><strong>TT</strong> - Target Text (متن مقصد)</li>
-            </ul>
+            <strong>تعریف پایه:</strong> ترجمه = بازتولید یک متن اصلی<br>
+            بنابراین همیشه دوگانگی وجود دارد: <strong>ST</strong> (متن مبدأ) ↔ <strong>TT</strong> (متن مقصد)
         </div>
 
         <div class="concept-box">
-            <h3>۳.۱. مسئله (Problem) - Objective</h3>
-            <p><strong>ماهیت:</strong> عینی و قابل شناسایی</p>
+            <h3>مسئله (Problem) - عینی</h3>
             <ul>
-                <li><strong>Deviation</strong> (انحراف) از متن مبدأ</li>
-                <li>انواع انحراف:
-                    <ul>
-                        <li>انحراف تاکتیکی (سطح واژه)</li>
-                        <li>انحراف نحوی (سطح جمله)</li>
-                        <li>انحراف معنایی</li>
-                    </ul>
-                </li>
-                <li>هر کسی می‌تواند آنها را ببیند - عیان است</li>
+                <li>انحراف از متن مبدأ (تاکتیکی، نحوی، معنایی)</li>
+                <li>همه می‌توانند ببینند - عیان است</li>
                 <li>برای شروع پژوهش مناسب است</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>۳.۲. پرابلماتیک (Problematique) - Subjective</h3>
-            <p><strong>ماهیت:</strong> ذهنی و پیچیده</p>
+            <h3>پرابلماتیک (Problematique) - ذهنی</h3>
             <ul>
-                <li>نه عینی (Objective) بلکه ذهنی (Subjective)</li>
                 <li>در ذهن مترجم یا پژوهشگر است</li>
-                <li>موقعیت‌هایی که در آن تضاد، تنش، تقابل، یا کشمکش وجود دارد</li>
+                <li>موقعیت‌هایی با <strong>تضاد، تنش، تقابل، کشمکش</strong></li>
                 <li>نیازمند کشف و تبیین</li>
+                <li>ارزش پژوهشی بالاتر</li>
             </ul>
         </div>
 
         <div class="important">
-            <h3>کار اصلی پژوهشگر</h3>
-            <p><strong>کشف مسئله (Problem Finding) > حل مسئله</strong></p>
-            <p>رسالت پژوهشگر: <strong>مسئله‌شناس</strong> بودن - شناسایی موقعیت‌های پرابلماتیک</p>
+            <strong>کار اصلی پژوهشگر:</strong> کشف مسئله (Problem Finding) > حل مسئله
         </div>
 
         <div class="ai-explanation">
-            <span class="ai-explanation-header">
-                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="icon">
-                توضیح تکمیلی
-            </span>
-            <p><strong>تفاوت Problem و Problematique را با مثال بفهمیم:</strong></p>
-            <p>تصور کنید دارید یک ترجمه فارسی را می‌خوانید و متوجه می‌شوید که یک کلمه اشتباه ترجمه شده:</p>
-
-            <p><strong>Problem (مسئله عینی):</strong></p>
-            <ul>
-                <li><strong>مثال:</strong> کلمه "freedom" به "آزادی" ترجمه شده، اما در این زمینه باید "رهایی" باشد</li>
-                <li><strong>ویژگی:</strong> همه می‌توانند این اشتباه را ببینند - عینی است</li>
-                <li><strong>راه‌حل:</strong> ساده است - کلمه را تصحیح کنید</li>
-                <li><strong>مناسب برای:</strong> شروع پژوهش یا تمرین ترجمه</li>
-            </ul>
-
-            <p><strong>Problematique (مسئله ذهنی/پیچیده):</strong></p>
-            <ul>
-                <li><strong>مثال:</strong> چرا مترجم همیشه کلمه "freedom" را به "آزادی" ترجمه می‌کند، حتی وقتی زمینه سیاسی است؟</li>
-                <li><strong>سؤال عمیق‌تر:</strong> آیا مترجم از ایدئولوژی خاصی تبعیت می‌کند؟ آیا ناشر فشار می‌آورد؟ آیا سانسور وجود دارد؟</li>
-                <li><strong>ویژگی:</strong> پیچیده است - نیازمند تحلیل ایدئولوژیک، فرهنگی، سیاسی</li>
-                <li><strong>راه‌حل:</strong> نیازمند پژوهش عمیق است</li>
-                <li><strong>مناسب برای:</strong> پایان‌نامه ارشد/دکتری</li>
-            </ul>
-
-            <p><strong>کدام بهتر است؟</strong></p>
-            <p>هر دو مهم هستند، اما برای پژوهش عمیق، <strong>Problematique</strong> ارزشمندتر است. چون به شما کمک می‌کند تا به سؤالات بزرگ‌تر پاسخ دهید: چرا ترجمه اینطور است؟ چه نیروهایی پشت آن هستند؟</p>
+            <div class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                <span>تفاوت Problem و Problematique</span>
+            </div>
+            <p><strong>مثال Problem:</strong> کلمه «freedom» به «آزادی» ترجمه شده، اما باید «رهایی» باشد ← همه می‌بینند، ارزش پژوهشی کم</p>
+            <p><strong>مثال Problematique:</strong> چرا مترجم همیشه کلمات سیاسی را به شکل خاصی ترجمه می‌کند؟ ← نیازمند تحلیل ایدئولوژیک، ارزش پژوهشی بالا</p>
+            <p><strong>نشانه‌های Problematique:</strong> تضاد، تنش، تقابل، کشمکش</p>
         </div>
 
-        <h2>۴. توصیف (Description) vs تبیین (Explanation)</h2>
+        <h2>۴. توصیف vs تبیین</h2>
 
         <div class="concept-box">
-            <h3>دو سطح کار پژوهشی</h3>
-
-            <h4>۴.۱. توصیف (Description)</h4>
+            <h3>توصیف (Description)</h3>
             <ul>
-                <li><strong>مرحله اول:</strong> توصیف ظاهر پدیده</li>
-                <li><strong>ضروری است</strong> اما کافی نیست</li>
-                <li>مثال: راننده تاکسی در مورد مشکلات جامعه صحبت می‌کند - این توصیف است</li>
-                <li>بدون توصیف نمی‌توانیم مسئله را مسئله‌سازی کنیم</li>
+                <li>مرحله اول - توصیف ظاهر پدیده</li>
+                <li>لازم است اما کافی نیست</li>
+                <li>مثال: راننده تاکسی مشکلات جامعه را توصیف می‌کند</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h4>۴.۲. تبیین (Explanation)</h4>
+            <h3>تبیین (Explanation)</h3>
             <ul>
-                <li><strong>مرحله دوم:</strong> کاوش (Exploration) در ابعاد مختلف</li>
-                <li><strong>پرسش‌های کلیدی:</strong>
-                    <ul>
-                        <li>این مسئله از کجا ناشی می‌شود؟</li>
-                        <li>چه مکانیسمی وجود دارد؟</li>
-                        <li>روابط علت و معلول چیست؟</li>
-                        <li>کدام عوامل پنهان (Invisible) مؤثرند؟</li>
-                    </ul>
-                </li>
+                <li>مرحله دوم - کاوش در ابعاد مختلف</li>
+                <li>پرسش‌های کلیدی: از کجا ناشی می‌شود؟ چه مکانیسمی؟ روابط علت و معلول؟</li>
                 <li><strong>هدف:</strong> از Text به Context رفتن</li>
             </ul>
         </div>
 
-        <div class="case-study">
-            <h3>مثال: تحلیل خودکشی</h3>
-
-            <p><strong>سطح توصیف:</strong> فردی از پل خودش را پرت کرد و خودکشی کرد</p>
-
-            <p><strong>سطح تبیین (کار پژوهشگر):</strong></p>
-            <ul>
-                <li>در گذشته این فرد چه اتفاقی افتاده؟</li>
-                <li>چه مشکلاتی وجود داشته؟</li>
-                <li>سهم خانواده چقدر بوده؟</li>
-                <li>سهم دوستان چقدر بوده؟</li>
-                <li>سهم جامعه چقدر بوده؟</li>
-                <li>سهم حکومت چقدر بوده؟</li>
-            </ul>
-
-            <p><strong>نتیجه:</strong> پژوهشگر خودکشی را تبدیل به یک مسئله می‌کند و در زوایای مختلف تولید فکر می‌کند</p>
-        </div>
-
         <div class="important">
-            <blockquote>
-                "توصیف لازم است اما صرف توصیف کافی نیست. هدف ما از توصیف این است که از Description به Explanation برویم. کار ما به عنوان پژوهشگر Explain کردن است."
-            </blockquote>
+            <blockquote>«توصیف لازم است اما کافی نیست. کار ما اکسپلین کردن است.»</blockquote>
         </div>
 
         <div class="ai-explanation">
-            <span class="ai-explanation-header">
-                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="icon">
-                توضیح تکمیلی
-            </span>
-            <p><strong>تفاوت Description و Explanation را با مثال ترجمه بفهمیم:</strong></p>
-
-            <p><strong>سناریو:</strong> شما دارید ترجمه فارسی یک رمان انگلیسی را تحلیل می‌کنید و متوجه می‌شوید که مترجم همیشه صفات شخصیت‌های منفی را حذف می‌کند.</p>
-
-            <p><strong>سطح Description (توصیف):</strong></p>
-            <ul>
-                <li>"در ۲۰ مورد از ترجمه، صفات منفی حذف شده است"</li>
-                <li>"مترجم کلماتی مثل selfish, arrogant, cruel را ترجمه نکرده"</li>
-                <li>"در فصل ۳، جمله‌ای که شخصیت را به عنوان 'خودخواه' توصیف می‌کرد، کلاً حذف شده"</li>
-            </ul>
-            <p><strong>نتیجه:</strong> خوب، الان چی؟ فقط یک لیست از حذف‌ها داریم - این کافی نیست!</p>
-
-            <p><strong>سطح Explanation (تبیین):</strong></p>
-            <p>حالا سؤالات عمیق‌تر می‌پرسیم:</p>
-            <ul>
-                <li><strong>چرا؟</strong> چرا مترجم این کار را کرده؟
-                    <ul>
-                        <li>آیا سانسور وجود دارد؟</li>
-                        <li>آیا ناشر فشار می‌آورد؟</li>
-                        <li>آیا مترجم خودش باور دارد که این صفات "نامناسب" هستند؟</li>
-                    </ul>
-                </li>
-                <li><strong>چه تأثیری دارد؟</strong> این حذف‌ها چه پیامی منتقل می‌کنند؟
-                    <ul>
-                        <li>آیا شخصیت‌ها ایدئال‌سازی می‌شوند؟</li>
-                        <li>آیا خواننده فارسی تصویر غلط از شخصیت‌ها می‌گیرد؟</li>
-                    </ul>
-                </li>
-                <li><strong>چه الگویی وجود دارد؟</strong>
-                    <ul>
-                        <li>آیا این مترجم در کارهای دیگرش هم همین کار را می‌کند؟</li>
-                        <li>آیا این یک الگوی فرهنگی در ترجمه فارسی است؟</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <p><strong>نتیجه نهایی:</strong></p>
-            <p>با <strong>Explanation</strong> شما از سطح "چی شده" به سطح "چرا شده" و "چه معنایی دارد" می‌روید. این همان چیزی است که پژوهش شما را ارزشمند می‌کند - شما دارید <strong>از Text به Context</strong> می‌روید و نیروهای پنهان را کشف می‌کنید.</p>
+            <div class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                <span>مثال: از توصیف به تبیین</span>
+            </div>
+            <p><strong>توصیف:</strong> «در ۲۰ مورد صفات منفی حذف شده» ← خب، حالا چی؟</p>
+            <p><strong>تبیین:</strong> چرا حذف شده؟ سانسور؟ فشار ناشر؟ باور شخصی مترجم؟ الگوی فرهنگی؟</p>
+            <p><strong>نتیجه:</strong> با تبیین از «چی شده» به «چرا شده» می‌رویم.</p>
         </div>
 
         <h2>۵. کانسپت‌ها: ابزارهای فکری پژوهشگر</h2>
 
         <div class="key-term">
-            <h3>چرا به کانسپت نیاز داریم؟</h3>
-            <p>بدون کانسپت‌ها اصلاً نمی‌توانیم پژوهش کنیم!</p>
+            <strong>چرا به کانسپت نیاز داریم؟</strong>
             <ul>
-                <li>کانسپت‌ها = ابزارهای مفهومی برای Explore کردن</li>
+                <li>بدون کانسپت‌ها نمی‌توانیم پژوهش کنیم</li>
                 <li>کانسپت‌ها = زبان مشترک آکادمیک</li>
-                <li>کانسپت‌ها توسط نظریه‌پردازان (قهرمانان هر رشته) تولید می‌شوند</li>
-                <li>ما باید آنها را یاد بگیریم و Apply کنیم</li>
+                <li>توسط نظریه‌پردازان تولید می‌شوند</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>کانسپت‌ها = رمزگان فرهنگی (Cultural Code)</h3>
-            <p>برای عضویت در یک گروه (جامعه علمی) باید رمزگان‌های آن را بدانید</p>
-
-            <h4>مثال‌ها:</h4>
+            <h3>کانسپت‌ها = رمزگان فرهنگی</h3>
+            <p>برای عضویت در جامعه علمی باید رمزگان آن را بدانید:</p>
             <ul>
-                <li><strong>پزشکان:</strong> از اصطلاحات تخصصی پزشکی استفاده می‌کنند</li>
-                <li><strong>هواشناسان:</strong> نه "هوای دلپذیر" بلکه "توده هوای پرفشار"، "موج گرما"</li>
-                <li><strong>محققان ترجمه:</strong> باید از کانسپت‌های مطالعات ترجمه استفاده کنند</li>
+                <li><strong>پزشکان:</strong> اصطلاحات تخصصی پزشکی</li>
+                <li><strong>هواشناسان:</strong> «توده هوای پرفشار» نه «هوای دلپذیر»</li>
+                <li><strong>محققان ترجمه:</strong> کانسپت‌های مطالعات ترجمه</li>
             </ul>
+            <p><strong>هشدار:</strong> اگر رمزگان را نداشته باشید، سیستم شما را Out می‌کند!</p>
         </div>
 
-        <div class="important">
-            <h3>زبان صنفی (Professional Jargon)</h3>
-            <p>شما وارد هر حرفه‌ای می‌شوید، اول باید زبان صنفی آن حرفه را یاد بگیرید</p>
-            <p><strong>نکته:</strong> اگر این رمزگان را نداشته باشید، سیستم شما را Out می‌کند!</p>
-        </div>
+        <h2>۶. مثال: مطالعات هواداری در ترجمه</h2>
 
-        <h2>۶. مثال کاربردی: مطالعات هواداری در ترجمه</h2>
-
-        <div class="scholar-box">
-            <h3>عنوان پژوهش نمونه</h3>
-            <p><strong>فرهنگ‌های هواداری در میان مترجمان</strong></p>
-            <p>ارائه شده در: دانشکده علوم اجتماعی دانشگاه تهران</p>
-            <p>همایش: فرهنگ‌های شهری</p>
-        </div>
-
-        <div class="key-term">
-            <h3>کانسپت‌های کلیدی</h3>
-
-            <h4>۶.۱. خرده‌فرهنگ (Subculture)</h4>
-            <p>مترجمان خودشان یک خرده‌فرهنگ محسوب می‌شوند</p>
-
-            <h4>۶.۲. کنش هواداری (Fan Practice / Fandom)</h4>
-            <ul>
-                <li><strong>تعریف:</strong> کنش‌هایی که هواداران تولید می‌کنند</li>
-                <li><strong>ویژگی‌ها:</strong>
-                    <ul>
-                        <li>هدفمند</li>
-                        <li>دارای دلبستگی عاطفی شدید</li>
-                        <li>نسبت به یک Subject (سوژه)</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>۶.۳. اجتماع هواداران (Fan Community)</h4>
-            <ul>
-                <li>گروهی با هدف خاص</li>
-                <li>ثبات دارد (نه تصادفی)</li>
-                <li>کنش هدفمند و مستمر</li>
-            </ul>
-        </div>
-
-        <h3>۶.۴. ژانرهای ترجمه هواداری</h3>
-
-        <div class="concept-box">
-            <h4>سه ژانر جدید</h4>
-
+        <div class="case-study">
+            <h3>سه ژانر ترجمه هواداری</h3>
             <table>
-                <tr>
-                    <th>ژانر</th>
-                    <th>اصطلاح انگلیسی</th>
-                    <th>توضیح</th>
-                </tr>
-                <tr>
-                    <td><strong>فن‌دابینگ</strong></td>
-                    <td>Fandubbing</td>
-                    <td>دوبله کردن توسط هواداران (Fan + Dubbing)</td>
-                </tr>
-                <tr>
-                    <td><strong>فن‌سابینگ</strong></td>
-                    <td>Fansubbing</td>
-                    <td>زیرنویس‌گذاری توسط هواداران (Fan + Subtitling)</td>
-                </tr>
-                <tr>
-                    <td><strong>فن‌پرودینگ</strong></td>
-                    <td>Fanprodding</td>
-                    <td>نقیضه‌پردازی / دستکاری خلاقانه متن (Fan + Parody)</td>
-                </tr>
+                <tr><th>ژانر</th><th>توضیح</th></tr>
+                <tr><td><strong>فن‌دابینگ (Fandubbing)</strong></td><td>دوبله توسط هواداران</td></tr>
+                <tr><td><strong>فن‌سابینگ (Fansubbing)</strong></td><td>زیرنویس‌گذاری توسط هواداران</td></tr>
+                <tr><td><strong>فن‌پرودینگ (Fanprodding)</strong></td><td>نقیضه‌پردازی / دستکاری خلاقانه متن</td></tr>
             </table>
         </div>
 
         <div class="case-study">
-            <h3>مثال: Fanprodding - نقیضه‌پردازی</h3>
-
-            <h4>تعریف</h4>
-            <p><strong>نقیضه:</strong> از ریشه عربی "نقض" به معنای شکستن → هنجارشکنی</p>
-
-            <h4>مثال: مونالیزا</h4>
-            <ul>
-                <li>مونالیزا = متن مقدس هنری</li>
-                <li>دستکاری‌های خلاقانه:
-                    <ul>
-                        <li>مونالیزای ریش‌دار</li>
-                        <li>مونالیزای محجبه / روسری‌دار</li>
-                        <li>و دستکاری‌های دیگر...</li>
-                    </ul>
-                </li>
-                <li><strong>هدف:</strong> گاهی تولید خنده، گاهی تولید فکر و اندیشه، همیشه تولید لذت</li>
-            </ul>
+            <h3>مثال: برادران دی‌کامپوس</h3>
+            <p>شاعران برزیلی که شکسپیر را ترجمه کردند و به جای «Toby» از «Tupi» (قوم سرکوب‌شده برزیل) استفاده کردند.</p>
+            <blockquote>«ما می‌خواهیم از انرژی شکسپیر استفاده کنیم تا صدای Tupi‌ها هم شنیده شود.»</blockquote>
+            <p>این یک <strong>Fanprodding</strong> است - استفاده خلاقانه از ترجمه برای اهداف سیاسی و فرهنگی.</p>
         </div>
 
-        <div class="case-study">
-            <h3>مثال تاریخی: برادران دی‌کامپوس - شاعران برزیل</h3>
-
-            <p><strong>کار:</strong> ترجمه شکسپیر به پرتغالی برزیل</p>
-
-            <p><strong>دستکاری:</strong> به جای "Toby" از "Tupi" استفاده کردند</p>
-            <ul>
-                <li><strong>Toby:</strong> صدای استعمار (شکسپیر)</li>
-                <li><strong>Tupi:</strong> قوم سرکوب‌شده برزیل</li>
-            </ul>
-
-            <p><strong>استدلال:</strong></p>
-            <blockquote>
-                "ما دیگر به اندازه کافی استعمارزده شدیم. مشکل ما الان Tupi‌ها هستند که همیشه سرکوب می‌شوند. ما می‌خواهیم از انرژی شکسپیر استفاده کنیم تا صدای Tupi‌ها هم شنیده شود."
-            </blockquote>
-
-            <p><strong>این یک Fanprodding است</strong> - استفاده خلاقانه و هدفمند از ترجمه</p>
-        </div>
-
-        <div class="case-study">
-            <h3>مثال: فیلم Hamlet و ترافیک نیویورک</h3>
-
-            <p><strong>دستکاری خلاقانه:</strong></p>
-            <ul>
-                <li>فیلمی با کاراکترهای Hamlet</li>
-                <li>هنگامی که Hamlet صحبت می‌کند، صدایش خیلی ضعیف است</li>
-                <li>به جای صدای او، صدای ترافیک شهر نیویورک (آمبولانس، ماشین‌ها) شنیده می‌شود</li>
-            </ul>
-
-            <p><strong>پیام:</strong></p>
-            <blockquote>
-                "تا کی باید صدای قدرت (Hamlet/شکسپیر) را بشنویم؟ مسئله ما الان ترافیک شهر است! اگر مشکل ترافیک را به زبان عادی بگوییم کسی نمی‌شنود، پس آن را به زبان شکسپیر (صدای قدرت) مطرح می‌کنیم تا شنیده شود."
-            </blockquote>
-        </div>
-
-        <h2>۷. رمزگان آکادمیک و تمایز</h2>
+        <h2>۷. کار پژوهشگر: کامپلیکیت کردن نه سیمپلیفای کردن</h2>
 
         <div class="important">
-            <h3>کار رمزگان‌ها: ایجاد تمایز</h3>
-            <ul>
-                <li><strong>هنر:</strong> کدام اثر هنری‌تر است؟ ارزشمندتر است؟</li>
-                <li><strong>آکادمی:</strong> کدام متن معتبرتر است؟ علمی‌تر است؟</li>
-                <li><strong>ترجمه:</strong> کدام ترجمه بهتر است؟ چرا؟</li>
-            </ul>
+            <blockquote>«کار پژوهشگر ساده‌سازی نیست. کار پژوهشگر پیچیده‌سازی است - چیزهایی که Arguable هستند بحث کنیم، شواهد میدانی و متنی پیدا کنیم.»</blockquote>
         </div>
 
-        <div class="concept-box">
-            <h3>رمزگان‌ها چه تمایزهایی ایجاد می‌کنند؟</h3>
-            <ul>
-                <li>Normal ≠ Abnormal (عادی ≠ غیرعادی)</li>
-                <li>Good ≠ Bad (خوب ≠ بد)</li>
-                <li>Translator ≠ Transliterator (مترجم ≠ نقل‌کننده)</li>
-                <li>Credible ≠ Non-credible (معتبر ≠ غیرمعتبر)</li>
-            </ul>
-        </div>
-
-        <div class="important">
-            <p><strong>نکته کلیدی:</strong> ما به رمزگان نیاز داریم که بتوانیم به صورت آکادمیک در مورد تمایز دو ترجمه صحبت کنیم</p>
-            <p>با چه شاخص‌هایی؟ با چه معیارهایی؟</p>
-        </div>
-
-        <h2>۸. پدیده (Phenomenon): ارزش پژوهش</h2>
-
-        <div class="key-term">
-            <h3>پدیده چیست؟</h3>
-            <p><strong>تعریف:</strong> هر چیزی که ارزش تبیین کردن دارد</p>
-        </div>
-
-        <div class="concept-box">
-            <h3>ویژگی‌های پدیده قابل پژوهش</h3>
-            <ul>
-                <li><strong>ضرورت:</strong> باید ضرورتی داشته باشد</li>
-                <li><strong>ارزش:</strong> باید ارزشی داشته باشد</li>
-                <li><strong>خروجی:</strong> باید خروجی ملموس داشته باشد</li>
-                <li><strong>سنخیت:</strong> باید با تجربه‌های زیسته ما تناسب داشته باشد</li>
-            </ul>
-        </div>
-
-        <div class="important">
-            <p><strong>هشدار:</strong> ما بیکار نیستیم که سر هر موضوعی تولید فکر کنیم!</p>
-            <p>پژوهش باید یک خروجی ملموسی داشته باشد</p>
-        </div>
-
-        <h2>۹. کار پژوهشگر: کامپلیکیت کردن نه سیمپلیفای کردن</h2>
-
-        <div class="concept-box">
-            <h3>تفاوت پژوهشگر با دیگران</h3>
-            <table>
-                <tr>
-                    <th>شخص</th>
-                    <th>رویکرد</th>
-                    <th>ارزش علمی</th>
-                </tr>
-                <tr>
-                    <td>راننده تاکسی</td>
-                    <td>توصیف مشکلات جامعه</td>
-                    <td>خیر - صرفاً توصیف است</td>
-                </tr>
-                <tr>
-                    <td>آگهی "آموزش ترجمه در ۱۰ جلسه"</td>
-                    <td>ساده‌انگاری بیش از حد</td>
-                    <td>خیر - شارلاتانیسم / توهین</td>
-                </tr>
-                <tr>
-                    <td>پژوهشگر</td>
-                    <td>Complexify - پیچیده‌سازی و کاوش عمیق</td>
-                    <td>بله - کار علمی</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="important">
-            <blockquote>
-                "کار پژوهشگر این نیست که ساده‌سازی (Simplify) کند. کار پژوهشگر این است که پیچیده‌سازی (Complexify) کند - چیزهایی را که Arguable هستند بحث کنیم، برایشان شواهد میدانی و شواهد متنی پیدا کنیم."
-            </blockquote>
-        </div>
+        <table>
+            <tr><th>شخص</th><th>رویکرد</th><th>ارزش علمی</th></tr>
+            <tr><td>راننده تاکسی</td><td>توصیف مشکلات</td><td>خیر</td></tr>
+            <tr><td>«آموزش ترجمه در ۱۰ جلسه»</td><td>ساده‌انگاری</td><td>شارلاتانیسم</td></tr>
+            <tr><td>پژوهشگر</td><td>Complexify</td><td>بله</td></tr>
+        </table>
 
         <div class="ai-explanation">
-            <span class="ai-explanation-header">
-                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="icon">
-                جمع‌بندی: از داده تا پژوهش عمیق
-            </span>
-            <p><strong>این جلسه چه چیزی به شما یاد داد؟</strong></p>
-
-            <p>این جلسه یک نقشه راه کامل برای تبدیل شدن از یک دانشجوی معمولی به یک <strong>پژوهشگر حرفه‌ای</strong> است. بیایید همه چیز را با هم جمع کنیم:</p>
-
-            <p><strong>۱. قدرت داده (Data is Power)</strong></p>
-            <ul>
-                <li>هر پژوهشی با داده شروع می‌شود</li>
-                <li>داده خام ارزش ندارد - شما باید آن را <strong>معنادار</strong> کنید</li>
-                <li><strong>مثال:</strong> یک مترجم ۱۰۰ صفحه ترجمه انجام می‌دهد. این صرفاً داده است. اما اگر شما تحلیل کنید که چرا مترجم همیشه کلمات سیاسی را حذف می‌کند، داده تبدیل به <strong>دانش</strong> می‌شود.</li>
-            </ul>
-
-            <p><strong>۲. از Problem به Problematique</strong></p>
-            <ul>
-                <li><strong>Problem:</strong> "این جمله اشتباه ترجمه شده" → همه می‌بینند، ارزش پژوهشی کم</li>
-                <li><strong>Problematique:</strong> "چرا مترجمان ایرانی در متون سیاسی الگوی خاصی از سانسور دارند؟" → این سؤال عمیق و ارزشمند است</li>
-                <li><strong>نتیجه:</strong> در پایان‌نامه، دنبال Problematique باشید - موضوعاتی که <strong>تنش</strong>، <strong>تضاد</strong>، و <strong>کشمکش</strong> دارند</li>
-            </ul>
-
-            <p><strong>۳. از Description به Explanation</strong></p>
-            <ul>
-                <li><strong>توصیف کردن</strong> کافی نیست - همه می‌توانند توصیف کنند</li>
-                <li>کار شما <strong>تبیین کردن</strong> است: چرا؟ چطور؟ چه عواملی؟</li>
-                <li><strong>مثال:</strong> نگوئید "۵۰ کلمه حذف شده"، بگوئید "چرا حذف شده؟ چه الگوی ایدئولوژیکی پشت آن است؟"</li>
-            </ul>
-
-            <p><strong>۴. کانسپت‌ها = پاسپورت آکادمیک شما</strong></p>
-            <ul>
-                <li>بدون کانسپت‌ها، شما نمی‌توانید در دنیای آکادمیک صحبت کنید</li>
-                <li>کانسپت‌ها مثل <strong>رمزگان فرهنگی</strong> هستند - اگر ندانید، Out می‌شوید</li>
-                <li><strong>مثال:</strong> وقتی می‌گوئید "این ترجمه یک Domestication است"، همه محققان می‌فهمند شما از چه حرف می‌زنید. اما اگر بگوئید "این ترجمه خوب است"، هیچ‌کس نمی‌فهمد منظورتان چیست!</li>
-            </ul>
-
-            <p><strong>۵. Complexify نه Simplify</strong></p>
-            <ul>
-                <li>کار شما این نیست که بگوئید "ترجمه در ۱۰ جلسه یاد بگیرید" - این شارلاتانیسم است</li>
-                <li>کار شما این است که نشان دهید ترجمه چقدر <strong>پیچیده</strong>، <strong>ایدئولوژیک</strong>، و <strong>سیاسی</strong> است</li>
-                <li><strong>مثال:</strong> حتی ترجمه یک کلمه مثل "freedom" می‌تواند الگوهای قدرت، سانسور، و ایدئولوژی را نشان دهد</li>
-            </ul>
-
-            <p><strong>نتیجه نهایی: چطور یک پژوهشگر موفق شوید؟</strong></p>
+            <div class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                <span>جمع‌بندی: چطور پژوهشگر شوید</span>
+            </div>
             <ol>
                 <li><strong>داده جمع کنید:</strong> متون، ترجمه‌ها، مصاحبه‌ها</li>
                 <li><strong>Problematique پیدا کنید:</strong> کجا تنش است؟ کجا تضاد است؟</li>
-                <li><strong>Explain کنید:</strong> از "چی" به "چرا" بروید</li>
-                <li><strong>کانسپت‌ها را یاد بگیرید:</strong> زبان آکادمیک را بدانید</li>
+                <li><strong>Explain کنید:</strong> از «چی» به «چرا» بروید</li>
+                <li><strong>کانسپت‌ها یاد بگیرید:</strong> زبان آکادمیک را بدانید</li>
                 <li><strong>Complexify کنید:</strong> نشان دهید موضوع چقدر پیچیده است</li>
             </ol>
-
-            <p><strong>این جلسه شما را از یک "دانشجو" به یک "پژوهشگر" تبدیل می‌کند!</strong></p>
         </div>
 
-        <h2>۱۰. نکات کلیدی برای موفقیت</h2>
+        <h2>خلاصه نکات کلیدی</h2>
 
-        <div class="scholar-box">
-            <h3>خلاصه درس</h3>
+        <div class="concept-box">
             <ul>
-                <li><strong>داده</strong> اساس هر پژوهش است - بدون داده فاقد قدرت هستیم</li>
-                <li><strong>توصیف</strong> لازم است اما <strong>تبیین</strong> هدف اصلی است</li>
-                <li><strong>پرابلماتیک</strong> از پرابلم مهم‌تر است - دنبال تضاد و تنش باشید</li>
-                <li><strong>کانسپت‌ها</strong> ابزارهای ضروری پژوهشگر هستند - بدون آنها نمی‌توانیم پژوهش کنیم</li>
-                <li><strong>رمزگان آکادمیک</strong> را یاد بگیرید - زبان مشترک علمی</li>
-                <li><strong>پدیده‌هایی</strong> را انتخاب کنید که ارزش تبیین دارند</li>
+                <li><strong>داده</strong> = اساس پژوهش و منبع قدرت</li>
+                <li><strong>توصیف</strong> لازم، <strong>تبیین</strong> هدف اصلی</li>
+                <li><strong>Problematique</strong> > Problem (دنبال تضاد و تنش باشید)</li>
+                <li><strong>کانسپت‌ها</strong> = ابزار ضروری پژوهشگر</li>
                 <li>پژوهشگر باید <strong>Complexify</strong> کند نه Simplify</li>
             </ul>
         </div>
 
-        <div class="concept-box">
-            <h3>حوزه مطالعاتی نمونه</h3>
-            <p><strong>Fan Studies</strong> (مطالعات هواداری) - <strong>Fandom Studies</strong></p>
-            <p>شامل: Fandubbing, Fansubbing, Fanprodding</p>
-            <p>این یک حوزه مطالعاتی مستقل است که ما می‌توانیم از کانسپت‌های آن برای مطالعه ترجمه‌های هواداری استفاده کنیم</p>
+        <h2>سؤالات امتحانی</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱:</strong> چرا داده منبع قدرت پژوهشگر است؟
+        </div>
+        <div class="answer-box">
+            داده نقطه شروع هر پژوهش و ارزشمندترین دارایی پژوهشگر است. در عصر علم داده، دیتا کالایی شده و ارزش اقتصادی دارد. اما داده خودش معنا ندارد - پژوهشگر با تحلیل و تفسیر آن را معنادار می‌کند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۲:</strong> تفاوت Problem و Problematique چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>Problem (عینی):</strong> انحرافاتی که همه می‌بینند (خطاهای واژگانی، نحوی، معنایی) - ارزش پژوهشی محدود.<br>
+            <strong>Problematique (ذهنی):</strong> موقعیت‌های پیچیده با تضاد، تنش و کشمکش که نیازمند کشف و تبیین هستند - ارزش پژوهشی بالا.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۳:</strong> تفاوت توصیف و تبیین چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>توصیف:</strong> شرح ظاهر پدیده (لازم اما کافی نیست).<br>
+            <strong>تبیین:</strong> کاوش در ابعاد مختلف - چرا؟ از کجا ناشی می‌شود؟ چه مکانیسمی؟ هدف: از Text به Context رفتن.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۴:</strong> چرا به کانسپت‌ها نیاز داریم؟
+        </div>
+        <div class="answer-box">
+            کانسپت‌ها رمزگان فرهنگی جامعه علمی هستند. بدون آنها نمی‌توانیم در گفتمان آکادمیک مشارکت کنیم. هر حرفه زبان صنفی خاص خود را دارد و اگر آن را ندانیم، سیستم ما را Out می‌کند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۵:</strong> سه ژانر ترجمه هواداری را نام ببرید.
+        </div>
+        <div class="answer-box">
+            ۱. <strong>فن‌دابینگ (Fandubbing):</strong> دوبله توسط هواداران<br>
+            ۲. <strong>فن‌سابینگ (Fansubbing):</strong> زیرنویس‌گذاری توسط هواداران<br>
+            ۳. <strong>فن‌پرودینگ (Fanprodding):</strong> نقیضه‌پردازی و دستکاری خلاقانه متن
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۶:</strong> چرا «آموزش ترجمه در ۱۰ جلسه» شارلاتانیسم است؟
+        </div>
+        <div class="answer-box">
+            ترجمه فرآیندی پیچیده است که سال‌ها آموزش می‌خواهد. ساده‌انگاری بیش از حد توهین به رشته است. کار پژوهشگر Complexify کردن است نه Simplify کردن - نشان دادن پیچیدگی واقعی پدیده‌ها.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۷:</strong> هدف کارشناسی ارشد در مطالعات ترجمه چیست؟
+        </div>
+        <div class="answer-box">
+            هدف یادگیری ترجمه نیست (که باید از قبل بلد باشید). هدف تبدیل شدن به <strong>پژوهشگر</strong> است - کسی که می‌تواند ترجمه را از لنز نظریه‌ها ببیند، مسئله‌ها را شناسایی کند، و تولید فکر کند.
+        </div>
+
+        <div class="case-study">
+            <h3>اصطلاحات کلیدی</h3>
+            <ul>
+                <li><strong>داده (Data):</strong> نقطه شروع پژوهش</li>
+                <li><strong>مسئله (Problem):</strong> عینی و قابل مشاهده</li>
+                <li><strong>پرابلماتیک (Problematique):</strong> ذهنی با تضاد و تنش</li>
+                <li><strong>توصیف (Description):</strong> شرح ظاهر</li>
+                <li><strong>تبیین (Explanation):</strong> تحلیل علل و مکانیسم‌ها</li>
+                <li><strong>کانسپت (Concept):</strong> ابزار نظری تحلیل</li>
+                <li><strong>رمزگان فرهنگی:</strong> زبان مشترک گروه‌های علمی</li>
+                <li><strong>Complexify:</strong> نشان دادن پیچیدگی</li>
+            </ul>
         </div>
 
     </div>
