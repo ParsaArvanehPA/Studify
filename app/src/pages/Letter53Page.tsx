@@ -2,21 +2,6 @@ import React, {useState, useMemo, useEffect} from 'react';
 import {Search, BookOpen, X, Copy, Check, Languages} from 'lucide-react';
 import {letter53Passages, sectionGroups} from '../data/letter53Data';
 
-function normalizeArabic(text: string): string {
-    let result = text;
-    result = result.replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, '');
-    result = result.replace(/[أإآٱ]/g, 'ا');
-    result = result.replace(/ؤ/g, 'و');
-    result = result.replace(/ئ/g, 'ی');
-    result = result.replace(/ي/g, 'ی');
-    result = result.replace(/ك/g, 'ک');
-    result = result.replace(/ة/g, 'ه');
-    result = result.replace(/الله/g, '___ALLAH___');
-    result = result.replace(/لل/g, 'ل\u200Cل');
-    result = result.replace(/___ALLAH___/g, 'الله');
-    return result;
-}
-
 function normalizeForSearch(text: string): string {
     let result = text;
     result = result.replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, '');
