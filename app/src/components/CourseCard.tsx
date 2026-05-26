@@ -18,7 +18,7 @@ export function CourseCard({ course, semesterId, index }: CourseCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
     >
-      <Link to={`/semester/${semesterId}/course/${course.id}`}>
+      <Link to={course.link || `/semester/${semesterId}/course/${course.id}`}>
         <motion.div
           whileHover={{ scale: 1.02, y: -4 }}
           whileTap={{ scale: 0.98 }}

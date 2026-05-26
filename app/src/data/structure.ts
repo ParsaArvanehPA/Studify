@@ -16,6 +16,7 @@ export interface Course {
   icon: string;
   color: string;
   description?: string;
+  link?: string;
   sessions: Session[];
 }
 
@@ -377,6 +378,23 @@ export const studyData: Semester[] = [
             ]
           },
         ]
+      },
+    ]
+  },
+  {
+    id: 'semester-2',
+    name: 'Semester 2',
+    icon: '📖',
+    color: 'from-teal-600 to-teal-700',
+    courses: [
+      {
+        id: 'islamic-texts-translation',
+        name: 'ترجمه متون اسلامی',
+        icon: '📜',
+        color: 'from-emerald-400/70 to-teal-500/70',
+        description: 'Translation of Islamic Texts — Letter 53, Nahj al-Balagha',
+        link: '/letter-53',
+        sessions: []
       },
     ]
   }
