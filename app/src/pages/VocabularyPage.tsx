@@ -1,18 +1,18 @@
-import React, {useState, useMemo, useEffect} from 'react';
+import {useState, useMemo, useEffect} from 'react';
 import {Search, BookOpen, X, Copy, Check, Languages} from 'lucide-react';
-import {letter53Passages, sectionGroups} from '../data/letter53Data';
+import {vocabularyEntries} from '../data/letter53VocabularyData';
 import {faultTolerantMatch, highlightText} from '../utils/arabicSearch';
 import {IslamicTextsNav} from '../components/IslamicTextsNav';
 
-export function Letter53Page() {
+export function VocabularyPage() {
     const [searchQuery, setSearchQuery] = useState('');
-    const [copiedId, setCopiedId] = useState<string | null>(null);
+    const [copiedId, setCopiedId] = useState<number | null>(null);
     const [selectionMenu, setSelectionMenu] = useState<{x: number; y: number; text: string} | null>(null);
     const [selectionCopied, setSelectionCopied] = useState(false);
     const [translation, setTranslation] = useState<string | null>(null);
     const [isTranslating, setIsTranslating] = useState(false);
 
-    const copyToClipboard = (text: string, id: string) => {
+    const copyToClipboard = (text: string, id: number) => {
         navigator.clipboard.writeText(text);
         setCopiedId(id);
         setTimeout(() => setCopiedId(null), 2000);
@@ -87,26 +87,15 @@ export function Letter53Page() {
         }
     }, [selectionMenu]);
 
-    const filteredPassages = useMemo(() => {
-        if (!searchQuery.trim()) return letter53Passages;
+    const filteredEntries = useMemo(() => {
+        if (!searchQuery.trim()) return vocabularyEntries;
         const query = searchQuery.trim();
-        return letter53Passages.filter(p =>
-            faultTolerantMatch(p.arabic, query, true) ||
-            faultTolerantMatch(p.farsi, query, true) ||
-            faultTolerantMatch(p.english, query) ||
-            faultTolerantMatch(p.sectionEnglish, query) ||
-            faultTolerantMatch(p.section, query, true)
+        return vocabularyEntries.filter(e =>
+            faultTolerantMatch(e.arabic, query, true) ||
+            faultTolerantMatch(e.farsi, query, true) ||
+            faultTolerantMatch(e.english, query)
         );
     }, [searchQuery]);
-
-    const groupedPassages = useMemo(() => {
-        const groups: {[key: string]: typeof letter53Passages} = {};
-        filteredPassages.forEach(p => {
-            if (!groups[p.section]) groups[p.section] = [];
-            groups[p.section].push(p);
-        });
-        return groups;
-    }, [filteredPassages]);
 
     useEffect(() => {
         if (!searchQuery.trim()) return;
@@ -114,7 +103,9 @@ export function Letter53Page() {
             const firstResult = document.getElementById('first-search-result');
             if (firstResult) firstResult.scrollIntoView({behavior: 'instant', block: 'start'});
         }, 0);
-    }, [searchQuery, filteredPassages]);
+    }, [searchQuery, filteredEntries]);
+
+    const firstEntryId = filteredEntries.length > 0 ? filteredEntries[0].id : null;
 
     return (
         <div className="min-h-screen py-8 px-4">
@@ -125,104 +116,68 @@ export function Letter53Page() {
                         <BookOpen className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                        <h1 className="text-2xl font-bold gradient-text">نامه ۵۳ نهج البلاغه — Letter 53</h1>
-                        <p className="text-gray-400 text-sm">Imam Ali's Letter to Malik al-Ashtar</p>
+                        <h1 className="text-2xl font-bold gradient-text">واژگان تخصصی نامه ۵۳ — Vocabulary</h1>
+                        <p className="text-gray-400 text-sm">۳۰۰ واژهٔ تخصصی نهج‌البلاغه — عربی، فارسی و انگلیسی</p>
                     </div>
                 </div>
 
                 <IslamicTextsNav />
 
-                {/* Sections */}
-                {sectionGroups.map((section) => {
-                    const passages = groupedPassages[section.name];
-                    if (!passages || passages.length === 0) return null;
+                {/* Vocabulary list */}
+                <div className="space-y-3">
+                    {filteredEntries.map((entry) => (
+                        <div
+                            key={entry.id}
+                            id={searchQuery.trim() && entry.id === firstEntryId ? 'first-search-result' : undefined}
+                            className="glass rounded-xl border border-white/5 flex items-stretch overflow-hidden"
+                            style={{scrollMarginTop: '80px'}}
+                        >
+                            {/* Number */}
+                            <div className="flex items-center justify-center w-12 shrink-0 bg-white/5 text-gray-500 text-sm font-medium border-l border-white/5">
+                                {entry.id}
+                            </div>
 
-                    const firstPassageId = filteredPassages.length > 0 ? filteredPassages[0].id : null;
-                    let lastSubSection = '';
-
-                    return (
-                        <section key={section.id} id={section.id} className="mb-12">
-                            <div className="glass rounded-2xl p-6">
-                                <h2 className="text-2xl font-bold text-white mb-1" dir="rtl" style={{fontFamily: 'Vazirmatn, sans-serif'}}>
-                                    {section.name}
-                                </h2>
-                                <p className="text-emerald-400 mb-6">{section.nameEnglish}</p>
-
-                                <div className="space-y-4">
-                                    {passages.map((passage) => {
-                                        let subHeader = null;
-                                        if (passage.subSection && passage.subSection !== lastSubSection) {
-                                            lastSubSection = passage.subSection;
-                                            subHeader = (
-                                                <div className="glass rounded-xl p-3 border border-teal-500/20 mb-4">
-                                                    <h3 className="text-lg font-semibold text-teal-400" dir="rtl" style={{fontFamily: 'Vazirmatn, sans-serif'}}>
-                                                        {passage.subSection}
-                                                    </h3>
-                                                    {passage.subSectionEnglish && (
-                                                        <p className="text-teal-300/70 text-sm">{passage.subSectionEnglish}</p>
-                                                    )}
-                                                </div>
-                                            );
-                                        }
-
-                                        return (
-                                            <React.Fragment key={passage.id}>
-                                                {subHeader}
-                                                <div
-                                                    id={searchQuery.trim() && passage.id === firstPassageId ? 'first-search-result' : undefined}
-                                                    className="glass rounded-xl overflow-hidden border border-white/5"
-                                                    style={{scrollMarginTop: '80px'}}
-                                                >
-                                                    {/* Arabic */}
-                                                    <div
-                                                        className="text-lg md:text-xl text-amber-100 p-4 bg-amber-500/5 border-b border-white/5"
-                                                        dir="rtl"
-                                                        style={{fontFamily: 'Amiri, serif', lineHeight: '2.2'}}
-                                                    >
-                                                        {highlightText(passage.arabic, searchQuery, true)}
-                                                    </div>
-                                                    {/* Farsi */}
-                                                    <div
-                                                        className="text-base text-emerald-100 p-4 bg-emerald-500/5 border-b border-white/5"
-                                                        dir="rtl"
-                                                        style={{fontFamily: 'Vazirmatn, sans-serif', lineHeight: '2'}}
-                                                    >
-                                                        {highlightText(passage.farsi, searchQuery, true)}
-                                                    </div>
-                                                    {/* English */}
-                                                    <div className="flex items-start gap-3 p-4 bg-blue-500/5">
-                                                        <div className="text-blue-100 leading-relaxed flex-1" style={{fontFamily: 'Inter, sans-serif'}}>
-                                                            {highlightText(passage.english, searchQuery)}
-                                                        </div>
-                                                        <button
-                                                            onClick={() => copyToClipboard(
-                                                                passage.arabic + '\n\n' + passage.farsi + '\n\n' + passage.english,
-                                                                passage.id
-                                                            )}
-                                                            className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white shrink-0 cursor-pointer"
-                                                            title="Copy passage"
-                                                        >
-                                                            {copiedId === passage.id ? (
-                                                                <Check className="w-4 h-4 text-emerald-400" />
-                                                            ) : (
-                                                                <Copy className="w-4 h-4" />
-                                                            )}
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </React.Fragment>
-                                        );
-                                    })}
+                            <div className="flex-1 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-white/5">
+                                {/* Arabic */}
+                                <div
+                                    className="p-4 bg-amber-500/5 text-amber-100 text-xl flex items-center justify-end text-right"
+                                    dir="rtl"
+                                    style={{fontFamily: 'Amiri, serif', lineHeight: '2'}}
+                                >
+                                    {highlightText(entry.arabic, searchQuery, true)}
+                                </div>
+                                {/* Farsi */}
+                                <div
+                                    className="p-4 bg-emerald-500/5 text-emerald-100 flex items-center justify-end text-right"
+                                    dir="rtl"
+                                    style={{fontFamily: 'Vazirmatn, sans-serif', lineHeight: '1.9'}}
+                                >
+                                    {highlightText(entry.farsi, searchQuery, true)}
+                                </div>
+                                {/* English */}
+                                <div className="p-4 bg-blue-500/5 text-blue-100 flex items-center justify-between gap-3" style={{fontFamily: 'Inter, sans-serif'}}>
+                                    <span className="flex-1">{highlightText(entry.english, searchQuery)}</span>
+                                    <button
+                                        onClick={() => copyToClipboard(`${entry.arabic}\n${entry.farsi}\n${entry.english}`, entry.id)}
+                                        className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white shrink-0 cursor-pointer"
+                                        title="Copy entry"
+                                    >
+                                        {copiedId === entry.id ? (
+                                            <Check className="w-4 h-4 text-emerald-400" />
+                                        ) : (
+                                            <Copy className="w-4 h-4" />
+                                        )}
+                                    </button>
                                 </div>
                             </div>
-                        </section>
-                    );
-                })}
+                        </div>
+                    ))}
+                </div>
 
                 {/* No results */}
-                {searchQuery.trim() && filteredPassages.length === 0 && (
+                {searchQuery.trim() && filteredEntries.length === 0 && (
                     <div className="text-center py-20">
-                        <p className="text-gray-400 text-lg">No passages found for "{searchQuery}"</p>
+                        <p className="text-gray-400 text-lg">No entries found for "{searchQuery}"</p>
                     </div>
                 )}
 
@@ -250,7 +205,7 @@ export function Letter53Page() {
                         </div>
                         {searchQuery && (
                             <div className="mt-2 text-sm text-gray-400 text-center">
-                                Found {filteredPassages.length} passage{filteredPassages.length !== 1 ? 's' : ''} matching "{searchQuery}"
+                                Found {filteredEntries.length} entr{filteredEntries.length !== 1 ? 'ies' : 'y'} matching "{searchQuery}"
                             </div>
                         )}
                     </div>

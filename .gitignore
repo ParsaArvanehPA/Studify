@@ -543,3 +543,7 @@ FodyWeavers.xsd
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,angular,webstorm+all,visualstudiocode
 
 .angular
+
+# OS & tooling artifacts
+.DS_Store
+.playwright-mcp/
