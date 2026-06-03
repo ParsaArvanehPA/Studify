@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
 import { SemesterPage } from './pages/SemesterPage';
@@ -8,8 +8,11 @@ import { Letter53Page } from './pages/Letter53Page';
 import { VocabularyPage } from './pages/VocabularyPage';
 
 function App() {
+  // basename matches Vite `base` ('/Studify/') so deep links resolve on GitHub Pages.
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
   return (
-    <HashRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -20,7 +23,7 @@ function App() {
           <Route path="letter-53-vocabulary" element={<VocabularyPage />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

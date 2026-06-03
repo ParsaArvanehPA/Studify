@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { SessionCard } from '../components/SessionCard';
 import { DocumentViewer } from '../components/DocumentViewer';
+import { Seo } from '../components/Seo';
+import { breadcrumbJsonLd, courseJsonLd } from '../seo/jsonLd';
 import { studyData, type StudyFile } from '../data/structure';
 
 export function CoursePage() {
@@ -18,9 +20,28 @@ export function CoursePage() {
   }
 
   const totalFiles = course.sessions.reduce((acc, sess) => acc + sess.files.length, 0);
+  const path = `/semester/${semester.id}/course/${course.id}`;
+  const description =
+    course.description ||
+    `${course.name}: ${course.sessions.length} sessions and ${totalFiles} study files on Studify.`;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <Seo
+        title={course.name}
+        description={description}
+        path={path}
+        type="article"
+        jsonLd={[
+          breadcrumbJsonLd([
+            { name: 'Home', path: '/' },
+            { name: semester.name, path: `/semester/${semester.id}` },
+            { name: course.name }
+          ]),
+          courseJsonLd(course, path)
+        ]}
+      />
+
       {/* Breadcrumb */}
       <div className="mb-8">
         <Breadcrumb

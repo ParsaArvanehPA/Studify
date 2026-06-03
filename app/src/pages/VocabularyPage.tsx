@@ -3,6 +3,7 @@ import {Search, BookOpen, X, Copy, Check, Languages} from 'lucide-react';
 import {vocabularyEntries} from '../data/letter53VocabularyData';
 import {faultTolerantMatch, highlightText} from '../utils/arabicSearch';
 import {IslamicTextsNav} from '../components/IslamicTextsNav';
+import {Seo} from '../components/Seo';
 
 export function VocabularyPage() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -109,6 +110,12 @@ export function VocabularyPage() {
 
     return (
         <div className="min-h-screen py-8 px-4">
+            <Seo
+                title="واژگان تخصصی نامه ۵۳ — Vocabulary"
+                description="Specialized vocabulary cheat sheet for Letter 53 of Nahj al-Balagha with searchable Arabic-Persian glosses."
+                path="/letter-53-vocabulary"
+                type="article"
+            />
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-6">

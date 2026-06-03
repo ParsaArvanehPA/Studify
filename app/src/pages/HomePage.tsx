@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Sparkles, TrendingUp, Clock, Target } from 'lucide-react';
 import { SemesterCard } from '../components/SemesterCard';
+import { Seo } from '../components/Seo';
+import { websiteJsonLd } from '../seo/jsonLd';
 import { studyData } from '../data/structure';
 
 export function HomePage() {
@@ -15,6 +17,8 @@ export function HomePage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <Seo path="/" jsonLd={websiteJsonLd()} />
+
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

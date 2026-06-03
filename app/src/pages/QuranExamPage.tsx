@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Search, BookOpen, X, Copy, Check, Languages } from 'lucide-react';
+import { Seo } from '../components/Seo';
 
 // Function to normalize Arabic text for display and Farsi keyboard search
 function normalizeArabic(text: string): string {
@@ -1540,6 +1541,11 @@ export function QuranExamPage() {
 
   return (
     <div className="min-h-screen py-8 px-4">
+      <Seo
+        title="Quran Exam Materials"
+        description="Searchable Quran exam-prep tool with Arabic text normalization, fault-tolerant search, and copy/translate features."
+        path="/exam-materials"
+      />
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">

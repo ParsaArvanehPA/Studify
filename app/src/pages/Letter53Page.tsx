@@ -3,6 +3,7 @@ import {Search, BookOpen, X, Copy, Check, Languages} from 'lucide-react';
 import {letter53Passages, sectionGroups} from '../data/letter53Data';
 import {faultTolerantMatch, highlightText} from '../utils/arabicSearch';
 import {IslamicTextsNav} from '../components/IslamicTextsNav';
+import {Seo} from '../components/Seo';
 
 export function Letter53Page() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -118,6 +119,12 @@ export function Letter53Page() {
 
     return (
         <div className="min-h-screen py-8 px-4">
+            <Seo
+                title="نامه ۵۳ نهج البلاغه — Letter 53"
+                description="Searchable Arabic-Persian study tool for Letter 53 of Nahj al-Balagha, with fault-tolerant search and section navigation."
+                path="/letter-53"
+                type="article"
+            />
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-6">

@@ -2,6 +2,8 @@ import { useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { CourseCard } from '../components/CourseCard';
+import { Seo } from '../components/Seo';
+import { breadcrumbJsonLd, semesterCollectionJsonLd } from '../seo/jsonLd';
 import { studyData } from '../data/structure';
 
 export function SemesterPage() {
@@ -18,8 +20,20 @@ export function SemesterPage() {
     ), 0
   );
 
+  const path = `/semester/${semester.id}`;
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <Seo
+        title={semester.name}
+        description={`${semester.name}: ${semester.courses.length} courses and ${totalFiles} study files on Studify.`}
+        path={path}
+        jsonLd={[
+          breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: semester.name }]),
+          semesterCollectionJsonLd(semester, path)
+        ]}
+      />
+
       {/* Breadcrumb */}
       <div className="mb-8">
         <Breadcrumb
