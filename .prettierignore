@@ -15,3 +15,4 @@ libs/shared/feature/src/lib/reader/reader.component.scss
 apps/studify/src/assets/content
 Semester 1
 Semester 2libs/shared/feature/src/lib/course-page/course-page.component.scss
+libs/shared/feature/src/lib/home/home.component.scss

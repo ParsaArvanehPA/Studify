@@ -1,0 +1,167 @@
+<div class="field">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="calli l1" data-depth="14">
+        translation ترجمه traduction 翻訳 traducción translation ترجمه traduction 翻訳 traducción
+    </div>
+    <div class="calli l2" data-depth="26">meaning معنا sens 意味 significado meaning معنا sens 意味 significado</div>
+    <div class="calli l3" data-depth="40">language زبان langue 言語 lengua language زبان langue 言語 lengua</div>
+</div>
+<div class="grain"></div>
+<div class="vign"></div>
+<div class="cursor" id="cursor"></div>
+
+<header [class.stuck]="stuck()">
+    <div class="brand"><span class="wm">Studify</span><span class="acc">.</span></div>
+    <div class="hsearch">
+        <span class="mag">⌕</span>
+        <input
+            type="text"
+            placeholder="Find a course…"
+            aria-label="Find a course"
+            autocomplete="off"
+            [value]="query()"
+            (input)="query.set($any($event.target).value)"
+        />
+        <span class="kbd">⌘K</span>
+        @if (results().length || query()) {
+            <div class="search-results open">
+                @if (results().length) {
+                    <div class="sr-head">{{ results().length }} result{{ results().length > 1 ? 's' : '' }}</div>
+                    @for (r of results(); track r.name) {
+                        @if (r.courseId) {
+                            <a
+                                class="sr-item"
+                                [style.--cc]="r.color"
+                                [routerLink]="['/course', r.courseId]"
+                                (click)="query.set('')"
+                            >
+                                <span class="dot">{{ r.glyph }}</span
+                                ><span class="nm">{{ r.name }}</span
+                                ><span class="mt">{{ r.sem }}</span>
+                            </a>
+                        } @else {
+                            <span class="sr-item" [style.--cc]="r.color">
+                                <span class="dot">{{ r.glyph }}</span
+                                ><span class="nm">{{ r.name }}</span
+                                ><span class="mt">soon</span>
+                            </span>
+                        }
+                    }
+                } @else {
+                    <div class="sr-empty">No courses match “{{ query() }}”.</div>
+                }
+            </div>
+        }
+    </div>
+</header>
+
+<main class="wrap">
+    <section class="hero">
+        @if (returning() && resume(); as r) {
+            <a
+                class="resume"
+                [routerLink]="resumeTarget()"
+                data-reveal
+                style="animation-delay: 0.05s"
+                [style.--rz]="r.color"
+            >
+                <span class="rz-ic">{{ r.glyph || '📚' }}</span>
+                <span class="rz-body">
+                    <span class="rz-k">Continue where you left off</span>
+                    <span class="rz-t">{{ r.course }}</span>
+                </span>
+                <span class="rz-file">{{ r.line }}</span>
+                <span class="rz-go">→</span>
+            </a>
+        } @else {
+            <a class="welcome" href="#semesters" data-reveal style="animation-delay: 0.05s">
+                <span class="dotpulse"></span>New here — start with Semester 1 <span class="wc-go">↓</span>
+            </a>
+        }
+
+        <h1 data-reveal style="animation-delay: 0.12s">Carry meaning<br />across <em>languages</em>.</h1>
+        <div class="echo" data-reveal style="animation-delay: 0.16s">انتقالِ معنا میانِ زبان‌ها</div>
+        <p class="sub" data-reveal style="animation-delay: 0.22s">
+            Your whole syllabus for English Translation Studies — every course, summary and reference, in one quiet
+            place built for long nights of reading.
+        </p>
+
+        <div class="stats" data-reveal style="animation-delay: 0.32s">
+            <div class="stat"
+                ><div class="n">{{ counts().semesters }}</div
+                ><div class="l">Semesters</div></div
+            >
+            <div class="stat"
+                ><div class="n">{{ counts().courses }}</div
+                ><div class="l">Courses</div></div
+            >
+            <div class="stat"
+                ><div class="n">{{ counts().files }}</div
+                ><div class="l">Study files</div></div
+            >
+        </div>
+
+        <div class="scrollhint" data-reveal style="animation-delay: 0.46s">Scroll<span class="l"></span></div>
+    </section>
+
+    <section class="sec" id="semesters">
+        @for (sem of semesters; track sem.name) {
+            <div class="sem-group iv" [class.show]="revealed()">
+                <div class="gh">
+                    <span class="gn">{{ sem.name }}</span>
+                    <span class="gfa">{{ sem.fa }}</span>
+                    <span class="gc">{{ sem.courses.length }} course{{ sem.courses.length > 1 ? 's' : '' }}</span>
+                </div>
+                <div class="courses">
+                    @for (c of sem.courses; track c.name) {
+                        @if (c.courseId) {
+                            <a
+                                class="course"
+                                [style.--ch]="c.color"
+                                [routerLink]="['/course', c.courseId]"
+                                (click)="openCourse(c)"
+                            >
+                                <span class="glyph" [style.color]="c.color">{{ c.glyph }}</span>
+                                <span class="go">→</span>
+                                <div class="cn">{{ c.name }}</div>
+                                <div class="cfa">{{ c.fa }}</div>
+                                <div class="cmeta"
+                                    ><span class="f">{{ c.meta }}</span></div
+                                >
+                            </a>
+                        } @else {
+                            <div class="course" [style.--ch]="c.color">
+                                <span class="glyph" [style.color]="c.color">{{ c.glyph }}</span>
+                                <div class="cn">{{ c.name }}</div>
+                                <div class="cfa">{{ c.fa }}</div>
+                                <div class="cmeta"
+                                    ><span class="f">{{ c.meta }}</span
+                                    ><span class="f">soon</span></div
+                                >
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        }
+    </section>
+</main>
+
+<footer>
+    <div
+        class="ar"
+        style="font-family: 'Newsreader', serif; font-style: italic; font-size: 18px; letter-spacing: 0.04em"
+    >
+        translation · ترجمه · traduction · 翻訳
+    </div>
+    Studify · English Translation Studies · a quiet study library
+</footer>
+
+<div class="moods">
+    <span class="lbl">Mood</span>
+    @for (m of moods; track m) {
+        <button [class]="moodSwatch(m)" [title]="m" [attr.aria-label]="m" (click)="setMood(m)"></button>
+    }
+</div>

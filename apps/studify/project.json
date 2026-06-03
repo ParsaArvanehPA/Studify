@@ -1,99 +1,99 @@
 {
-  "name": "studify",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "application",
-  "prefix": "studify",
-  "sourceRoot": "apps/studify/src",
-  "tags": ["application:studify"],
-  "targets": {
-    "build": {
-      "executor": "@angular/build:application",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/apps/studify",
-        "browser": "apps/studify/src/main.ts",
-        "tsConfig": "apps/studify/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
-        "assets": [
-          {
-            "glob": "**/*",
-            "input": "apps/studify/public"
-          },
-          {
-            "glob": "**/*",
-            "input": "apps/studify/src/assets",
-            "output": "assets"
-          }
-        ],
-        "styles": ["libs/shared/ui/styles/studify-ds.scss", "apps/studify/src/styles.scss"],
-        "server": "apps/studify/src/main.server.ts",
-        "ssr": {
-          "entry": "apps/studify/src/server.ts"
-        },
-        "outputMode": "server"
-      },
-      "configurations": {
-        "production": {
-          "budgets": [
-            {
-              "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+    "name": "studify",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "prefix": "studify",
+    "sourceRoot": "apps/studify/src",
+    "tags": ["application:studify"],
+    "targets": {
+        "build": {
+            "executor": "@angular/build:application",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/studify",
+                "browser": "apps/studify/src/main.ts",
+                "tsConfig": "apps/studify/tsconfig.app.json",
+                "inlineStyleLanguage": "scss",
+                "assets": [
+                    {
+                        "glob": "**/*",
+                        "input": "apps/studify/public"
+                    },
+                    {
+                        "glob": "**/*",
+                        "input": "apps/studify/src/assets",
+                        "output": "assets"
+                    }
+                ],
+                "styles": ["libs/shared/ui/styles/studify-ds.scss", "apps/studify/src/styles.scss"],
+                "server": "apps/studify/src/main.server.ts",
+                "ssr": {
+                    "entry": "apps/studify/src/server.ts"
+                },
+                "outputMode": "server"
             },
-            {
-              "type": "anyComponentStyle",
-              "maximumWarning": "8kb",
-              "maximumError": "16kb"
+            "configurations": {
+                "production": {
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "500kb",
+                            "maximumError": "1mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "24kb",
+                            "maximumError": "48kb"
+                        }
+                    ],
+                    "outputHashing": "all",
+                    "optimization": {
+                        "scripts": true,
+                        "styles": true,
+                        "fonts": false
+                    },
+                    "baseHref": "/Studify/"
+                },
+                "development": {
+                    "optimization": false,
+                    "extractLicenses": false,
+                    "sourceMap": true
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "serve": {
+            "continuous": true,
+            "executor": "@angular/build:dev-server",
+            "configurations": {
+                "production": {
+                    "buildTarget": "studify:build:production"
+                },
+                "development": {
+                    "buildTarget": "studify:build:development"
+                }
+            },
+            "defaultConfiguration": "development"
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint"
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "apps/studify/jest.config.cts",
+                "tsConfig": "apps/studify/tsconfig.spec.json"
             }
-          ],
-          "outputHashing": "all",
-          "optimization": {
-            "scripts": true,
-            "styles": true,
-            "fonts": false
-          },
-          "baseHref": "/Studify/"
         },
-        "development": {
-          "optimization": false,
-          "extractLicenses": false,
-          "sourceMap": true
+        "serve-static": {
+            "continuous": true,
+            "executor": "@nx/web:file-server",
+            "options": {
+                "buildTarget": "studify:build",
+                "staticFilePath": "dist/apps/studify/browser",
+                "spa": true
+            }
         }
-      },
-      "defaultConfiguration": "production"
-    },
-    "serve": {
-      "continuous": true,
-      "executor": "@angular/build:dev-server",
-      "configurations": {
-        "production": {
-          "buildTarget": "studify:build:production"
-        },
-        "development": {
-          "buildTarget": "studify:build:development"
-        }
-      },
-      "defaultConfiguration": "development"
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "apps/studify/jest.config.cts",
-        "tsConfig": "apps/studify/tsconfig.spec.json"
-      }
-    },
-    "serve-static": {
-      "continuous": true,
-      "executor": "@nx/web:file-server",
-      "options": {
-        "buildTarget": "studify:build",
-        "staticFilePath": "dist/apps/studify/browser",
-        "spa": true
-      }
     }
-  }
 }

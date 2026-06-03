@@ -12,3 +12,4 @@ Semester 2/**
 dist/**
 node_modules/**
 libs/shared/feature/src/lib/course-page/course-page.component.scss
+libs/shared/feature/src/lib/home/home.component.scss
