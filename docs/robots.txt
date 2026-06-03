@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://parsaarvanehpa.github.io/Studify/sitemap.xml

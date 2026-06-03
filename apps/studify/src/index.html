@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-mood="midnight">
+    <head>
+        <meta charset="utf-8" />
+        <title>Studify</title>
+        <base href="/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Studify — a calm, unified reader for university study materials." />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Vazirmatn:wght@300;400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <script>
+            try {
+                document.documentElement.dataset.mood = localStorage.getItem('studify:mood') || 'midnight';
+            } catch (e) {}
+        </script>
+        <studify-root></studify-root>
+    </body>
+</html>

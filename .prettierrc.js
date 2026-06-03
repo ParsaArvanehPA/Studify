@@ -17,7 +17,7 @@ module.exports = {
             }
         },
         {
-            files: ['*.component.html'],
+            files: ['*.component.html', '*.app.html'],
             options: {
                 parser: 'angular'
             }

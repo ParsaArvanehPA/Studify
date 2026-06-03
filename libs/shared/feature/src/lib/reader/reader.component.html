@@ -1,0 +1,43 @@
+<div class="ds-field">
+    <div class="ds-blob b1"></div>
+    <div class="ds-blob b2"></div>
+    <div class="ds-blob b3"></div>
+</div>
+<div class="ds-vign"></div>
+<div class="ds-cursor" id="ds-cursor"></div>
+<div class="rprog" [style.width.%]="progress()"></div>
+
+<div class="reader">
+    <div class="rbar" [class.stuck]="stuck()">
+        <a class="back" href="."><span>← Back</span></a>
+        <div class="rcrumb">
+            <div class="rk">{{ doc()?.course || 'Studify' }}</div>
+            <div class="rn">{{ doc() ? doc()!.chapter + ' · ' + doc()!.kind : 'Loading…' }}</div>
+        </div>
+        <div class="spacer"></div>
+        <div class="fontseg" title="Text size">
+            <button class="a1" (click)="changeFont(-1)" aria-label="Smaller text">A</button>
+            <button class="a2" (click)="changeFont(1)" aria-label="Larger text">A</button>
+        </div>
+        <div class="seg" role="group" aria-label="Reading surface">
+            @for (s of surfaces; track s) {
+                <button [class]="'s-' + s + (surface() === s ? ' on' : '')" (click)="setSurface(s)">
+                    <span class="sd"></span><span>{{ s }}</span>
+                </button>
+            }
+        </div>
+        <a class="rbtn" [href]="doc()?.path" target="_blank" rel="noopener" title="Open original file">↗</a>
+    </div>
+
+    <div [class]="'canvas surface-' + surface()">
+        <div class="sheet">
+            @if (loading()) {
+                <div class="rstate"><div class="spin"></div>Preparing the page…</div>
+            } @else if (error()) {
+                <div class="rstate">Could not load this document.</div>
+            } @else {
+                <article class="prose" [class.rtl]="rtl()" [style.font-size.px]="fontSize()" [innerHTML]="proseHtml()"></article>
+            }
+        </div>
+    </div>
+</div>

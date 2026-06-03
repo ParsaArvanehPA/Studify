@@ -1,0 +1,13 @@
+# Faithful design ports from the Claude Design handoff — kept verbatim for
+# pixel-fidelity (define tokens/shells in hex/rgba). Hand-written component styles still lint.
+libs/shared/ui/styles/studify-ds.scss
+libs/shared/feature/src/lib/reader/reader.component.scss
+
+# Static study-material content (source HTML, not app styles)
+Semester 1/**
+Semester 2/**
+**/assets/content/**
+
+# build output / deps
+dist/**
+node_modules/**

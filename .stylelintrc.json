@@ -26,7 +26,7 @@
 
         "block-no-empty": true,
         "comment-no-empty": true,
-        "no-empty-source": false,
+        "no-empty-source": null,
 
         "color-no-invalid-hex": true,
         "function-calc-no-unspaced-operator": true,
@@ -49,7 +49,7 @@
 
         "annotation-no-unknown": true,
         "at-rule-no-unknown": true,
-        "declaration-property-value-no-unknown": true,
+        "declaration-property-value-no-unknown": null,
         "function-no-unknown": true,
         "media-feature-name-no-unknown": true,
         "media-feature-name-value-no-unknown": true,
@@ -65,7 +65,7 @@
         "selector-type-no-unknown": [
             true,
             {
-                "ignoreTypes": ["/^ui-/", "::ng-host", "/^ng-/", "/^feature-/", "/^lib-/"]
+                "ignoreTypes": ["/^ui-/", "::ng-host", "/^ng-/", "/^feature-/", "/^studify-/"]
             }
         ],
         "unit-no-unknown": true,
@@ -109,7 +109,7 @@
         "rule-empty-line-before": null,
 
         "declaration-block-single-line-max-declarations": 1,
-        "number-max-precision": 2,
+        "number-max-precision": 4,
         "selector-max-universal": 1,
 
         "alpha-value-notation": "number",
@@ -127,8 +127,8 @@
         "declaration-block-no-redundant-longhand-properties": true,
         "shorthand-property-no-redundant-values": true,
 
-        "number-leading-zero": "always",
+        "number-leading-zero": null,
 
-        "unit-case": "lower"
+        "unit-case": null
     }
 }
