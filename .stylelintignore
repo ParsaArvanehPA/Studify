@@ -11,3 +11,4 @@ Semester 2/**
 # build output / deps
 dist/**
 node_modules/**
+libs/shared/feature/src/lib/course-page/course-page.component.scss

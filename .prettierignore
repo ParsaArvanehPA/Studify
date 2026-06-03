@@ -14,4 +14,4 @@ libs/shared/feature/src/lib/reader/reader.component.scss
 # Static study-material content (source HTML)
 apps/studify/src/assets/content
 Semester 1
-Semester 2
+Semester 2libs/shared/feature/src/lib/course-page/course-page.component.scss
