@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f0f1a"/>
+      <stop offset="1" stop-color="#1a1530"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="120" r="260" fill="url(#accent)" opacity="0.12"/>
+  <circle cx="180" cy="560" r="200" fill="url(#accent)" opacity="0.10"/>
+  <g transform="translate(90 250)">
+    <rect x="0" y="-70" width="96" height="96" rx="24" fill="url(#accent)"/>
+    <text x="48" y="-8" font-family="Inter, Segoe UI, sans-serif" font-size="54" text-anchor="middle" fill="#ffffff">🎓</text>
+    <text x="130" y="0" font-family="Inter, Segoe UI, sans-serif" font-weight="700" font-size="92" fill="#ffffff">Studify</text>
+  </g>
+  <text x="90" y="350" font-family="Inter, Segoe UI, sans-serif" font-weight="600" font-size="44" fill="#c7c9e2">University Study Materials</text>
+  <text x="90" y="420" font-family="Inter, Segoe UI, sans-serif" font-size="30" fill="#8b8da8">Lecture notes · Study guides · Exam prep</text>
+  <text x="90" y="480" font-family="Inter, Segoe UI, sans-serif" font-size="30" fill="#8b8da8">Organized by Semester → Course → Session</text>
+</svg>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای مطالعه: جلسه هفتم - مفهوم امر سیاسی (اشمیت)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --accent-color: #4299e1;
+            --text-color: #1a1a1a;
+            --background-color: #ffffff;
+            --box-background: #f8f9fa;
+            --key-term-color: #e67e22;
+            --important-color: #c2185b;
+            --case-study-color: #27ae60;
+            --example-color: #f39c12;
+            --scholar-color: #6c757d;
+            --ai-color: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.9;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 48px 0 24px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 32px 0 16px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 16px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .concept-box {
+            background-color: var(--box-background);
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .concept-box h3, .concept-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .key-term {
+            background-color: #fef3e2;
+            border-right: 5px solid var(--key-term-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .key-term strong {
+            color: var(--key-term-color);
+        }
+
+        .important {
+            background-color: #fdf2f8;
+            border-right: 5px solid var(--important-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .important strong, .important h3 {
+            color: var(--important-color);
+        }
+
+        .case-study {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .case-study strong, .case-study h4 {
+            color: var(--case-study-color);
+        }
+
+        .example {
+            background-color: #fffbeb;
+            border-right: 5px solid var(--example-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .example strong {
+            color: var(--example-color);
+        }
+
+        .scholar-box {
+            background-color: #f8f9fa;
+            border-right: 5px solid var(--scholar-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .scholar-box strong, .scholar-box h3, .scholar-box h4 {
+            color: var(--scholar-color);
+        }
+
+        .ai-box {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-right: 5px solid var(--ai-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+        }
+
+        .ai-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #c4b5fd;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #6b21a8;
+        }
+
+        .ai-box p {
+            color: #4c1d95;
+            margin: 12px 0;
+        }
+
+        .ai-box ul, .ai-box ol {
+            color: #4c1d95;
+            margin: 12px 24px 12px 0;
+        }
+
+        .ai-box li {
+            margin: 8px 0;
+        }
+
+        .ai-box strong {
+            color: #7c3aed;
+        }
+
+        .question-box {
+            background-color: #ebf8ff;
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .question-box strong {
+            color: var(--primary-color);
+        }
+
+        .answer-box {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 20px 24px;
+            margin: 8px 0 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .answer-box strong {
+            color: var(--case-study-color);
+        }
+
+        ul, ol {
+            margin: 16px 24px 16px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .chapter-divider {
+            text-align: center;
+            margin: 64px 0;
+            position: relative;
+        }
+
+        .chapter-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+        }
+
+        .chapter-divider span {
+            background-color: var(--background-color);
+            padding: 0 24px;
+            position: relative;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        blockquote {
+            border-right: 4px solid var(--accent-color);
+            padding-right: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        @media print {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .concept-box, .key-term, .important, .case-study, .example, .scholar-box, .question-box, .answer-box, .ai-box {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ترجمهٔ سیاسی</h1>
+        <p class="subtitle">جلسه هفتم: کارگاهِ ترجمهٔ «مفهوم امر سیاسی» اشمیت — تعریفِ سلبی، درهم‌تنیدگیِ امور و برساخت در برابر فکت | کارشناسی ارشد مطالعات ترجمه - دانشگاه علامه طباطبایی</p>
+
+        <div class="chapter-divider"><span>مروری بر محتوای جلسه</span></div>
+
+        <div class="concept-box">
+            <h3>درباره این جلسه</h3>
+            <p>کارگاهِ ترجمهٔ متنِ <strong>کارل اشمیت</strong> با عنوانِ «مفهومِ امرِ سیاسی». محورها: (۱) معرفیِ اشمیت و چالشِ تعریفِ «امرِ سیاسی»؛ (۲) <strong>درهم‌تنیدگیِ امور</strong> (سیاسی/اقتصادی/اجتماعی/اخلاقی) و معنای «همه‌چیز سیاسی است»؛ (۳) راهبردهای ترجمه و تمایزِ کلیدیِ <strong>برساخت (Construct) در برابر فکت (Fact)</strong>.</p>
+        </div>
+
+        <h2>۱. کارل اشمیت و «مفهومِ امرِ سیاسی»</h2>
+
+        <div class="scholar-box">
+            <h4>کارل اشمیت (Carl Schmitt)</h4>
+            <p>نظریه‌پردازِ سیاسیِ آلمانی و چهره‌ای <strong>محافظه‌کار</strong> و بسیار <strong>جنجالی/بحث‌برانگیز</strong>: عضوِ حزبِ نازی بود و از علم و نفوذش برای توجیهِ سیاست‌های نازی بهره گرفت؛ با‌این‌حال تا امروز یکی از دانشمندانِ برجستهٔ علمِ سیاست به‌شمار می‌آید. (یادآوریِ جلسهٔ دوم: شناختِ بدنامیِ نویسنده بخشی از توانشِ مترجم است.)</p>
+        </div>
+
+        <div class="key-term">
+            <strong>«امرِ سیاسی» (The Political):</strong> ساختِ «the + صفت» در انگلیسی به «امر/مفهومِ + صفت» ترجمه می‌شود (مثلاً «مفهومِ امرِ سیاسی»). واژهٔ «امر» از «مسئله/موضوع» رسمی‌تر است.
+        </div>
+
+        <div class="important">
+            <h3>تعریفِ سلبی و دورِ باطل</h3>
+            <p>تعریفِ «امرِ سیاسی» دشوار است؛ زیرا اغلب به‌صورتِ <strong>سلبی (Negative)</strong> و <strong>در تقابل با مفاهیمِ دیگر</strong> تعریف می‌شود: سیاست در برابر اقتصاد، سیاست در برابر اخلاق، سیاست در برابر حقوق. این یک «دورِ باطل» می‌سازد: امرِ سیاسی را با گفتنِ آنچه «نیست» می‌شناسیم. اشمیت می‌گوید «امرِ سیاسیِ متعلق به دولت» تعریفی <strong>دوری و نابسنده</strong> است.</p>
+        </div>
+
+        <div class="key-term">
+            <strong>«سلبی» (Privative/Negative) یعنی چه؟</strong> از «سلب‌کردن = گرفتن»؛ نگاهِ سلبی یعنی تمرکز بر جنبهٔ منفی/بازدارنده (مثلِ دیدنِ نیمهٔ خالیِ لیوان، یا قانونِ بازدارنده در برابرِ قانونِ تشویقی). در ترجمه باید این بار را تشخیص داد.
+        </div>
+
+        <h2>۲. درهم‌تنیدگیِ امور و «همه‌چیز سیاسی است»</h2>
+
+        <div class="concept-box">
+            <p>تصورِ ساده‌انگارانه این است که سیاست، فرهنگ، اقتصاد، اخلاق و هنر هرکدام «جعبه‌ای جداگانه»‌اند؛ اما در واقعیت همه به‌هم <strong>پیوسته</strong>اند و مرزبندیِ صددرصدی ندارند. ازاین‌رو «هر کنشی بارِ سیاسی دارد» — و حتی <strong>نکردن/سکوت</strong> نیز یک کنشِ سیاسی است (در ادبیات: آنچه گفته <em>نمی‌شود</em> گاه مهم‌تر از آنچه گفته می‌شود است).</p>
+        </div>
+
+        <div class="case-study">
+            <h4>نمونه: خریدِ یک یخچال</h4>
+            <p>تصمیم به خریدِ یخچالِ ایرانی (به‌جای آلمانی/آمریکایی/چینی) در ظاهر فقط <strong>اقتصادی</strong> است، اما هم‌زمان: بارِ <strong>سیاسی</strong> (حمایت از تولیدِ داخل)، <strong>اجتماعی</strong> (اشتغال‌زایی)، <strong>اخلاقی</strong> (تصمیم بر اساسِ آنچه درست‌تر است نه راحت‌تر) و حتی <strong>فرهنگی/هنری</strong> دارد (اگر آن شرکت حامیِ رویدادهای هنری باشد). یک کنشِ ساده، ده‌ها بُعد دارد — به‌ویژه در درازمدت.</p>
+        </div>
+
+        <h2>۳. دولت و امرِ سیاسی</h2>
+
+        <div class="scholar-box">
+            <h4>جملهٔ مشهورِ اشمیت</h4>
+            <p>«مفهومِ دولت، مفهومِ امرِ سیاسی را پیش‌فرض می‌گیرد» (The concept of the state presupposes the concept of the political). یعنی برای آنکه دولتی شکل بگیرد، نخست باید امر/فعالیتِ سیاسی وجود داشته باشد (مانندِ اینکه برای برگزاریِ انتخابات، نخست باید جامعه‌ای وجود داشته باشد). هم‌چنین دولت در «مواردِ تعیین‌کننده»، <strong>مرجعِ نهاییِ اقتدار (Ultimate Authority)</strong> است.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>دولت چیست؟ (تعریف‌های استعاری و پیش‌فرض‌هایشان)</h3>
+            <p>اشمیت می‌پرسد دولت در ذاتِ خود چیست: ماشین، موجودِ زنده (Organism)، شخص، نهاد، جامعه، شرکت، کندوی زنبور (Beehive)، یا نظمِ رویه‌ایِ بنیادین؟ نکته: هر یک از این تصویرها <strong>پیش‌فرض‌های</strong> زیادی (معنا، تفسیر، مثال‌پردازی، صورت‌بندی) را با خود حمل می‌کند (مثلاً «کندو» مستلزمِ ملکه و نظمِ سفت‌وسختِ وظایف است)؛ پس هیچ‌یک نقطهٔ آغازِ خوبی برای تعریفِ ساده نیست.</p>
+        </div>
+
+        <h2>۴. تمایزِ کلیدی: برساخت در برابر فکت</h2>
+
+        <div class="important">
+            <table>
+                <tr><th>فکت (Fact)</th><th>برساخت (Construct)</th></tr>
+                <tr><td>گزاره‌ای که همیشه و همه‌جا درست است (آب در ۱۰۰ درجه می‌جوشد؛ زمین به دورِ خورشید می‌گردد). انسان آن را نساخته؛ بخشی از قوانینِ طبیعت است.</td><td>ایده/باوری که الزاماً و همه‌جا درست نیست؛ می‌تواند کلیشه باشد (کلیشه‌های قومیتی). ساختهٔ ذهن/جامعه است؛ ازاین‌رو از فعلِ «ساختن» (برساخت) استفاده می‌کنیم.</td></tr>
+            </table>
+        </div>
+
+        <div class="case-study">
+            <h4>برساختِ هدفمند</h4>
+            <p>برخی برساخت‌ها <strong>هدفمند</strong>اند: نظریه‌ای می‌گوید کلیشه‌ها و جوک‌های قومیتی در ایران را نخستین‌بار انگلیسی‌ها برای ایجادِ تفرقه رواج دادند (مطالعهٔ فرهنگ‌ها، استخراجِ یک ویژگی، تعمیم و ساختِ جوک). برخی نیز کلیشه‌های «جهان‌شمول»‌اند. نکتهٔ مترجم: «construction» می‌تواند «برساخت» یا «تفسیر» معنا دهد؛ تشخیصش به بافت بستگی دارد.</p>
+        </div>
+
+        <h2>۵. راهبردهای ترجمه در این جلسه</h2>
+
+        <div class="concept-box">
+            <ul>
+                <li><strong>government در برابر governance</strong> (حکومت/دولت در برابر عملِ حکمرانی) — یادآوریِ جلسهٔ پنجم.</li>
+                <li><strong>modern:</strong> هم «مدرن» و هم «معاصر»؛ «دورانِ مدرن» معمولاً به نیمهٔ اولِ قرنِ بیستم اشاره دارد (پس از جنگِ دوم: پسامدرن).</li>
+                <li><strong>ترجیحِ معادلِ فارسیِ مأنوس:</strong> «موجودِ زنده» به‌جای «ارگانیسم»، مگر آنکه نامأنوس یا باعثِ بدخوانی شود. این انتخاب‌های کوچک، زبان را تقویت یا تضعیف می‌کنند.</li>
+            </ul>
+        </div>
+
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <span>✦ دفاع از واژه‌سازی: نقشِ فرهنگستان</span>
+            </div>
+            <p>استاد در دفاع از <strong>فرهنگستانِ زبان فارسی</strong> توضیح می‌دهد: شایعاتی مانند ساختِ «درازآویزِ زینتی» برای کراوات، جعلی‌اند (و باورِ آن‌ها بی‌بهره‌بودن از تفکرِ نقادانه است). دستاوردهای واقعیِ فرهنگستان واژه‌هایی است که امروز به‌راحتی به‌کار می‌بریم: <strong>شهرداری</strong> (نه بلدیه)، <strong>کلانتری/پاسگاه</strong> (نه نظمیه)، <strong>دادگستری</strong> (نه عدلیه)، <strong>پایان‌نامه</strong>، <strong>پیشنهاده</strong> (proposal)، <strong>رایانه</strong>، <strong>یارانه</strong> (نه سوبسید)، <strong>کالابرگ</strong> (نه کوپن). درس برای مترجم: ترجیحِ معادلِ فارسی، توانِ واژه‌سازیِ زبان را زنده نگه می‌دارد — و اساتیدِ زبان موجّه‌ترین کسان برای پرهیز از به‌کارگیریِ بی‌رویهٔ واژه‌های بیگانه‌اند.</p>
+        </div>
+
+        <div class="chapter-divider"><span>سوالات امتحانی</span></div>
+
+        <h2>پرسش و پاسخ برای آمادگی امتحان</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱:</strong> کارل اشمیت کیست و چرا چهره‌ای جنجالی است؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> نظریه‌پردازِ سیاسیِ آلمانی و محافظه‌کار؛ جنجالی است چون عضوِ حزبِ نازی بود و از علم و نفوذش برای توجیهِ سیاست‌های نازی استفاده کرد، اما تا امروز یکی از دانشمندانِ برجستهٔ علمِ سیاست به‌شمار می‌آید. شناختِ این سابقه بخشی از توانشِ مترجم است.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۲:</strong> چرا تعریفِ «امرِ سیاسی» سلبی و دوری است؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چون اغلب در <strong>تقابل با مفاهیمِ دیگر</strong> تعریف می‌شود (سیاست در برابر اقتصاد/اخلاق/حقوق)؛ یعنی با گفتنِ آنچه «نیست» شناخته می‌شود — یک دورِ باطل. اشمیت نشان می‌دهد «امرِ سیاسیِ متعلق به دولت» نیز تعریفی دوری و نابسنده است. «سلبی» یعنی تمرکز بر جنبهٔ منفی/بازدارنده.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۳:</strong> منظور از «درهم‌تنیدگیِ امور» چیست؟ با مثال توضیح دهید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> اینکه سیاست، اقتصاد، اخلاق و فرهنگ جعبه‌های جدا نیستند و به‌هم پیوسته‌اند؛ پس هر کنشی چند بُعد دارد. مثال: خریدِ یخچالِ ایرانی در ظاهر اقتصادی است، اما هم‌زمان بارِ سیاسی (حمایت از تولیدِ داخل)، اجتماعی (اشتغال) و اخلاقی دارد. حتی «نکردن/سکوت» نیز کنشِ سیاسی است.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۴:</strong> جملهٔ «دولت، امرِ سیاسی را پیش‌فرض می‌گیرد» یعنی چه؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> یعنی برای آنکه دولتی شکل بگیرد، نخست باید امر/فعالیتِ سیاسی وجود داشته باشد (مانندِ اینکه برای برگزاریِ انتخابات نخست باید جامعه‌ای موجود باشد). هم‌چنین دولت در مواردِ تعیین‌کننده، مرجعِ نهاییِ اقتدار است. تعریفِ دولت صرفاً بر حسبِ امرِ سیاسی، دوری و نابسنده است.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۵:</strong> تفاوتِ «فکت» و «برساخت» را با مثال بیان کنید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> <strong>فکت</strong> گزاره‌ای است که همیشه و همه‌جا درست است و انسان آن را نساخته (آب در ۱۰۰ درجه می‌جوشد). <strong>برساخت</strong> ایده/باوری است که الزاماً درست نیست و ساختهٔ ذهن/جامعه است (کلیشه‌های قومیتی)؛ برخی برساخت‌ها هدفمندند (نظریهٔ رواجِ جوک‌های قومیتی برای تفرقه). از فعلِ «ساختن» استفاده می‌کنیم تا بر ساختگی‌بودنش تأکید شود.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۶:</strong> چرا استاد از فرهنگستان دفاع می‌کند و این چه ربطی به کارِ مترجم دارد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چون بسیاری از واژه‌های رایجِ امروز (شهرداری، دادگستری، پایان‌نامه، رایانه، یارانه) ساختهٔ فرهنگستان‌اند، و شایعاتِ واژه‌های مسخره اغلب جعلی‌اند (باورشان نشانهٔ نبودِ تفکرِ نقادانه است). ربط به مترجم: ترجیحِ معادلِ فارسیِ مأنوس، توانِ واژه‌سازیِ زبان را زنده نگه می‌دارد؛ همین انتخاب‌های کوچک، زبان را تقویت یا تضعیف می‌کنند.
+        </div>
+
+        <div class="concept-box">
+            <h4>نکات کلیدی برای مرور</h4>
+            <ul>
+                <li>کارل اشمیت: نظریه‌پردازِ نازی اما برجسته؛ شناختِ نویسنده = توانش</li>
+                <li>امرِ سیاسی: تعریفِ سلبی و دوری (در تقابل با اقتصاد/اخلاق/حقوق)</li>
+                <li>درهم‌تنیدگیِ امور؛ مثالِ یخچال؛ سکوت = کنشِ سیاسی</li>
+                <li>دولت امرِ سیاسی را پیش‌فرض می‌گیرد؛ دولت = مرجعِ نهاییِ اقتدار</li>
+                <li>برساخت (Construct) در برابر فکت (Fact)؛ برساختِ هدفمند</li>
+                <li>راهبردها: government/governance، modern/معاصر، معادلِ فارسی، دفاع از فرهنگستان</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
