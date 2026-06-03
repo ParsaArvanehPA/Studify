@@ -6,3 +6,12 @@
 .angular
 
 .nx/self-healing
+
+# Verbatim design ports from the Claude Design handoff — keep as authored
+libs/shared/ui/styles/studify-ds.scss
+libs/shared/feature/src/lib/reader/reader.component.scss
+
+# Static study-material content (source HTML)
+apps/studify/src/assets/content
+Semester 1
+Semester 2

@@ -1,4 +1,4 @@
 {
     "*": ["npx nx format:write --files"],
-    "*.scss": ["npx stylelint --fix"]
+    "*.scss": ["npx stylelint --fix --allow-empty-input"]
 }

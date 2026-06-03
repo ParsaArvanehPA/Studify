@@ -62,5 +62,18 @@
     .canvas{padding:84px 10px 24px}
     .sheet{padding:18px 16px 40px}
   }
-  /* hidden loader iframe */
-  #loader{position:absolute;width:0;height:0;border:0;opacity:0;pointer-events:none}
+  /* ---------- header re-themed to the ambient MOOD (matches the app theme,
+       not the reading surface). Overrides the surface-themed rbar rules above. ---------- */
+  .rbar{background:color-mix(in srgb,var(--bg) 76%,transparent);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line)}
+  .rbar.stuck{background:color-mix(in srgb,var(--bg) 88%,transparent);border-color:var(--line)}
+  .rbar .back{color:var(--ink-soft);border-color:var(--line);background:var(--glass)}
+  .rbar .back:hover{color:var(--ink);border-color:color-mix(in srgb,var(--ink) 24%,transparent)}
+  .rbar .rcrumb .rk{color:var(--gold)}
+  .rbar .rcrumb .rn{color:var(--ink)}
+  .rbar .seg,.rbar .fontseg{background:var(--glass);border-color:var(--line)}
+  .rbar .seg button,.rbar .fontseg button{color:var(--ink-soft)}
+  .rbar .seg button:hover,.rbar .fontseg button:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 8%,transparent)}
+  .rbar .seg button.on{color:var(--bg);background:var(--accent)}
+  .rbar .rbtn{color:var(--ink-soft);border-color:var(--line);background:var(--glass)}
+  .rbar .rbtn:hover{color:var(--ink);border-color:color-mix(in srgb,var(--ink) 24%,transparent)}
+  .rprog{background:var(--accent);box-shadow:0 0 10px var(--accent)}
