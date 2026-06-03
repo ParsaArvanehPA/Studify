@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای مطالعه: جلسه چهارم - ترجمه به‌مثابه کنش سیاسی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --accent-color: #4299e1;
+            --text-color: #1a1a1a;
+            --background-color: #ffffff;
+            --box-background: #f8f9fa;
+            --key-term-color: #e67e22;
+            --important-color: #c2185b;
+            --case-study-color: #27ae60;
+            --example-color: #f39c12;
+            --scholar-color: #6c757d;
+            --ai-color: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.9;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 48px 0 24px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 32px 0 16px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 16px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .concept-box {
+            background-color: var(--box-background);
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .concept-box h3, .concept-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .key-term {
+            background-color: #fef3e2;
+            border-right: 5px solid var(--key-term-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .key-term strong {
+            color: var(--key-term-color);
+        }
+
+        .important {
+            background-color: #fdf2f8;
+            border-right: 5px solid var(--important-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .important strong, .important h3 {
+            color: var(--important-color);
+        }
+
+        .case-study {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .case-study strong, .case-study h4 {
+            color: var(--case-study-color);
+        }
+
+        .example {
+            background-color: #fffbeb;
+            border-right: 5px solid var(--example-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .example strong {
+            color: var(--example-color);
+        }
+
+        .scholar-box {
+            background-color: #f8f9fa;
+            border-right: 5px solid var(--scholar-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .scholar-box strong, .scholar-box h3, .scholar-box h4 {
+            color: var(--scholar-color);
+        }
+
+        .ai-box {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-right: 5px solid var(--ai-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+        }
+
+        .ai-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #c4b5fd;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #6b21a8;
+        }
+
+        .ai-box p {
+            color: #4c1d95;
+            margin: 12px 0;
+        }
+
+        .ai-box ul, .ai-box ol {
+            color: #4c1d95;
+            margin: 12px 24px 12px 0;
+        }
+
+        .ai-box li {
+            margin: 8px 0;
+        }
+
+        .ai-box strong {
+            color: #7c3aed;
+        }
+
+        .question-box {
+            background-color: #ebf8ff;
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .question-box strong {
+            color: var(--primary-color);
+        }
+
+        .answer-box {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 20px 24px;
+            margin: 8px 0 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .answer-box strong {
+            color: var(--case-study-color);
+        }
+
+        ul, ol {
+            margin: 16px 24px 16px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .chapter-divider {
+            text-align: center;
+            margin: 64px 0;
+            position: relative;
+        }
+
+        .chapter-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+        }
+
+        .chapter-divider span {
+            background-color: var(--background-color);
+            padding: 0 24px;
+            position: relative;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        blockquote {
+            border-right: 4px solid var(--accent-color);
+            padding-right: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        @media print {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .concept-box, .key-term, .important, .case-study, .example, .scholar-box, .question-box, .answer-box, .ai-box {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>روزنامه‌نگاری برخط و ترجمه در فضای دیجیتال</h1>
+        <p class="subtitle">جلسه چهارم: ترجمه به‌مثابه کنش سیاسی، بافت و جهانی‌شدن رسانه | کارشناسی ارشد مطالعات ترجمه - دانشگاه علامه طباطبایی</p>
+
+        <div class="chapter-divider"><span>مروری بر محتوای جلسه</span></div>
+
+        <div class="concept-box">
+            <h3>درباره این جلسه</h3>
+            <p>این جلسه به پیوند <strong>سیاست و ترجمه</strong> می‌پردازد: چگونه بافت (Context)، چارچوب‌بندی (Framing) و جهانی‌شدن رسانه، ترجمه را به یک «کنش سیاسی» بدل می‌کنند. محور اصلی این است که هیچ ترجمهٔ خبری/رسانه‌ایِ خنثایی وجود ندارد؛ هر انتخاب واژگانی یک موضع‌گیری است.</p>
+        </div>
+
+        <h2>۱. تعریف «سیاست» و نسبت آن با ترجمه</h2>
+
+        <div class="concept-box">
+            <h3>سیاست چیست؟</h3>
+            <p>سیاست تنها به دولت و حکومت محدود نمی‌شود؛ سیاست عبارت است از:</p>
+            <ul>
+                <li>هنجارها، نقش‌ها و انتظاراتی که رفتار را در جامعه شکل می‌دهند (Norms, roles, expectations that shape behavior).</li>
+                <li>شیوهٔ «حکمرانی» (Governing) و تنظیم تعاملات اجتماعی.</li>
+                <li>تعامل و ارتباط اجتماعی و به‌طور خاص، <strong>روابط قدرت</strong> (Relations of Power).</li>
+            </ul>
+            <p>چون ترجمه نوعی ارتباط اجتماعی است و در دل روابط قدرت رخ می‌دهد، خودْ کنشی سیاسی است.</p>
+        </div>
+
+        <h2>۲. بافت، چشم‌انداز و چارچوب‌بندی</h2>
+
+        <div class="key-term">
+            <strong>بافت و چشم‌انداز (Context & Perspective):</strong> معنای هر متن در بافت آن شکل می‌گیرد. مترجم با انتخاب «چشم‌انداز» و «کانون توجه» (Focus)، عملاً یک چارچوب (Frame) به متن تحمیل می‌کند؛ پس ترجمه هرگز بازتاب بی‌طرفِ متن مبدأ نیست.
+        </div>
+
+        <div class="concept-box">
+            <h3>بافت چندزبانی (Multilingual Context)</h3>
+            <p>در یک بافت چندزبانه، زبان می‌تواند ابزار <strong>شمول یا طرد</strong> باشد. کسی که زبان مسلط را نمی‌داند احساس «جا ماندن» و کنار گذاشته‌شدن می‌کند (مثلاً گویشور بلوچی یا گویش محلیِ مناطقی چون آبادان و اهواز در برابر زبان رسمی). ترجمه می‌تواند این شکاف را پر کند یا تشدید کند.</p>
+        </div>
+
+        <h2>۳. جهانی‌شدن و سلطهٔ رسانه‌های انگلیسی‌زبان</h2>
+
+        <div class="important">
+            <h3>زبان مسلط در عصر جهانی‌شدن</h3>
+            <p>در عصر جهانی‌شدن، رسانه‌های انگلیسی‌زبان (CNN، BBC، الجزیره و...) خبر را اغلب نخست به انگلیسی تولید می‌کنند و سپس به زبان‌های دیگر «منتقل/ترجمه» می‌شود. <strong>انگلیسی به‌مثابه زبان مسلط/جهان‌شمول</strong> عمل می‌کند و بیشترین حجم انتشار خبری به این زبان است؛ همین، توان آن را در شکل‌دادن به روایت جهانی بالا می‌برد.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>چه کسی پشت رسانه است؟ (Sponsors / Financing)</h3>
+            <p>پشت هر رسانه، منابع مالی و حامیان (Sponsors) قرار دارند که بر خط خبری و جهت‌گیری ترجمه اثر می‌گذارند. شناخت «چه کسی تأمین مالی می‌کند» بخشی از تحلیل سیاسیِ ترجمهٔ خبر است.</p>
+        </div>
+
+        <div class="example">
+            <strong>نمونه: وابستگی فناورانه (GPS):</strong> سامانهٔ موقعیت‌یاب GPS ساختهٔ ایالات متحده است و بسیاری از کشورها به آن وابسته‌اند؛ چین برای کاهش این وابستگی، سامانهٔ موقعیت‌یابِ خود را ساخت. این نمونه نشان می‌دهد که حتی زیرساخت‌های به‌ظاهر فنی نیز بار سیاسی و رابطهٔ قدرت دارند — همان‌گونه که زبان مسلطِ رسانه چنین است.
+        </div>
+
+        <h2>۴. ترجمه به‌مثابه کنش سیاسی: انتخاب واژگان</h2>
+
+        <div class="important">
+            <h3>واژه‌های دارای بار سیاسی</h3>
+            <p>روشن‌ترین نمودِ سیاسی‌بودنِ ترجمه، <strong>انتخاب واژگان</strong> برای یک رویداد واحد است. برای «مرگِ» افراد در یک درگیری، بسته به موضع‌گیری می‌توان گفت:</p>
+            <ul>
+                <li>«به شهادت رسیدند» (موضع همدلانه/تقدیس‌گرانه)</li>
+                <li>«کشته شدند» (موضع خنثی)</li>
+                <li>«به هلاکت رسیدند» (موضع خصمانه/تحقیرآمیز)</li>
+                <li>«جان خود را از دست دادند» (موضع تلطیف‌شده)</li>
+            </ul>
+            <p>هر چهار عبارت به یک واقعهٔ واحد اشاره دارند، اما هر یک یک <strong>موضع سیاسی-ایدئولوژیک</strong> را به مخاطب منتقل می‌کنند. مترجم خبر با همین انتخاب‌ها، چارچوب سیاسی متن را می‌سازد.</p>
+        </div>
+
+        <div class="case-study">
+            <h4>نمونه: لهجه، صدا و بازنماییِ قدرت</h4>
+            <p>در سینما، بازیگرانی که نقش رهبران سیاسی را بازی می‌کنند با لهجه و لحن خاص، بُعد سیاسی شخصیت را منتقل می‌کنند (مثل کالین فرث در «سخنرانی پادشاه»، گری اولدمن در نقش چرچیل، تام هنکس در «پل جاسوسان»). در ترجمه و دوبله نیز انتقالِ این لایهٔ سیاسیِ صدا و لحن چالش‌برانگیز است.</p>
+        </div>
+
+        <div class="case-study">
+            <h4>نمونه: ترجمه در جنگ روایت‌ها</h4>
+            <p>در رویدادهایی مانند جنگ اوکراین، بازیگران سیاسی (مثلاً رهبران یا چهره‌هایی چون ایلان ماسک) با پست‌های توییتری و ترجمهٔ آن‌ها به زبان‌های مختلف، روایت خود را جهانی می‌کنند. هر ترجمه، یک «چشم‌اندازِ سیاسی» را به متن تزریق می‌کند (Injecting a political perspective).</p>
+        </div>
+
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <span>✦ توضیح تکمیلی: چرا «ترجمهٔ خنثی» در رسانه توهم است؟</span>
+            </div>
+            <p>این جلسه همان درس بنیادینِ مطالعات ترجمه را در میدان رسانه بازمی‌گوید: <strong>هیچ ترجمهٔ بی‌طرفی وجود ندارد.</strong></p>
+            <ul>
+                <li>انتخاب واژه (شهید/کشته/هلاک) = موضع‌گیری ایدئولوژیک.</li>
+                <li>انتخاب چه‌چیزی ترجمه شود و چه‌چیزی حذف شود = چارچوب‌بندی سیاسی.</li>
+                <li>زبان مسلط (انگلیسی) = تعیین‌کنندهٔ روایت غالبِ جهانی.</li>
+                <li>حامیان مالی رسانه = جهت‌دهندهٔ پنهانِ ترجمه.</li>
+            </ul>
+            <p><strong>نتیجه برای مترجم:</strong> مترجم خبر باید نسبت به بارِ سیاسیِ هر انتخاب آگاه باشد، چارچوب‌بندیِ متن مبدأ را تشخیص دهد و دربارهٔ موضع خود تصمیم آگاهانه بگیرد. ترجمهٔ ماشینی این لایهٔ سیاسی-فرهنگی را درک نمی‌کند؛ اینجا «شکافِ ترجمه» (Translation Gap) آشکار می‌شود و تخصص انسانی ضروری است.</p>
+        </div>
+
+        <div class="chapter-divider"><span>سوالات امتحانی</span></div>
+
+        <h2>پرسش و پاسخ برای آمادگی امتحان</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱:</strong> چرا ترجمه یک «کنش سیاسی» محسوب می‌شود؟ تعریف سیاست را در پاسخ بیاورید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> سیاست فقط دولت نیست؛ سیاست یعنی هنجارها و نقش‌هایی که رفتار را شکل می‌دهند، شیوهٔ حکمرانی، و به‌ویژه <strong>روابط قدرت</strong> در تعامل اجتماعی. چون ترجمه نوعی ارتباط اجتماعی است که در دل روابط قدرت رخ می‌دهد و بر روایت‌ها اثر می‌گذارد، خودْ کنشی سیاسی است و نمی‌تواند بی‌طرف باشد.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۲:</strong> با یک مثال نشان دهید که «انتخاب واژگان» در ترجمهٔ خبر بار سیاسی دارد.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> برای مرگِ افراد در یک درگیری می‌توان گفت «به شهادت رسیدند» (همدلانه)، «کشته شدند» (خنثی)، «به هلاکت رسیدند» (خصمانه/تحقیرآمیز) یا «جان خود را از دست دادند» (تلطیف‌شده). هر چهار به واقعه‌ای واحد اشاره دارند، اما هر کدام موضع سیاسی-ایدئولوژیک متفاوتی را منتقل می‌کنند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۳:</strong> نقش «زبان مسلط» در جهانی‌شدن رسانه چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> در عصر جهانی‌شدن، رسانه‌های انگلیسی‌زبان (CNN، BBC، الجزیره) خبر را نخست به انگلیسی تولید می‌کنند و بیشترین حجم انتشار به این زبان است. <strong>انگلیسی به‌مثابه زبان مسلط/جهان‌شمول</strong> عمل می‌کند و روایت غالبِ جهانی را شکل می‌دهد؛ ترجمه به/از این زبان، چشم‌انداز سیاسی را منتقل می‌کند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۴:</strong> «بافت چندزبانی» چگونه می‌تواند ابزار شمول یا طرد باشد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> در بافت چندزبانه، کسی که زبان مسلط را نمی‌داند احساس کنار گذاشته‌شدن و طرد می‌کند (مثلاً گویشور یک زبان محلی در برابر زبان رسمی). ترجمه می‌تواند این شکاف را پر کند (شمول) یا با نادیده‌گرفتنِ زبان‌های حاشیه‌ای آن را تشدید کند (طرد).
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۵:</strong> مثال GPS و رقیب چینی آن چه نکته‌ای دربارهٔ قدرت و وابستگی نشان می‌دهد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> GPS ساختهٔ آمریکاست و بسیاری کشورها به آن وابسته‌اند؛ چین برای کاهش این وابستگی سامانهٔ خود را ساخت. این نشان می‌دهد حتی زیرساخت‌های به‌ظاهر فنی نیز بارِ سیاسی و رابطهٔ قدرت دارند — درست مانند سلطهٔ زبان انگلیسی در رسانه که وابستگیِ روایتی ایجاد می‌کند.
+        </div>
+
+        <div class="concept-box">
+            <h4>نکات کلیدی برای مرور</h4>
+            <ul>
+                <li>سیاست = هنجارها، حکمرانی، روابط قدرت (نه فقط دولت)</li>
+                <li>ترجمه = کنش سیاسی؛ هیچ ترجمهٔ خنثایی وجود ندارد</li>
+                <li>انتخاب واژگان (شهید/کشته/هلاک/جان‌باخته) = موضع‌گیری ایدئولوژیک</li>
+                <li>جهانی‌شدن و سلطهٔ زبان انگلیسی در رسانه (CNN، BBC، الجزیره)</li>
+                <li>حامیان مالی رسانه؛ مثال GPS و وابستگی فناورانه</li>
+                <li>بافت چندزبانی: ابزار شمول یا طرد؛ شکاف ترجمهٔ ماشینی</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -396,6 +396,38 @@ export const studyData: Semester[] = [
         link: '/letter-53',
         sessions: []
       },
+      {
+        id: 'online-journalism',
+        name: 'Online Journalism',
+        icon: '📰',
+        color: 'from-sky-400/70 to-blue-500/70',
+        description: 'روزنامه‌نگاری برخط و ترجمه در فضای دیجیتال — Online Journalism & translation in the digital space',
+        sessions: [
+          { id: 'session-1', name: 'Session 1', files: [{ name: 'Study Guide', path: 'Semester 2/Online Journalism/session-1/session-1-study-guide.html', type: 'html' }] },
+          { id: 'session-2', name: 'Session 2', files: [{ name: 'Study Guide', path: 'Semester 2/Online Journalism/session-2/session-2-study-guide.html', type: 'html' }] },
+          { id: 'session-3', name: 'Session 3', files: [{ name: 'Study Guide', path: 'Semester 2/Online Journalism/session-3/session-3-study-guide.html', type: 'html' }] },
+          { id: 'session-4', name: 'Session 4', files: [{ name: 'Study Guide', path: 'Semester 2/Online Journalism/session-4/session-4-study-guide.html', type: 'html' }] },
+          { id: 'session-5', name: 'Session 5', files: [{ name: 'Study Guide', path: 'Semester 2/Online Journalism/session-5/session-5-study-guide.html', type: 'html' }] },
+          { id: 'session-6', name: 'Session 6', files: [{ name: 'Study Guide', path: 'Semester 2/Online Journalism/session-6/session-6-study-guide.html', type: 'html' }] },
+          { id: 'session-7', name: 'Session 7', files: [{ name: 'Study Guide', path: 'Semester 2/Online Journalism/session-7/session-7-study-guide.html', type: 'html' }] },
+          { id: 'session-8', name: 'Session 8', files: [{ name: 'Study Guide', path: 'Semester 2/Online Journalism/session-8/session-8-study-guide.html', type: 'html' }] },
+        ]
+      },
+      {
+        id: 'political-translation',
+        name: 'Political Translation',
+        icon: '🗳️',
+        color: 'from-rose-400/70 to-red-500/70',
+        description: 'ترجمهٔ متون سیاسی — Translation of political texts, with Edward Said, Carl Schmitt & critical discourse analysis',
+        sessions: [
+          { id: 'session-1', name: 'Session 1', files: [{ name: 'Study Guide', path: 'Semester 2/Political Translation/session-1/session-1-study-guide.html', type: 'html' }] },
+          { id: 'session-2', name: 'Session 2', files: [{ name: 'Study Guide', path: 'Semester 2/Political Translation/session-2/session-2-study-guide.html', type: 'html' }] },
+          { id: 'session-3', name: 'Session 3', files: [{ name: 'Study Guide', path: 'Semester 2/Political Translation/session-3/session-3-study-guide.html', type: 'html' }] },
+          { id: 'session-4', name: 'Session 4', files: [{ name: 'Study Guide', path: 'Semester 2/Political Translation/session-4/session-4-study-guide.html', type: 'html' }] },
+          { id: 'session-5', name: 'Session 5', files: [{ name: 'Study Guide', path: 'Semester 2/Political Translation/session-5/session-5-study-guide.html', type: 'html' }] },
+          { id: 'session-7', name: 'Session 7', files: [{ name: 'Study Guide', path: 'Semester 2/Political Translation/session-7/session-7-study-guide.html', type: 'html' }] },
+        ]
+      },
     ]
   }
 ];

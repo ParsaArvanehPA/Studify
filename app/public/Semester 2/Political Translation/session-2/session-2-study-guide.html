@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای مطالعه: جلسه دوم - ادوارد سعید و شرق‌شناسی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --accent-color: #4299e1;
+            --text-color: #1a1a1a;
+            --background-color: #ffffff;
+            --box-background: #f8f9fa;
+            --key-term-color: #e67e22;
+            --important-color: #c2185b;
+            --case-study-color: #27ae60;
+            --example-color: #f39c12;
+            --scholar-color: #6c757d;
+            --ai-color: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.9;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 48px 0 24px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 32px 0 16px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 16px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .concept-box {
+            background-color: var(--box-background);
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .concept-box h3, .concept-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .key-term {
+            background-color: #fef3e2;
+            border-right: 5px solid var(--key-term-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .key-term strong {
+            color: var(--key-term-color);
+        }
+
+        .important {
+            background-color: #fdf2f8;
+            border-right: 5px solid var(--important-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .important strong, .important h3 {
+            color: var(--important-color);
+        }
+
+        .case-study {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .case-study strong, .case-study h4 {
+            color: var(--case-study-color);
+        }
+
+        .example {
+            background-color: #fffbeb;
+            border-right: 5px solid var(--example-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .example strong {
+            color: var(--example-color);
+        }
+
+        .scholar-box {
+            background-color: #f8f9fa;
+            border-right: 5px solid var(--scholar-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .scholar-box strong, .scholar-box h3, .scholar-box h4 {
+            color: var(--scholar-color);
+        }
+
+        .ai-box {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-right: 5px solid var(--ai-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+        }
+
+        .ai-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #c4b5fd;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #6b21a8;
+        }
+
+        .ai-box p {
+            color: #4c1d95;
+            margin: 12px 0;
+        }
+
+        .ai-box ul, .ai-box ol {
+            color: #4c1d95;
+            margin: 12px 24px 12px 0;
+        }
+
+        .ai-box li {
+            margin: 8px 0;
+        }
+
+        .ai-box strong {
+            color: #7c3aed;
+        }
+
+        .question-box {
+            background-color: #ebf8ff;
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .question-box strong {
+            color: var(--primary-color);
+        }
+
+        .answer-box {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 20px 24px;
+            margin: 8px 0 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .answer-box strong {
+            color: var(--case-study-color);
+        }
+
+        ul, ol {
+            margin: 16px 24px 16px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .chapter-divider {
+            text-align: center;
+            margin: 64px 0;
+            position: relative;
+        }
+
+        .chapter-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+        }
+
+        .chapter-divider span {
+            background-color: var(--background-color);
+            padding: 0 24px;
+            position: relative;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        blockquote {
+            border-right: 4px solid var(--accent-color);
+            padding-right: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        @media print {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .concept-box, .key-term, .important, .case-study, .example, .scholar-box, .question-box, .answer-box, .ai-box {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ترجمهٔ سیاسی</h1>
+        <p class="subtitle">جلسه دوم: شناخت نویسنده و پیرامتن، ادوارد سعید و شرق‌شناسی، بازنمایی و قدرت | کارشناسی ارشد مطالعات ترجمه - دانشگاه علامه طباطبایی</p>
+
+        <div class="chapter-divider"><span>مروری بر محتوای جلسه</span></div>
+
+        <div class="concept-box">
+            <h3>درباره این جلسه</h3>
+            <p>این جلسه دو لایه دارد: نخست، چرا <strong>شناختِ نویسنده و متن</strong> (و مفهومِ <strong>پیرامتن</strong>) بخشی از خودِ فرایندِ ترجمه است؛ دوم، معرفیِ <strong>ادوارد سعید</strong> و نظریهٔ <strong>شرق‌شناسی (Orientalism)</strong> به‌عنوان چارچوبی برای فهمِ رابطهٔ <strong>بازنمایی و قدرت</strong> در متونِ سیاسی و رسانه‌ای. متنِ کارگاهیِ جلسه، مقاله‌ای از سعید دربارهٔ بازنماییِ «تسخیر لانهٔ جاسوسی» در مطبوعات آمریکاست.</p>
+        </div>
+
+        <h2>۱. شناخت نویسنده و متن: بخشی از فرایند ترجمه</h2>
+
+        <div class="important">
+            <p>دانشِ کافی دربارهٔ نویسنده، متن، نوعِ متن و بافتارِ آن، «مسئلهٔ جانبی» نیست، بلکه <strong>بخشی از خودِ فرایندِ ترجمه</strong> است؛ به دلایلِ حرفه‌ای و عملی:</p>
+            <ul>
+                <li><strong>دلیل عملی:</strong> ممکن است نویسنده در کشوری ممنوع‌الچاپ باشد و نتوان اثرش را ترجمه/منتشر کرد.</li>
+                <li><strong>فهمِ بهتر:</strong> شناختِ تفکر و تیترِ کلامِ نویسنده به فهمِ اصطلاحاتِ دشوار و یافتنِ معادلِ آن‌ها در دیگر آثارش کمک می‌کند.</li>
+                <li><strong>پیوند با کلِ کارنامه:</strong> مترجمِ آگاه می‌تواند اثر را به سایرِ آثارِ نویسنده ربط دهد و مقدمهٔ بهتری بنویسد.</li>
+            </ul>
+        </div>
+
+        <div class="case-study">
+            <h4>نمونه: نقل‌قول از یک نژادپرست</h4>
+            <p>استاد در دورهٔ دکتری نقل‌قولی از یک شخصیت آمریکایی آورده بود؛ استادِ راهنما توصیه کرد دربارهٔ آن فرد مطالعه کند. معلوم شد او از <strong>برتری‌طلبانِ سفیدپوست (White Supremacist)</strong>ِ بدنام است. نقل‌قول کاملاً بجا بود، اما چرا سراغِ کسی با چنین سابقه‌ای برویم وقتی گزینه‌های بهتری هست؟ شناختِ نویسنده بخشی از <strong>توانشِ</strong> مترجم/پژوهشگر است (نه در حدِ تخصص، اما در حدِ یک درکِ کلی).</p>
+        </div>
+
+        <h2>۲. پیرامتن (Paratext)</h2>
+
+        <div class="scholar-box">
+            <h4>ژرار ژُنت — «پیرامتن‌ها: آستانه‌های تفسیر»</h4>
+            <p>ژنت در کتابِ <em>Paratexts: Thresholds of Interpretation</em> از <strong>پیرامتن</strong> سخن می‌گوید: هر آنچه محتوای مستقیمِ متن نیست اما به متن مربوط است و بر فهم، دریافت، چاپ و ترجمهٔ آن اثر می‌گذارد. (ژنت آن را به <strong>پیراتن/پیرامتنِ درونی (Peritext)</strong> و <strong>پیرامتنِ بیرونی (Epitext)</strong> تقسیم می‌کند.)</p>
+            <ul>
+                <li>تصویرِ روی جلد، عنوان، اندازه و نوعِ جلد، تقدیم‌نامه، فونت.</li>
+                <li>تأییدیه‌ها و تعریف‌های پشتِ جلد (Endorsements)، مصاحبه‌های نویسنده، جلساتِ کتاب‌خوانی.</li>
+                <li>شبکهٔ توزیعِ ناشر، وب‌سایت‌ها، و ریویوها در گودریدز/گوگل‌بوکس و شبکه‌های اجتماعی.</li>
+            </ul>
+            <p>این عناصر به‌مرور بخشی از «خودِ متن» و از آن جدایی‌ناپذیر می‌شوند. شناختِ نویسنده و تاریخچهٔ اثر نیز در همین قلمروِ پیرامتن جای می‌گیرد؛ بی‌توجهی به آن، جای خالی در ترجمه ایجاد می‌کند.</p>
+        </div>
+
+        <h2>۳. ادوارد سعید و نظریهٔ شرق‌شناسی</h2>
+
+        <div class="scholar-box">
+            <h4>ادوارد سعید (Edward W. Said)</h4>
+            <p>متفکر، منتقد و نظریه‌پردازِ فلسطینی-آمریکایی (مسیحیِ فلسطینی)، استادِ ادبیاتِ تطبیقی در دانشگاه کلمبیا، درگذشتهٔ ۲۰۰۳؛ از تأثیرگذارترین چهره‌های علوم انسانی در پنج دههٔ اخیر. (همکارِ ایرانیِ مشهورِ او در همان دانشگاه: حمید دباشی.)</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>شرق‌شناسی (Orientalism) چیست؟</h3>
+            <p>سعید شرق‌شناسی را <strong>مجموعه‌ای از ابزارها، سازوکارها، نظام‌ها، نگرش‌ها و دانش‌ها</strong> می‌داند که جهانِ غرب از طریقِ آن‌ها، جهانِ شرق (به‌ویژه <strong>شرقِ مسلمان</strong>) را «می‌سازد» و بازنمایی می‌کند — به‌خصوص از دورهٔ استعمار تا امروز. این ابزارها شامل سفرنامه، مقاله، تصویر، رسانه و مطالعاتِ شبه‌علمی‌اند.</p>
+        </div>
+
+        <div class="important">
+            <h3>جهانِ دوگانه (Binary)</h3>
+            <p>شرق‌شناسی به‌مثابه یک <strong>گفتمان (Discourse)</strong>، جهانی دوتایی می‌سازد و به انسانِ شرقی و غربی صفاتِ متضاد نسبت می‌دهد:</p>
+            <table>
+                <tr><th>انسانِ شرقی</th><th>انسانِ غربی</th></tr>
+                <tr><td>نامتمدن، تنبل، فاسد، بی‌نظم</td><td>متمدن، سخت‌کوش، اخلاق‌مدار، منظم</td></tr>
+                <tr><td>خرافاتی، غیرمنطقی، احساساتی</td><td>عقلانی، خردمند، علمی</td></tr>
+                <tr><td>فاقدِ تاریخ و ادبیات و فلسفه، زن‌ستیز</td><td>دارای تاریخ و فرهنگ، مدافعِ حقوقِ زنان</td></tr>
+            </table>
+        </div>
+
+        <div class="key-term">
+            <strong>جغرافیای تخیلی (Imaginative Geography):</strong> «شرقی» که شرق‌شناسی می‌سازد، یک برساختهٔ خیالی است. مگر می‌توان دربارهٔ میلیاردها انسانِ گوناگون یک حکمِ کلی صادر کرد؟ حتی درونِ یک کشور (ایران) تفاوت‌های فاحش هست. این صفاتِ منفی در غرب نیز هست (یا بیشتر)، اما «قلم در دستِ غرب بوده» و رسانه و سینما (هالیوود) آن را پنهان کرده‌اند.
+        </div>
+
+        <h2>۴. بازنمایی و قدرت (Representation & Power)</h2>
+
+        <div class="important">
+            <p>پرسشِ محوریِ سعید: این کلیشه‌ها <strong>چگونه</strong> به تصویرِ جهانی تبدیل شدند؟ پاسخ: از طریقِ <strong>قدرت</strong>. رسانه در دستِ کسی است که قدرت دارد (CNN, CBS, ABC, Fox؛ کنترلِ اینستاگرام، X، فیسبوک، واتساپ)؛ او به جهان می‌گوید چه ببیند و چه باور کند. بهترین نمونه، تفاوتِ تصویرِ رسانه‌ایِ غرب با واقعیتِ روی زمین در جنگ‌های جاری است.</p>
+        </div>
+
+        <div class="case-study">
+            <h4>درونی‌شدنِ کلیشه و خودتحقیری</h4>
+            <p>مرحلهٔ بعدیِ شرق‌شناسی این است که شرقی، کلیشه را دربارهٔ خود <strong>باور</strong> کند؛ نتیجه، نسلی است که حتی پس از استقلال، ذهنش «مستعمره» می‌ماند (نقل‌قولِ مشهور دربارهٔ «نسلی هندی در خون اما انگلیسی در اندیشه»). در ایران این به‌صورتِ <strong>خودتحقیری</strong> نسبت به زبان، فرهنگ و تمدنِ خودی نمود می‌یابد — و این آیرونیک است، چون ایران یکی از بزرگ‌ترین تمدن‌ها و ادبیات‌ها (سعدی، حافظ، فردوسی، نظامی) و دانشمندان (ابن‌سینا، خیام، بیرونی) را دارد.</p>
+        </div>
+
+        <div class="case-study">
+            <h4>انسانیت‌زدایی (Dehumanization)</h4>
+            <p>یکی از مؤلفه‌های گفتمانِ شرق‌شناسی، <strong>انسانیت‌زدایی</strong> از سوژهٔ بازنمایی است. در نمونهٔ یک گزارشِ دادگاه (اشغالِ عراق ۲۰۰۳)، سربازی که مرتکبِ جنایت شده بود در توجیه گفت آن‌ها «انسان‌هایی به آن معنا که ما هستیم، نیستند» (Sub-human). نخست از طریقِ گفتمان، دیگری را «غیرانسان» جا می‌اندازند، سپس زمینهٔ کشتنِ او بدونِ هم‌دردی فراهم می‌شود. (نمونهٔ جایگزینیِ «عرب/مسلمان/ایرانی» با «تروریست» و «چینی/کره‌شمالی» با «کمونیست».)</p>
+        </div>
+
+        <h2>۵. کاربرد در ترجمهٔ خبر: تحلیلِ نام‌گذاری</h2>
+
+        <div class="case-study">
+            <h4>«تسخیر لانهٔ جاسوسی» در برابر «Iran Hostage Crisis»</h4>
+            <p>مقالهٔ سعید دربارهٔ بازنماییِ تسخیرِ سفارت آمریکا در تهران است. خودِ نام‌گذاری، گفتمان را آشکار می‌کند:</p>
+            <ul>
+                <li><strong>عرفِ سیاسیِ ما:</strong> «تسخیرِ لانهٔ جاسوسی» — «لانه» برای انسان به‌کار نمی‌رود و محلِ کارِ خطرناک/غیرقانونی را می‌رساند؛ «تسخیر» نیز حسِ غرور و پیروزی دارد.</li>
+                <li><strong>عرفِ سیاسیِ آن‌ها:</strong> «Iran Hostage Crisis» — دو واژهٔ کاملاً منفی (گروگان‌گیری + بحران) به نامِ «ایران» پیوند می‌خورد.</li>
+            </ul>
+            <p>تصویرِ ایران در رسانه‌های غربی همواره با جنگ، بحران و تهدید پیوند خورده است. سعید (بی‌آنکه دربارهٔ درست/غلطِ خودِ رویداد قضاوت کند) نشان می‌دهد رویداد چگونه بازنمایی و به‌مثابه «واقعیت» پذیرفته می‌شود — درست همان کاری که در تحلیلِ انتقادیِ گفتمان (CDA) انجام می‌دهیم.</p>
+        </div>
+
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <span>✦ چرا این جلسه ستونِ کلِ درس است؟</span>
+            </div>
+            <p>این جلسه پلِ میان «نظریه» و «عملِ ترجمهٔ خبر» را می‌سازد:</p>
+            <ul>
+                <li><strong>پیرامتن</strong> به ما می‌گوید پیش از ترجمه چه باید بدانیم.</li>
+                <li><strong>شرق‌شناسی</strong> نشان می‌دهد متونِ سیاسی/رسانه‌ای حاملِ یک گفتمانِ قدرت‌اند.</li>
+                <li><strong>بازنمایی و قدرت</strong> توضیح می‌دهد چرا کلیشه‌ها به «واقعیت» بدل می‌شوند.</li>
+                <li><strong>تحلیلِ نام‌گذاری</strong> ابزارِ عملیِ مترجم برای دیدنِ این گفتمان در سطحِ واژه است.</li>
+            </ul>
+            <p><strong>نتیجه برای مترجم:</strong> ترجمهٔ یک خبرِ سیاسی، انتخابِ میانِ گفتمان‌هاست؛ مترجمِ آگاه می‌داند هر نام و هر واژه، بار و موضعِ نهفته‌ای دارد.</p>
+        </div>
+
+        <div class="chapter-divider"><span>سوالات امتحانی</span></div>
+
+        <h2>پرسش و پاسخ برای آمادگی امتحان</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱:</strong> چرا شناختِ نویسنده و متن «بخشی از فرایند ترجمه» است، نه مسئله‌ای جانبی؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چون بر کلِ ترجمه اثر می‌گذارد: دلایلِ عملی (نویسندهٔ ممنوع‌الچاپ)، فهمِ بهترِ اصطلاحات و تیترِ کلامِ نویسنده، یافتنِ معادل در دیگر آثار او، و ربط‌دادنِ اثر به کلِ کارنامه. نمونهٔ نقل‌قول از یک نژادپرست نشان می‌دهد ناآگاهی از نویسنده می‌تواند به انتخابِ نادرست بینجامد.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۲:</strong> پیرامتن (Paratext) از نگاهِ ژنت چیست؟ چند نمونه بیاورید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> هر آنچه محتوای مستقیمِ متن نیست اما بر فهم، دریافت و ترجمهٔ آن اثر می‌گذارد و به‌مرور از متن جدایی‌ناپذیر می‌شود. نمونه‌ها: تصویرِ جلد، عنوان، فونت، تقدیم‌نامه، تأییدیه‌های پشتِ جلد، مصاحبه‌ها، ریویوها در گودریدز و شبکهٔ توزیع. ژنت آن را به پیرامتنِ درونی (Peritext) و بیرونی (Epitext) تقسیم می‌کند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۳:</strong> نظریهٔ شرق‌شناسیِ ادوارد سعید را تعریف کنید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> شرق‌شناسی مجموعه‌ای از ابزارها، سازوکارها، نظام‌ها و نگرش‌هاست که غرب از طریقِ آن‌ها شرق (به‌ویژه شرقِ مسلمان) را می‌سازد و بازنمایی می‌کند، به‌خصوص از دورهٔ استعمار. این گفتمان جهانی دوتایی می‌سازد و به شرقی صفاتِ منفی (نامتمدن، خرافاتی، غیرعقلانی) و به غربی صفاتِ متضادِ مثبت نسبت می‌دهد؛ این صفات، شبه‌علم‌اند و اغلب اهدافِ استعماری داشته‌اند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۴:</strong> رابطهٔ «بازنمایی و قدرت» را با مفهومِ «انسانیت‌زدایی» توضیح دهید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> کلیشه‌ها از طریقِ قدرت (کنترلِ رسانه: CNN، فاکس، اینستاگرام و...) به تصویرِ جهانی بدل می‌شوند. <strong>انسانیت‌زدایی</strong> مؤلفه‌ای از این گفتمان است: نخست دیگری را از طریقِ گفتمان «غیرانسان» (Sub-human) جلوه می‌دهند، سپس کشتنِ او بدونِ هم‌دردی ممکن می‌شود (نمونهٔ سربازِ اشغالگر، و جایگزینیِ «مسلمان/ایرانی» با «تروریست»).
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۵:</strong> تحلیلِ نام‌گذاریِ «تسخیر لانهٔ جاسوسی» در برابر «Iran Hostage Crisis» چه نشان می‌دهد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> دو نام برای یک رویداد، دو گفتمانِ متضاد را آشکار می‌کنند. «تسخیرِ لانهٔ جاسوسی» با «لانه» (محلِ کارِ خطرناک/غیرقانونی، نه انسان) و «تسخیر» (غرور و پیروزی) بار می‌گیرد؛ «Iran Hostage Crisis» دو واژهٔ منفی (گروگان‌گیری + بحران) را به نامِ ایران پیوند می‌زند. این نشان می‌دهد نام‌گذاری، گفتمانِ پنهان را حمل می‌کند — و مترجم باید نسبت به آن آگاه باشد.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۶:</strong> «جغرافیای تخیلی» یعنی چه؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> اصطلاحِ سعید برای نشان‌دادنِ اینکه «شرقِ» یک‌دستِ شرق‌شناسی، برساخته‌ای خیالی است؛ نمی‌توان دربارهٔ میلیاردها انسانِ گوناگون (که حتی درونِ یک کشور تفاوت‌های فاحش دارند) یک حکمِ کلی صادر کرد. این کلیشه‌ها واقعیتِ متکثر را به یک تصویرِ ساختگی فرومی‌کاهند.
+        </div>
+
+        <div class="concept-box">
+            <h4>نکات کلیدی برای مرور</h4>
+            <ul>
+                <li>شناختِ نویسنده/متن = بخشی از فرایند ترجمه (نه جانبی)</li>
+                <li>پیرامتن (ژنت): جلد، عنوان، تأییدیه، ریویو — Peritext/Epitext</li>
+                <li>ادوارد سعید؛ شرق‌شناسی = ساختِ شرق توسط غرب</li>
+                <li>جهانِ دوگانه؛ جغرافیای تخیلی؛ شبه‌علم</li>
+                <li>بازنمایی و قدرت؛ کنترلِ رسانه؛ خودتحقیری</li>
+                <li>انسانیت‌زدایی؛ جایگزینیِ هویت با «تروریست/کمونیست»</li>
+                <li>تحلیلِ نام‌گذاری: تسخیر لانهٔ جاسوسی vs Iran Hostage Crisis</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

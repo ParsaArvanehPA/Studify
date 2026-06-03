@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای مطالعه: جلسه هفتم - اقتصاد سیاسی رسانه و غربی‌شدن</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --accent-color: #4299e1;
+            --text-color: #1a1a1a;
+            --background-color: #ffffff;
+            --box-background: #f8f9fa;
+            --key-term-color: #e67e22;
+            --important-color: #c2185b;
+            --case-study-color: #27ae60;
+            --example-color: #f39c12;
+            --scholar-color: #6c757d;
+            --ai-color: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.9;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 48px 0 24px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 32px 0 16px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 16px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .concept-box {
+            background-color: var(--box-background);
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .concept-box h3, .concept-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .key-term {
+            background-color: #fef3e2;
+            border-right: 5px solid var(--key-term-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .key-term strong {
+            color: var(--key-term-color);
+        }
+
+        .important {
+            background-color: #fdf2f8;
+            border-right: 5px solid var(--important-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .important strong, .important h3 {
+            color: var(--important-color);
+        }
+
+        .case-study {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .case-study strong, .case-study h4 {
+            color: var(--case-study-color);
+        }
+
+        .example {
+            background-color: #fffbeb;
+            border-right: 5px solid var(--example-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .example strong {
+            color: var(--example-color);
+        }
+
+        .scholar-box {
+            background-color: #f8f9fa;
+            border-right: 5px solid var(--scholar-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .scholar-box strong, .scholar-box h3, .scholar-box h4 {
+            color: var(--scholar-color);
+        }
+
+        .ai-box {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-right: 5px solid var(--ai-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+        }
+
+        .ai-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #c4b5fd;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #6b21a8;
+        }
+
+        .ai-box p {
+            color: #4c1d95;
+            margin: 12px 0;
+        }
+
+        .ai-box ul, .ai-box ol {
+            color: #4c1d95;
+            margin: 12px 24px 12px 0;
+        }
+
+        .ai-box li {
+            margin: 8px 0;
+        }
+
+        .ai-box strong {
+            color: #7c3aed;
+        }
+
+        .question-box {
+            background-color: #ebf8ff;
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .question-box strong {
+            color: var(--primary-color);
+        }
+
+        .answer-box {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 20px 24px;
+            margin: 8px 0 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .answer-box strong {
+            color: var(--case-study-color);
+        }
+
+        ul, ol {
+            margin: 16px 24px 16px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .chapter-divider {
+            text-align: center;
+            margin: 64px 0;
+            position: relative;
+        }
+
+        .chapter-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+        }
+
+        .chapter-divider span {
+            background-color: var(--background-color);
+            padding: 0 24px;
+            position: relative;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        blockquote {
+            border-right: 4px solid var(--accent-color);
+            padding-right: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        @media print {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .concept-box, .key-term, .important, .case-study, .example, .scholar-box, .question-box, .answer-box, .ai-box {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>روزنامه‌نگاری برخط و ترجمه در فضای دیجیتال</h1>
+        <p class="subtitle">جلسه هفتم: اقتصاد سیاسیِ رسانه، غربی‌شدن فرهنگی و نقش ترجمه | کارشناسی ارشد مطالعات ترجمه - دانشگاه علامه طباطبایی</p>
+
+        <div class="chapter-divider"><span>مروری بر محتوای جلسه</span></div>
+
+        <div class="concept-box">
+            <h3>درباره این جلسه</h3>
+            <p>این جلسه به <strong>اقتصاد سیاسیِ رسانه</strong> و پیامدهای فرهنگیِ جهانی‌شدن می‌پردازد: زیرساختِ مادیِ اطلاعات، کنترل دولتی و منطقِ بازارِ خبر، و مهم‌تر از همه، <strong>غربی‌شدنِ فرهنگی</strong> از طریق رسانه و کالا و نقشِ ترجمه به‌مثابه حاملِ این جریان.</p>
+        </div>
+
+        <h2>۱. زیرساخت مادی و کنترل رسانه</h2>
+
+        <div class="concept-box">
+            <h3>زیرساختِ فیزیکیِ اطلاعات</h3>
+            <p>فضای به‌ظاهر «نامرئیِ» اینترنت بر زیرساختِ مادی استوار است: کابل‌های فیبر نوری، ماهواره‌ها و مسیرهای انتقال داده (مثلاً کابل‌هایی که از مسیرهای مشخص عبور می‌کنند). همین وابستگیِ مادی، نقطهٔ اعمالِ <strong>کنترل</strong> است.</p>
+        </div>
+
+        <div class="important">
+            <h3>کنترل دولتی و منطق بازار</h3>
+            <ul>
+                <li><strong>کنترل دولتی و تبلیغات (Propaganda):</strong> دولت‌ها می‌توانند با در اختیار گرفتنِ رسانه و زیرساخت، پوشش خبری را جهت دهند.</li>
+                <li><strong>منطق بازار (Market Logic):</strong> رسانه‌ها (حتی بنگاه‌هایی مثل BBC) محتوا را بر اساس داده‌ها و گرایشِ بازار تولید می‌کنند؛ تولید خبر، تابعِ اقتصادِ آن نیز هست.</li>
+                <li><strong>حامیان مالی (Sponsors):</strong> منبعِ تأمینِ مالیِ رسانه بر جهت‌گیریِ آن اثر می‌گذارد.</li>
+            </ul>
+        </div>
+
+        <h2>۲. غربی‌شدنِ فرهنگی (Westernization)</h2>
+
+        <div class="concept-box">
+            <h3>انتقال ارزش‌ها از طریق فرهنگ عامه</h3>
+            <p>فرهنگِ عامه و رسانه، ارزش‌ها و آیین‌های یک فرهنگ را به فرهنگ‌های دیگر منتقل می‌کنند. نمونه‌ها: گسترشِ مناسبت‌هایی چون هالووین، کریسمس و ولنتاین در جوامع غیرغربی. جهان به سمتِ «فضای غربی/آمریکایی» نزدیک می‌شود.</p>
+        </div>
+
+        <div class="key-term">
+            <strong>زبان به‌مثابه حامل (Vector):</strong> زبان انگلیسی صرفاً ابزار ارتباط نیست؛ «حاملِ» فرهنگ، ارزش‌ها و سبک زندگی است. هر انتقالِ زبانی، انتقالِ فرهنگی نیز هست.
+        </div>
+
+        <div class="example">
+            <strong>نمونهٔ برندها:</strong> اقتدارِ فرهنگیِ غرب در برندها نیز بازتاب دارد: آیفون، لپ‌تاپ‌های ویندوزی، رولزرویس و BMW به‌عنوان نمادِ «برترِ» غربی شناخته می‌شوند — حتی اگر محصول در جای دیگری (مثلاً چین) مونتاژ شود، «برندِ» غربی ارزش‌گذاری می‌شود. این، سلطهٔ نمادینِ غرب را نشان می‌دهد.
+        </div>
+
+        <div class="case-study">
+            <h4>نمونهٔ تاریخی-فرهنگی (ایران)</h4>
+            <p>تماسِ فرهنگی و ورودِ عناصرِ غربی سابقه‌ای تاریخی دارد (مثلاً سفرِ ناصرالدین‌شاه به فرانسه و ورودِ عکاسی به ایران). در دورانِ معاصر نیز نهادهایی مانند وزارت فرهنگ و ارشاد اسلامی در تنظیمِ نسبتِ فرهنگِ بومی با محتوای واردشده و مرزهای «مجاز/غیرمجاز» نقش دارند.</p>
+        </div>
+
+        <h2>۳. نقش ترجمه در این جریان</h2>
+
+        <div class="important">
+            <p>ترجمه یکی از مجاری اصلیِ این انتقالِ فرهنگی است. مترجم می‌تواند:</p>
+            <ul>
+                <li><strong>حاملِ منفعلِ</strong> غربی‌شدن باشد و ارزش‌های واردشده را بی‌واسطه منتقل کند، یا</li>
+                <li><strong>کنشگرِ آگاه</strong> باشد که با شناختِ منطقِ اقتصادی-سیاسیِ رسانه و بارِ فرهنگیِ زبان، آگاهانه تصمیم بگیرد چه‌چیزی و چگونه منتقل شود.</li>
+            </ul>
+        </div>
+
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <span>✦ توضیح تکمیلی: چرا «صرفاً یک ترجمه» هیچ‌گاه صرفاً یک ترجمه نیست؟</span>
+            </div>
+            <p>این جلسه نشان می‌دهد که پشتِ هر متنِ رسانه‌ایِ ترجمه‌شده، یک زنجیرهٔ قدرت قرار دارد:</p>
+            <ul>
+                <li><strong>زیرساخت مادی</strong> (کابل، ماهواره) ← امکانِ کنترل.</li>
+                <li><strong>اقتصادِ رسانه</strong> (بازار و حامیان) ← جهت‌دهیِ محتوا.</li>
+                <li><strong>زبانِ مسلط</strong> ← حاملِ ارزش‌های فرهنگی.</li>
+                <li><strong>برند و فرهنگ عامه</strong> ← مشروعیتِ نمادینِ غرب.</li>
+            </ul>
+            <p><strong>نتیجه برای مترجم:</strong> ترجمهٔ خبر و محتوای رسانه‌ای، حلقه‌ای از این زنجیره است. مترجم با هر انتخاب، یا این جریان را بازتولید می‌کند یا آگاهانه در آن مداخله می‌کند. آگاهی نسبت به اقتصادِ سیاسیِ رسانه، شرطِ کنشگریِ نقادانه است.</p>
+        </div>
+
+        <div class="chapter-divider"><span>سوالات امتحانی</span></div>
+
+        <h2>پرسش و پاسخ برای آمادگی امتحان</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱:</strong> چرا زیرساختِ مادیِ اینترنت برای بحثِ کنترل رسانه اهمیت دارد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چون فضای به‌ظاهر نامرئیِ اینترنت بر زیرساختِ مادی (کابل فیبر نوری، ماهواره، مسیرهای انتقال داده) استوار است؛ همین وابستگیِ مادی، نقطه‌ای است که می‌توان از طریق آن جریان اطلاعات را کنترل و جهت‌دهی کرد.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۲:</strong> «منطق بازار» چگونه بر تولید خبر اثر می‌گذارد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> رسانه‌ها (حتی بنگاه‌هایی مانند BBC) محتوا را بر اساس داده‌ها و گرایشِ بازار تولید می‌کنند؛ یعنی تولید خبر تابعِ اقتصادِ آن و جذبِ مخاطب است. در کنار آن، حامیان مالی (Sponsors) نیز بر جهت‌گیریِ رسانه اثر می‌گذارند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۳:</strong> منظور از «زبان به‌مثابه حامل (Vector)» چیست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> یعنی زبان (به‌ویژه انگلیسی) صرفاً ابزار ارتباط نیست، بلکه حاملِ فرهنگ، ارزش‌ها و سبک زندگی است. هر انتقالِ زبانی، انتقالِ فرهنگی نیز هست؛ پس گسترشِ یک زبان، گسترشِ فرهنگِ همراهِ آن را در پی دارد.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۴:</strong> مثالِ برندها چگونه سلطهٔ نمادینِ غرب را نشان می‌دهد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> برندهایی مانند آیفون، رولزرویس و BMW نمادِ «برترِ» غربی‌اند؛ حتی وقتی محصول در جای دیگری (مثلاً چین) مونتاژ می‌شود، باز «برندِ» غربی ارزش‌گذاری و خواسته می‌شود. این نشان می‌دهد اقتدارِ غرب تنها مادی نیست، بلکه نمادین و فرهنگی است.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۵:</strong> مترجم در جریانِ غربی‌شدنِ فرهنگی چه نقشی می‌تواند داشته باشد؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> مترجم می‌تواند <strong>حاملِ منفعلِ</strong> این جریان باشد و ارزش‌های واردشده را بی‌واسطه منتقل کند، یا <strong>کنشگرِ آگاهی</strong> باشد که با شناختِ منطقِ اقتصادی-سیاسیِ رسانه و بارِ فرهنگیِ زبان، آگاهانه تصمیم بگیرد چه و چگونه منتقل کند. آگاهی نسبت به اقتصادِ سیاسیِ رسانه، شرطِ کنشگریِ نقادانه است.
+        </div>
+
+        <div class="concept-box">
+            <h4>نکات کلیدی برای مرور</h4>
+            <ul>
+                <li>زیرساختِ مادیِ اطلاعات (کابل، ماهواره) ← نقطهٔ کنترل</li>
+                <li>کنترل دولتی و تبلیغات؛ منطقِ بازار؛ حامیان مالی</li>
+                <li>غربی‌شدنِ فرهنگی: هالووین/کریسمس/ولنتاین</li>
+                <li>زبان به‌مثابه حاملِ فرهنگ (Vector)</li>
+                <li>برندها: سلطهٔ نمادینِ غرب</li>
+                <li>ترجمه: حاملِ منفعل یا کنشگرِ آگاه</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
