@@ -2,13 +2,16 @@ import {DOCUMENT, isPlatformBrowser} from '@angular/common';
 import {
     ChangeDetectionStrategy,
     Component,
+    ElementRef,
     HostListener,
+    OnDestroy,
     PLATFORM_ID,
     ViewEncapsulation,
     afterNextRender,
     computed,
     inject,
-    signal
+    signal,
+    viewChild
 } from '@angular/core';
 import {RouterLink} from '@angular/router';
 
@@ -43,10 +46,14 @@ interface ResumeChip {
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnDestroy {
     private readonly document = inject(DOCUMENT);
     private readonly seo = inject(SeoService);
     private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+    private readonly searchInput = viewChild<ElementRef<HTMLInputElement>>('searchInput');
+
+    /** Mobile: the header search collapses to an icon; this toggles it open. */
+    protected readonly searchOpen = signal(false);
 
     protected readonly semesters = SEMESTERS;
     protected readonly moods = MOODS;
@@ -182,6 +189,28 @@ export class HomeComponent {
     protected moodSwatch(mood: Mood): string {
         const swatch = mood === 'midnight' ? 'm-mid' : mood === 'nebula' ? 'm-neb' : 'm-ivo';
         return swatch + (this.mood() === mood ? ' sel' : '');
+    }
+
+    protected openSearch(): void {
+        if (this.searchOpen()) {
+            return;
+        }
+        this.searchOpen.set(true);
+        this.document.body.classList.add('search-open');
+        setTimeout(() => this.searchInput()?.nativeElement.focus(), 0);
+    }
+
+    protected closeSearch(event?: Event): void {
+        event?.stopPropagation();
+        this.searchOpen.set(false);
+        this.query.set('');
+        this.document.body.classList.remove('search-open');
+    }
+
+    ngOnDestroy(): void {
+        if (this.isBrowser) {
+            this.document.body.classList.remove('search-open');
+        }
     }
 
     protected resumeTarget(): string {

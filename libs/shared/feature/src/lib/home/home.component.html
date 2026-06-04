@@ -14,9 +14,10 @@
 
 <header [class.stuck]="stuck()">
     <div class="brand"><span class="wm">Studify</span><span class="acc">.</span></div>
-    <div class="hsearch">
+    <div class="hsearch" [class.expanded]="searchOpen()" (click)="openSearch()">
         <span class="mag">⌕</span>
         <input
+            #searchInput
             type="text"
             placeholder="Find a course…"
             aria-label="Find a course"
@@ -25,6 +26,7 @@
             (input)="query.set($any($event.target).value)"
         />
         <span class="kbd">⌘K</span>
+        <button class="close-search" type="button" aria-label="Close search" (click)="closeSearch($event)">✕</button>
         @if (results().length || query()) {
             <div class="search-results open">
                 @if (results().length) {
@@ -35,7 +37,7 @@
                                 class="sr-item"
                                 [style.--cc]="r.color"
                                 [routerLink]="['/course', r.courseId]"
-                                (click)="query.set('')"
+                                (click)="closeSearch()"
                             >
                                 <span class="dot">{{ r.glyph }}</span
                                 ><span class="nm">{{ r.name }}</span

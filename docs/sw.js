@@ -8,7 +8,7 @@
  *   - static files → stale-while-revalidate (instant, refreshed in background).
  * Bump VERSION to force a clean cache rotation on the next visit.
  */
-const VERSION = 'studify-v1';
+const VERSION = 'studify-v2';
 const SCOPE = self.registration.scope;
 const shellUrl = (path) => new URL(path, SCOPE).href;
 
@@ -17,7 +17,8 @@ const SHELL = [
     'index.html',
     'manifest.webmanifest',
     'favicon.svg',
-    'favicon.ico',
+    'icons/favicon-32.png',
+    'icons/favicon-16.png',
     'apple-touch-icon.png',
     'icons/icon-192.png',
     'icons/icon-512.png',
