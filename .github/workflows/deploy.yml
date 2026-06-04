@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Site is published from the `docs/` folder on `main` (Pages "Deploy from a
+# branch"). This workflow is an optional alternative: switch Pages Source to
+# "GitHub Actions" and run it manually to publish straight from the build.
 on:
-    push:
-        branches: [main]
     workflow_dispatch:
 
 permissions:

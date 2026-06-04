@@ -15,3 +15,6 @@ libs/shared/feature/src/lib/home/home.component.scss
 
 # Bundled study-material content + data (not source to format)
 apps/studify/src/assets
+
+# Built site published to GitHub Pages (generated output, never formatted)
+/docs

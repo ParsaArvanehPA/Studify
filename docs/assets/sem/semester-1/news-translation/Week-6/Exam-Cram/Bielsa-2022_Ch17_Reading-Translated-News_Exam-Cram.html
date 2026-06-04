@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Translated News - EXAM CRAM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e4620 0%, #059669 100%);
+            color: white;
+            padding: 20px;
+            margin: -30px -30px 25px -30px;
+            border-radius: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+        }
+
+        .exam-focus {
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+
+        h2 {
+            color: #1e4620;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            border-bottom: 3px solid #059669;
+            padding-bottom: 6px;
+        }
+
+        h3 {
+            color: #059669;
+            font-size: 1.2em;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        .definitions-table {
+            background-color: #f8f9fa;
+            border: 2px solid #1e4620;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .definitions-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .definitions-table th {
+            background-color: #1e4620;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+
+        .definitions-table td {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        .definitions-table tr:nth-child(even) {
+            background-color: #f0fdf4;
+        }
+
+        .key-theories {
+            background-color: #ecfdf5;
+            border-left: 5px solid #059669;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .key-theories ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .key-theories li {
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+
+        .exam-tip {
+            background-color: #fff4e6;
+            border: 2px solid #f59e0b;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        .exam-tip strong {
+            color: #92400e;
+        }
+
+        .critical-point {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 12px;
+            margin: 12px 0;
+            font-size: 0.95em;
+        }
+
+        .scholar-reference {
+            background-color: #f0fdf4;
+            border: 2px solid #10b981;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .scholar-reference table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+
+        .scholar-reference th {
+            background-color: #10b981;
+            color: white;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .scholar-reference td {
+            padding: 6px 8px;
+            border: 1px solid #ddd;
+        }
+
+        .quick-list {
+            columns: 2;
+            column-gap: 20px;
+            margin: 12px 0;
+        }
+
+        .quick-list li {
+            break-inside: avoid;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+
+        .exam-questions {
+            background-color: #f3e8ff;
+            border: 2px solid #8b5cf6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .exam-questions ol {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .exam-questions li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .checklist {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .checklist ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li {
+            padding: 6px 0;
+            font-size: 0.95em;
+        }
+
+        .checklist li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.9em;
+        }
+
+        th {
+            background-color: #1e4620;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .definitions-table, .exam-tip, .exam-questions {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Reading Translated News - EXAM CRAM</h1>
+            <div class="exam-focus">
+                <strong>📌 Source:</strong> Bielsa (2022), Ch. 17 | <strong>Author:</strong> Claire Scammell<br>
+                <strong>🔑 Focus:</strong> Reader-Response Research, Reception Studies, Foreignization Effects, Cosmopolitan Openness
+            </div>
+        </header>
+
+        <section id="essential-definitions">
+            <h2>📌 Essential Definitions</h2>
+
+            <div class="definitions-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Term</th>
+                            <th>Definition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Reader-Response Research</strong></td>
+                            <td>Empirical investigation of how actual readers engage with, comprehend, and interpret texts, including translated texts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reception Studies</strong></td>
+                            <td>Research focusing on how texts are received by audiences; meaning emerges through interaction between texts and readers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cosmopolitan Openness</strong></td>
+                            <td>Orientation of curiosity and receptivity toward foreign cultures and perspectives; theorized benefit of foreignization</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Translation Awareness</strong></td>
+                            <td>Readers' consciousness that they are engaging with translated rather than originally authored texts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Focus Groups</strong></td>
+                            <td>Qualitative research method with facilitated group discussions where participants share interpretations and reactions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Translator Invisibility</strong></td>
+                            <td>Phenomenon where translation work goes unnoticed; readers don't realize they're reading translated texts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cultural Capital</strong></td>
+                            <td>Knowledge, skills, educational resources enabling navigation of cultural contexts; affects comprehension of foreignized news</td>
+                        </tr>
+                        <tr>
+                            <td><strong>News Literacy</strong></td>
+                            <td>Ability to critically evaluate news sources, identify credible information, understand news production processes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="key-theories">
+            <h2>🔑 Key Theories & Concepts</h2>
+
+            <div class="key-theories">
+                <h3>1. Production-Reception Gap</h3>
+                <ul>
+                    <li>Translation studies has "production bias" - focuses on translators/processes, neglects reader reception</li>
+                    <li>Understanding how translation "works" requires empirical investigation of actual reader responses</li>
+                    <li>Particularly pronounced gap in news translation research</li>
+                </ul>
+            </div>
+
+            <div class="key-theories">
+                <h3>2. News Translation Characteristics (Bielsa & Bassnett 2009)</h3>
+                <ul>
+                    <li><strong>Gatekeeping:</strong> Editorial selection determines which international news gets translated/published</li>
+                    <li><strong>Tight deadlines:</strong> Speed requirements shape translation practices</li>
+                    <li><strong>Collective production:</strong> Multiple agents (correspondents, translators, editors) collaborate</li>
+                    <li><strong>Institutional constraints:</strong> News values and organizational policies influence translation</li>
+                </ul>
+            </div>
+
+            <div class="key-theories">
+                <h3>3. Reader-Response Theory in Translation</h3>
+                <ul>
+                    <li>Meaning not embedded in texts but constructed through text-reader interaction</li>
+                    <li>Understanding translation effects requires examining real readers' engagements</li>
+                    <li>Challenges assumptions about how translation strategies affect readers</li>
+                </ul>
+            </div>
+
+            <div class="key-theories">
+                <h3>4. Narratives in Translation (Baker 2006)</h3>
+                <ul>
+                    <li>Translation participates in constructing and circulating narratives about political events, identities, conflicts</li>
+                    <li>Translated news = key site where narratives operate</li>
+                    <li>Framework for understanding ideological dimensions of news translation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="research-methods">
+            <h2>🔬 Reader-Response Research Methods</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                        <th>Strengths</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Focus Groups</strong></td>
+                        <td>Facilitated group discussions where participants read and discuss translated texts</td>
+                        <td>Rich qualitative data about meaning-making processes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Eye-Tracking</strong></td>
+                        <td>Technology monitoring where readers look and fixation duration</td>
+                        <td>Reveals attention patterns and processing difficulties</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comprehension Tests</strong></td>
+                        <td>Questionnaires measuring understanding of content</td>
+                        <td>Quantifies comprehension levels with different strategies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Think-Aloud Protocols</strong></td>
+                        <td>Participants verbalize thoughts while reading</td>
+                        <td>Real-time access to interpretive processes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Surveys</strong></td>
+                        <td>Large-scale questionnaires about attitudes and preferences</td>
+                        <td>Broad data about reader perspectives</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="exam-tip">
+                <strong>⚡ EXAM TIP:</strong> Be able to discuss methodological challenges - ecological validity (research settings differ from natural reading), sample representativeness, and translation awareness affecting responses.
+            </div>
+        </section>
+
+        <section id="case-study">
+            <h2>📊 Scammell's Reuters Case Study - KEY EXAM TOPIC</h2>
+
+            <div class="exam-tip">
+                <strong>⚡ HIGH-PROBABILITY EXAM TOPIC:</strong> Know this case study thoroughly - research design, findings, and implications!
+            </div>
+
+            <h3>Research Overview</h3>
+            <ul class="quick-list">
+                <li><strong>Researcher:</strong> Claire Scammell</li>
+                <li><strong>Method:</strong> Focus groups with British readers</li>
+                <li><strong>News Source:</strong> Reuters articles on French politics (Sarkozy)</li>
+                <li><strong>Translation Strategy:</strong> Foreignization (preserving foreign names, terms, references)</li>
+                <li><strong>Research Question:</strong> Does foreignization promote cosmopolitan openness or create barriers?</li>
+            </ul>
+
+            <h3>Reuters' Foreignization Approach</h3>
+            <ol>
+                <li>Retaining foreign names (personal, place, institutional)</li>
+                <li>Maintaining cultural references with minimal explanation</li>
+                <li>Preserving foreign political/legal/institutional terminology</li>
+                <li>Limited contextualization for international audiences</li>
+            </ol>
+
+            <h3>Major Findings</h3>
+
+            <div class="critical-point">
+                <strong>📌 Finding 1: Variable Comprehension by Reader Segment</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>Highly educated/news-literate:</strong> Strong comprehension; minimal difficulty with foreign references</li>
+                    <li><strong>Less educated/casual readers:</strong> Struggled with terminology; sometimes incorrect interpretations</li>
+                    <li><strong>Implication:</strong> Foreignization may create two-tier readership - raises equity questions about access</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>📌 Finding 2: Contextual Inference Strategies</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Contextual guessing using surrounding text</li>
+                    <li>Analogical reasoning (parallels to British institutions)</li>
+                    <li>Skipping incomprehensible elements while maintaining general understanding</li>
+                    <li>External information seeking (mentioned but not possible in study)</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>📌 Finding 3: Low Translation Awareness</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Most participants didn't initially realize texts were translations</li>
+                    <li>"Translator invisibility" in news contexts</li>
+                    <li>Readers attributed comprehension difficulties to own knowledge gaps, not translation choices</li>
+                    <li>When informed about translation, some reconsidered assessments of text quality</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>📌 Finding 4: Mixed Attitudes Toward Foreignization</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>Positive (highly educated):</strong> Valued authenticity; appreciated exposure; educationally valuable</li>
+                    <li><strong>Neutral (moderate):</strong> Accepted as inevitable; tolerated some incomprehension</li>
+                    <li><strong>Negative (lower literacy):</strong> Experienced as barrier; wanted more explanation; felt excluded</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>📌 Finding 5: Cosmopolitan Openness - Conditional Effect</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>Supporting:</strong> Some valued understanding France "on its own terms"; expressed curiosity</li>
+                    <li><strong>Contradicting:</strong> Others found foreignization alienating; led to disengagement</li>
+                    <li><strong>Conclusion:</strong> Effect depends on existing cultural capital, news literacy, education - may reinforce inequalities</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="comparison-tables">
+            <h2>📊 Comparison Tables</h2>
+
+            <h3>Domestication vs. Foreignization in News</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Domestication</th>
+                        <th>Foreignization</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Strategy</strong></td>
+                        <td>Adapt foreign news to local conventions; explain cultural references</td>
+                        <td>Preserve foreign names, terms, cultural references</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Potential Benefits</strong></td>
+                        <td>Facilitates comprehension; accessible to general audiences</td>
+                        <td>Promotes cosmopolitan awareness; preserves cultural specificity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Potential Risks</strong></td>
+                        <td>Risk of ethnocentrism; erasing cultural difference</td>
+                        <td>Risk of incomprehension; reader alienation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scammell Finding</strong></td>
+                        <td>-</td>
+                        <td>Effects vary by reader segment; may reinforce inequalities</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Production vs. Reception Focus</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>Production-Focused Studies</th>
+                        <th>Reception-Focused Studies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Focus</strong></td>
+                        <td>Translators, processes, textual analysis</td>
+                        <td>Readers, comprehension, interpretation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Methods</strong></td>
+                        <td>Textual analysis, translator interviews, institutional analysis</td>
+                        <td>Focus groups, eye-tracking, comprehension tests, surveys</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Key Question</strong></td>
+                        <td>How is news translated?</td>
+                        <td>How do readers respond to translated news?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Limitation</strong></td>
+                        <td>Assumes effects without testing on readers</td>
+                        <td>Ecological validity; sample representativeness</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="implications">
+            <h2>⚡ Theoretical & Practical Implications</h2>
+
+            <div class="critical-point">
+                <strong>1. Rethinking Domestication-Foreignization Binary</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Not absolute oppositions but poles on continuum</li>
+                    <li>Effective news translation may require strategic combinations</li>
+                    <li>Domesticate some elements, foreignize others depending on context</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>2. Implications for Practice</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>Contextualization:</strong> Brief contextual info can mitigate comprehension difficulties</li>
+                    <li><strong>Strategic foreignization:</strong> Retain terms without English equivalents; domesticate translatable elements</li>
+                    <li><strong>Audience awareness:</strong> Consider target readership's likely familiarity with source culture</li>
+                    <li><strong>Paratextual support:</strong> Glossaries, footnotes, hyperlinks to explain references</li>
+                    <li><strong>Translation visibility:</strong> Making translation visible might help develop reader strategies</li>
+                </ul>
+            </div>
+
+            <div class="critical-point">
+                <strong>3. Theoretical Contributions</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Value of empirically testing theoretical claims about translation effects</li>
+                    <li>Reception as co-construction: meaning emerges through text-reader interaction</li>
+                    <li>Translation strategies have differential effects by reader segment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="scholars">
+            <h2>👥 Scholar Reference Table</h2>
+
+            <div class="scholar-reference">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scholar</th>
+                            <th>Year</th>
+                            <th>Key Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bielsa & Bassnett</strong></td>
+                            <td>2009</td>
+                            <td>Distinctive features of news translation: gatekeeping, deadlines, collective production, constraints</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Baker</strong></td>
+                            <td>2006</td>
+                            <td>Narrative theory in translation; how translation constructs/circulates political narratives</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mason</strong></td>
+                            <td>2009</td>
+                            <td>Advocated empirical reader-response research to test assumptions about translation effects</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fairclough</strong></td>
+                            <td>2003</td>
+                            <td>Critical discourse analysis (CDA) for analyzing ideological dimensions of news texts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scammell</strong></td>
+                            <td>Various</td>
+                            <td>Empirical reader-response research on foreignization in Reuters using focus groups</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Venuti</strong></td>
+                            <td>1995, 2008</td>
+                            <td>Domestication vs. foreignization; translator invisibility concept</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="exam-checklist">
+            <h2>✓ Pre-Exam Checklist</h2>
+
+            <div class="checklist">
+                <ul>
+                    <li>Can explain the "production-reception gap" in translation studies</li>
+                    <li>Can define reader-response research and explain its value for translation studies</li>
+                    <li>Can list 5 research methods for studying news translation reception</li>
+                    <li>Can identify 4 distinctive features of news translation (Bielsa & Bassnett)</li>
+                    <li>Can describe Scammell's Reuters case study: design, participants, procedure</li>
+                    <li>Can list and explain all 5 major findings from Scammell's research</li>
+                    <li>Can discuss how foreignization effects varied by reader segment</li>
+                    <li>Can explain "cosmopolitan openness" and whether foreignization promotes it (conditional effect)</li>
+                    <li>Can identify methodological challenges (ecological validity, sample, translation awareness)</li>
+                    <li>Can discuss practical implications for news translation practice</li>
+                    <li>Can name and date 6 key scholars with their contributions</li>
+                    <li>Can explain Baker's narrative theory in translation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="exam-questions">
+            <h2>❓ High-Probability Exam Questions</h2>
+
+            <div class="exam-questions">
+                <ol>
+                    <li><strong>Explain the "production-reception gap" in translation studies. Why is reader-response research important for addressing this gap?</strong></li>
+
+                    <li><strong>Describe Scammell's Reuters case study. What was the research design, and what were the major findings?</strong></li>
+
+                    <li><strong>Discuss how foreignization in news translation affected different reader segments in Scammell's research. What are the implications for equity and access to international news?</strong></li>
+
+                    <li><strong>What is "cosmopolitan openness"? Does foreignization in news translation promote it? Provide evidence from Scammell's research.</strong></li>
+
+                    <li><strong>Compare and contrast at least 3 research methods for studying reader responses to translated news. What are the strengths and limitations of each?</strong></li>
+
+                    <li><strong>Explain Bielsa & Bassnett's (2009) characterization of news translation. What distinguishes news translation from other types of translation?</strong></li>
+
+                    <li><strong>Discuss the concept of "translation awareness" in news contexts. How did Scammell's research reveal issues related to translator invisibility?</strong></li>
+
+                    <li><strong>What are the main methodological challenges in conducting reader-response research in translation studies? How might these be addressed?</strong></li>
+
+                    <li><strong>Based on Scammell's findings, what practical recommendations would you make for news translators and editors regarding domestication vs. foreignization strategies?</strong></li>
+
+                    <li><strong>Explain Baker's (2006) concept of "narratives" in translation. How does this framework apply to news translation?</strong></li>
+                </ol>
+            </div>
+
+            <div class="exam-tip">
+                <strong>⚡ ESSAY STRATEGY:</strong> For Scammell case study questions: (1) State research design briefly, (2) Discuss ALL 5 findings systematically, (3) Address implications (equity, cosmopolitan openness, practice), (4) Conclude with theoretical significance of empirical approach.
+            </div>
+        </section>
+
+        <section id="quick-facts">
+            <h2>🔑 Quick Facts to Memorize</h2>
+
+            <div class="critical-point">
+                <strong>📌 Scammell's 5 Key Findings (MUST KNOW!):</strong>
+                <ol style="margin-left: 20px; margin-top: 5px;">
+                    <li>Variable comprehension by reader segment (education/news literacy matter)</li>
+                    <li>Contextual inference strategies (guessing, analogical reasoning, skipping, seeking info)</li>
+                    <li>Low translation awareness (translator invisibility in news)</li>
+                    <li>Mixed attitudes toward foreignization (positive/neutral/negative by segment)</li>
+                    <li>Cosmopolitan openness has conditional effect (depends on cultural capital)</li>
+                </ol>
+            </div>
+
+            <div class="critical-point">
+                <strong>📌 4 Distinctive Features of News Translation (Bielsa & Bassnett):</strong>
+                <ol style="margin-left: 20px; margin-top: 5px;">
+                    <li>Gatekeeping (editorial selection)</li>
+                    <li>Tight deadlines (speed requirements)</li>
+                    <li>Collective production (multiple agents)</li>
+                    <li>Institutional constraints (news values, policies)</li>
+                </ol>
+            </div>
+
+            <div class="critical-point">
+                <strong>📌 5 Reader-Response Methods:</strong>
+                <ol style="margin-left: 20px; margin-top: 5px;">
+                    <li>Focus groups (qualitative discussions)</li>
+                    <li>Eye-tracking (attention patterns)</li>
+                    <li>Comprehension tests (quantify understanding)</li>
+                    <li>Think-aloud protocols (real-time verbalization)</li>
+                    <li>Surveys (large-scale attitudes/preferences)</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
