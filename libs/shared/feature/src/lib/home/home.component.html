@@ -116,13 +116,8 @@
                 </div>
                 <div class="courses">
                     @for (c of sem.courses; track c.name) {
-                        @if (c.courseId) {
-                            <a
-                                class="course"
-                                [style.--ch]="c.color"
-                                [routerLink]="['/course', c.courseId]"
-                                (click)="openCourse(c)"
-                            >
+                        @if (courseTarget(c); as target) {
+                            <a class="course" [style.--ch]="c.color" [routerLink]="target" (click)="rememberCourse(c)">
                                 <span class="glyph" [style.color]="c.color">{{ c.glyph }}</span>
                                 <span class="go">→</span>
                                 <div class="cn">{{ c.name }}</div>

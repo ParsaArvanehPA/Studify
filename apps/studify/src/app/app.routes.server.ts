@@ -14,6 +14,14 @@ export const serverRoutes: ServerRoute[] = [
         getPrerenderParams: async () => COURSES.map((course) => ({courseId: course.id}))
     },
     {
+        path: 'letter-53',
+        renderMode: RenderMode.Prerender
+    },
+    {
+        path: 'vocabulary',
+        renderMode: RenderMode.Prerender
+    },
+    {
         path: '',
         renderMode: RenderMode.Prerender
     },

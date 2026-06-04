@@ -1,0 +1,65 @@
+<div class="ds-field">
+    <div class="ds-blob b1"></div>
+    <div class="ds-blob b2"></div>
+    <div class="ds-blob b3"></div>
+</div>
+<div class="ds-vign"></div>
+<div class="ds-cursor"></div>
+
+<header class="ref-head" [class.stuck]="stuck()">
+    <a class="brand" routerLink="/"><span class="wm">Studify</span><span class="acc">.</span></a>
+    <a class="back" routerLink="/letter-53">← <span class="lbl">Letter 53</span></a>
+</header>
+
+<main class="ref-shell">
+    <section class="ref-hero">
+        <div class="rk"><span class="dotpulse"></span>Letter 53 · Glossary</div>
+        <h1>Vocabulary<br /><span class="ar">واژگانُ النَّهج</span></h1>
+        <p class="rsub">
+            300 specialist terms from the Covenant to Malik al-Ashtar — Arabic, Persian and English side by side. Search
+            any language; diacritics and letter variants are ignored automatically.
+        </p>
+    </section>
+
+    <div class="ref-search-wrap">
+        <div class="ref-search" [class.has-q]="!!query()">
+            <span class="mag">⌕</span>
+            <input
+                type="text"
+                placeholder="Search a term…  واژه را جستجو کنید"
+                aria-label="Search vocabulary"
+                autocomplete="off"
+                [value]="query()"
+                (input)="query.set($any($event.target).value)"
+            />
+            <button class="clear" aria-label="Clear" (click)="clear()">✕</button>
+            <span class="count">{{ query() ? visible().length + ' of ' + total() : '' }}</span>
+        </div>
+    </div>
+
+    <div class="vocab-grid">
+        @for (v of visible(); track v.id) {
+            <div class="vocab-card">
+                <span class="v-id">{{ v.id }}</span>
+                <div class="v-ar" [innerHTML]="hl(v.arabic)"></div>
+                <div class="v-fa" [innerHTML]="hl(v.farsi)"></div>
+                <div class="v-en" [innerHTML]="hl(v.english)"></div>
+            </div>
+        }
+    </div>
+
+    @if (loadError()) {
+        <div class="ref-empty"><div class="big">Couldn’t load the glossary</div>Please try again.</div>
+    } @else if (visible().length === 0 && query()) {
+        <div class="ref-empty"><div class="big">No terms found</div>Try a different spelling, or clear the search.</div>
+    }
+
+    <div class="ref-foot">٣٠٠ terms · Nahj al-Balagha · Letter 53</div>
+</main>
+
+<div class="ds-moods">
+    <span class="lbl">Mood</span>
+    @for (m of moods; track m) {
+        <button [class]="moodSwatch(m)" [title]="m" [attr.aria-label]="m" (click)="setMood(m)"></button>
+    }
+</div>

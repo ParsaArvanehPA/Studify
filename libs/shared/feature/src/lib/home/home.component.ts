@@ -10,7 +10,7 @@ import {
     inject,
     signal
 } from '@angular/core';
-import {Router, RouterLink} from '@angular/router';
+import {RouterLink} from '@angular/router';
 
 import {HOME_STATS, HomeCourse, Mood, SEMESTERS} from '@studify/shared/data-access';
 import {SeoService} from '@studify/shared/utils';
@@ -42,7 +42,6 @@ interface ResumeChip {
 })
 export class HomeComponent {
     private readonly document = inject(DOCUMENT);
-    private readonly router = inject(Router);
     private readonly seo = inject(SeoService);
     private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
@@ -84,15 +83,17 @@ export class HomeComponent {
         });
     }
 
-    protected openCourse(course: HomeCourse): void {
-        if (!course.courseId) {
-            return;
+    protected courseTarget(course: HomeCourse): string[] | null {
+        if (course.courseId) {
+            return ['/course', course.courseId];
         }
-        this.rememberCourse(course);
-        this.router.navigate(['/course', course.courseId]);
+        if (course.link) {
+            return [course.link];
+        }
+        return null;
     }
 
-    private rememberCourse(course: HomeCourse): void {
+    protected rememberCourse(course: HomeCourse): void {
         if (!this.isBrowser) {
             return;
         }

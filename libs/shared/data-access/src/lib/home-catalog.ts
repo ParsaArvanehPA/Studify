@@ -7,6 +7,8 @@ export interface HomeCourse {
     meta: string;
     /** Set when a course page exists; otherwise the card is a placeholder. */
     courseId?: string;
+    /** Direct link target for tool-style courses (e.g. Letter 53). */
+    link?: string;
 }
 
 /** A semester group on the home page. */
@@ -70,7 +72,8 @@ export const SEMESTERS: readonly Semester[] = [
                 fa: 'ترجمهٔ متون اسلامی',
                 glyph: '📜',
                 color: '#34CBB8',
-                meta: 'Letter 53 · 300 terms'
+                meta: 'Letter 53 · 300 terms',
+                link: '/letter-53'
             }
         ]
     }

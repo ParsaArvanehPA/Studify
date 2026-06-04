@@ -1,0 +1,107 @@
+<div class="ds-field">
+    <div class="ds-blob b1"></div>
+    <div class="ds-blob b2"></div>
+    <div class="ds-blob b3"></div>
+</div>
+<div class="ds-vign"></div>
+<div class="ds-cursor"></div>
+
+<header class="ref-head" [class.stuck]="stuck()">
+    <a class="brand" routerLink="/"><span class="wm">Studify</span><span class="acc">.</span></a>
+    <div style="display: flex; gap: 8px; align-items: center">
+        <a class="back" routerLink="/vocabulary">Vocabulary <span class="lbl">واژگان</span></a>
+        <a class="back" routerLink="/">← <span class="lbl">Home</span></a>
+    </div>
+</header>
+
+<main class="ref-shell">
+    <section class="ref-hero">
+        <div class="rk"><span class="dotpulse"></span>Nahj al-Balagha · Letter 53</div>
+        <h1>The Covenant<br />to <span class="ar">مالكِ الأشتر</span></h1>
+        <p class="rsub">
+            Imam Ali's letter to Malik al-Ashtar, governor of Egypt — read passage by passage in Arabic, Persian and
+            English. Search any word in any language; copy or translate any passage.
+        </p>
+    </section>
+
+    <div class="ref-langs">
+        <span class="ll">Show</span>
+        <button [class.on]="langs().ar" (click)="toggleLang('ar')">Arabic</button>
+        <button [class.on]="langs().fa" (click)="toggleLang('fa')">Persian</button>
+        <button [class.on]="langs().en" (click)="toggleLang('en')">English</button>
+    </div>
+
+    <div class="ref-search-wrap">
+        <div class="ref-search" [class.has-q]="!!query()">
+            <span class="mag">⌕</span>
+            <input
+                type="text"
+                placeholder="Search Arabic, Persian or English…  جستجو"
+                aria-label="Search passages"
+                autocomplete="off"
+                [value]="query()"
+                (input)="query.set($any($event.target).value)"
+            />
+            <button class="clear" aria-label="Clear" (click)="clear()">✕</button>
+            <span class="count">{{ query() ? shown() + ' found' : '' }}</span>
+        </div>
+    </div>
+
+    <nav class="ref-sections" aria-label="Sections">
+        <button [class.on]="activeSection() === 'all'" (click)="setSection('all')">All</button>
+        @for (s of sections(); track s.id) {
+            <button [class.on]="activeSection() === s.nameEnglish" (click)="setSection(s.nameEnglish)">
+                {{ sectionLabel(s) }}
+            </button>
+        }
+    </nav>
+
+    <div>
+        @for (row of rows(); track $index) {
+            @if (row.kind === 'header') {
+                <div class="ref-secrow">
+                    <span class="sn">§{{ row.n }}</span>
+                    <span class="st">{{ row.section.nameEnglish }}</span>
+                    <span class="sfa">{{ row.section.name }}</span>
+                </div>
+            } @else {
+                <div
+                    class="passage"
+                    [class.hide-ar]="!langs().ar"
+                    [class.hide-fa]="!langs().fa"
+                    [class.hide-en]="!langs().en"
+                >
+                    <div class="p-top">
+                        <span class="p-id">{{ row.passage.id.toUpperCase() }}</span>
+                        <div class="p-actions">
+                            <button title="Copy all" (click)="copy(row.passage)">⧉</button>
+                            <button title="Translate (Google)" (click)="translate(row.passage)">A⇄</button>
+                        </div>
+                    </div>
+                    <div class="p-ar" [innerHTML]="hl(row.passage.arabic)"></div>
+                    <div class="p-fa"
+                        ><span class="fa-lbl">فارسی</span><span [innerHTML]="hl(row.passage.farsi)"></span
+                    ></div>
+                    <div class="p-en"
+                        ><span class="en-lbl">English</span><span [innerHTML]="hl(row.passage.english)"></span
+                    ></div>
+                </div>
+            }
+        }
+    </div>
+
+    @if (loadError()) {
+        <div class="ref-empty"><div class="big">Couldn’t load the text</div>Please try again.</div>
+    } @else if (shown() === 0 && query()) {
+        <div class="ref-empty"><div class="big">No passages found</div>Try a different word, or clear the search.</div>
+    }
+
+    <div class="ref-foot">٥٣ · Nahj al-Balagha · 200 passages</div>
+</main>
+
+<div class="ds-moods">
+    <span class="lbl">Mood</span>
+    @for (m of moods; track m) {
+        <button [class]="moodSwatch(m)" [title]="m" [attr.aria-label]="m" (click)="setMood(m)"></button>
+    }
+</div>
