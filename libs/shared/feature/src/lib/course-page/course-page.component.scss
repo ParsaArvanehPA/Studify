@@ -390,6 +390,11 @@ header.nav .back span {
     position: relative;
     z-index: 2;
 }
+.ch-no,
+.ch-title,
+.ch-arrow {
+    pointer-events: none;
+}
 .ch-files .pill {
     text-decoration: none;
 }
