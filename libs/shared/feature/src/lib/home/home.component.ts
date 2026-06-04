@@ -27,7 +27,10 @@ interface ResumeChip {
     color: string;
     line: string;
     glyph?: string;
+    /** Last reader document id — resume goes straight back to it. */
     doc?: string;
+    /** Course page fallback when no specific document was opened. */
+    courseId?: string;
 }
 
 /** Home page — hero + semester course grid, following Studify - Dazzle Home.html. */
@@ -98,25 +101,40 @@ export class HomeComponent {
             return;
         }
         try {
+            // Keep the previously-read document if we're re-entering the same course,
+            // so "Continue" still resumes the exact reading section.
+            const prev = this.readLast();
+            const doc = prev && prev.course === course.name ? prev.doc : undefined;
             localStorage.setItem(
                 'studify:lastSession',
-                JSON.stringify({course: course.name, color: course.color, line: course.meta, glyph: course.glyph})
+                JSON.stringify({
+                    course: course.name,
+                    color: course.color,
+                    line: course.meta,
+                    glyph: course.glyph,
+                    courseId: course.courseId,
+                    doc
+                })
             );
         } catch {
             /* storage unavailable */
         }
     }
 
-    private restoreResume(): void {
+    private readLast(): ResumeChip | undefined {
         try {
             const raw = localStorage.getItem('studify:lastSession');
-            if (!raw) {
-                return;
-            }
-            this.resume.set(JSON.parse(raw) as ResumeChip);
-            this.returning.set(true);
+            return raw ? (JSON.parse(raw) as ResumeChip) : undefined;
         } catch {
-            /* storage unavailable */
+            return undefined;
+        }
+    }
+
+    private restoreResume(): void {
+        const chip = this.readLast();
+        if (chip) {
+            this.resume.set(chip);
+            this.returning.set(true);
         }
     }
 
@@ -168,7 +186,13 @@ export class HomeComponent {
 
     protected resumeTarget(): string {
         const chip = this.resume();
-        return chip?.doc ? `/reader/${chip.doc}` : '/';
+        if (chip?.doc) {
+            return `/reader/${chip.doc}`;
+        }
+        if (chip?.courseId) {
+            return `/course/${chip.courseId}`;
+        }
+        return '/';
     }
 
     @HostListener('window:scroll')

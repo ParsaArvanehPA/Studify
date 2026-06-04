@@ -230,12 +230,15 @@ export class ReaderComponent implements OnInit {
     }
 
     private rememberLast(d: StudyDoc): void {
+        const course = COURSES.find((c) => c.name === d.course);
         this.persist(
             KEY.last,
             JSON.stringify({
                 course: d.course,
                 color: COURSE_COLOR[d.course] || '#E6B557',
                 line: `${d.chapter} · ${d.kind}`,
+                glyph: course?.glyph,
+                courseId: course?.id,
                 doc: d.id
             })
         );
