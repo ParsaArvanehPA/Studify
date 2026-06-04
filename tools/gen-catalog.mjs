@@ -106,6 +106,34 @@ const COURSES = [
         prefix: 'pt',
         description:
             'Translation of political texts — Edward Said, Carl Schmitt and critical discourse analysis, with hands-on translation workshops.'
+    },
+    {
+        id: 'translation-of-islamic-texts',
+        name: 'Translation of Islamic Texts',
+        fa: 'ترجمهٔ متون اسلامی',
+        glyph: '📜',
+        color: '#34CBB8',
+        semester: 'Semester 2',
+        rtl: true,
+        kind: 'tool',
+        description:
+            'Trilingual reference tools for Imam Ali’s Letter 53 to Malik al-Ashtar — the full covenant, passage by passage, and a 300-term specialist glossary, all searchable across Arabic, Persian and English.',
+        tools: [
+            {
+                no: '01',
+                title: 'Letter 53 · Covenant to Malik al-Ashtar',
+                kind: 'Trilingual reader',
+                tag: 'guide',
+                link: '/letter-53'
+            },
+            {
+                no: '02',
+                title: 'Specialist Vocabulary · 300 terms',
+                kind: 'Trilingual glossary',
+                tag: 'concise',
+                link: '/vocabulary'
+            }
+        ]
     }
 ];
 
@@ -123,14 +151,18 @@ const human = (f) =>
         .trim();
 
 for (const c of COURSES) {
-    const base = join(FS, ASSETS, c.dir);
-    const served = `${ASSETS}/${c.dir}`;
+    const base = c.dir ? join(FS, ASSETS, c.dir) : '';
+    const served = c.dir ? `${ASSETS}/${c.dir}` : '';
     const chapters = [];
     const push = (id, chapter, kind, relPath, rtl = c.rtl) => {
         docs.push({id, course: c.name, courseFa: c.fa, chapter, kind, path: relPath, rtl});
     };
 
-    if (c.kind === 'chapters') {
+    if (c.kind === 'tool') {
+        for (const t of c.tools) {
+            chapters.push({no: t.no, title: t.title, files: [{kind: t.kind, tag: t.tag, link: t.link}]});
+        }
+    } else if (c.kind === 'chapters') {
         const byNum = new Map();
         for (const f of readdirSync(base).filter(isHtml).sort()) {
             const m = /chapter-(\d+)-summary(-concise)?\.html$/.exec(f);
@@ -310,7 +342,12 @@ const courseLines = courseData
         const chaps = c.chapters
             .map((ch) => {
                 const fs = ch.files
-                    .map((f) => `{kind: ${j(f.kind)}, tag: ${j(f.tag)}, docId: ${j(f.docId)}}`)
+                    .map((f) => {
+                        const parts = [`kind: ${j(f.kind)}`, `tag: ${j(f.tag)}`];
+                        if (f.docId) parts.push(`docId: ${j(f.docId)}`);
+                        if (f.link) parts.push(`link: ${j(f.link)}`);
+                        return `{${parts.join(', ')}}`;
+                    })
                     .join(', ');
                 return `            {no: ${j(ch.no)}, title: ${j(ch.title)}, files: [${fs}]}`;
             })

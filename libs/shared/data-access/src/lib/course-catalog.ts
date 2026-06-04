@@ -402,6 +402,28 @@ export const COURSES: readonly Course[] = [
             {no: '05', title: 'Session 5', files: [{kind: 'Study Guide', tag: 'guide', docId: 'pt-5-guide'}]},
             {no: '07', title: 'Session 7', files: [{kind: 'Study Guide', tag: 'guide', docId: 'pt-7-guide'}]}
         ]
+    },
+    {
+        id: 'translation-of-islamic-texts',
+        name: 'Translation of Islamic Texts',
+        fa: 'ترجمهٔ متون اسلامی',
+        glyph: '📜',
+        color: '#34CBB8',
+        semester: 'Semester 2',
+        description:
+            'Trilingual reference tools for Imam Ali’s Letter 53 to Malik al-Ashtar — the full covenant, passage by passage, and a 300-term specialist glossary, all searchable across Arabic, Persian and English.',
+        chapters: [
+            {
+                no: '01',
+                title: 'Letter 53 · Covenant to Malik al-Ashtar',
+                files: [{kind: 'Trilingual reader', tag: 'guide', link: '/letter-53'}]
+            },
+            {
+                no: '02',
+                title: 'Specialist Vocabulary · 300 terms',
+                files: [{kind: 'Trilingual glossary', tag: 'concise', link: '/vocabulary'}]
+            }
+        ]
     }
 ];
 

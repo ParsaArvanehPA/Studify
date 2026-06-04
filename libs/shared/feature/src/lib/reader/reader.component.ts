@@ -16,6 +16,7 @@ import {ActivatedRoute} from '@angular/router';
 
 import {
     CONTENT_CATALOG,
+    COURSES,
     COURSE_COLOR,
     ContentLoaderService,
     ReadingSurface,
@@ -79,6 +80,13 @@ export class ReaderComponent implements OnInit {
     protected readonly prevDoc = computed(() => this.sibling(-1));
     protected readonly nextDoc = computed(() => this.sibling(1));
 
+    /** Back target: the document's course page (relative to base href), else home. */
+    protected readonly backHref = computed(() => {
+        const current = this.doc();
+        const course = current ? COURSES.find((c) => c.name === current.course) : undefined;
+        return course ? `course/${course.id}` : '.';
+    });
+
     constructor() {
         afterNextRender(() => this.restorePreferences());
     }
@@ -108,7 +116,8 @@ export class ReaderComponent implements OnInit {
                 const minutes = this.estimateMinutes(normalized.html);
                 this.rtl.set(normalized.rtl);
                 this.readMinutes.set(minutes);
-                const html = this.buildHead(found, minutes) + normalized.html + this.buildNav(found) + this.buildEnd(found);
+                const html =
+                    this.buildHead(found, minutes) + normalized.html + this.buildNav(found) + this.buildEnd(found);
                 this.proseHtml.set(this.sanitizer.bypassSecurityTrustHtml(html));
                 this.loading.set(false);
                 this.rememberLast(found);
@@ -223,7 +232,12 @@ export class ReaderComponent implements OnInit {
     private rememberLast(d: StudyDoc): void {
         this.persist(
             KEY.last,
-            JSON.stringify({course: d.course, color: COURSE_COLOR[d.course] || '#E6B557', line: `${d.chapter} · ${d.kind}`, doc: d.id})
+            JSON.stringify({
+                course: d.course,
+                color: COURSE_COLOR[d.course] || '#E6B557',
+                line: `${d.chapter} · ${d.kind}`,
+                doc: d.id
+            })
         );
     }
 

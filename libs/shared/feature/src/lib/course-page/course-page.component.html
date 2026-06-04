@@ -48,14 +48,16 @@
                     <div class="ch-row">
                         <a
                             class="ch-hit"
-                            [routerLink]="['/reader', ch.files[0].docId]"
+                            [routerLink]="ch.files[0].link ? [ch.files[0].link] : ['/reader', ch.files[0].docId]"
                             [attr.aria-label]="ch.title"
                         ></a>
                         <span class="ch-no">{{ ch.no }}</span>
                         <span class="ch-title">{{ ch.title }}</span>
                         <span class="ch-files">
-                            @for (f of ch.files; track f.docId) {
-                                <a class="pill {{ f.tag }}" [routerLink]="['/reader', f.docId]">{{ f.kind }}</a>
+                            @for (f of ch.files; track f.kind) {
+                                <a class="pill {{ f.tag }}" [routerLink]="f.link ? [f.link] : ['/reader', f.docId]">{{
+                                    f.kind
+                                }}</a>
                             }
                         </span>
                         <span class="ch-arrow">→</span>

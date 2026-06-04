@@ -1,11 +1,13 @@
-/** A study file within a chapter, linking to a reader document. */
+/** A study file within a chapter, linking to a reader document or a tool route. */
 export interface CourseFileRef {
     /** Display label, e.g. "Study Guide", "Concise". */
     kind: string;
     /** Pill style: 'guide' | 'concise' | 'quiz'. */
     tag: string;
-    /** Reader catalog doc id. */
-    docId: string;
+    /** Reader catalog doc id (for content documents). */
+    docId?: string;
+    /** Absolute app route (for tool pages, e.g. '/letter-53'); set instead of docId. */
+    link?: string;
 }
 
 /** A chapter/session in a course. */

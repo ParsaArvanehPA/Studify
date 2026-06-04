@@ -9,7 +9,7 @@
 
 <div class="reader">
     <div class="rbar" [class.stuck]="stuck()">
-        <a class="back" href="."><span>← Back</span></a>
+        <a class="back" [href]="backHref()"><span>← Back</span></a>
         <div class="rcrumb">
             <div class="rk">{{ doc()?.course || 'Studify' }}</div>
             <div class="rn">{{ doc() ? doc()!.chapter + ' · ' + doc()!.kind : 'Loading…' }}</div>
@@ -26,7 +26,6 @@
                 </button>
             }
         </div>
-        <a class="rbtn" [href]="doc()?.path" target="_blank" rel="noopener" title="Open original file">↗</a>
     </div>
 
     <div [class]="'canvas surface-' + surface()">
@@ -36,7 +35,12 @@
             } @else if (error()) {
                 <div class="rstate">Could not load this document.</div>
             } @else {
-                <article class="prose" [class.rtl]="rtl()" [style.font-size.px]="fontSize()" [innerHTML]="proseHtml()"></article>
+                <article
+                    class="prose"
+                    [class.rtl]="rtl()"
+                    [style.font-size.px]="fontSize()"
+                    [innerHTML]="proseHtml()"
+                ></article>
             }
         </div>
     </div>

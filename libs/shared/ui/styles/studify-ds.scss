@@ -261,8 +261,7 @@ body.cursor-on .ds-cursor{opacity:1}
 .ref-hero .rsub{max-width:54ch;font-size:clamp(14px,1.5vw,17px);color:var(--ink-soft);line-height:1.6;margin-top:18px}
 
 /* sticky search */
-.ref-search-wrap{position:sticky;top:64px;z-index:20;padding:14px 0 10px;margin-bottom:6px;
-  background:linear-gradient(var(--bg) 62%,transparent)}
+.ref-search-wrap{position:sticky;top:64px;z-index:20;padding:14px 0 10px;margin-bottom:6px}
 .ref-search{position:relative;display:flex;align-items:center;gap:13px;background:color-mix(in srgb,var(--bg2) 92%,var(--bg));
   border:1px solid var(--line);border-radius:16px;padding:15px 18px;transition:border-color .25s,box-shadow .25s}
 .ref-search:focus-within{border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 0 28px -8px var(--accent)}

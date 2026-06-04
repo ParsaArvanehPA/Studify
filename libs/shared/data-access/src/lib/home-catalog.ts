@@ -92,7 +92,7 @@ export const SEMESTERS: readonly Semester[] = [
                 glyph: '📜',
                 color: '#34CBB8',
                 meta: 'Letter 53 · 300 terms',
-                link: '/letter-53'
+                courseId: 'translation-of-islamic-texts'
             }
         ]
     }
