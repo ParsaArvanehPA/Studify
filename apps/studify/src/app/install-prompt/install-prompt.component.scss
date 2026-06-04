@@ -1,0 +1,127 @@
+:host {
+    position: fixed;
+    inset-block-end: 1.25rem;
+    inset-inline: 0;
+
+    z-index: 80;
+
+    display: flex;
+    justify-content: center;
+    padding-inline: 1rem;
+
+    pointer-events: none;
+}
+
+.pwa {
+    display: flex;
+    gap: 0.85rem;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+
+    color: var(--ink);
+
+    background: color-mix(in srgb, var(--bg2) 94%, var(--bg));
+    box-shadow: 0 22px 60px -28px hsl(0deg 0% 0% / 0.7);
+    backdrop-filter: blur(14px);
+
+    animation: pwa-rise 400ms cubic-bezier(0.2, 0.7, 0.3, 1);
+
+    pointer-events: auto;
+    inline-size: 100%;
+    max-inline-size: 30rem;
+    padding-block: 0.7rem;
+    padding-inline: 0.85rem;
+}
+
+.ic img {
+    display: block;
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+
+    border-radius: 0.65rem;
+}
+
+.body {
+    flex: 1;
+    min-inline-size: 0;
+}
+
+.t {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.98rem;
+    font-family: var(--serif, "Newsreader", georgia, serif);
+}
+
+.d {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    align-items: center;
+
+    color: var(--ink-soft);
+
+    font-size: 0.8rem;
+    margin-block-start: 0.15rem;
+}
+
+.d strong {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.share {
+    inline-size: 0.95rem;
+    block-size: 0.95rem;
+
+    color: var(--accent);
+}
+
+.go {
+    flex: none;
+    border: 0;
+    border-radius: 0.65rem;
+
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 0.85rem;
+
+    font-family: inherit;
+
+    background: var(--accent);
+
+    cursor: pointer;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+}
+
+.x {
+    display: grid;
+    flex: none;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+
+    color: var(--ink-soft);
+
+    font-size: 0.75rem;
+
+    background: none;
+
+    cursor: pointer;
+    place-items: center;
+    inline-size: 1.8rem;
+    block-size: 1.8rem;
+}
+
+@keyframes pwa-rise {
+    from {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

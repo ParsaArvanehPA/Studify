@@ -1,0 +1,29 @@
+@if (visible()) {
+    <div class="pwa" role="dialog" aria-label="Install Studify">
+        <span class="ic" aria-hidden="true">
+            <img src="icons/icon-192.png" alt="" width="40" height="40" />
+        </span>
+        <div class="body">
+            <div class="t">Install Studify</div>
+            @if (ios()) {
+                <div class="d">
+                    Tap
+                    <svg class="share" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3l4 4-1.4 1.4L13 6.8V15h-2V6.8L9.4 8.4 8 7l4-4z" fill="currentColor"></path>
+                        <path
+                            d="M5 11h3v2H6v6h12v-6h-2v-2h3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1z"
+                            fill="currentColor"
+                        ></path>
+                    </svg>
+                    Share, then <strong>Add to Home Screen</strong>.
+                </div>
+            } @else {
+                <div class="d">Add it to your home screen for offline study.</div>
+            }
+        </div>
+        @if (!ios()) {
+            <button class="go" type="button" (click)="install()">Install</button>
+        }
+        <button class="x" type="button" (click)="dismiss()" aria-label="Dismiss">✕</button>
+    </div>
+}
