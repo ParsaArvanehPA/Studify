@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 3: Positioning and Point of View</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        header {
+            background-color: #0d7377;
+            color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        .meta-info {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: #0d7377;
+            font-size: 1.6em;
+            margin: 35px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #14a085;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #14a085;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #0d7377;
+            font-size: 1.1em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .concept-box {
+            background-color: #e0f2f1;
+            border-left: 5px solid #14a085;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .concept-box h4 {
+            color: #0d7377;
+            margin-top: 0;
+        }
+
+        .key-term {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .key-term strong {
+            color: #0d7377;
+            font-size: 1.05em;
+        }
+
+        .important {
+            background-color: #fce4ec;
+            border-left: 5px solid #c2185b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .scholar-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .scholar-box h4 {
+            color: #0d7377;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .case-study {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .case-study h4 {
+            color: #0d7377;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .example {
+            background-color: #fff9e6;
+            border-left: 5px solid #fbc02d;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .example h5 {
+            color: #0d7377;
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .ai-explanation {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            color: #006064;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #00acc1;
+            box-shadow: 0 2px 8px rgba(0, 172, 193, 0.15);
+        }
+
+        .ai-explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #80deea;
+            color: #00838f;
+        }
+
+        .ai-explanation-header img {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        .ai-explanation p {
+            margin: 10px 0;
+            line-height: 1.9;
+        }
+
+        .ai-explanation ul, .ai-explanation ol {
+            margin: 12px 0;
+            padding-left: 25px;
+        }
+
+        .ai-explanation li {
+            margin: 8px 0;
+        }
+
+        .ai-explanation strong {
+            color: #00838f;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th {
+            background-color: #0d7377;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        blockquote {
+            border-left: 4px solid #14a085;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        strong {
+            color: #0d7377;
+        }
+
+        em {
+            color: #14a085;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Session 3: Positioning and Point of View</h1>
+            <div class="meta-info">
+                Critical Discourse Analysis | Chapter 3 - Stance and Authorial Position<br>
+                Conscious and Unconscious Positioning in Texts
+            </div>
+        </header>
+
+        <div class="important">
+            <strong>Key Focus of This Chapter:</strong> Understanding how <em>stance</em> (authorial position) can be conscious (explicit or hidden) or unconscious. Learning to identify authorial positioning in different text types: reviews, promotional texts, racist/sexist discourse, and historical writing.
+        </div>
+
+        <h2>1. Position and Attitude (Stance)</h2>
+
+        <div class="concept-box">
+            <h4>What is Stance?</h4>
+            <p><strong>Stance</strong> (also called authorial position or point of view) is the position taken by a writer or speaker in a text. It reflects their <em>attitude</em> toward the subject matter and the audience.</p>
+            <p>Stance can be:</p>
+            <ul>
+                <li><strong>Conscious</strong> — the author deliberately positions themselves</li>
+                <li><strong>Unconscious</strong> — the author is unaware of the position they're expressing</li>
+            </ul>
+        </div>
+
+        <h3>1.1 Three Types of Stance</h3>
+
+        <table>
+            <tr>
+                <th>Type of Stance</th>
+                <th>Description</th>
+                <th>Text Examples</th>
+            </tr>
+            <tr>
+                <td><strong>Conscious - Explicit</strong></td>
+                <td>Deliberate positioning, openly revealed to reader</td>
+                <td>Film/book reviews, opinion pieces, critical essays</td>
+            </tr>
+            <tr>
+                <td><strong>Conscious - Hidden</strong></td>
+                <td>Deliberate positioning, concealed from reader</td>
+                <td>Promotional letters, advertisements, propaganda</td>
+            </tr>
+            <tr>
+                <td><strong>Unconscious</strong></td>
+                <td>Unaware positioning, reveals ideology/worldview</td>
+                <td>Racist/sexist discourse, biased reporting, textbooks</td>
+            </tr>
+        </table>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Why Does This Matter?
+            </span>
+            <p><strong>Understanding stance is crucial for CDA because:</strong></p>
+
+            <ol>
+                <li><strong>Explicit stance is transparent:</strong> We know the reviewer is giving their opinion. We can agree or disagree.</li>
+                <li><strong>Hidden stance is manipulative:</strong> The advertiser pretends to be helpful while trying to sell us something.</li>
+                <li><strong>Unconscious stance is ideological:</strong> The writer doesn't even realize they're expressing a biased worldview.</li>
+            </ol>
+
+            <p><strong>CDA's task:</strong> Expose hidden and unconscious stances, making visible what would otherwise remain invisible.</p>
+        </div>
+
+        <h2>2. Film and Book Reviews (Conscious - Explicit)</h2>
+
+        <div class="concept-box">
+            <h4>Key Feature</h4>
+            <p>In reviews, writers <strong>openly express subjective opinions</strong> using evaluative language and first-person pronouns. The reader knows they are reading someone's opinion.</p>
+        </div>
+
+        <h3>2.1 Linguistic Features of Reviews</h3>
+
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Purpose</th>
+                <th>Examples</th>
+            </tr>
+            <tr>
+                <td><strong>First-person pronouns</strong></td>
+                <td>Show personal involvement</td>
+                <td>"I found...", "We believe...", "In my opinion..."</td>
+            </tr>
+            <tr>
+                <td><strong>Evaluative adjectives</strong></td>
+                <td>Express judgment</td>
+                <td>Brilliant, tedious, compelling, disappointing, masterful</td>
+            </tr>
+            <tr>
+                <td><strong>Modality</strong></td>
+                <td>Hedge or strengthen claims</td>
+                <td>"You should see this", "You might enjoy", "You must watch"</td>
+            </tr>
+            <tr>
+                <td><strong>Direct address</strong></td>
+                <td>Engage reader</td>
+                <td>"You will love...", "Don't miss...", "If you enjoy..."</td>
+            </tr>
+            <tr>
+                <td><strong>Presupposition</strong></td>
+                <td>Assume shared values</td>
+                <td>"As we all know...", "Obviously...", "Naturally..."</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <h5>Example Analysis:</h5>
+            <p><strong>Text:</strong> "This film is undoubtedly one of the worst I've seen this year."</p>
+            <p><strong>Analysis:</strong></p>
+            <ul>
+                <li><strong>"undoubtedly"</strong> = intensifier (strengthens claim)</li>
+                <li><strong>"one of the worst"</strong> = evaluative phrase (negative judgment)</li>
+                <li><strong>"I've seen"</strong> = first-person (personal experience)</li>
+                <li><strong>Result:</strong> Explicit negative stance — reader knows this is the reviewer's opinion</li>
+            </ul>
+        </div>
+
+        <h2>3. Promotional Letters (Conscious - Hidden)</h2>
+
+        <div class="concept-box">
+            <h4>Key Feature</h4>
+            <p>In promotional texts, writers <strong>deliberately hide their persuasive intent</strong> while positioning products/services favorably. They manufacture intimacy and trust to manipulate the reader.</p>
+        </div>
+
+        <h3>3.1 Deceptive Strategies in Promotional Texts</h3>
+
+        <div class="concept-box">
+            <h4>Six Key Manipulation Techniques</h4>
+            <ol>
+                <li><strong>Simulated Friendship:</strong> Use of first names, informal tone</li>
+                <li><strong>Synthetic Personalization:</strong> "Dear [Name]" though mass-produced</li>
+                <li><strong>Pseudo-Intimacy:</strong> "We know you..." / "You deserve..."</li>
+                <li><strong>False Scarcity:</strong> "Limited time offer" / "Only for you"</li>
+                <li><strong>Authority Claims:</strong> "Experts recommend..." / "Studies show..."</li>
+                <li><strong>Flattery:</strong> "As a valued customer..." / "Sophisticated buyers like you..."</li>
+            </ol>
+        </div>
+
+        <table>
+            <tr>
+                <th>Technique</th>
+                <th>Linguistic Marker</th>
+                <th>Hidden Purpose</th>
+            </tr>
+            <tr>
+                <td>Inclusive "we"</td>
+                <td>"We're offering you..."</td>
+                <td>Create false solidarity between company and customer</td>
+            </tr>
+            <tr>
+                <td>Second-person focus</td>
+                <td>"You'll love...", "Your needs..."</td>
+                <td>Simulate personal attention (it's mass-produced)</td>
+            </tr>
+            <tr>
+                <td>Positive presupposition</td>
+                <td>"When you order..." (not "if")</td>
+                <td>Assume compliance before it happens</td>
+            </tr>
+            <tr>
+                <td>Imperative softening</td>
+                <td>"Why not try...", "Just send..."</td>
+                <td>Disguise commands as friendly suggestions</td>
+            </tr>
+        </table>
+
+        <div class="key-term">
+            <strong>Synthetic Personalization (Fairclough):</strong> The practice of mass communication disguising itself as personal communication. A letter sent to millions is written as if it's just for you.
+        </div>
+
+        <div class="case-study">
+            <h4>Case Study: Promotional Letter Analysis</h4>
+            <p><strong>Text:</strong> "Dear Sarah, As one of our most valued customers, we wanted you to be the first to know about this exclusive opportunity..."</p>
+            <p><strong>Analysis:</strong></p>
+            <ul>
+                <li><strong>"Dear Sarah"</strong> — synthetic personalization (auto-generated)</li>
+                <li><strong>"most valued customers"</strong> — flattery (everyone gets this letter)</li>
+                <li><strong>"we wanted you"</strong> — simulated care (marketing department)</li>
+                <li><strong>"first to know"</strong> — false exclusivity (mass mailing)</li>
+                <li><strong>"exclusive opportunity"</strong> — false scarcity (standard offer)</li>
+            </ul>
+            <p><strong>Hidden Stance:</strong> The writer positions themselves as a caring friend while actually trying to sell something. The commercial intent is concealed behind pseudo-intimacy.</p>
+        </div>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Spotting Hidden Stance
+            </span>
+            <p><strong>How to identify conscious-hidden positioning:</strong></p>
+
+            <p><strong>Ask these questions:</strong></p>
+            <ol>
+                <li>What is the writer trying to GET from the reader? (money, vote, action)</li>
+                <li>How is this goal disguised? (as advice, information, friendship)</li>
+                <li>What relationship is being manufactured? (friend, expert, ally)</li>
+                <li>What would the text look like if the writer was honest about their purpose?</li>
+            </ol>
+
+            <p><strong>Red flags for hidden commercial intent:</strong></p>
+            <ul>
+                <li>Excessive use of "you" and "your"</li>
+                <li>Claims of exclusivity or urgency</li>
+                <li>Flattery without evidence</li>
+                <li>Assumed intimacy with a stranger</li>
+                <li>Questions that presuppose positive answers</li>
+            </ul>
+        </div>
+
+        <h2>4. Racist and Sexist Discourse (Unconscious Stance)</h2>
+
+        <div class="concept-box">
+            <h4>What is Unconscious Stance?</h4>
+            <p><strong>Unconscious stance</strong> occurs when writers are unaware they're expressing a discriminatory worldview. It reveals <em>naturalized ideology</em> through language choices that the writer considers "normal" or "neutral."</p>
+        </div>
+
+        <h3>4.1 Racist Discourse Markers</h3>
+
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Function</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>Othering pronouns</strong></td>
+                <td>Create us/them divide</td>
+                <td>"They are taking our jobs"</td>
+            </tr>
+            <tr>
+                <td><strong>Nominalization</strong></td>
+                <td>Obscure agency</td>
+                <td>"The immigration problem" (who says it's a problem?)</td>
+            </tr>
+            <tr>
+                <td><strong>Generalizations</strong></td>
+                <td>Stereotype groups</td>
+                <td>"Those people always..."</td>
+            </tr>
+            <tr>
+                <td><strong>Metaphors</strong></td>
+                <td>Dehumanize</td>
+                <td>"Flood of refugees", "swarm of migrants", "invasion"</td>
+            </tr>
+            <tr>
+                <td><strong>Presupposition</strong></td>
+                <td>Naturalize bias</td>
+                <td>"Even the good ones..." (presumes most are bad)</td>
+            </tr>
+        </table>
+
+        <div class="scholar-box">
+            <h4>Van Dijk's Ideological Square</h4>
+            <p>Teun van Dijk identified a pattern in ideologically biased discourse:</p>
+            <ol>
+                <li><strong>Emphasize OUR good qualities</strong></li>
+                <li><strong>Emphasize THEIR bad qualities</strong></li>
+                <li><strong>Mitigate OUR bad qualities</strong></li>
+                <li><strong>Mitigate THEIR good qualities</strong></li>
+            </ol>
+            <p>This "ideological square" operates in racist, nationalist, and other discriminatory discourse.</p>
+        </div>
+
+        <h3>4.2 Sexist Discourse Markers</h3>
+
+        <div class="concept-box">
+            <h4>Key Features of Sexist Language</h4>
+            <ul>
+                <li><strong>Generic Masculine:</strong> Using "he/him" as universal (excludes women)</li>
+                <li><strong>Asymmetric Address:</strong> "Mr. Smith and Janet" (unequal naming)</li>
+                <li><strong>Semantic Derogation:</strong> Negative connotations for female terms (master vs. mistress)</li>
+                <li><strong>Role Stereotyping:</strong> "Female doctor", "male nurse" (marked forms)</li>
+                <li><strong>Trivialization:</strong> Diminutives (lady doctor, career girl)</li>
+                <li><strong>Appearance Focus:</strong> Describing women's looks when irrelevant</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h5>Example of Sexist Discourse:</h5>
+            <p><strong>Text:</strong> "The politician and his attractive wife arrived at the event."</p>
+            <p><strong>Analysis:</strong></p>
+            <ul>
+                <li><strong>"The politician"</strong> — man defined by his role/profession</li>
+                <li><strong>"his attractive wife"</strong> — woman defined by appearance AND possession ("his")</li>
+                <li><strong>Implication:</strong> Man has public identity; woman's identity is through relationship to man and physical appearance</li>
+            </ul>
+            <p><strong>Compare:</strong> "The politician and her supportive husband arrived" — this would feel "marked" to many readers, revealing the hidden expectation that politicians are male.</p>
+        </div>
+
+        <div class="case-study">
+            <h4>Case Study: Newspaper Headlines</h4>
+            <p><strong>Text A:</strong> "Mother of three wins Nobel Prize"</p>
+            <p><strong>Text B:</strong> "Scientist wins Nobel Prize"</p>
+            <p><strong>Analysis:</strong></p>
+            <ul>
+                <li>Text A defines the woman by her family role, not her professional achievement</li>
+                <li>Would we see "Father of three wins Nobel Prize" for a male scientist?</li>
+                <li>The "mother" frame reduces her identity to domestic sphere</li>
+                <li>This is unconscious sexism — the writer probably thought they were being "human interest"</li>
+            </ul>
+        </div>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Identifying Unconscious Bias
+            </span>
+            <p><strong>The key test for unconscious bias:</strong></p>
+
+            <p><strong>Would this be written differently for a different group?</strong></p>
+
+            <ul>
+                <li>If describing a male professional, would appearance be mentioned?</li>
+                <li>If describing a native citizen, would "loyalty" be questioned?</li>
+                <li>If describing the dominant group, would group membership be stated?</li>
+            </ul>
+
+            <p><strong>Example Analysis:</strong></p>
+            <p>"The female CEO announced record profits" vs. "The CEO announced record profits"</p>
+            <ul>
+                <li>Why is "female" mentioned? Because male is the unmarked default</li>
+                <li>This marking makes women in leadership seem exceptional/unusual</li>
+                <li>The writer probably didn't intend sexism — but the language perpetuates it</li>
+            </ul>
+
+            <p><strong>CDA insight:</strong> Unconscious bias is often more powerful than conscious bias because it appears "natural" and goes unchallenged.</p>
+        </div>
+
+        <h2>5. History Textbooks (Mixed Conscious/Unconscious)</h2>
+
+        <div class="concept-box">
+            <h4>Key Issue</h4>
+            <p>History textbooks often claim <strong>objectivity</strong> but contain subtle positioning through lexical choices, voice, and narrative structure. The stance may be partly conscious (editorial decisions) and partly unconscious (cultural assumptions).</p>
+        </div>
+
+        <h3>5.1 How Stance Appears in History Texts</h3>
+
+        <table>
+            <tr>
+                <th>Device</th>
+                <th>Effect</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>Passive Voice</strong></td>
+                <td>Hide agency, obscure responsibility</td>
+                <td>"Mistakes were made" (by whom?)</td>
+            </tr>
+            <tr>
+                <td><strong>Nominalization</strong></td>
+                <td>Turn actions into things, obscure actors</td>
+                <td>"The colonization of..." (who colonized?)</td>
+            </tr>
+            <tr>
+                <td><strong>Lexical Choice</strong></td>
+                <td>Frame events ideologically</td>
+                <td>"Settlers" vs. "invaders", "discovery" vs. "invasion"</td>
+            </tr>
+            <tr>
+                <td><strong>Modality</strong></td>
+                <td>Present opinion as fact</td>
+                <td>"It is clear that...", "Obviously...", "Undoubtedly..."</td>
+            </tr>
+            <tr>
+                <td><strong>Omission</strong></td>
+                <td>Silence alternative perspectives</td>
+                <td>Ignoring indigenous viewpoints in colonial history</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <h5>Example: Comparing Historical Framings</h5>
+            <p><strong>Version A (biased):</strong> "Australia was discovered by Britain in 1788"</p>
+            <p><strong>Version B (less biased):</strong> "British forces arrived in Australia in 1788"</p>
+            <p><strong>Version C (indigenous perspective):</strong> "British forces invaded the lands of the Aboriginal peoples in 1788"</p>
+            <p><strong>Analysis:</strong></p>
+            <ul>
+                <li>Version A: "discovered" implies the land was empty (ignores 60,000+ years of indigenous presence)</li>
+                <li>Version B: "arrived" is more neutral but still doesn't acknowledge existing ownership</li>
+                <li>Version C: "invaded" acknowledges prior occupation and the violence of colonization</li>
+            </ul>
+            <p><strong>Each version encodes a different ideological position.</strong></p>
+        </div>
+
+        <div class="case-study">
+            <h4>Case Study: Passive Voice and Responsibility</h4>
+            <p><strong>Text:</strong> "During the colonial period, native populations were significantly reduced."</p>
+            <p><strong>Analysis:</strong></p>
+            <ul>
+                <li><strong>Passive voice:</strong> "were reduced" — BY WHOM?</li>
+                <li><strong>Euphemism:</strong> "reduced" — meaning killed through violence, disease, starvation</li>
+                <li><strong>Nominalization:</strong> "colonial period" — obscures who was doing the colonizing</li>
+                <li><strong>Effect:</strong> Makes genocide sound like a natural process rather than human action</li>
+            </ul>
+            <p><strong>Rewritten with agency:</strong> "Colonial forces killed, displaced, and starved indigenous populations."</p>
+        </div>
+
+        <h2>6. Analyzing Authorial Stance - Complete Checklist</h2>
+
+        <div class="concept-box">
+            <h4>Nine-Point Analysis Framework</h4>
+            <ol>
+                <li><strong>Pronoun Use:</strong> Who is "we"? Who is "they"? Inclusive or exclusive?</li>
+                <li><strong>Modality:</strong> Certainty markers (must, will, should, might, could)</li>
+                <li><strong>Evaluative Language:</strong> Adjectives and adverbs expressing judgment</li>
+                <li><strong>Presuppositions:</strong> What is assumed as shared knowledge?</li>
+                <li><strong>Voice:</strong> Active (shows agency) vs. Passive (hides agency)</li>
+                <li><strong>Lexical Choices:</strong> Word selection reveals ideology (terrorist vs. freedom fighter)</li>
+                <li><strong>Metaphors:</strong> Conceptual frameworks used (war, journey, disease, flood)</li>
+                <li><strong>What's Absent:</strong> Whose voices are silenced? What's not said?</li>
+                <li><strong>Genre Expectations:</strong> How does text conform to or deviate from norms?</li>
+            </ol>
+        </div>
+
+        <h2>7. Key Theorists and Concepts</h2>
+
+        <div class="scholar-box">
+            <h4>Teun van Dijk</h4>
+            <p><strong>Key Concept:</strong> Ideological Square</p>
+            <p>Analysis of racist discourse showing how positive self-presentation combines with negative other-presentation.</p>
+        </div>
+
+        <div class="scholar-box">
+            <h4>Norman Fairclough</h4>
+            <p><strong>Key Concept:</strong> Synthetic Personalization</p>
+            <p>Mass communication disguised as personal — the "manufactured intimacy" of promotional discourse.</p>
+        </div>
+
+        <div class="scholar-box">
+            <h4>George Lakoff</h4>
+            <p><strong>Key Concept:</strong> Conceptual Metaphor Theory</p>
+            <p>How metaphors reveal worldview — the frames we use shape how we think about issues.</p>
+        </div>
+
+        <h2>8. Applying Stance Analysis: Worked Examples</h2>
+
+        <div class="case-study">
+            <h4>Example 1: News Report Analysis</h4>
+            <p><strong>Text:</strong> "Police were forced to use tear gas when the protest turned violent."</p>
+            <p><strong>Stance Analysis:</strong></p>
+            <ul>
+                <li><strong>"were forced"</strong> — passive, removes police agency, implies no choice</li>
+                <li><strong>"turned violent"</strong> — protest as agent of violence (were police also violent?)</li>
+                <li><strong>Presupposition:</strong> Police action was reactive, justified</li>
+                <li><strong>Absent:</strong> Protester perspective, what preceded the tear gas</li>
+            </ul>
+            <p><strong>Alternative framing:</strong> "Police deployed tear gas against protesters" — assigns agency to police</p>
+            <p><strong>Stance:</strong> Original text has pro-police positioning, probably unconscious (standard news framing)</p>
+        </div>
+
+        <div class="case-study">
+            <h4>Example 2: Political Speech Analysis</h4>
+            <p><strong>Text:</strong> "We must protect our way of life from those who would destroy it."</p>
+            <p><strong>Stance Analysis:</strong></p>
+            <ul>
+                <li><strong>"We"</strong> — who is included? (citizens, "real" citizens, the nation?)</li>
+                <li><strong>"must"</strong> — strong modality, no alternative presented</li>
+                <li><strong>"our way of life"</strong> — presupposes shared values, homogeneous culture</li>
+                <li><strong>"those who"</strong> — vague othering, enemy unspecified</li>
+                <li><strong>"would destroy"</strong> — intent attributed to "them"</li>
+            </ul>
+            <p><strong>Stance:</strong> Conscious-explicit nationalist positioning with hidden us/them construction</p>
+        </div>
+
+        <div class="ai-explanation">
+            <span class="ai-explanation-header">
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg" alt="AI">
+                Chapter Summary: The Three Stances
+            </span>
+            <p><strong>Key Takeaways from Chapter 3:</strong></p>
+
+            <p><strong>1. Conscious-Explicit Stance (Reviews)</strong></p>
+            <ul>
+                <li>Writer openly shares opinion</li>
+                <li>Reader knows it's subjective</li>
+                <li>Uses "I," evaluative language, modal verbs</li>
+                <li><strong>CDA task:</strong> Examine what values underlie the judgments</li>
+            </ul>
+
+            <p><strong>2. Conscious-Hidden Stance (Advertising)</strong></p>
+            <ul>
+                <li>Writer hides persuasive intent</li>
+                <li>Manufactured intimacy and trust</li>
+                <li>Synthetic personalization, flattery, false scarcity</li>
+                <li><strong>CDA task:</strong> Expose the hidden commercial/political agenda</li>
+            </ul>
+
+            <p><strong>3. Unconscious Stance (Bias)</strong></p>
+            <ul>
+                <li>Writer unaware of their positioning</li>
+                <li>Reveals naturalized ideology</li>
+                <li>Othering pronouns, metaphors, passive voice, omission</li>
+                <li><strong>CDA task:</strong> Make visible what the writer takes for granted</li>
+            </ul>
+
+            <p><strong>Analysis Framework:</strong></p>
+            <ol>
+                <li>Identify text type and expected stance</li>
+                <li>Examine pronouns (who is included/excluded?)</li>
+                <li>Find evaluative language (judgment words)</li>
+                <li>Check voice (active reveals, passive conceals)</li>
+                <li>Note lexical choices (loaded words)</li>
+                <li>Identify presuppositions (what's assumed?)</li>
+                <li>Consider omissions (what's silenced?)</li>
+            </ol>
+
+            <p><strong>Remember:</strong> No text is neutral. Every text has a stance — the question is whether it's visible or hidden, conscious or unconscious.</p>
+        </div>
+
+        <h2>9. Summary: Key Points to Remember</h2>
+
+        <div class="important">
+            <strong>Essential Takeaways from Chapter 3:</strong>
+            <ul>
+                <li>Stance = authorial position toward subject and audience</li>
+                <li>Three types: Conscious-Explicit, Conscious-Hidden, Unconscious</li>
+                <li>Reviews use first-person, evaluative adjectives, modality</li>
+                <li>Promotional texts use synthetic personalization and manufactured intimacy</li>
+                <li>Racist discourse uses othering pronouns, dehumanizing metaphors, presuppositions</li>
+                <li>Sexist discourse uses generic masculine, asymmetric address, appearance focus</li>
+                <li>Van Dijk's Ideological Square: emphasize our good/their bad, mitigate our bad/their good</li>
+                <li>History textbooks use passive voice and nominalization to obscure agency</li>
+                <li>Lexical choice (settlers vs. invaders) reveals ideological framing</li>
+                <li>Always ask: What's NOT said? Whose voice is absent?</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

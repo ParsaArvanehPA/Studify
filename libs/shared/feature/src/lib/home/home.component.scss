@@ -148,7 +148,7 @@
   .courses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   @media(max-width:900px){.courses{grid-template-columns:1fr 1fr}}
   @media(max-width:600px){.courses{grid-template-columns:1fr}}
-  .course{position:relative;border-radius:20px;padding:24px;cursor:pointer;
+  .course{position:relative;border-radius:20px;padding:24px;cursor:pointer;text-decoration:none;color:var(--ink);
     background:linear-gradient(165deg,color-mix(in srgb,var(--bg2) 88%,transparent),color-mix(in srgb,var(--bg) 90%,transparent));
     border:1px solid var(--line);overflow:hidden;transform-style:preserve-3d;
     transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s,box-shadow .35s;min-height:208px;display:flex;flex-direction:column}

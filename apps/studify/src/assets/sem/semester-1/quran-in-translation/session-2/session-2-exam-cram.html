@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM CRAM: Session 2 - Surah Al-Ma'idah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+            color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-info {
+            font-size: 0.95em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .exam-alert {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #856404;
+        }
+
+        h2 {
+            color: white;
+            background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            padding: 10px 15px;
+            font-weight: 700;
+            border-radius: 3px;
+        }
+
+        h3 {
+            color: #0d7377;
+            font-size: 1.15em;
+            margin: 20px 0 12px 0;
+            font-weight: 700;
+        }
+
+        h4 {
+            color: #14a085;
+            font-size: 1em;
+            margin: 15px 0 8px 0;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 8px 0;
+        }
+
+        .quick-fact {
+            background-color: #e0f7f7;
+            border-left: 4px solid #14a085;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 3px;
+        }
+
+        .quick-fact strong {
+            color: #0d7377;
+            font-weight: 700;
+        }
+
+        .memorize {
+            background-color: #fff3e0;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .must-know {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .arabic-quick {
+            font-family: 'Amiri', serif;
+            font-size: 1.3em;
+            text-align: right;
+            direction: rtl;
+            color: #1a1a1a;
+            background-color: #f8f9fa;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 3px;
+            border-left: 4px solid #0d7377;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+
+        th {
+            background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .number-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.85em;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        strong {
+            color: #0d7377;
+            font-weight: 700;
+        }
+
+        .cheat-sheet {
+            background-color: #e0f7f7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 2px dashed #14a085;
+        }
+
+        .cheat-sheet h3 {
+            color: #0d7377;
+            margin-top: 0;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ EXAM CRAM ⚡</h1>
+            <div class="meta-info">
+                Session 2: Surah Al-Ma'idah (Verses 94, 105-109)<br>
+                Quick Review | Key Facts | Must-Know Items
+            </div>
+        </header>
+
+        <div class="exam-alert">
+            ⏱️ <strong>EXAM TIP:</strong> Focus on the context of verse 94 (hunting test), the misinterpretation of verse 105, and the testimony law in 106-108!
+        </div>
+
+        <h2>📋 Fast Facts - Surah Overview</h2>
+
+        <div class="quick-fact">
+            <strong>Name:</strong> Al-Ma'idah (المائدة) = "The Table Spread"
+        </div>
+
+        <div class="quick-fact">
+            <strong>Type:</strong> Medinan Surah (one of the LAST revealed)
+        </div>
+
+        <div class="quick-fact">
+            <strong>Chapter Number:</strong> #5 in Quran
+        </div>
+
+        <div class="quick-fact">
+            <strong>Total Verses:</strong> 120 verses
+        </div>
+
+        <div class="quick-fact">
+            <strong>Main Topics (this session):</strong> Divine tests, personal responsibility, testimony law, ultimate accountability
+        </div>
+
+        <h2>📖 Verse 94 - The Hunting Test</h2>
+
+        <div class="arabic-quick">
+            يا أَيُّهَا الَّذِينَ آمَنُوا لَيَبْلُوَنَّكُمُ اللَّـهُ بِشَيْ‏ءٍ مِنَ الصَّيْدِ تَنالُهُ أَيْدِيكُمْ وَ رِماحُكُمْ...
+        </div>
+
+        <div class="memorize">
+            <span class="number-badge">V.94</span> <strong>Key Message:</strong> Allah will test you with game/hunting that your hands and spears can easily reach → To reveal who fears Him in the unseen
+        </div>
+
+        <h3>🎯 Context - TESTABLE!</h3>
+
+        <div class="must-know">
+            <strong>Historical Setting:</strong> Treaty of Hudaybiyyah (6 AH / 628 CE)
+        </div>
+
+        <div class="must-know">
+            <strong>Situation:</strong> Muslims in state of <em>ihram</em> (pilgrimage consecration) - hunting FORBIDDEN
+        </div>
+
+        <div class="must-know">
+            <strong>The Test:</strong> Abundant game everywhere, easy to catch, but must RESTRAIN despite hunger
+        </div>
+
+        <h3>Key Terms to Know:</h3>
+
+        <table>
+            <tr>
+                <th>Arabic</th>
+                <th>Transliteration</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td>لَيَبْلُوَنَّكُمُ</td>
+                <td>La-yabluwannakum</td>
+                <td>"Surely will test you"</td>
+            </tr>
+            <tr>
+                <td>بِالْغَيْبِ</td>
+                <td>Bil-ghayb</td>
+                <td>"In the unseen" / "when unseen"</td>
+            </tr>
+            <tr>
+                <td>تَنالُهُ أَيْدِيكُمْ وَ رِماحُكُمْ</td>
+                <td>Tanāluhu aydīkum wa rimāhukum</td>
+                <td>"Your hands and spears can reach"</td>
+            </tr>
+        </table>
+
+        <h3>💡 The Point of the Test</h3>
+
+        <div class="quick-fact">
+            <strong>Purpose:</strong> "So that Allah may make evident those who fear Him unseen"
+        </div>
+
+        <div class="quick-fact">
+            <strong>What's Being Tested:</strong> Not strength or skill, but RESTRAINT and God-consciousness (تقوى)
+        </div>
+
+        <div class="quick-fact">
+            <strong>The Challenge:</strong> Test is through something EASY to get, not impossible - restraint is hard!
+        </div>
+
+        <h3>🔥 Severe Warning</h3>
+
+        <div class="memorize">
+            <strong>"Whoever transgresses after that - painful punishment"</strong>
+            <ul>
+                <li>After CLEAR warning = more severe</li>
+                <li>After knowing it's a TEST = no excuse</li>
+                <li>Deliberate sin > ignorant sin</li>
+            </ul>
+        </div>
+
+        <h2>📖 Verse 105 - Personal Responsibility</h2>
+
+        <div class="arabic-quick">
+            يا أَيُّهَا الَّذِينَ آمَنُوا عَلَيْكُمْ أَنْفُسَكُمْ لا يَضُرُّكُمْ مَنْ ضَلَّ إِذَا اهْتَدَيْتُمْ...
+        </div>
+
+        <div class="memorize">
+            <span class="number-badge">V.105</span> <strong>Translation:</strong> "Upon you is [responsibility for] yourselves. Those who go astray will not harm you when you have been guided."
+        </div>
+
+        <h3>⚠️ COMMON MISINTERPRETATION (EXAM FAVORITE!)</h3>
+
+        <table>
+            <tr>
+                <th>WRONG Interpretation</th>
+                <th>CORRECT Interpretation</th>
+            </tr>
+            <tr>
+                <td>❌ "Don't worry about others, just focus on yourself"</td>
+                <td>✅ "After you fulfill your duty to advise others, their misguidance won't harm YOU"</td>
+            </tr>
+            <tr>
+                <td>❌ Abandon commanding good/forbidding evil</td>
+                <td>✅ You MUST try to guide, but you're not responsible for their final choice</td>
+            </tr>
+        </table>
+
+        <div class="must-know">
+            <strong>🎯 Abu Bakr's Clarification:</strong> "When people see evil and don't change it, Allah will punish them all." You MUST try to guide others!
+        </div>
+
+        <h2>📖 Verses 106-108 - Testimony Law (VERY TESTABLE!)</h2>
+
+        <div class="exam-alert">
+            ⚠️ <strong>EXAM WARNING:</strong> Testimony procedures are frequently tested! Know the witness requirements and counter-testimony process!
+        </div>
+
+        <h3>🧮 Witness Requirements for Bequests</h3>
+
+        <table>
+            <tr>
+                <th>Situation</th>
+                <th>Witness Requirement</th>
+            </tr>
+            <tr>
+                <td><strong>Normal circumstances</strong></td>
+                <td>Two just men from among you (Muslims)</td>
+            </tr>
+            <tr>
+                <td><strong>While traveling</strong></td>
+                <td>Two others from outside (may be NON-Muslims)</td>
+            </tr>
+        </table>
+
+        <div class="must-know">
+            <strong>🔥 REVOLUTIONARY:</strong> Rare permission to accept NON-MUSLIM testimony (when traveling and no Muslim witnesses available)
+        </div>
+
+        <h3>🔐 Oath Protocol - MEMORIZE</h3>
+
+        <div class="cheat-sheet">
+            <h3>Procedural Safeguards (V.106)</h3>
+            <ol>
+                <li><strong>Timing:</strong> "After the prayer" (heightened spiritual awareness)</li>
+                <li><strong>Sacred Oath:</strong> "Swear by Allah"</li>
+                <li><strong>No Bribery:</strong> "We won't exchange it for a price"</li>
+                <li><strong>No Favoritism:</strong> "Even if he's a near relative"</li>
+                <li><strong>Divine Accountability:</strong> "We won't withhold Allah's testimony"</li>
+            </ol>
+        </div>
+
+        <h3>🔄 Counter-Testimony Process (V.107-108)</h3>
+
+        <div class="memorize">
+            <strong>IF perjury discovered:</strong>
+            <ol>
+                <li>Two others from rightful heirs can step forward</li>
+                <li>They take counter-oath: "Our testimony is truer"</li>
+                <li>They swear they haven't transgressed</li>
+                <li>Their testimony SUPERSEDES the false one</li>
+            </ol>
+        </div>
+
+        <div class="quick-fact">
+            <strong>Purpose (V.108):</strong> "More likely they'll give testimony truthfully" - knowing testimony can be challenged = DETERRENT against lying
+        </div>
+
+        <h3>📚 Historical Case - Know This!</h3>
+
+        <div class="must-know">
+            <h4>The Case of Tameem al-Dari</h4>
+            <ul>
+                <li><strong>Situation:</strong> Muslim man (Budayl) traveling with 2 Christians, makes will, then dies</li>
+                <li><strong>Problem:</strong> Silver vessel missing - Christian witnesses denied taking it</li>
+                <li><strong>Discovery:</strong> Vessel found being sold in Mecca by those same witnesses!</li>
+                <li><strong>Resolution:</strong> Muslim heirs gave counter-testimony, property returned</li>
+                <li><strong>Lesson:</strong> Counter-testimony mechanism WORKS</li>
+            </ul>
+        </div>
+
+        <h2>📖 Verse 109 - Day of Judgment</h2>
+
+        <div class="arabic-quick">
+            يَوْمَ يَجْمَعُ اللَّـهُ الرُّسُلَ فَيَقُولُ ما ذا أُجِبْتُمْ قالُوا لا عِلْمَ لَنا إِنَّكَ أَنْتَ عَلاَّمُ الْغُيُوبِ
+        </div>
+
+        <div class="memorize">
+            <span class="number-badge">V.109</span> <strong>Translation:</strong> Day when Allah gathers messengers and asks "What response did you receive?" They say "We have no knowledge. You are Knower of the unseen."
+        </div>
+
+        <h3>🤔 Why Don't Prophets Answer? (Common Exam Question)</h3>
+
+        <table>
+            <tr>
+                <th>Reason</th>
+                <th>Explanation</th>
+            </tr>
+            <tr>
+                <td><strong>Overwhelming Awe</strong></td>
+                <td>Magnitude of Day overwhelms even messengers</td>
+            </tr>
+            <tr>
+                <td><strong>Complete Knowledge</strong></td>
+                <td>Only Allah knows full truth - outward & inward</td>
+            </tr>
+            <tr>
+                <td><strong>Epistemic Humility</strong></td>
+                <td>Acknowledging limits of human knowledge</td>
+            </tr>
+            <tr>
+                <td><strong>Deference</strong></td>
+                <td>Defer to Allah's superior knowledge</td>
+            </tr>
+        </table>
+
+        <div class="must-know">
+            <strong>Connection to Testimony Theme:</strong> Human testimony can be false, but divine knowledge is ABSOLUTE and PERFECT - all hidden things revealed!
+        </div>
+
+        <h2>🎯 Cheat Sheet - Must Memorize</h2>
+
+        <div class="cheat-sheet">
+            <h3>📝 Quick Reference</h3>
+
+            <h4>Verse 94 - Hunting Test</h4>
+            <ul>
+                <li>✅ Context: Treaty of Hudaybiyyah, Muslims in ihram</li>
+                <li>✅ Test: Game within easy reach but must restrain</li>
+                <li>✅ Purpose: Reveal who fears Allah "unseen"</li>
+                <li>✅ Warning: Painful punishment for transgression</li>
+            </ul>
+
+            <h4>Verse 105 - Personal Responsibility</h4>
+            <ul>
+                <li>✅ NOT "ignore others" - MUST try to guide</li>
+                <li>✅ After you advise, their choice ≠ your burden</li>
+                <li>✅ Abu Bakr warned against misuse of this verse</li>
+            </ul>
+
+            <h4>Verses 106-108 - Testimony Law</h4>
+            <ul>
+                <li>✅ Normal: 2 just Muslim men</li>
+                <li>✅ Traveling: 2 from outside (may be non-Muslim)</li>
+                <li>✅ Oath: After prayer, swear by Allah, no bribery/favoritism</li>
+                <li>✅ Counter-testimony possible if perjury discovered</li>
+            </ul>
+
+            <h4>Verse 109 - Ultimate Testimony</h4>
+            <ul>
+                <li>✅ Prophets defer to Allah's complete knowledge</li>
+                <li>✅ All hidden things will be revealed</li>
+                <li>✅ Divine knowledge > human testimony</li>
+            </ul>
+        </div>
+
+        <h2>📚 Key Vocabulary - Flashcard Style</h2>
+
+        <div class="cheat-sheet">
+            <h3>Arabic Terms You MUST Know</h3>
+
+            <div class="memorize">
+                <strong>1. لَيَبْلُوَنَّكُمُ</strong> (La-yabluwannakum) = Surely will test you
+            </div>
+
+            <div class="memorize">
+                <strong>2. بِالْغَيْبِ</strong> (Bil-ghayb) = In/when unseen
+            </div>
+
+            <div class="memorize">
+                <strong>3. عَلَيْكُمْ أَنْفُسَكُمْ</strong> ('Alaykum anfusakum) = Upon you is yourselves
+            </div>
+
+            <div class="memorize">
+                <strong>4. شَهادَةُ</strong> (Shahādah) = Testimony/witness
+            </div>
+
+            <div class="memorize">
+                <strong>5. ذَوا عَدْلٍ</strong> (Dhawā 'adl) = Two just persons
+            </div>
+
+            <div class="memorize">
+                <strong>6. مِنْ غَيْرِكُمْ</strong> (Min ghayrikum) = From outside your community
+            </div>
+
+            <div class="memorize">
+                <strong>7. اسْتَحَقَّا إِثْماً</strong> (Istahaqqā ithman) = Were guilty of sin/perjury
+            </div>
+
+            <div class="memorize">
+                <strong>8. عَلاَّمُ الْغُيُوبِ</strong> ('Allāmul-ghuyūb) = Knower of all unseen
+            </div>
+        </div>
+
+        <h2>🎓 Exam Strategy Tips</h2>
+
+        <div class="exam-alert">
+            <strong>✏️ LIKELY EXAM QUESTIONS:</strong>
+        </div>
+
+        <ol>
+            <li><strong>What was the context of verse 94?</strong> → Treaty of Hudaybiyyah, Muslims in ihram</li>
+            <li><strong>What does "bil-ghayb" mean?</strong> → Fear Allah in the unseen/when unseen</li>
+            <li><strong>Common misinterpretation of verse 105?</strong> → "Don't worry about others" - WRONG! Must try to guide.</li>
+            <li><strong>Witness requirements while traveling?</strong> → Can be from outside community (non-Muslims allowed)</li>
+            <li><strong>What is counter-testimony?</strong> → Process to challenge false testimony (v.107)</li>
+            <li><strong>Why don't prophets answer in v.109?</strong> → Defer to Allah's complete knowledge, epistemic humility</li>
+            <li><strong>Purpose of testimony oath protocol?</strong> → Deter lying through sacred accountability</li>
+            <li><strong>Historical case example?</strong> → Tameem al-Dari and the silver vessel</li>
+        </ol>
+
+        <h2>⚡ Last-Minute Review</h2>
+
+        <div class="must-know">
+            <h3>If You Remember NOTHING ELSE:</h3>
+            <ul>
+                <li>✅ V.94 = Hunting test during Hudaybiyyah, reveals who fears Allah "unseen"</li>
+                <li>✅ V.105 = NOT "ignore others" - must try to guide, but their choice ≠ your burden</li>
+                <li>✅ V.106 = Testimony: 2 just Muslims OR 2 outsiders when traveling</li>
+                <li>✅ V.107-108 = Counter-testimony possible if perjury found</li>
+                <li>✅ V.109 = Prophets defer to Allah's complete knowledge on Judgment Day</li>
+                <li>✅ Key term: بِالْغَيْبِ (bil-ghayb) = in/when unseen</li>
+                <li>✅ Theme: Tests reveal character, testimony needs safeguards, divine knowledge is absolute</li>
+            </ul>
+        </div>
+
+        <div class="exam-alert">
+            <strong>🎯 FINAL TIP:</strong> These verses connect divine testing (v.94) → individual responsibility (v.105) → human testimony systems (v.106-108) → ultimate divine knowledge (v.109). Understand the FLOW!
+        </div>
+
+    </div>
+</body>
+</html>

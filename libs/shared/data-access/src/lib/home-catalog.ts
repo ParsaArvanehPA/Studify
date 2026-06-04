@@ -37,21 +37,24 @@ export const SEMESTERS: readonly Semester[] = [
                 fa: 'تحلیل گفتمان انتقادی',
                 glyph: '🔍',
                 color: '#3BB6D6',
-                meta: '4 sessions · 4 files'
+                meta: '3 chapters · exam · 4 files',
+                courseId: 'critical-discourse-analysis'
             },
             {
                 name: 'News Translation',
                 fa: 'ترجمهٔ متون مطبوعاتی',
                 glyph: '📰',
                 color: '#E8A93C',
-                meta: '9 weeks · 44 files'
+                meta: '19 readings · 40 files',
+                courseId: 'news-translation'
             },
             {
                 name: 'Quran in Translation',
                 fa: 'ترجمهٔ قرآن',
                 glyph: '📖',
                 color: '#46C39A',
-                meta: '8 sessions · 15 files'
+                meta: '8 sessions · 15 files',
+                courseId: 'quran-in-translation'
             },
             {
                 name: 'The Way of Research',
@@ -71,7 +74,7 @@ export const SEMESTERS: readonly Semester[] = [
                 name: 'Online Journalism',
                 fa: 'روزنامه‌نگاری برخط',
                 glyph: '📰',
-                color: '#E8A93C',
+                color: '#5BA8F0',
                 meta: '8 sessions · 8 files',
                 courseId: 'online-journalism'
             },
@@ -96,4 +99,4 @@ export const SEMESTERS: readonly Semester[] = [
 ];
 
 /** Headline stats for the hero. */
-export const HOME_STATS = {semesters: 2, courses: 8, files: 88} as const;
+export const HOME_STATS = {semesters: 2, courses: 8, files: 98} as const;
