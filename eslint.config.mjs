@@ -6,7 +6,13 @@ export default [
     ...nx.configs['flat/typescript'],
     ...nx.configs['flat/javascript'],
     {
-        ignores: ['**/dist', '**/node_modules', '**/vite.config.*.timestamp*', '**/vitest.config.*.timestamp*']
+        ignores: [
+            '**/dist',
+            '**/node_modules',
+            '**/assets/**',
+            '**/vite.config.*.timestamp*',
+            '**/vitest.config.*.timestamp*'
+        ]
     },
     {
         files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
@@ -19,12 +25,7 @@ export default [
                     depConstraints: [
                         {
                             sourceTag: 'application:studify',
-                            onlyDependOnLibsWithTags: [
-                                'scope:feature',
-                                'scope:ui',
-                                'scope:data-access',
-                                'scope:utils'
-                            ]
+                            onlyDependOnLibsWithTags: ['scope:feature', 'scope:ui', 'scope:data-access', 'scope:utils']
                         },
                         {
                             sourceTag: 'scope:feature',
