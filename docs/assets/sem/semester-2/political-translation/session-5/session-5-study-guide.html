@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای مطالعه: جلسه پنجم - ساختار مقاله و اندیشه/الگو/عمل سیاسی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --accent-color: #4299e1;
+            --text-color: #1a1a1a;
+            --background-color: #ffffff;
+            --box-background: #f8f9fa;
+            --key-term-color: #e67e22;
+            --important-color: #c2185b;
+            --case-study-color: #27ae60;
+            --example-color: #f39c12;
+            --scholar-color: #6c757d;
+            --ai-color: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.9;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 48px 0 24px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 32px 0 16px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 16px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .concept-box {
+            background-color: var(--box-background);
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .concept-box h3, .concept-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .key-term {
+            background-color: #fef3e2;
+            border-right: 5px solid var(--key-term-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .key-term strong {
+            color: var(--key-term-color);
+        }
+
+        .important {
+            background-color: #fdf2f8;
+            border-right: 5px solid var(--important-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .important strong, .important h3 {
+            color: var(--important-color);
+        }
+
+        .case-study {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .case-study strong, .case-study h4 {
+            color: var(--case-study-color);
+        }
+
+        .example {
+            background-color: #fffbeb;
+            border-right: 5px solid var(--example-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .example strong {
+            color: var(--example-color);
+        }
+
+        .scholar-box {
+            background-color: #f8f9fa;
+            border-right: 5px solid var(--scholar-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .scholar-box strong, .scholar-box h3, .scholar-box h4 {
+            color: var(--scholar-color);
+        }
+
+        .ai-box {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-right: 5px solid var(--ai-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+        }
+
+        .ai-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #c4b5fd;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #6b21a8;
+        }
+
+        .ai-box p {
+            color: #4c1d95;
+            margin: 12px 0;
+        }
+
+        .ai-box ul, .ai-box ol {
+            color: #4c1d95;
+            margin: 12px 24px 12px 0;
+        }
+
+        .ai-box li {
+            margin: 8px 0;
+        }
+
+        .ai-box strong {
+            color: #7c3aed;
+        }
+
+        .question-box {
+            background-color: #ebf8ff;
+            border-right: 5px solid var(--primary-color);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .question-box strong {
+            color: var(--primary-color);
+        }
+
+        .answer-box {
+            background-color: #f0fdf4;
+            border-right: 5px solid var(--case-study-color);
+            padding: 20px 24px;
+            margin: 8px 0 24px 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .answer-box strong {
+            color: var(--case-study-color);
+        }
+
+        ul, ol {
+            margin: 16px 24px 16px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .chapter-divider {
+            text-align: center;
+            margin: 64px 0;
+            position: relative;
+        }
+
+        .chapter-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+        }
+
+        .chapter-divider span {
+            background-color: var(--background-color);
+            padding: 0 24px;
+            position: relative;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        blockquote {
+            border-right: 4px solid var(--accent-color);
+            padding-right: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        @media print {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .concept-box, .key-term, .important, .case-study, .example, .scholar-box, .question-box, .answer-box, .ai-box {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ترجمهٔ سیاسی</h1>
+        <p class="subtitle">جلسه پنجم: کارگاهِ ترجمهٔ فارسی‌به‌انگلیسی — ساختارِ مقاله، دقتِ نشانه‌گذاری و سه‌گانهٔ اندیشه/الگو/عملِ سیاسی | کارشناسی ارشد مطالعات ترجمه - دانشگاه علامه طباطبایی</p>
+
+        <div class="chapter-divider"><span>مروری بر محتوای جلسه</span></div>
+
+        <div class="concept-box">
+            <h3>درباره این جلسه</h3>
+            <p>این جلسه کارگاهِ ترجمهٔ یک مقالهٔ علمیِ فارسی (دربارهٔ <strong>اندیشهٔ سیاسی</strong>) به انگلیسی است. سه محور: (۱) <strong>ساختارِ مقالهٔ علمی</strong> (چکیده و کلیدواژه)؛ (۲) <strong>دقتِ نشانه‌گذاری و رسم‌الخط</strong> و تمایزهای واژگانی در ترجمهٔ فارسی↔انگلیسی؛ (۳) محتوای مقاله: تمایزِ <strong>اندیشهٔ سیاسیِ ثابت</strong>، <strong>الگوی سیاسی</strong> و <strong>عملِ سیاسی</strong>.</p>
+        </div>
+
+        <h2>۱. ساختارِ مقالهٔ علمی</h2>
+
+        <div class="concept-box">
+            <h3>چکیده (Abstract)</h3>
+            <p>چکیدهٔ استاندارد (۱۵۰–۲۵۰ کلمه) باید این اجزا را داشته باشد: <strong>هدفِ پژوهش</strong>، <strong>چارچوبِ نظری</strong>، <strong>مطالعهٔ موردی</strong> (در صورتِ وجود)، <strong>روش‌شناسی</strong>، و <strong>یافته‌ها</strong>. کارکردِ چکیده این است که بدونِ خواندنِ کلِ مقاله بفهمیم موضوعش چیست و آیا به کارِ پژوهشِ ما می‌آید. (هوش مصنوعی این کار را انجام می‌دهد اما <strong>قابل‌اعتماد نیست</strong> و گاه منبع و محتوای جعلی می‌سازد؛ پس باید خودمان انجام دهیم.)</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>کلیدواژه‌ها (Keywords)</h3>
+            <p>کلیدواژه‌ها مانندِ <strong>هشتگ</strong> عمل می‌کنند؛ مهم‌ترین کارکردشان <strong>نمایه‌سازی (Indexing)</strong> است: دسته‌بندیِ مقاله در پایگاه‌های داده، جست‌وجو، و ارجاعِ مقاله به داورِ متخصص. دو باورِ نادرست:</p>
+            <ul>
+                <li>«کلیدواژه باید حتماً در چکیده آمده باشد» — نادرست؛ می‌توان واژهٔ کلی‌ترِ زمینه‌ای (مثلِ «شاعرِ قرنِ بیستم») را که در متن نیامده، در کلیدواژه آورد.</li>
+                <li>«اسمِ خاص نباید در کلیدواژه بیاید» — نادرست؛ اگر نظریه‌پرداز یا اثری موضوعِ مطالعه است (مثلِ سوزان بسنت یا مونا بیکر)، آوردنش بجاست.</li>
+            </ul>
+            <p>تفاوتِ کلیدواژه با <strong>تعریفِ اصطلاحاتِ کلیدی</strong> (در پروپوزال/پایان‌نامه): در دومی باید مفهوم را تعریف و <strong>عملیاتی (Operationalize)</strong> کنیم؛ یعنی تعریف را متناسب با بافتِ کارِ خود (مثلاً ترجمهٔ فارسی↔انگلیسی) مشخص کنیم.</p>
+        </div>
+
+        <h2>۲. دقتِ نشانه‌گذاری و رسم‌الخط</h2>
+
+        <div class="important">
+            <h3>نشانه‌گذاری «تزئین» نیست</h3>
+            <p>علائمِ سجاوندی به‌اندازهٔ تک‌تکِ واژه‌ها مهم‌اند و می‌توانند معنا را دگرگون کنند. نمونهٔ مشهور: «عفو لازم نیست، اعدامش کنید» در برابر «عفو، لازم نیست اعدامش کنید» — جای یک ویرگول، جانِ یک نفر را تعیین می‌کند. (نمونهٔ انگلیسی: دعوای «کامارو/کامایِ یک‌میلیون‌دلاری» در یک قرارداد.)</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>ویرگولِ آکسفورد (Oxford Comma)</h3>
+            <p>در فهرستِ بیش از دو عضو، گذاشتنِ ویرگول پیش از «و»ِ آخر (انتزاعی، کلی، و دائمی) صحیح‌تر است. نبودِ آن می‌تواند دو عضوِ آخر را «یک واحد» جلوه دهد (مثلاً «رضا، علی، محمود، حسن و حسین» — گویی حسن و حسین یک واحدند). این تفاوتِ ظریف، دلالتِ متفاوتی ایجاد می‌کند.</p>
+        </div>
+
+        <div class="key-term">
+            <strong>گیومه (Quotation Marks):</strong> گیومه یعنی «این سخن از آنِ دیگری است و من به آن ارجاع می‌دهم». نبودِ گیومه یعنی سخن از آنِ خودِ توست — و می‌تواند به اتهامِ سرقتِ ادبی بینجامد. در معرفیِ اصطلاحاتِ تخصصی، بارِ اول داخلِ گیومه می‌آیند؛ دفعاتِ بعد دیگر لازم نیست.
+        </div>
+
+        <div class="concept-box">
+            <h3>قراردادهای ترجمهٔ فارسی↔انگلیسی</h3>
+            <ul>
+                <li><strong>ترتیبِ استانداردِ جمله:</strong> در انگلیسی اجزای جمله را پشتِ‌سرِ هم و استاندارد بیاوریم (Subject + verb...) و تکه‌تکه نکنیم.</li>
+                <li><strong>حذفِ زوائد:</strong> دونقطه، «و»، و گیومه‌های غیرضروری را حذف کنیم.</li>
+                <li><strong>معرفیِ نام:</strong> بارِ اول نامِ کاملِ نویسنده/نظریه‌پرداز؛ دفعاتِ بعد فقط نامِ خانوادگی.</li>
+                <li><strong>نیم‌فاصله:</strong> در فارسی، بیشترِ پسوندها (مثلِ «ها» در «کتاب‌ها») و فعل‌های مرکب (مثلِ «پی‌بردن») با نیم‌فاصله نوشته می‌شوند تا واژه‌سازیِ زبان حفظ شود (سبکِ جداسازیِ رضا امیرخانی: «هم‌سر»، «ره‌بر»).</li>
+            </ul>
+        </div>
+
+        <div class="case-study">
+            <h4>تمایزِ واژگانی و ریشه‌شناسی: Government در برابر Governance</h4>
+            <p><strong>Government</strong> (با پسوندِ ment ← establishment/نهاد) یعنی «حکومت/دولت»؛ <strong>Governance</strong> (با پسوندِ ance ← act of/عمل) یعنی «حکمرانی، عملِ اداره‌کردن». درس: یادگیریِ <strong>ریشه‌شناسی (Etymology)</strong> و معنای پیشوند/پسوند، دایرهٔ واژگان را چند برابر می‌کند و پیوندِ واژه‌ها را آشکار می‌سازد (progress/regress/digress از ریشهٔ gress = حرکت). نکتهٔ ترجمه: هرجا ممکن است، معادلِ فارسیِ مأنوس را بر معادلِ عربی ترجیح دهیم (سرچشمه به‌جای منشأ/نشئت).</p>
+        </div>
+
+        <h2>۳. محتوای مقاله: سه‌گانهٔ اندیشه/الگو/عمل</h2>
+
+        <div class="scholar-box">
+            <h4>تفکیکِ سه مفهوم</h4>
+            <table>
+                <tr><th>مفهوم</th><th>تعریف</th></tr>
+                <tr><td><strong>اندیشهٔ سیاسیِ ثابت</strong><br>(Fixed Political Thought)</td><td>مجموعه گزاره‌های <strong>انتزاعی، کلی و دائمی</strong> در حوزهٔ سیاست که ناظر به زمان و مکانِ خاص نیست.</td></tr>
+                <tr><td><strong>الگوی سیاسی</strong><br>(Political Model/Pattern)</td><td>مجموعه گزاره‌های <strong>عینی/ملموس</strong> که بر اساسِ اندیشهٔ ثابت، برای <strong>بافتِ سیاسیِ خاص</strong> (زمان و مکانِ معین) ساخته می‌شود و الگوی حکومتیِ مطلوب و مقدورِ آن عصر را بیان می‌کند.</td></tr>
+                <tr><td><strong>عملِ سیاسی</strong><br>(Political Action/Practice)</td><td>آنچه در عمل، در چارچوبِ الگوی سیاسی، اتفاق می‌افتد.</td></tr>
+            </table>
+        </div>
+
+        <div class="important">
+            <h3>رابطهٔ سه مفهوم</h3>
+            <p>از <strong>عملِ سیاسی</strong> می‌توان به <strong>الگوی سیاسی</strong> پی برد، اما به‌سختی می‌توان به <strong>اندیشهٔ سیاسیِ ثابت</strong> رسید؛ زیرا اندیشهٔ ثابت بسیار ژرف‌تر از تک‌تکِ عمل‌هاست. (قیاسِ شعرِ مشهور: «هر عیب که هست در مسلمانیِ ماست / اسلام به ذاتِ خود ندارد عیبی» — از عملِ یک فرد نمی‌توان به ذاتِ آن اندیشه/دین پی برد.)</p>
+        </div>
+
+        <div class="case-study">
+            <h4>نمونه: ترامپ، دموکراسی و الگوی سیاسی</h4>
+            <p>«دموکراسی» اندیشهٔ سیاسیِ ثابتِ مشترکِ آمریکا و انگلستان است، اما <strong>الگوهای سیاسیِ</strong> متفاوتی دارند (آمریکا: رئیس‌جمهور + کنگره؛ انگلستان: پادشاهی + نخست‌وزیر + پارلمان). از عملِ سیاسیِ ترامپ می‌توان به الگوی سیاسیِ خاصِ آمریکا (لیبرال‌دموکراسی‌ای که در آن، با صرفِ پولِ بیشتر و نظامِ آرای الکترال می‌توان رئیس‌جمهور شد) پی برد — اما نمی‌توان او را محصولِ «دموکراسی» به‌طورِ کلی دانست. (به همین دلیل آمریکایی‌ها می‌گویند رفتارِ او در «قانونِ اساسی و عرفِ سیاسیِ» ما نیست — یعنی عملِ فردی را نباید به اندیشهٔ ثابت نسبت داد.)</p>
+        </div>
+
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <span>✦ چرا این ریزه‌کاری‌ها برای مترجم حیاتی‌اند؟</span>
+            </div>
+            <ul>
+                <li>یک ویرگول یا گیومه می‌تواند معنا را وارونه یا مترجم را متهم به سرقتِ ادبی کند.</li>
+                <li>شناختِ ریشه و پسوند (ment/ance) مرزِ ظریفِ مفاهیم (government/governance) را در ترجمه حفظ می‌کند.</li>
+                <li>تفکیکِ «اندیشه/الگو/عمل» به مترجمِ متنِ سیاسی کمک می‌کند سطحِ گزاره‌ها را اشتباه نگیرد و عملِ فردی را به اندیشهٔ کلی فرونکاهد.</li>
+                <li>هوش مصنوعی این دقت و قضاوت را ندارد و منبع جعل می‌کند؛ پس داوریِ انسانیِ مترجم جایگزین‌ناپذیر است.</li>
+            </ul>
+        </div>
+
+        <div class="chapter-divider"><span>سوالات امتحانی</span></div>
+
+        <h2>پرسش و پاسخ برای آمادگی امتحان</h2>
+
+        <div class="question-box">
+            <strong>سؤال ۱:</strong> اجزای یک چکیدهٔ استاندارد را نام ببرید و بگویید کارکردِ چکیده چیست.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> اجزا: هدفِ پژوهش، چارچوبِ نظری، مطالعهٔ موردی (در صورتِ وجود)، روش‌شناسی، و یافته‌ها. کارکرد: بدونِ خواندنِ کلِ مقاله بفهمیم موضوعش چیست و آیا به کارِ پژوهشِ ما می‌آید. (هوش مصنوعی این کار را قابل‌اعتماد انجام نمی‌دهد و منبع جعل می‌کند.)
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۲:</strong> کارکردِ اصلیِ کلیدواژه‌ها چیست و دو باورِ نادرست دربارهٔ آن‌ها کدام است؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> کارکردِ اصلی: <strong>نمایه‌سازی</strong> (مثلِ هشتگ) برای دسته‌بندی، جست‌وجو در پایگاه‌های داده و ارجاع به داور. باورهای نادرست: ۱) «کلیدواژه باید حتماً در چکیده آمده باشد» (نادرست؛ می‌توان واژهٔ زمینه‌ایِ کلی‌تر را آورد)؛ ۲) «اسمِ خاص نباید بیاید» (نادرست؛ اگر نظریه‌پرداز/اثر موضوعِ مطالعه است، بجاست).
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۳:</strong> چرا نشانه‌گذاری «تزئینِ متن» نیست؟ با مثال توضیح دهید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چون به‌اندازهٔ تک‌تکِ واژه‌ها معنا دارد و می‌تواند معنا را وارونه کند. نمونه: «عفو لازم نیست، اعدامش کنید» در برابر «عفو، لازم نیست اعدامش کنید» — جای یک ویرگول جانِ یک نفر را تعیین می‌کند. ویرگولِ آکسفورد هم در فهرست، از یکی‌شدنِ ناخواستهٔ دو عضوِ آخر جلوگیری می‌کند.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۴:</strong> تفاوتِ government و governance را با اشاره به پسوندهایشان توضیح دهید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> <strong>government</strong> با پسوندِ ment (به establishment/نهاد برمی‌گردد) یعنی «حکومت/دولت»؛ <strong>governance</strong> با پسوندِ ance (به act of/عمل برمی‌گردد) یعنی «حکمرانی، عملِ اداره‌کردن». شناختِ ریشه و پسوند، این مرزِ ظریف را در ترجمه حفظ می‌کند و دایرهٔ واژگان را چند برابر می‌سازد.
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۵:</strong> سه مفهومِ «اندیشهٔ سیاسیِ ثابت»، «الگوی سیاسی» و «عملِ سیاسی» را تعریف کنید و رابطه‌شان را بگویید.
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> <strong>اندیشهٔ سیاسیِ ثابت</strong>: گزاره‌های انتزاعی، کلی و دائمیِ غیروابسته به زمان/مکان. <strong>الگوی سیاسی</strong>: گزاره‌های عینی که بر اساسِ اندیشهٔ ثابت برای بافتِ خاص ساخته می‌شود. <strong>عملِ سیاسی</strong>: آنچه در چارچوبِ الگو در عمل رخ می‌دهد. رابطه: از عمل می‌توان به الگو پی برد، اما به‌سختی به اندیشهٔ ثابت (اندیشه ژرف‌تر از تک‌تکِ عمل‌هاست؛ مانندِ «هر عیب که هست در مسلمانیِ ماست»).
+        </div>
+
+        <div class="question-box">
+            <strong>سؤال ۶:</strong> چرا نمی‌توان ترامپ را «محصولِ دموکراسی» به‌طورِ کلی دانست؟
+        </div>
+        <div class="answer-box">
+            <strong>پاسخ:</strong> چون «دموکراسی» اندیشهٔ سیاسیِ ثابتِ مشترک (آمریکا و انگلستان) است، اما الگوهای سیاسیِ متفاوتی دارد. ترامپ محصولِ <strong>الگوی سیاسیِ خاصِ آمریکا</strong>ست (لیبرال‌دموکراسی‌ای که در آن با پولِ بیشتر و نظامِ آرای الکترال می‌توان رئیس‌جمهور شد)، نه محصولِ دموکراسی به‌طورِ کلی. عملِ فردی را نباید به اندیشهٔ ثابت فروکاست.
+        </div>
+
+        <div class="concept-box">
+            <h4>نکات کلیدی برای مرور</h4>
+            <ul>
+                <li>چکیده: هدف، چارچوب نظری، مطالعهٔ موردی، روش، یافته‌ها</li>
+                <li>کلیدواژه = هشتگ برای نمایه‌سازی؛ تعریف و عملیاتی‌کردنِ اصطلاحات</li>
+                <li>نشانه‌گذاری معنا می‌سازد: ویرگولِ «عفو...»؛ ویرگولِ آکسفورد؛ گیومه و سرقتِ ادبی</li>
+                <li>قراردادها: ترتیبِ استاندارد، حذفِ زوائد، نامِ کامل بارِ اول، نیم‌فاصله</li>
+                <li>government (نهاد) vs governance (عملِ حکمرانی)؛ ریشه‌شناسی</li>
+                <li>اندیشهٔ ثابت ← الگوی سیاسی ← عملِ سیاسی؛ از عمل به اندیشهٔ ثابت نمی‌توان پی برد</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
