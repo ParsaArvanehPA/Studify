@@ -13,7 +13,7 @@
         h3 { color: #5b4bd6; margin: 20px 0 10px 0; padding-left: 15px; border-left: 4px solid #6c5ce7; font-size: 18px; }
         .key-concept { background: #ece9ff; border-left: 4px solid #6c5ce7; padding: 15px; margin: 15px 0; border-radius: 0 5px 5px 0; }
         .exam-tip { background: #ffeaa7; border: 2px solid #fdcb6e; padding: 15px; margin: 15px 0; border-radius: 5px; }
-        .exam-tip::before { content: "\1F3AF KEY POINT: "; font-weight: bold; color: #d63031; }
+        .exam-tip::before { content: "🎯 KEY POINT: "; font-weight: bold; color: #d63031; }
         table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         th { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 12px; text-align: left; font-weight: 600; }
         td { padding: 12px; border-bottom: 1px solid #ddd; }
@@ -22,17 +22,15 @@
         li { margin: 8px 0; line-height: 1.5; }
         .checklist { background: #fff9e6; padding: 20px; border-radius: 5px; margin: 15px 0; }
         .checklist li { list-style-type: none; padding-left: 25px; position: relative; }
-        .checklist li::before { content: "\2610"; position: absolute; left: 0; color: #f39c12; font-size: 18px; }
+        .checklist li::before { content: "☐"; position: absolute; left: 0; color: #f39c12; font-size: 18px; }
         .definition { background: #eef2ff; border-left: 4px solid #5b4bd6; padding: 12px; margin: 10px 0; font-style: italic; }
         .definition strong { color: #5b4bd6; font-style: normal; }
         .scholar { background: #f3f0ff; padding: 10px; margin: 10px 0; border-radius: 3px; border-left: 3px solid #a29bfe; }
         .quote { border-left: 4px solid #95a5a6; padding-left: 15px; margin: 15px 0; font-style: italic; color: #555; }
         .debate-box { background: #ffefd5; border: 2px solid #ff6347; padding: 15px; margin: 15px 0; border-radius: 5px; }
-        .debate-box::before { content: "\26A1 DEBATE: "; font-weight: bold; color: #c0392b; }
+        .debate-box::before { content: "⚡ DEBATE: "; font-weight: bold; color: #c0392b; }
         .question-box { background: #ece9ff; border-left: 5px solid #6c5ce7; padding: 20px 24px; margin: 24px 0 8px 0; border-radius: 0 8px 8px 0; }
-        .question-box strong { color: #5b4bd6; }
         .answer-box { background: #f0fdf4; border-left: 5px solid #27ae60; padding: 20px 24px; margin: 8px 0 24px 0; border-radius: 0 8px 8px 0; }
-        .answer-box strong { color: #27ae60; }
         .page-break { page-break-after: always; }
         @media print { body { background: white; padding: 0; } .container { box-shadow: none; padding: 20px; } }
     </style>
@@ -40,65 +38,201 @@
 <body>
     <div class="container">
         <h1>Equivalence and Equivalent Effect</h1>
-        <p style="text-align:center;color:#7f8c8d;margin-bottom:30px;"><strong>Study Guide &middot; Jeremy Munday, Introducing Translation Studies (2016), Ch. 3</strong><br>Jakobson, Nida, Newmark and Koller on meaning and equivalence</p>
-        <h2>1. Core Argument</h2>
-        <div class="key-concept"><strong>Central thesis:</strong> To escape the old <strong>literal vs. free</strong> debate, theorists of the 1950s–60s pursued a more systematic analysis centred on <strong>meaning</strong> and <strong>equivalence</strong>. The chapter runs from Jakobson through Nida's <strong>formal/dynamic equivalence</strong> and the <strong>principle of equivalent effect</strong>, Newmark's <strong>semantic/communicative</strong> translation, and Koller's five <strong>equivalence relations</strong>.</div>
-        <div class="exam-tip">The core exam items are Nida's formal vs. dynamic equivalence + equivalent effect, Newmark's semantic vs. communicative translation, and Koller's five equivalence types — plus the criticisms of equivalent effect.</div>
-        <h2>2. Jakobson: Linguistic Meaning and Equivalence</h2>
-        <div class="definition"><strong>Signifier / signified (Saussure):</strong> The signifier is the spoken/written signal; the signified is the concept. Together they form the linguistic <strong>sign</strong>, which is <strong>arbitrary</strong><br><br><strong>Key claim:</strong> 'There is ordinarily <strong>no full equivalence</strong> between code-units' (e.g. Russian <em>syr</em> is not identical to English <em>cheese</em>, which excludes cottage cheese = <em>tvarog</em>)</div>
-        <div class="key-concept"><strong>Translatability:</strong> Interlingual translation substitutes <strong>whole messages</strong>, not separate code-units. Jakobson: 'Languages differ essentially in what they <strong>must</strong> convey and not in what they <strong>may</strong> convey' (differences of gender, aspect, semantic fields). '<strong>All is conveyable in any existing language</strong>' — only <strong>poetry</strong>, with its unity of form and sense, is 'untranslatable' and requires 'creative transposition'.</div>
+        <p style="text-align:center;color:#7f8c8d;margin-bottom:30px;">
+            <strong>Study Guide · Jeremy Munday, Introducing Translation Studies (2016), Ch. 3</strong><br>
+            From Jakobson to Koller — the search for a systematic theory of equivalence, with case studies
+        </p>
+
+        <h2>1. What This Chapter Is Actually About</h2>
+
+        <div class="key-concept">
+            <strong>The big picture:</strong> The old "literal vs. free" debate was going nowhere — it was too vague, too subjective. So in the 1950s and 1960s, translation theorists tried to get more systematic. They started talking about <strong>meaning</strong> and <strong>equivalence</strong>. This chapter traces that journey: from Jakobson's linguistic take on equivalence, through Nida's famous formal/dynamic distinction and the principle of equivalent effect, to Newmark's semantic/communicative translation and Koller's five equivalence relations. Then there are case studies (Genesis 1, the Treaty of Maastricht) that show these concepts in action.
+        </div>
+
+        <div class="exam-tip">
+            The three things you MUST know from this chapter: (1) Nida's formal vs. dynamic equivalence + equivalent effect, (2) Newmark's semantic vs. communicative translation, (3) Koller's five equivalence types. The Genesis case study is the best concrete example of formal vs. dynamic in action — bring it up in your essay.
+        </div>
+
+        <h2>2. Roman Jakobson: Meaning Between Languages</h2>
+
+        <div class="key-concept">
+            <strong>Key claim:</strong> "There is ordinarily no <strong>full equivalence</strong> between code-units." Russian <em>syr</em> isn't identical to English "cheese" — because <em>syr</em> doesn't include cottage cheese (that's <em>tvarog</em>). Translation substitutes <strong>whole messages</strong>, not separate code-units.
+        </div>
+
+        <p>Jakobson draws on Saussure's distinction between <strong>signifier</strong> (the sound/written signal) and <strong>signified</strong> (the concept) — together they make the linguistic <strong>sign</strong>, which is arbitrary. The sign "cheese" could just as easily have been "bread" or anything else.</p>
+
+        <p>But here's where it gets theoretical: there's a tension between <strong>linguistic universalism</strong> (languages differ in surface form but share underlying ways of thinking) and <strong>linguistic determinism</strong> (the Sapir-Whorf hypothesis — language shapes thought). If determinism were absolute, translation would be impossible. But translation happens all the time, so...</p>
+
+        <div class="scholar">
+            <strong>Jakobson's resolution:</strong> "Languages differ essentially in what they <strong>must</strong> convey and not in what they <strong>may</strong> convey" — some languages force you to specify gender, aspect, etc. But "all is conveyable in any existing language." The exception? <strong>Poetry</strong>, where form and sense are fused — that requires "creative transposition," not translation.
+        </div>
+
         <h2>3. Nida and the Science of Translating</h2>
-        <div class="scholar"><strong>The influence of Chomsky</strong><br>Nida borrows Chomsky's <strong>generative-transformational grammar</strong>. The ST surface structure is analysed into <strong>kernels</strong> (basic structural elements) by <strong>back-transformation</strong>, then transferred and <strong>restructured</strong> into the TT surface structure — a three-stage model: <strong>analysis → transfer → restructuring</strong>. Four functional classes: events, objects, abstracts, relationals.</div>
-        <div class="definition"><strong>Linguistic meaning:</strong> The relationship between linguistic structures (e.g. <em>his house</em> = possession vs <em>his kindness</em> = quality)<br><br><strong>Referential meaning:</strong> The denotative 'dictionary' meaning (son = male child)<br><br><strong>Emotive/connotative meaning:</strong> The associations a word produces ('Don't worry, son' = endearment)</div>
-        <div class="key-concept"><strong>Techniques of meaning analysis:</strong> <strong>Hierarchical structuring</strong> (superordinate <em>animal</em> vs hyponyms), <strong>componential analysis</strong> (plotting kinship terms by sex, generation, lineality), and <strong>semantic structure analysis</strong> (the many senses of <em>spirit</em>), all stressing that meaning is 'conditioned' by context.</div>
-        <div class="key-concept"><strong>Formal vs. Dynamic Equivalence:</strong> Nida discards 'literal/free/faithful' for <strong>two basic orientations</strong>:</div>
+
+        <h3>The Chomsky Connection</h3>
+        <div class="key-concept">
+            Nida was inspired by Chomsky's <strong>generative-transformational grammar</strong>. His three-stage model: <strong>analysis → transfer → restructuring</strong>. The ST surface structure is analysed into <strong>kernels</strong> (basic structural elements) by a process of <strong>back-transformation</strong>, then transferred, then restructured into TT surface structure. Four functional classes: <strong>events</strong> (often verbs), <strong>objects</strong> (nouns), <strong>abstracts</strong> (adjectives/adverbs), <strong>relationals</strong> (prepositions, conjunctions).
+        </div>
+
+        <p>Example: "will of God" — back-transformation = "B (object, God) performs A (event, wills)." "Creation of the world" = "B (the world) is performed by A (event, creates)." Nida claims all languages have 6-12 basic kernel structures and agree more on kernels than on surface structures.</p>
+
+        <h3>Three Kinds of Meaning</h3>
+        <div class="definition">
+            <strong>Linguistic meaning:</strong> relationships between structures — "his house" (possession) ≠ "his journey" (he performs) ≠ "his kindness" (a quality of him)
+        </div>
+        <div class="definition">
+            <strong>Referential meaning:</strong> the denotative, dictionary meaning (son = male child)
+        </div>
+        <div class="definition">
+            <strong>Emotive/connotative meaning:</strong> the associations words carry ("Don't worry, son" = endearment or condescension, depending on context)
+        </div>
+
+        <p>Nida developed techniques for analysing meaning: <strong>hierarchical structuring</strong> (animal → goat, dog, cow), <strong>componential analysis</strong> (plotting kinship terms by sex, generation, lineality — useful for languages with different kinship systems), and <strong>semantic structure analysis</strong> (separating out the different senses of "spirit": demons, angels, gods, ghost, ethos, alcohol — meaning is "conditioned" by context).</p>
+
+        <h3>Formal vs. Dynamic Equivalence — THE KEY CONCEPT</h3>
+
+        <div class="key-concept">
+            Nida dumps the old "literal/free/faithful" vocabulary and replaces it with TWO basic orientations:
+        </div>
+
         <ul>
-            <li><strong>Formal equivalence</strong> (later 'formal correspondence') — focuses on the <strong>message itself, in form and content</strong>; ST-oriented; typical of 'gloss translations' with footnotes, giving access to source language and customs</li>
-            <li><strong>Dynamic equivalence</strong> (later 'functional') — based on the <strong>principle of equivalent effect</strong>: 'the relationship between receptor and message should be substantially the same as that between the original receptors and the message'; aims at 'complete <strong>naturalness</strong> of expression', the 'closest natural equivalent'</li>
+            <li><strong>Formal equivalence</strong> (later "formal correspondence"): focuses on the <strong>message itself, in both form and content</strong>. ST-oriented. Typical of "gloss translations" with footnotes, giving the reader close access to the source language and customs. Used in academic/legal contexts.</li>
+            <li><strong>Dynamic equivalence</strong> (later "functional"): based on the <strong>principle of equivalent effect</strong> — the relationship between the receptor and the message should be "substantially the same" as that between the original receptors and the message. Aims at "complete <strong>naturalness</strong> of expression" and "the <strong>closest natural equivalent</strong>." The message is tailored to the receptor's linguistic needs and cultural expectations.</li>
         </ul>
-        <div class="key-concept"><strong>Four basic requirements + priority rule:</strong> A translation must: (1) make sense; (2) convey the spirit and manner of the original; (3) have a natural and easy form; (4) produce a similar response. As a general rule, <strong>'correspondence in meaning must have priority over correspondence in style'</strong>.</div>
-        <div class="debate-box">Criticisms: Lefevere — equivalence too word-focused; van den Broeck &amp; Larose — equivalent <strong>effect/response is impossible</strong> (how can it be measured, and how can a text have the same effect in two different cultures and times?). Gentzler attacks Nida's theological, proselytizing standpoint; ironically some religious groups find dynamic equivalence near-sacrilegious. The famous case: 'greet one another with a holy kiss' → 'give one another a hearty handshake all round'.</div>
-        <div class="page-break"></div>
+
+        <div class="definition">
+            <strong>Nida's four requirements for a translation:</strong> (1) making sense; (2) conveying the spirit and manner of the original; (3) having a natural and easy form; (4) producing a similar response. The priority rule: <strong>"correspondence in meaning must have priority over correspondence in style."</strong>
+        </div>
+
+        <h3>The Criticism</h3>
+        <div class="debate-box">
+            Equivalent effect has been heavily criticized. Van den Broeck and Larose: How do you MEASURE "effect"? How can a text have the SAME effect in two different cultures and times? Qian Hu (in a series of Meta articles, 1992-94) demonstrated the "implausibility" of equivalent response, especially when meaning is bound up in form. Gentzler attacks Nida from a deconstructionist perspective: dynamic equivalence is designed to convert receptors to Protestant Christianity. Ironically, some religious groups ALSO attack Nida — for being TOO free with the Word of God. The famous controversial example: "greet one another with a holy kiss" → "give one another a hearty handshake all round."
+        </div>
+
         <h2>4. Newmark: Semantic and Communicative Translation</h2>
-        <div class="definition"><strong>Communicative translation:</strong> Attempts to produce on its readers an effect <strong>as close as possible</strong> to that on the readers of the original (resembles Nida's dynamic equivalence)<br><br><strong>Semantic translation:</strong> Attempts to render, as closely as syntax allows, the <strong>exact contextual meaning</strong> of the original (resembles formal equivalence)</div>
-        <div class="key-concept"><strong>Newmark's departure from Nida:</strong> Newmark feels equivalent effect is <strong>'illusory'</strong> and that the conflict of loyalties (source vs. target) is the overriding problem. Semantic translation stays within the SL culture, is more complex and detailed (tends to overtranslate), suits serious literature; communicative translation transfers foreign elements to the TL culture, is smoother (tends to undertranslate), suits the majority of texts. Where equivalent effect is secured, he holds <strong>literal word-for-word translation to be 'the only valid method'</strong>; where the two conflict, communicative translation wins (e.g. <em>bissiger Hund</em> → 'beware of the dog!', not 'dog that bites!').</div>
-        <h2>5. Koller: Equivalence Relations</h2>
-        <div class="definition"><strong>Correspondence:</strong> Belongs to <strong>contrastive linguistics</strong>; compares two language systems (Saussure's <em>langue</em>); e.g. identifying false friends<br><br><strong>Equivalence:</strong> Relates to equivalent items in specific <strong>ST–TT pairs</strong> and contexts (Saussure's <em>parole</em>)</div>
-        <div class="key-concept"><strong>Koller's five types of equivalence:</strong> Constrained by 'double linkage' (the ST on one side, the receiver's communicative conditions on the other):</div>
-        <ul>
-            <li><strong>Denotative</strong> — the extralinguistic content ('content invariance')</li>
-            <li><strong>Connotative</strong> — lexical choices, near-synonyms ('stylistic equivalence')</li>
-            <li><strong>Text-normative</strong> — text-type norms (linked to Reiss)</li>
-            <li><strong>Pragmatic</strong> ('communicative') — oriented to the receiver (= Nida's dynamic equivalence)</li>
-            <li><strong>Formal</strong> — form and aesthetics, wordplay, individual style ('expressive equivalence'; not to be confused with Nida's 'formal equivalence')</li>
-        </ul>
-        <div class="exam-tip">The equivalence types are <strong>hierarchically ordered</strong> by the needs of the communicative situation: the translator tries denotative first, then moves up (connotative, text-normative...) as needed.</div>
-        <h2>6. Later Developments in Equivalence</h2>
-        <div class="scholar"><strong>Pym: natural vs. directional equivalence</strong><br><strong>Natural</strong> equivalence — identifying naturally-occurring terms in SL and TL (as in glossaries/term bases). <strong>Directional</strong> equivalence — rendering ST meaning in the TT (as translation memories impose existing equivalents via exact/fuzzy matches).</div>
-        <div class="debate-box">Equivalence remains central but criticised for <strong>circularity</strong> (Kenny: 'equivalence defines translation, and translation defines equivalence'). Bassnett: translation involves far more than replacing lexical/grammatical items. In descriptive studies the contentious <em>tertium comparationis</em> (the invariant against which segments are measured) entails inevitable subjectivity. Toury shuns a prescriptive definition, instead identifying the web of relations between ST and TT.</div>
-        <h2>Exam Q&amp;A &middot; Check Yourself</h2>
-        <div class="question-box"><strong>Q:</strong> Distinguish Nida's formal and dynamic equivalence.</div>
-        <div class="answer-box"><strong>A:</strong> <strong>Formal equivalence</strong> focuses on the message itself in form and content, is ST-oriented and often uses gloss translations with footnotes. <strong>Dynamic equivalence</strong> is based on the principle of equivalent effect, aims at complete naturalness and the closest natural equivalent, tailoring the message to the receptor.</div>
-        <div class="question-box"><strong>Q:</strong> What is the 'principle of equivalent effect' and why is it criticised?</div>
-        <div class="answer-box"><strong>A:</strong> The relationship between receptor and message should be substantially the same as that between the original receptors and the message. Critics (van den Broeck, Larose) argue effect/response is <strong>impossible to measure</strong> and a text cannot produce the same effect across different cultures and times.</div>
-        <div class="question-box"><strong>Q:</strong> Compare Newmark's semantic and communicative translation.</div>
-        <div class="answer-box"><strong>A:</strong> <strong>Semantic</strong> translation renders the exact contextual meaning as closely as syntax allows, stays within the SL culture and tends to overtranslate (serious literature). <strong>Communicative</strong> translation aims at an effect as close as possible to the original's, transfers foreign elements to the TL culture, and tends to undertranslate (most texts).</div>
-        <div class="question-box"><strong>Q:</strong> List Koller's five equivalence relations.</div>
-        <div class="answer-box"><strong>A:</strong> <strong>Denotative</strong> (content), <strong>connotative</strong> (lexical/stylistic choices), <strong>text-normative</strong> (text-type norms), <strong>pragmatic</strong> (receiver-oriented = Nida's dynamic), and <strong>formal</strong> (form/aesthetics/wordplay). They are hierarchically ordered by communicative need.</div>
-        <div class="question-box"><strong>Q:</strong> How does Jakobson treat translatability and poetry?</div>
-        <div class="answer-box"><strong>A:</strong> He holds that 'all is conveyable in any existing language' because interlingual translation substitutes whole messages, not code-units — languages differ in what they <em>must</em> convey. Only <strong>poetry</strong>, with its unity of form and sense, is 'untranslatable' and requires 'creative transposition'.</div>
-        <h2>Key Scholars &amp; Contributions</h2>
+
+        <div class="key-concept">
+            Peter Newmark felt that equivalent effect was "illusory." He proposed his own pair: <strong>semantic</strong> vs. <strong>communicative</strong> translation.
+        </div>
+
         <table>
-            <tr><th>Scholar</th><th>Year</th><th>Key contribution</th></tr>
-            <tr><td>Roman Jakobson</td><td>1959</td><td>No full equivalence between code-units; 'all is conveyable'</td></tr>
-            <tr><td>Eugene Nida</td><td>1964</td><td>Formal &amp; dynamic equivalence; equivalent effect</td></tr>
-            <tr><td>Nida &amp; Taber</td><td>1969</td><td>Analysis–transfer–restructuring; kernels</td></tr>
-            <tr><td>Peter Newmark</td><td>1981</td><td>Semantic &amp; communicative translation</td></tr>
-            <tr><td>Werner Koller</td><td>1979/1995</td><td>Five equivalence relations; correspondence vs equivalence</td></tr>
-            <tr><td>Anthony Pym</td><td>2007</td><td>Natural vs directional equivalence</td></tr>
-            <tr><td>Gideon Toury</td><td>1995</td><td>Rejects prescriptive equivalence; web of relations</td></tr>
+            <tr><th>Parameter</th><th>Semantic Translation</th><th>Communicative Translation</th></tr>
+            <tr><td>Focus</td><td>Thought processes of the transmitter (author)</td><td>TT reader, oriented to specific language/culture</td></tr>
+            <tr><td>Culture</td><td>Stays within SL culture</td><td>Transfers foreign elements into TL culture</td></tr>
+            <tr><td>Relation to ST</td><td>Always "inferior" to ST; "loss" of meaning</td><td>May be "better" than ST; "gain" in force and clarity</td></tr>
+            <tr><td>TL form</td><td>More complex, detailed, tends to overtranslate</td><td>Smoother, simpler, tends to undertranslate</td></tr>
+            <tr><td>Best for</td><td>Serious literature, autobiography, important political statements</td><td>Most texts: technical, informative, publicity, popular fiction</td></tr>
         </table>
-        <div style="text-align:center;margin-top:40px;padding:20px;background:#f8f9fa;border-radius:5px;"><strong>Equivalence replaced the literal–free debate. Master Nida (formal vs dynamic + equivalent effect), Newmark (semantic vs communicative) and Koller's five types — and the standing criticism that 'equivalent effect' can never really be measured.</strong></div>
+
+        <div class="exam-tip">
+            Newmark's rule: where equivalent effect IS secured, literal translation is "not only the best, it is the only valid method." Where there's conflict, communicative translation wins — e.g., <em>bissiger Hund</em> → "beware of the dog!" not "dog that bites!"
+        </div>
+
+        <h2>5. Koller: Five Equivalence Relations</h2>
+
+        <div class="key-concept">
+            Werner Koller distinguished <strong>correspondence</strong> (contrastive linguistics, comparing language systems — <em>langue</em>) from <strong>equivalence</strong> (specific ST-TT pairs and contexts — <em>parole</em>). He then identified five types of equivalence, constrained by "double linkage" (the ST on one side, the receiver's needs on the other):
+        </div>
+
+        <ul>
+            <li><strong>Denotative</strong> — the extralinguistic content ("content invariance"). First thing to try.</li>
+            <li><strong>Connotative</strong> — lexical choices, near-synonyms. One of the hardest problems, often only approximate. Includes formality, social usage, geographical origin, stylistic effect, frequency, evaluation, emotion.</li>
+            <li><strong>Text-normative</strong> — text-type norms. Different text types behave differently (linked to Reiss's work).</li>
+            <li><strong>Pragmatic</strong> ("communicative") — oriented toward the receiver. = Nida's dynamic equivalence. Can override other requirements.</li>
+            <li><strong>Formal</strong> ("expressive") — form, aesthetics, wordplay, rhyme, metaphor. NOT the same as Nida's "formal equivalence." Requires creativity.</li>
+        </ul>
+
+        <div class="key-concept">
+            <strong>Worked example:</strong> "I had wanted for years to get Mrs Thatcher in front of my camera. As she got more powerful she got sort of sexier." If translated denotatively into Arabic, "sexy" might convey "pornographic." Connotative (e.g., "attractiveness") is better but too direct for a magazine. Text-normative requires less direct phrasing. Pragmatic — the translator might choose "attractive femininity" or add "so to speak." Formal equivalence would need creative stylistic forms in the TL.
+        </div>
+
+        <h2>6. Case Study 1: Genesis 1 — Formal vs. Dynamic in Action</h2>
+
+        <div class="key-concept">
+            This is the best practical example of what Nida was talking about. Three English versions of the same Hebrew passage:
+        </div>
+
+        <p><strong>KJV (1611):</strong> "In the beginning God created the heaven and the earth. And the earth was <strong>without form, and void</strong>; and darkness was upon the <strong>face of the deep</strong>. And the <strong>Spirit of God</strong> moved upon the <strong>face of the waters</strong>." <br><em>→ Closest to formal equivalence. Retains the Hebrew metaphor "face of..." Uses "Spirit of God." Repeats "and" three times (formal syntactic device from Hebrew/Greek).</em></p>
+
+        <p><strong>NEB (1970):</strong> "Now the earth was <strong>without shape and empty</strong>, and darkness was over the <strong>surface of the watery deep</strong>, but the <strong>Spirit of God</strong> was moving over the <strong>surface of the water</strong>." <br><em>→ Dynamic equivalence. Explicates "surface" and "watery deep." Adds "Now" for cohesion. Clear, explanatory.</em></p>
+
+        <p><strong>NAB (1970):</strong> "The earth was a <strong>formless wasteland</strong>, and darkness covered the <strong>abyss</strong>, while a <strong>mighty wind</strong> swept over the waters." <br><em>→ Strongly dynamic. "Mighty wind" instead of "Spirit of God" is a major interpretative choice. "Formless wasteland." Cohesive "when" and "while."</em></p>
+
+        <div class="scholar">
+            What this shows: even within dynamic equivalence, there's a range. All three seek "equivalent effect" but the effect itself shifts — the KJV is now a formal, canonized archaism; the NEB is modern British; the NAB is modern American. And interestingly, Nida himself thought the KJV's threefold "and" needed adjustment to avoid "babyish" English.
+        </div>
+
+        <h2>7. Case Study 2: The Treaty of Maastricht — Equivalence in Law</h2>
+
+        <div class="key-concept">
+            EU law requires all language versions to be equally valid. This demands a high degree of formal equivalence. Compare:
+        </div>
+
+        <p><strong>English:</strong> "By this Treaty, the HIGH CONTRACTING PARTIES establish among themselves a EUROPEAN UNION..."</p>
+        <p><strong>Portuguese:</strong> "Pelo presente Tratado, as ALTAS PARTES CONTRATANTES instituem entre si uma UNIAO EUROPEIA..."</p>
+
+        <p>Adjustments are minimal — Portuguese "presente" for "this," added "por." The structures track each other closely. But even here, problems arise: the English says "creating an ever closer union" (ongoing process), while the French reads "une union sans cesse plus étroite" (the goal is achieved by this treaty). Different interpretations in equally valid legal texts show the limits of formal equivalence.</p>
+
+        <h2>8. Later Developments: Pym's Natural vs. Directional</h2>
+
+        <div class="scholar">
+            Anthony Pym (2007) distinguishes two types of equivalence: <strong>Natural</strong> — identifying naturally-occurring terms in SL and TL (like you'd find in glossaries/term bases). <strong>Directional</strong> — rendering ST meaning in the TT (translation memories impose existing "directional" equivalents via exact and fuzzy matches). The rise of CAT tools has given a new twist to this distinction.
+        </div>
+
+        <div class="debate-box">
+            Equivalence continues to be criticized for <strong>circularity</strong> (Kenny: "equivalence defines translation, and translation defines equivalence"). Bassnett: translation involves far more than replacing lexical and grammatical items. The <em>tertium comparationis</em> (the invariant against which segments are measured) is inevitably subjective. Toury abandons prescriptive equivalence altogether — he takes equivalence as a given and studies the web of relations between ST and TT.
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>Exam Q&amp;A · Check Yourself</h2>
+
+        <div class="question-box"><strong>Q:</strong> Distinguish Nida's formal and dynamic equivalence.</div>
+        <div class="answer-box"><strong>A:</strong> <strong>Formal equivalence</strong> focuses on the message itself in form and content, is ST-oriented, and often uses gloss translations with footnotes. <strong>Dynamic equivalence</strong> is based on equivalent effect — aims at naturalness and the "closest natural equivalent," tailoring the message to the receptor's needs.</div>
+
+        <div class="question-box"><strong>Q:</strong> How do the KJV, NEB, and NAB versions of Genesis 1 demonstrate Nida's categories?</div>
+        <div class="answer-box"><strong>A:</strong> The <strong>KJV</strong> is closest to formal equivalence (retains Hebrew metaphors, "Spirit of God," threefold "and"). The <strong>NEB</strong> is dynamically oriented (explicates "surface," "watery deep"). The <strong>NAB</strong> is the most dynamic ("mighty wind" for "Spirit of God"). The case shows a spectrum within dynamic equivalence itself.</div>
+
+        <div class="question-box"><strong>Q:</strong> What is the principle of equivalent effect and what are its main criticisms?</div>
+        <div class="answer-box"><strong>A:</strong> The relationship between receptor and message should be substantially the same as that between the original receptors and message. Criticisms: (1) impossible to measure "effect" (van den Broeck, Larose); (2) can't have the same effect across different cultures and times; (3) Gentzler: Nida's approach is covertly proselytizing (converting receptors to Protestant Christianity).</div>
+
+        <div class="question-box"><strong>Q:</strong> Compare Newmark's semantic and communicative translation.</div>
+        <div class="answer-box"><strong>A:</strong> <strong>Semantic</strong> renders exact contextual meaning as closely as syntax allows, stays within SL culture, overtranslates (for serious literature). <strong>Communicative</strong> aims at an effect as close as possible to the original's, transfers foreign elements, tends to undertranslate (for most texts).</div>
+
+        <div class="question-box"><strong>Q:</strong> List Koller's five equivalence relations with the Thatcher example.</div>
+        <div class="answer-box"><strong>A:</strong> <strong>Denotative</strong> (content; "sexy" → "sexy" = pornographic in Arabic). <strong>Connotative</strong> (near-synonyms; "attractiveness" is better but too direct). <strong>Text-normative</strong> (text-type norms). <strong>Pragmatic</strong> (receiver-oriented; "attractive femininity"). <strong>Formal</strong> (aesthetics/wordplay; would need creative TL forms). Hierarchically ordered by communicative need.</div>
+
+        <div class="question-box"><strong>Q:</strong> What does the Maastricht Treaty example reveal about equivalence?</div>
+        <div class="answer-box"><strong>A:</strong> EU law requires high formal equivalence (all versions equally valid). Yet the English "creating an ever closer union" (ongoing process) and the French "une union sans cesse plus étroite" (goal achieved) conflict — showing formal equivalence has limits even in tightly controlled legal translation.</div>
+
+        <h2>Key Scholars Snapshot</h2>
+        <table>
+            <tr><th>Scholar</th><th>Year</th><th>Key Contribution</th></tr>
+            <tr><td>Jakobson</td><td>1959</td><td>No full equivalence between code-units; "all is conveyable" except poetry</td></tr>
+            <tr><td>Eugene Nida</td><td>1964</td><td>Formal vs. dynamic equivalence; equivalent effect; analysis→transfer→restructuring</td></tr>
+            <tr><td>Peter Newmark</td><td>1981</td><td>Semantic vs. communicative translation</td></tr>
+            <tr><td>Werner Koller</td><td>1979/1995</td><td>Five equivalence relations; correspondence vs. equivalence</td></tr>
+            <tr><td>Anthony Pym</td><td>2007</td><td>Natural vs. directional equivalence</td></tr>
+            <tr><td>Gideon Toury</td><td>1995</td><td>Equivalence as the norm-relationship for a given pair</td></tr>
+        </table>
+
+        <h2>What to Absolutely Know for the Exam</h2>
+        <div class="checklist">
+            <li>Jakobson: no full equivalence between code-units; poetry needs "creative transposition"</li>
+            <li>Nida's process: analysis → transfer → restructuring (Chomsky's kernels)</li>
+            <li>Formal equivalence = ST-oriented, gloss + footnotes, KJV Genesis</li>
+            <li>Dynamic equivalence = receiver-focused, equivalent effect, NEB/NAB Genesis</li>
+            <li>Priority rule: meaning over style</li>
+            <li>Newmark: semantic (SL, overtranslate) vs. communicative (TL, undertranslate)</li>
+            <li>Koller's 5 types: denotative → connotative → text-normative → pragmatic → formal</li>
+            <li>Pym: natural vs. directional</li>
+            <li>Genesis case: KJV (formal) vs. NEB/NAB (dynamic, with differences)</li>
+            <li>Maastricht: formal equivalence in legal texts has limits</li>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;padding:20px;background:#f8f9fa;border-radius:5px;">
+            <strong>🧠 Bottom line: Equivalence replaced the literal/free debate. Master Nida (formal vs. dynamic + equivalent effect, the Genesis case study), Newmark (semantic vs. communicative), and Koller's five types. The Maastricht case shows equivalence's limits in practice.</strong>
+        </div>
     </div>
 </body>
 </html>

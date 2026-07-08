@@ -13,7 +13,7 @@
         h3 { color: #5b4bd6; margin: 20px 0 10px 0; padding-left: 15px; border-left: 4px solid #6c5ce7; font-size: 18px; }
         .key-concept { background: #ece9ff; border-left: 4px solid #6c5ce7; padding: 15px; margin: 15px 0; border-radius: 0 5px 5px 0; }
         .exam-tip { background: #ffeaa7; border: 2px solid #fdcb6e; padding: 15px; margin: 15px 0; border-radius: 5px; }
-        .exam-tip::before { content: "\1F3AF KEY POINT: "; font-weight: bold; color: #d63031; }
+        .exam-tip::before { content: "🎯 KEY POINT: "; font-weight: bold; color: #d63031; }
         table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         th { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 12px; text-align: left; font-weight: 600; }
         td { padding: 12px; border-bottom: 1px solid #ddd; }
@@ -22,17 +22,15 @@
         li { margin: 8px 0; line-height: 1.5; }
         .checklist { background: #fff9e6; padding: 20px; border-radius: 5px; margin: 15px 0; }
         .checklist li { list-style-type: none; padding-left: 25px; position: relative; }
-        .checklist li::before { content: "\2610"; position: absolute; left: 0; color: #f39c12; font-size: 18px; }
+        .checklist li::before { content: "☐"; position: absolute; left: 0; color: #f39c12; font-size: 18px; }
         .definition { background: #eef2ff; border-left: 4px solid #5b4bd6; padding: 12px; margin: 10px 0; font-style: italic; }
         .definition strong { color: #5b4bd6; font-style: normal; }
         .scholar { background: #f3f0ff; padding: 10px; margin: 10px 0; border-radius: 3px; border-left: 3px solid #a29bfe; }
         .quote { border-left: 4px solid #95a5a6; padding-left: 15px; margin: 15px 0; font-style: italic; color: #555; }
         .debate-box { background: #ffefd5; border: 2px solid #ff6347; padding: 15px; margin: 15px 0; border-radius: 5px; }
-        .debate-box::before { content: "\26A1 DEBATE: "; font-weight: bold; color: #c0392b; }
+        .debate-box::before { content: "⚡ DEBATE: "; font-weight: bold; color: #c0392b; }
         .question-box { background: #ece9ff; border-left: 5px solid #6c5ce7; padding: 20px 24px; margin: 24px 0 8px 0; border-radius: 0 8px 8px 0; }
-        .question-box strong { color: #5b4bd6; }
         .answer-box { background: #f0fdf4; border-left: 5px solid #27ae60; padding: 20px 24px; margin: 8px 0 24px 0; border-radius: 0 8px 8px 0; }
-        .answer-box strong { color: #27ae60; }
         .page-break { page-break-after: always; }
         @media print { body { background: white; padding: 0; } .container { box-shadow: none; padding: 20px; } }
     </style>
@@ -40,62 +38,174 @@
 <body>
     <div class="container">
         <h1>The Tradition of Translation in the Western World</h1>
-        <p style="text-align:center;color:#7f8c8d;margin-bottom:30px;"><strong>Study Guide &middot; Eugene A. Nida, Toward a Science of Translating, Ch. 2</strong><br>A history from the Rosetta Stone to the 20th century, and the basic conflicts in translation theory</p>
-        <h2>1. Core Argument</h2>
-        <div class="key-concept"><strong>Central thesis:</strong> Despite major shifts across epochs and countries, <strong>two basic conflicts</strong> have persisted throughout the history of Western translation: <strong>literal vs. free</strong> translating, and <strong>emphasis on form vs. concentration on content</strong>. Nida surveys the tradition from antiquity to the 20th century to show these tensions recurring.</div>
-        <div class="exam-tip">Focus on the chronological landmarks (Rosetta Stone → Jerome → Luther → Dolet → Dryden → Tytler → 20th c.) and the two enduring 'poles', plus the special theological problems of Bible translation.</div>
-        <h2>2. Antiquity</h2>
+        <p style="text-align:center;color:#7f8c8d;margin-bottom:30px;">
+            <strong>Study Guide · Eugene A. Nida, Toward a Science of Translating, Ch. 2</strong><br>
+            From the Rosetta Stone to machine translation — and the two conflicts that never went away
+        </p>
+
+        <h2>1. What This Chapter Is Actually About</h2>
+
+        <div class="key-concept">
+            <strong>Here's the big picture:</strong> Nida surveys the entire history of Western translation — from the Rosetta Stone (2nd century BCE) all the way to machine translation in the 1960s. His point: despite all the different periods and cultures, <strong>two basic conflicts keep reappearing</strong>: (1) literal vs. free translating, and (2) emphasis on form vs. concentration on content. These aren't just historical curiosities — they're the same tensions translators face today. The chapter also explores the special problems that arise when translating the Bible (theology vs. philology, inspiration vs. scholarship).
+        </div>
+
+        <div class="exam-tip">
+            This is Nida's historical overview. Know the landmarks (Rosetta Stone, Jerome, Luther, Dolet, Dryden, Tytler, the 19th-century reaction) and especially the <strong>two basic conflicts</strong> and the <strong>Bible translation tensions</strong> (inspiration vs. philology, tradition vs. authority, theology vs. grammar).
+        </div>
+
+        <h2>2. Antiquity: Where It All Began</h2>
+
         <ul>
-            <li>The <strong>Rosetta Stone</strong> (2nd c. BCE) — the most famous ancient translation; a biscript plus Greek translation that unlocked Egyptian hieroglyphics</li>
-            <li>Ancient Babylon and Assyria used corps of <strong>scribes</strong> who translated edicts; early bilingual word-lists ('dictionaries') survive on cuneiform tablets</li>
-            <li>The <strong>Septuagint</strong> — the Greek Old Testament for the large Greek-speaking Jewish community of Alexandria</li>
-            <li>Greco-Roman translators (<strong>Livius Andronicus</strong>, Cicero, Horace) translated the Greek classics with skill, but produced no systematic study of principles</li>
+            <li><strong>The Rosetta Stone</strong> (2nd century BCE) — the most famous translation from the ancient world. A biscript (Egyptian hieroglyphic + demotic) with a Greek translation. It unlocked the secrets of ancient Egypt when it was found in 1799.</li>
+            <li><strong>Earlier than that:</strong> Sargon of Assyria (3rd millennium BCE) had his exploits proclaimed in multiple languages. Hammurabi's Babylon was a polyglot city. Scribes translated edicts and even compiled bilingual word-lists on cuneiform tablets — early dictionaries.</li>
+            <li><strong>The Septuagint:</strong> The Greek translation of the Hebrew Old Testament, undertaken in Alexandria over a long period starting in the 3rd century BCE. The first major translation in Western culture — and highly controversial because it differed from the Hebrew.</li>
+            <li><strong>Greco-Roman translators:</strong> Livius Andronicus translated Homer's Odyssey into Latin verse (240 BCE). Cicero and Horace discussed translation, but there was no systematic study of principles — they just translated, often with great skill.</li>
         </ul>
-        <h2>3. Jerome and the Middle Ages</h2>
-        <div class="scholar"><strong>St Jerome</strong><br>The most <strong>systematic and disciplined</strong> of the ancient translators. He rendered 'sense for sense and not word for word', citing Cicero's authority and the way the Gospel writers freely adapted the Hebrew/Septuagint. Aquila (2nd c.) by contrast made a painfully <strong>literal</strong> Greek Old Testament.</div>
-        <div class="key-concept"><strong>Medieval centres:</strong> Medieval translation was mostly religious essays in stiff ecclesiastical Latin. Then <strong>Baghdad</strong> (9th–10th c.) became a centre for translating Greek classics into Arabic, and <strong>Toledo</strong> (12th c.) for translating them into Latin (often via Syriac and Arabic). Maimonides insisted word-for-word renderings make for a confused translation.</div>
-        <div class="page-break"></div>
-        <h2>4. Renaissance to the Reformation</h2>
-        <div class="scholar"><strong>Martin Luther</strong><br>The dominant 16th-century figure. He deserves credit for sensing the importance of <strong>full intelligibility</strong>, and worked out the implications of his principles: shifts of word order, modal auxiliaries, added connectives, suppression of untranslatable terms, using phrases for single words, shifting metaphors, and careful exegetical accuracy. <strong>Tyndale</strong> paralleled Luther in the first modern English New Testament.</div>
-        <div class="key-concept"><strong>Etienne Dolet's five principles (1540):</strong> Credit for the <strong>first formulation of a theory of translation</strong> goes to Dolet (later executed for heresy). His five headings:</div>
+
+        <h2>3. St Jerome and the Middle Ages</h2>
+
+        <div class="scholar">
+            <strong>St Jerome (347-420 CE):</strong> "Probably one of the most systematic and disciplined of any of the ancient translators." His Latin Vulgate became the official Bible of the Roman Catholic Church. He followed "sense for sense and not word for word," claiming Cicero's support. But he made an exception for Holy Scripture, where "even the syntax contains a mystery." His defence of his methods, especially against Rufinus, is a landmark in translation theory. Compare with Aquila (2nd century CE), who made a painfully literal Greek Old Testament.
+        </div>
+
+        <div class="scholar">
+            <strong>Medieval centres:</strong> <strong>Baghdad</strong> (9th-10th centuries) became a major centre for translating Greek classics into Arabic. <strong>Toledo</strong> (12th century) was where Greek classics were translated into Latin, often via Syriac and Arabic intermediaries. Maimonides insisted that word-for-word renderings "generally make for a doubtful and confused translation."
+        </div>
+
+        <h2>4. The Renaissance and the Reformation</h2>
+
+        <div class="key-concept">
+            Translation became a matter of life and death. The Humanist movement challenged the Church's Latin monopoly. The Reformation fought its battles through Bible translation into vernacular languages.
+        </div>
+
+        <h3>Martin Luther (1483-1546)</h3>
+        <div class="scholar">
+            "The dominant figure in the field of translation during the 16th century." His German New Testament (1522) and complete Bible (1534) didn't just translate — they helped standardize the German language itself. He worked out the implications of his translation principles in concrete detail: shifts of word order, use of modal auxiliaries, added connectives, suppression of terms with no German equivalent, use of phrases for single words, shifting metaphors, and careful attention to exegetical accuracy. His famous defence in the <em>Sendbrief vom Dolmetschen</em> (1530) responded to charges that he had added the word "allein" (alone/only) to Romans 3:28. His answer? He was translating into "pure, clear German."
+        </div>
+
+        <h3>Etienne Dolet (1509-1546)</h3>
+        <div class="key-concept">
+            <strong>Credit for the FIRST formulation of a theory of translation goes to Dolet.</strong> His five principles (1540) are ranked in order of importance:
+        </div>
         <ul>
             <li>The translator must <strong>perfectly understand</strong> the content and intention of the author</li>
-            <li>The translator should have <strong>perfect knowledge</strong> of both source and target languages</li>
-            <li>The translator should <strong>avoid word-for-word</strong> rendering — it destroys the meaning and ruins the beauty</li>
+            <li>The translator should have <strong>perfect knowledge</strong> of both SL and TL</li>
+            <li>The translator should <strong>avoid word-for-word</strong> rendering — it destroys the meaning and the beauty</li>
             <li>The translator should use <strong>forms of speech in common usage</strong></li>
-            <li>Through choice and order of words, the translator should produce the right overall <strong>'tone'</strong></li>
+            <li>Through choice and order of words, the translator should produce the right overall <strong>"tone"</strong></li>
         </ul>
-        <h2>5. From the 17th Century to the Present</h2>
-        <div class="key-concept"><strong>'Les Belles Infideles':</strong> 17th–18th-century secular translation showed almost unrestrained <strong>freedom</strong> — the age of <em>les belles infidèles</em>. Cowley claimed to have 'taken, left out and added what I please' to Pindar (his 'imitation').</div>
-        <div class="scholar"><strong>Dryden and Tytler</strong><br><strong>Dryden</strong> disapproved of Cowley's extreme freedom and set out three types — <strong>metaphrase</strong>, <strong>paraphrase</strong>, <strong>imitation</strong> — preferring the 'golden mean' of paraphrase: 'It is impossible to translate verbally and well at the same time.' <strong>Tytler</strong> (1790) set out three principles: complete transcript of the idea; same style and manner; all the ease of the original composition. (Campbell accused Tytler of plagiarism.)</div>
-        <div class="key-concept"><strong>The 19th and 20th centuries:</strong> The 19th c. brought pedantic <strong>literalism</strong> and 'super-sophistication' — the idea that 'nothing worth translating can be translated' (<strong>Matthew Arnold</strong> wanted to reproduce Homer for 'the competent scholar'; the English Revised Version was painfully literal). The <strong>20th c.</strong> brought a radical change: new concepts of communication, a premium on <strong>intelligibility</strong>, and five developments — structural linguistics, the Summer Institute of Linguistics (Wycliffe), the United Bible Societies, the journal <em>Babel</em> (UNESCO), and <strong>machine translation</strong>.</div>
-        <h2>6. The Basic Conflicts in Translation Theory</h2>
-        <div class="debate-box">Two sets of conflicting 'poles' persist: <strong>(1) literal vs. free</strong> translating, and <strong>(2) emphasis on form vs. concentration on content.</strong> These are closely related but not identical. Terms like 'literal vs. free' and 'words vs. sense' are often mere battle cries, rarely analysed in detail.</div>
-        <div class="key-concept"><strong>Grades between the poles:</strong> The literal–free difference is not a positive–negative dichotomy but a <strong>polar distinction with many grades between</strong>, as seen in successive Bible versions (ASV → RSV → NEB → Phillips) ranging from strict formal renderings to fully idiomatic ones. Form vs. content becomes acute in <strong>poetry</strong>, where a 'song' must be reproduced as a 'song' (Denham: not just 'language into language, but poesie into poesie').</div>
-        <div class="scholar"><strong>Special theological problems</strong><br>Bible translation raises special issues framed as oppositions: <strong>inspiration vs. philology</strong> (Augustine, who accepted the miraculous inspiration of the Septuagint translators, vs. Jerome, firmly on the side of a philological approach), <strong>tradition vs. contemporary authority</strong>, and <strong>theology vs. grammar</strong>.</div>
-        <h2>Exam Q&amp;A &middot; Check Yourself</h2>
-        <div class="question-box"><strong>Q:</strong> What are the two basic conflicts Nida identifies across the history of translation?</div>
-        <div class="answer-box"><strong>A:</strong> <strong>Literal vs. free</strong> translating, and <strong>emphasis on form vs. concentration on content</strong>. They are closely related but not identical, and recur throughout Western translation history.</div>
-        <div class="question-box"><strong>Q:</strong> Summarise Dolet's five principles and their significance.</div>
-        <div class="answer-box"><strong>A:</strong> Understand the author's content and intention; have perfect knowledge of both languages; avoid word-for-word rendering; use common speech; produce the right overall tone. They are significant as the <strong>first formulation of a theory of translation</strong>.</div>
-        <div class="question-box"><strong>Q:</strong> How did Dryden respond to the extreme freedom of his age?</div>
-        <div class="answer-box"><strong>A:</strong> He rejected Cowley's very free 'imitation', set out the triad <strong>metaphrase / paraphrase / imitation</strong>, and advocated the 'golden mean' of paraphrase, since 'it is impossible to translate verbally and well at the same time.'</div>
-        <div class="question-box"><strong>Q:</strong> Why is the literal–free distinction described as a 'polar' one?</div>
-        <div class="answer-box"><strong>A:</strong> Because it is not a simple positive–negative dichotomy but a scale with <strong>many grades between the extremes</strong>, as illustrated by the range of Bible versions from strictly formal to fully idiomatic renderings.</div>
-        <div class="question-box"><strong>Q:</strong> Describe the 'inspiration vs. philology' opposition in Bible translation.</div>
-        <div class="answer-box"><strong>A:</strong> <strong>Augustine</strong> accepted the tradition of the divinely inspired, miraculously identical Septuagint translation; <strong>Jerome</strong> rejected the divine inspiration of translators and adopted a philological approach — shared by most modern scholarship.</div>
-        <h2>Key Scholars &amp; Contributions</h2>
+        <p>Dolet was executed for adding "nothing at all" in a translation of Plato — a mistranslation that led to a charge of blasphemy and disbelief in immortality. He was tortured, strangled, and burned at the stake.</p>
+
+        <h2>5. The 17th and 18th Centuries</h2>
+
+        <div class="key-concept">
+            The age of <strong>"Les Belles Infidèles"</strong> — secular translation showed almost unrestrained freedom. Cowley boasted he had "taken, left out and added what I please" to Pindar. But Dryden pushed back:
+        </div>
+
+        <div class="scholar">
+            <strong>John Dryden (1631-1700):</strong> Set out three types — metaphrase (word-for-word, "dancing on ropes with fettered legs"), paraphrase (sense-for-sense, the golden mean), and imitation (very free, which he disapproved of). He preferred paraphrase. His portrait-painter metaphor dominated the 18th century.
+        </div>
+
+        <div class="scholar">
+            <strong>Alexander Fraser Tytler (1747-1813):</strong> The first comprehensive, systematic study in English. Three principles: (1) complete transcript of the ideas; (2) style and manner should match the original; (3) all the ease of the original composition. Ranked in order — if a sacrifice has to be made, sacrifice ease before manner, and manner before meaning. (Campbell, who had published similar principles the year before, accused Tytler of plagiarism.)
+        </div>
+
+        <h2>6. The 19th Century: Pedantry and Reaction</h2>
+
+        <div class="key-concept">
+            The 19th century brought "supersophistication" and the idea that "nothing worth translating can be translated." Matthew Arnold wanted to reproduce Homer for "the competent scholar" who knew the original. The English Revised Version (1881-1885) was so literal that it often made no sense to ordinary readers. Nida quotes 2 Corinthians 10:14-16 as an example:
+            <br><em>"For we stretch not ourselves overmuch, as though we reached not unto you: for we came even as far as unto you in the gospel of Christ: not glorying beyond our measure, that is, in other men's labours; but having hope that, as your faith groweth, we shall be magnified in you..."</em>
+            <br>Nida's comment: "The words may be English, but the grammar is not; and the sense is quite lacking."
+        </div>
+
+        <h2>7. The 20th Century: Five Developments</h2>
+
+        <div class="key-concept">
+            The 20th century brought a "radical change." New concepts of communication, a premium on intelligibility, and five key developments:
+        </div>
+        <ul>
+            <li><strong>Structural linguistics</strong> — Saussure, Hjelmslev, the Prague Linguistic Circle (Trubetskoy, Levý, Mukařovský, Procházka). In the US: Sapir, Whorf, Lounsbury, Greenberg, Weinreich — liberating translators from philological presuppositions.</li>
+            <li><strong>Wycliffe Bible Translators / Summer Institute of Linguistics</strong> (from 1935) — applying modern linguistic methods to Bible translation in "so-called primitive languages," working in 200+ languages across 13 countries.</li>
+            <li><strong>The United Bible Societies</strong> (from 1947) — the journal <em>The Bible Translator</em>, extensive helps for translators, reflecting both American and European linguistics.</li>
+            <li><strong><em>Babel</em></strong> (from 1955, under UNESCO) — published by the International Federation of Translators, informing translators of new lexical aids, conditions, and trends in theory and practice.</li>
+            <li><strong>Machine translation</strong> — research at the USSR Academy of Sciences, Birkbeck College (London), MIT, Harvard, IBM, Georgetown, UC Berkeley. Even apart from practical results, the thorough study of translation procedures required by MT programming produced "important insights into semantic theory and elements of structural design."</li>
+        </ul>
+
+        <h2>8. The Basic Conflicts — Still With Us</h2>
+
+        <div class="key-concept">
+            Two sets of conflicting "poles" have persisted throughout history:
+        </div>
+        <div class="definition">
+            <strong>Literal vs. Free:</strong> Not a simple positive/negative dichotomy but a <strong>polar distinction with many grades between</strong>. Compare the ASV, RSV, NEB, and Phillips versions of Romans 8:1-4 — from strict formal correspondence to fully idiomatic renderings. The battle cries ("literal vs. free," "words vs. sense") are rarely analyzed in detail.
+        </div>
+        <div class="definition">
+            <strong>Form vs. Content:</strong> Becomes especially acute in poetry, where the "form of the message is highly specialized" (Denham: "not his business alone to translate language into language, but poesie into poesie"). L. Forster discussed this in terms of "levels" of translation — the unit of translation expanding from the word to the phrase to the sentence to the entire work.
+        </div>
+
+        <h2>9. Special Theological Problems</h2>
+
+        <p>Bible translation raises issues that go beyond ordinary translation. Nida frames them as three oppositions:</p>
+
+        <ul>
+            <li><strong>Inspiration vs. Philology:</strong> Augustine accepted the tradition of the miraculous Septuagint — 72 men, working in isolation, produced 36 identical translated drafts through divine inspiration. Jerome completely rejected this ("I do not know who was the first lying author to construct the seventy cells at Alexandria"). He was firmly on the side of philological scholarship, shared by most modern scholars.</li>
+            <li><strong>Tradition vs. Contemporary Authority:</strong> Should a translation follow what the Church has always used, or what contemporary scholarship says is accurate?</li>
+            <li><strong>Theology vs. Grammar:</strong> When the grammatical structure forces a theological interpretation, which wins?</li>
+        </ul>
+
+        <div class="exam-tip">
+            The Augustine vs. Jerome opposition is exam gold. Augustine believed the Septuagint was divinely inspired — if the Greek says something different from the Hebrew, that difference is ALSO inspired. Jerome was the first great philological translator — he went back to the Hebrew original and used scholarship, not tradition.
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>Exam Q&amp;A · Check Yourself</h2>
+
+        <div class="question-box"><strong>Q:</strong> What are the two basic conflicts Nida identifies across the whole history of translation?</div>
+        <div class="answer-box"><strong>A:</strong> <strong>Literal vs. free</strong> translating (a polar distinction with many grades between extremes, not a simple binary), and <strong>emphasis on form vs. concentration on content</strong> (especially acute in poetry).</div>
+
+        <div class="question-box"><strong>Q:</strong> Why is Dolet significant in the history of translation theory?</div>
+        <div class="answer-box"><strong>A:</strong> He produced the <strong>first formulation of a theory of translation</strong> (1540) — five principles ranked in order of importance. He was later executed for mistranslating a passage in Plato that seemed to deny immortality.</div>
+
+        <div class="question-box"><strong>Q:</strong> What did Luther contribute beyond just translating the Bible into German?</div>
+        <div class="answer-box"><strong>A:</strong> He worked out <strong>concrete principles</strong> for translation (word order shifts, modal auxiliaries, added connectives, suppression of untranslatable terms, etc.), defended them in the <em>Sendbrief</em>, and helped standardize the German language itself.</div>
+
+        <div class="question-box"><strong>Q:</strong> Explain the "literal vs. free" distinction as a polar concept rather than a binary.</div>
+        <div class="answer-box"><strong>A:</strong> It's not simply "either literal or free" — there are many grades between. You can see this in the range of Bible translations from the ASV (very literal) through the RSV, NEB, to Phillips (very free). Each sits at a different point on the spectrum.</div>
+
+        <div class="question-box"><strong>Q:</strong> What were the five 20th-century developments Nida highlights?</div>
+        <div class="answer-box"><strong>A:</strong> (1) Structural linguistics (Saussure, Prague School); (2) The Wycliffe Bible Translators / SIL (applying linguistics to Bible translation); (3) The United Bible Societies program; (4) The journal <em>Babel</em> under UNESCO; (5) Machine translation research.</div>
+
+        <div class="question-box"><strong>Q:</strong> What was the Augustine vs. Jerome disagreement about?</div>
+        <div class="answer-box"><strong>A:</strong> <strong>Inspiration vs. philology.</strong> Augustine believed the Septuagint translators were divinely inspired — their differences from the Hebrew were also inspired. Jerome rejected divine inspiration of translators and adopted a philological approach, going back to the Hebrew original. Modern scholarship sides with Jerome.</div>
+
+        <h2>Key Scholars Snapshot</h2>
         <table>
-            <tr><th>Scholar</th><th>Year</th><th>Key contribution</th></tr>
-            <tr><td>St Jerome</td><td>4th–5th c.</td><td>Sense-for-sense; the most systematic ancient translator</td></tr>
-            <tr><td>Martin Luther</td><td>1522–34</td><td>Full intelligibility; vernacular German Bible</td></tr>
-            <tr><td>Etienne Dolet</td><td>1540</td><td>First formulation of a theory (five principles)</td></tr>
-            <tr><td>John Dryden</td><td>1680</td><td>Triad; the 'golden mean' of paraphrase</td></tr>
-            <tr><td>A. F. Tytler</td><td>1790</td><td>Three principles of translation</td></tr>
-            <tr><td>Matthew Arnold</td><td>1862</td><td>Literalist; reproduce Homer for 'the competent scholar'</td></tr>
-            <tr><td>Augustine vs. Jerome</td><td>—</td><td>Inspiration vs. philology in Bible translation</td></tr>
+            <tr><th>Scholar</th><th>Period</th><th>Key Contribution</th></tr>
+            <tr><td>St Jerome</td><td>4th-5th c.</td><td>Most systematic ancient translator; the Vulgate; sense-for-sense except Scripture</td></tr>
+            <tr><td>Martin Luther</td><td>1522-34</td><td>Vernacular German Bible; concrete translation principles</td></tr>
+            <tr><td>Etienne Dolet</td><td>1540</td><td>First theory of translation (five ranked principles)</td></tr>
+            <tr><td>John Dryden</td><td>1680</td><td>Metaphrase / paraphrase / imitation; the golden mean</td></tr>
+            <tr><td>Alexander Tytler</td><td>1790</td><td>First systematic English study; three laws ranked by priority</td></tr>
+            <tr><td>Matthew Arnold</td><td>1862</td><td>Literalist; translate for "the competent scholar"</td></tr>
+            <tr><td>Augustine vs. Jerome</td><td>4th-5th c.</td><td>Inspiration vs. philology in Bible translation</td></tr>
         </table>
-        <div style="text-align:center;margin-top:40px;padding:20px;background:#f8f9fa;border-radius:5px;"><strong>A sweep from the Rosetta Stone to machine translation, all showing two enduring conflicts: literal vs free and form vs content. Dolet gives the first theory; Dryden the golden mean; and Bible translation raises special inspiration-vs-philology problems.</strong></div>
+
+        <h2>What to Absolutely Know for the Exam</h2>
+        <div class="checklist">
+            <li>Two enduring conflicts: literal vs. free (as a scale, not binary) AND form vs. content</li>
+            <li>Landmarks: Rosetta Stone → Septuagint → Jerome → Luther → Dolet → Dryden → Tytler → 20th c.</li>
+            <li>Dolet = first theory of translation (1540), executed for heresy</li>
+            <li>Dryden's triad: metaphrase / paraphrase / imitation</li>
+            <li>"Les Belles Infidèles" = 17th-18th c. age of free, creative translation</li>
+            <li>19th c. reaction: pedantic literalism, Arnold's "competent scholar," the Revised Version</li>
+            <li>20th c.: five developments (structural linguistics, SIL, UBS, Babel, machine translation)</li>
+            <li>Theological problems: inspiration vs. philology (Augustine vs. Jerome)</li>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;padding:20px;background:#f8f9fa;border-radius:5px;">
+            <strong>🧠 Bottom line: A sweep from the Rosetta Stone to machine translation, all showing two enduring conflicts (literal/free and form/content). Dolet gave the first theory; Dryden the golden mean; and Bible translation raises special inspiration-vs.-philology problems.</strong>
+        </div>
     </div>
 </body>
 </html>

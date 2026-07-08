@@ -13,7 +13,7 @@
         h3 { color: #5b4bd6; margin: 20px 0 10px 0; padding-left: 15px; border-left: 4px solid #6c5ce7; font-size: 18px; }
         .key-concept { background: #ece9ff; border-left: 4px solid #6c5ce7; padding: 15px; margin: 15px 0; border-radius: 0 5px 5px 0; }
         .exam-tip { background: #ffeaa7; border: 2px solid #fdcb6e; padding: 15px; margin: 15px 0; border-radius: 5px; }
-        .exam-tip::before { content: "\1F3AF KEY POINT: "; font-weight: bold; color: #d63031; }
+        .exam-tip::before { content: "🎯 KEY POINT: "; font-weight: bold; color: #d63031; }
         table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         th { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 12px; text-align: left; font-weight: 600; }
         td { padding: 12px; border-bottom: 1px solid #ddd; }
@@ -22,17 +22,14 @@
         li { margin: 8px 0; line-height: 1.5; }
         .checklist { background: #fff9e6; padding: 20px; border-radius: 5px; margin: 15px 0; }
         .checklist li { list-style-type: none; padding-left: 25px; position: relative; }
-        .checklist li::before { content: "\2610"; position: absolute; left: 0; color: #f39c12; font-size: 18px; }
+        .checklist li::before { content: "☐"; position: absolute; left: 0; color: #f39c12; font-size: 18px; }
         .definition { background: #eef2ff; border-left: 4px solid #5b4bd6; padding: 12px; margin: 10px 0; font-style: italic; }
         .definition strong { color: #5b4bd6; font-style: normal; }
         .scholar { background: #f3f0ff; padding: 10px; margin: 10px 0; border-radius: 3px; border-left: 3px solid #a29bfe; }
         .quote { border-left: 4px solid #95a5a6; padding-left: 15px; margin: 15px 0; font-style: italic; color: #555; }
         .debate-box { background: #ffefd5; border: 2px solid #ff6347; padding: 15px; margin: 15px 0; border-radius: 5px; }
-        .debate-box::before { content: "\26A1 DEBATE: "; font-weight: bold; color: #c0392b; }
         .question-box { background: #ece9ff; border-left: 5px solid #6c5ce7; padding: 20px 24px; margin: 24px 0 8px 0; border-radius: 0 8px 8px 0; }
-        .question-box strong { color: #5b4bd6; }
         .answer-box { background: #f0fdf4; border-left: 5px solid #27ae60; padding: 20px 24px; margin: 8px 0 24px 0; border-radius: 0 8px 8px 0; }
-        .answer-box strong { color: #27ae60; }
         .page-break { page-break-after: always; }
         @media print { body { background: white; padding: 0; } .container { box-shadow: none; padding: 20px; } }
     </style>
@@ -40,50 +37,137 @@
 <body>
     <div class="container">
         <h1>Functionalism: A Historical Overview</h1>
-        <p style="text-align:center;color:#7f8c8d;margin-bottom:30px;"><strong>Study Guide &middot; Christiane Nord, Translating as a Purposeful Activity, Ch. 1</strong><br>From equivalence to function — the rise of the German functionalist school</p>
-        <h2>1. Core Argument</h2>
-        <div class="key-concept"><strong>Central thesis:</strong> Functionalism did not appear overnight. It grew out of dissatisfaction with <strong>equivalence-based</strong> linguistic approaches, especially among scholars in <strong>translator training</strong> who found that professional translating includes many cases where equivalence is <strong>not called for at all</strong>. The chapter sketches the 'German School': Reiss, Vermeer's Skopostheorie, Holz-Mänttäri's translational action, and functionalist methodology.</div>
-        <div class="exam-tip">Know the shift <em>from equivalence to function</em>, and the four landmark contributions: Reiss (text typology + criticism), Vermeer (Skopos), Holz-Mänttäri (translational action) and the training scholars (Hönig &amp; Kussmaul, Nord).</div>
-        <h2>2. Early Functionalist Views</h2>
-        <div class="key-concept"><strong>Function is old:</strong> Functional approaches were not invented in the 20th century — translators throughout history observed that <strong>different situations call for different renderings</strong> (Cicero, Jerome, Luther all reproduced form in some passages and sense in others). Nida's <strong>dynamic equivalence</strong> (1964) already emphasised communicative effect, and his 1976 framework stressed <strong>purpose</strong>: the key question is 'Best for whom?' — the relative adequacy of a translation depends on how well it fulfils its intended purpose.</div>
-        <div class="scholar"><strong>Why the linguistic reading of Nida dominated</strong><br>Linguistics was the dominant discipline of the 1950s–60s; early machine translation and structuralism nourished the idea that translation could be a strictly scientific, code-switching operation. So Nida's <em>linguistic</em> three-stage model was taken up more than his dynamic functionalism (Gentzler: Nida founded the 'science of translation').</div>
-        <h2>3. The Limits of Equivalence</h2>
-        <div class="definition"><strong>Equivalence approaches:</strong> Source-text oriented; the ST's features (content, style, function) must be <strong>preserved</strong> in the TT (Catford, Nida &amp; Taber, Wilss, Koller)<br><br><strong>Koller's normative statement:</strong> Any target text that is not equivalent 'as far as possible' is declared a <strong>non-translation</strong></div>
-        <div class="key-concept"><strong>Why training scholars broke away:</strong> Scholars in training institutions looked at the profession they were training for and found many cases where equivalence is <strong>not wanted</strong>. Example: translating a <strong>British school certificate</strong> for a German university — the target text is <em>not</em> expected to look like or function as a German school certificate. Kelly: 'A translator moulds his image of translation by the function he assigns to language.' A new theory was called for.</div>
+        <p style="text-align:center;color:#7f8c8d;margin-bottom:30px;">
+            <strong>Study Guide · Christiane Nord, Translating as a Purposeful Activity, Ch. 1</strong><br>
+            How the German functionalist school broke away from equivalence — Reiss, Vermeer, and Holz-Mänttäri
+        </p>
+
+        <h2>1. What This Chapter Is Actually About</h2>
+
+        <div class="key-concept">
+            <strong>The big picture:</strong> Functionalism didn't appear out of nowhere. It grew out of a growing dissatisfaction with <strong>equivalence-based</strong> approaches among scholars who worked in <strong>translator training</strong>. They noticed something obvious: professional translators often handle situations where equivalence is NOT what's wanted. A British school certificate translated for a German university shouldn't LOOK like a German school certificate. This chapter gives you the history of the "German School" — Reiss, Vermeer's Skopostheorie, Holz-Mänttäri's translational action, and the functionalist methodology that grew out of training contexts.
+        </div>
+
+        <div class="exam-tip">
+            The key shift: <strong>from equivalence to function</strong>. Know the four landmarks: Reiss (text typology + functional criticism), Vermeer (Skopos), Holz-Mänttäri (translational action), and the training scholars. Remember: functionalist views existed before the 20th century — Cicero, Jerome, and Luther all said different situations need different approaches.
+        </div>
+
+        <h2>2. Before Functionalism: The Limits of Equivalence</h2>
+
+        <div class="key-concept">
+            The linguistic approaches of the 1950s-60s saw translation as a <strong>code-switching operation</strong>. Nida's three-stage model (analysis→transfer→restructuring) was influential, but its <strong>linguistic</strong> side got taken up more than its <strong>functional</strong> side. Why? Because linguistics was the dominant discipline of the era, and early machine translation experiments needed contrastive language descriptions.
+        </div>
+
+        <p>Key equivalence-based definitions that dominated the field:</p>
+        <ul>
+            <li><strong>Catford (1965):</strong> "The replacement of textual material in one language (SL) by equivalent material in another language (TL)."</li>
+            <li><strong>Nida & Taber (1969):</strong> "Translating consists in reproducing in the receptor language the closest natural equivalent of the source-language message."</li>
+            <li><strong>Wilss (1977):</strong> Translation leads from ST to TT "which is as close an equivalent as possible."</li>
+            <li><strong>Koller (1979):</strong> Declared any TT not equivalent to the ST a non-translation — but later allowed "ad-hoc cases of adaptation" for pragmatic equivalence.</li>
+        </ul>
+
+        <div class="debate-box">
+            The problem: equivalence theorists set up "different or even contradictory standards for different genres." Some praised literalism as optimal (Newmark), others allowed adaptive procedures in specific cases. The criteria were arbitrary. And trainers found that professional translation often has nothing to do with equivalence — e.g. translating a British school certificate for a German university doesn't aim at equivalence at all.
+        </div>
+
+        <h2>3. Katharina Reiss: Text Typology and the Functional Category</h2>
+
+        <div class="key-concept">
+            As early as 1971, Reiss introduced a <strong>functional category</strong> into translation criticism — while still staying within equivalence theory. The ideal translation achieves equivalence in "conceptual content, linguistic form AND communicative function" — what she called "integral communicative performance."
+        </div>
+
+        <div class="scholar">
+            <strong>But Reiss knew real life is messier:</strong> She recognized exceptions from the equivalence requirement, based on the <strong>translation brief</strong> (<em>Übersetzungsauftrag</em>): (1) when the TT has a <strong>different function</strong> from the original (a prose text adapted for the stage, or word-for-word versions for a poet who doesn't know the source language); (2) when the TT addresses a <strong>different audience</strong> (<em>Gulliver's Travels</em> for children; ideological editing for religious or commercial reasons).
+        </div>
+
+        <p>She called these "transfers" (<em>Übertragungen</em>), not "translations proper." In those cases, the functional perspective takes precedence over normal standards of equivalence. Later, in Reiss & Vermeer (1984), her text typology becomes a "specific theory" within Vermeer's general theory — where functional equivalence is no longer the normal aim.</p>
+
+        <h2>4. Hans J. Vermeer: Skopostheorie</h2>
+
+        <div class="scholar">
+            <strong>Vermeer's break with linguistics:</strong> "Linguistics alone won't help us. First, because translating is not merely and not even primarily a linguistic process. Secondly, because linguistics has not yet formulated the right questions to tackle our problems. So let's look somewhere else." (1987)
+        </div>
+
+        <div class="key-concept">
+            For Vermeer, translation is a type of <strong>human action</strong>, and all action is <strong>intentional, purposeful behaviour</strong> that takes place in a situation embedded in a culture. This is why he calls his theory <strong>Skopostheorie</strong> — <em>skopos</em> is Greek for "purpose."
+        </div>
+
+        <p><strong>Key features of this approach:</strong></p>
+        <ul>
+            <li><strong>Skopos = the prime principle</strong> — the purpose of the overall translational action determines everything.</li>
+            <li><strong>The source text is demoted:</strong> For Reiss the ST was "the measure of all things." For Vermeer it's an <strong>"offer of information"</strong> (<em>Informationsangebot</em>) that is partly or wholly turned into an offer of information for the target audience.</li>
+            <li><strong>The addressee is central:</strong> To translate means "to produce a text in a target setting for a target purpose and target addressees in target circumstances." The receiver's culture-specific world-knowledge, expectations, and needs are the main factors determining the Skopos.</li>
+        </ul>
+
+        <div class="exam-tip">
+            Compare the status of the source text: In equivalence theories it's the measure of all things. In Skopostheorie it's just an "offer of information." That's a massive shift.
+        </div>
+
+        <h2>5. Justa Holz-Mänttäri: Translational Action</h2>
+
+        <div class="key-concept">
+            Holz-Mänttäri goes even further. She <strong>avoids the word "translation"</strong> altogether. Instead she talks about <strong>"translational action"</strong> (<em>translatorisches Handeln</em>) — a complex action designed to achieve a particular purpose. Translators are <strong>experts</strong> who produce <strong>"message transmitters"</strong> (<em>Botschaftsträger</em>) to coordinate communicative cooperation across cultural and language barriers.
+        </div>
+
+        <p>She analyzes in detail the roles of participants (<strong>initiator, translator, user, message receiver</strong>) and the situational conditions (<strong>time, place, medium</strong>). She's particularly concerned with the status of translators in a world characterized by the division of labour — her vocational training concepts emphasize translators as experts.</p>
+
+        <h2>6. Functionalist Methodology in Translator Training</h2>
+
+        <div class="key-concept">
+            Right from the start, functionalism had a huge impact on translator training. The key figure are <strong>Hönig & Kussmaul</strong> (their 1982 <em>Strategie der Übersetzung</em> showed how functional strategies solve translation problems). Their core maxim: the <strong>"necessary degree of precision"</strong> — reproduce just those semantic features relevant to the function of the translation (echoing Grice's conversational maxims).
+        </div>
+
+        <p><strong>What all functionalist training scholars share:</strong> They focus on <strong>language-independent pragmatic and cultural</strong> aspects of translation, emphasizing translation <strong>competence</strong> over language proficiency. Unlike the linguistic theorists, they look at what translators actually DO in professional practice.</p>
+
+        <div class="scholar">
+            <strong>Nord's own contribution:</strong> Her "translation-oriented model of text analysis" (1988/1991) analyzes extratextual and intratextual aspects of communication, designed to identify function-relevant elements in both the ST and the prospective TT as defined by the translation brief. By comparing the Skopos with ST functions before translating, translators can locate problems in advance and devise a holistic strategy.
+        </div>
+
         <div class="page-break"></div>
-        <h2>4. Katharina Reiss: Text Typology and Translation Criticism</h2>
-        <div class="key-concept"><strong>A functional category within equivalence:</strong> As early as 1971 Reiss introduced a <strong>functional category</strong> into her 'objective approach to translation criticism' — still within equivalence theory. The ideal translation achieves equivalence in <strong>conceptual content, linguistic form and communicative function</strong> ('integral communicative performance').</div>
-        <div class="scholar"><strong>Exceptions from equivalence</strong><br>Reiss recognised real-life exceptions, due to the <strong>translation brief</strong> (<em>Übersetzungsauftrag</em>): (1) when the TT has a <strong>different function</strong> from the original (e.g. a prose text adapted for the stage, or word-for-word versions for a poet); (2) when the TT addresses a <strong>different audience</strong> (e.g. <em>Gulliver's Travels</em> for children). She called these 'transfers' (<em>Übertragungen</em>), where the functional perspective takes precedence over equivalence.</div>
-        <h2>5. Hans Vermeer: Skopostheorie and Beyond</h2>
-        <div class="key-concept"><strong>Breaking with linguistics:</strong> Vermeer: 'Linguistics alone won't help us' — translating is not merely (or even primarily) a linguistic process. Translation is a <strong>type of human action</strong>, and action is <strong>intentional, purposeful behaviour</strong> in a situation embedded in a culture.</div>
-        <div class="definition"><strong>Skopos:</strong> Greek for 'purpose'/'aim'; the technical term for the purpose of a translation. The <strong>prime principle</strong> determining any translation process is the purpose of the overall translational action<br><br><strong>Status of the source text:</strong> Much <strong>lower</strong> than in equivalence theories. For Reiss the ST is 'the measure of all things'; for Vermeer it is an <strong>'offer of information'</strong> partly or wholly turned into an offer of information for the target audience</div>
-        <div class="scholar"><strong>The addressee</strong><br>One of the most important factors determining the Skopos is the <strong>addressee</strong> — the intended receiver with their culture-specific world-knowledge, expectations and needs. To translate is 'to produce a text in a target setting for a target purpose and target addressees in target circumstances'.</div>
-        <h2>6. Holz-Mänttäri and Functionalist Training</h2>
-        <div class="scholar"><strong>Justa Holz-Mänttäri: theory of translational action</strong><br>She goes further, even avoiding the word 'translation'. Translation is a <strong>complex action designed to achieve a particular purpose</strong> — the generic term is <strong>'translational action'</strong> (<em>translatorisches Handeln</em>). Translators are <strong>experts</strong> who produce <strong>'message transmitters'</strong> (<em>Botschaftsträger</em>) to coordinate communicative cooperation across culture barriers. She emphasises the roles of participants (initiator, translator, user, receiver) and situational conditions.</div>
-        <div class="key-concept"><strong>Functionalist methodology in training:</strong> Hönig &amp; Kussmaul (<em>Strategie der Übersetzung</em>, 1982) show how functional strategies solve translation problems; their key maxim is the <strong>'necessary degree of precision'</strong> — reproduce just those semantic features relevant to the function of your translation (echoing Grice). Nord adds a <strong>translation-oriented model of text analysis</strong> (extratextual + intratextual factors), comparing the Skopos with the source-text functions to locate problems before translating.</div>
-        <div class="exam-tip">Common feature of the functionalist training scholars: unlike the linguistic theorists, they focus on <strong>language-independent pragmatic/cultural</strong> aspects, emphasising translation <strong>competence</strong> over language proficiency.</div>
-        <h2>Exam Q&amp;A &middot; Check Yourself</h2>
+
+        <h2>Exam Q&amp;A · Check Yourself</h2>
+
         <div class="question-box"><strong>Q:</strong> What dissatisfaction gave rise to functionalism?</div>
-        <div class="answer-box"><strong>A:</strong> Dissatisfaction with <strong>equivalence-based</strong> approaches among <strong>translator-training</strong> scholars, who found that professional practice includes many cases where equivalence is not wanted — e.g. a British school certificate translated for a German university is not expected to look or function like a German one.</div>
-        <div class="question-box"><strong>Q:</strong> How did Reiss introduce a functional category, and what are her 'exceptions'?</div>
-        <div class="answer-box"><strong>A:</strong> Within an objective approach to translation criticism, she allowed exceptions from equivalence based on the <strong>translation brief</strong>: when the target text has a <strong>different function</strong> than the original, or addresses a <strong>different audience</strong> (e.g. <em>Gulliver's Travels</em> for children). She called these 'transfers'.</div>
+        <div class="answer-box"><strong>A:</strong> Dissatisfaction with <strong>equivalence-based</strong> approaches among <strong>translator-training</strong> scholars. They found that professional practice includes many cases where equivalence is simply not wanted — e.g., a British school certificate translated for a German university doesn't need to look like a German one.</div>
+
+        <div class="question-box"><strong>Q:</strong> How did Reiss introduce a functional category, and what exceptions did she allow?</div>
+        <div class="answer-box"><strong>A:</strong> Within an objective approach to translation criticism, she allowed exceptions when the translation brief specifies a <strong>different function</strong> from the original or a <strong>different audience</strong>. She called these "transfers" (<em>Übertragungen</em>), not "translations proper."</div>
+
         <div class="question-box"><strong>Q:</strong> Define Skopos and explain the status of the source text in Skopostheorie.</div>
-        <div class="answer-box"><strong>A:</strong> <strong>Skopos</strong> is the purpose of the translation — the prime principle determining the translation process. The source text's status is <strong>low</strong>: for Vermeer it is merely an <strong>'offer of information'</strong> to be partly or wholly re-offered to the target audience.</div>
-        <div class="question-box"><strong>Q:</strong> What is 'translational action' (Holz-Mänttäri)?</div>
-        <div class="answer-box"><strong>A:</strong> A complex, purpose-driven action in which translators, as <strong>experts</strong>, produce <strong>'message transmitters'</strong> to coordinate communicative cooperation across language and culture barriers — emphasising participant roles and situational conditions.</div>
-        <div class="question-box"><strong>Q:</strong> State Hönig &amp; Kussmaul's key maxim.</div>
-        <div class="answer-box"><strong>A:</strong> The <strong>'necessary degree of precision'</strong>: reproduce just those semantic features that are relevant in the given context with regard to the function of your translation (in line with Grice's maxims).</div>
-        <h2>Key Scholars &amp; Contributions</h2>
+        <div class="answer-box"><strong>A:</strong> <strong>Skopos</strong> is the purpose of the translation — the prime principle determining everything. The source text is NOT the measure of all things; it's merely an <strong>"offer of information"</strong> that is partly or wholly re-offered to the target audience.</div>
+
+        <div class="question-box"><strong>Q:</strong> What is "translational action" (Holz-Mänttäri)?</div>
+        <div class="answer-box"><strong>A:</strong> A complex, purpose-driven action in which translators, as experts, produce "message transmitters" to coordinate communicative cooperation across cultural and language barriers. It covers all forms of intercultural transfer, even those without source or target texts.</div>
+
+        <div class="question-box"><strong>Q:</strong> State Hönig & Kussmaul's key maxim for functional translation.</div>
+        <div class="answer-box"><strong>A:</strong> The <strong>"necessary degree of precision"</strong> — reproduce just those semantic features that are relevant in a given context with regard to the function of your translation (in line with Grice's conversational maxims of relevance and quantity).</div>
+
+        <h2>Key Scholars Snapshot</h2>
         <table>
-            <tr><th>Scholar</th><th>Year</th><th>Key contribution</th></tr>
-            <tr><td>Eugene Nida</td><td>1964/1976</td><td>Dynamic equivalence; 'Best for whom?' — purpose</td></tr>
-            <tr><td>Katharina Reiss</td><td>1971</td><td>Functional translation criticism; text typology</td></tr>
-            <tr><td>Hans J. Vermeer</td><td>1978</td><td>Skopostheorie; translation as purposeful action</td></tr>
-            <tr><td>Justa Holz-Mänttäri</td><td>1981/1984</td><td>Theory of translational action; message transmitters</td></tr>
-            <tr><td>Hönig &amp; Kussmaul</td><td>1982</td><td>Necessary degree of precision</td></tr>
-            <tr><td>Christiane Nord</td><td>1988/1991</td><td>Translation-oriented text analysis</td></tr>
+            <tr><th>Scholar</th><th>Year</th><th>Key Contribution</th></tr>
+            <tr><td>Eugene Nida</td><td>1964/1976</td><td>Dynamic equivalence; "Best for whom?" — purpose matters</td></tr>
+            <tr><td>Katharina Reiss</td><td>1971</td><td>Functional translation criticism; text typology; exceptions via the brief</td></tr>
+            <tr><td>Hans J. Vermeer</td><td>1978</td><td>Skopostheorie; translation as purposeful action; ST as "offer of information"</td></tr>
+            <tr><td>Justa Holz-Mänttäri</td><td>1981/1984</td><td>Theory of translational action; message transmitters; translator as expert</td></tr>
+            <tr><td>Hönig & Kussmaul</td><td>1982</td><td>Necessary degree of precision; functionalist training methodology</td></tr>
+            <tr><td>Christiane Nord</td><td>1988/1991</td><td>Translation-oriented text analysis; extratextual + intratextual factors</td></tr>
         </table>
-        <div style="text-align:center;margin-top:40px;padding:20px;background:#f8f9fa;border-radius:5px;"><strong>Functionalism moves from equivalence to purpose. Reiss adds a functional category, Vermeer makes Skopos (purpose) the prime principle and demotes the ST to an 'offer of information', Holz-Mänttäri reframes it as translational action — all driven by translator training.</strong></div>
+
+        <h2>What to Absolutely Know for the Exam</h2>
+        <div class="checklist">
+            <li>The shift = from equivalence (ST-bound) to function (purpose-driven)</li>
+            <li>Trigger: training scholars saw equivalence often isn't wanted in professional practice</li>
+            <li>Reiss: functional criticism from 1971; exceptions via the translation brief</li>
+            <li>Vermeer: Skopos = purpose; ST = "offer of information"; addressee = key factor</li>
+            <li>Holz-Mänttäri: "translational action"; avoids the word "translation"; message transmitters</li>
+            <li>Hönig & Kussmaul: "necessary degree of precision"</li>
+            <li>Common focus: language-independent pragmatic/cultural aspects over language proficiency</li>
+            <li>Nord: text analysis comparing ST situation with TT brief</li>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;padding:20px;background:#f8f9fa;border-radius:5px;">
+            <strong>🧠 Bottom line: Functionalism moves from equivalence to purpose. Reiss adds a functional category while still within equivalence; Vermeer makes Skopos the prime principle and demotes the ST to an "offer of information"; Holz-Mänttäri reframes it all as translational action. The driving force? Translator training.</strong>
+        </div>
     </div>
 </body>
 </html>
