@@ -834,6 +834,262 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/political-translation/session-7/session-7-study-guide.html',
         rtl: true
+    },
+    {
+        id: 'tt-01-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 1 · Munday Ch1 · Main Issues of Translation Studies',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-1/Comprehensive/01_Munday-2016_Ch1_Main-Issues-of-Translation-Studies_Comprehensive.html'
+    },
+    {
+        id: 'tt-01-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 1 · Munday Ch1 · Main Issues of Translation Studies',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-1/Exam-Cram/01_Munday-2016_Ch1_Main-Issues-of-Translation-Studies_Exam-Cram.html'
+    },
+    {
+        id: 'tt-02-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 1 · Munday Ch2 · Translation Theory Before the 20th Century',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-1/Comprehensive/02_Munday-2016_Ch2_Translation-Theory-Before-the-Twentieth-Century_Comprehensive.html'
+    },
+    {
+        id: 'tt-02-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 1 · Munday Ch2 · Translation Theory Before the 20th Century',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-1/Exam-Cram/02_Munday-2016_Ch2_Translation-Theory-Before-the-Twentieth-Century_Exam-Cram.html'
+    },
+    {
+        id: 'tt-03-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 2 · Pym Ch1 · What Is a Translation Theory?',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-2/Comprehensive/01_Pym-2014_Ch1_What-Is-a-Translation-Theory_Comprehensive.html'
+    },
+    {
+        id: 'tt-03-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 2 · Pym Ch1 · What Is a Translation Theory?',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-2/Exam-Cram/01_Pym-2014_Ch1_What-Is-a-Translation-Theory_Exam-Cram.html'
+    },
+    {
+        id: 'tt-04-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 4 · Nida Ch1 · Toward a Science of Translating',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-4/Comprehensive/01_Nida_Ch1_Introduction-Science-of-Translating_Comprehensive.html'
+    },
+    {
+        id: 'tt-04-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 4 · Nida Ch1 · Toward a Science of Translating',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-4/Exam-Cram/01_Nida_Ch1_Introduction-Science-of-Translating_Exam-Cram.html'
+    },
+    {
+        id: 'tt-05-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 4 · Nida Ch2 · The Western Tradition of Translation',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-4/Comprehensive/02_Nida_Ch2_Tradition-of-Translation-in-the-Western-World_Comprehensive.html'
+    },
+    {
+        id: 'tt-05-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 4 · Nida Ch2 · The Western Tradition of Translation',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-4/Exam-Cram/02_Nida_Ch2_Tradition-of-Translation-in-the-Western-World_Exam-Cram.html'
+    },
+    {
+        id: 'tt-06-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 4 · Munday Ch3 · Equivalence and Equivalent Effect',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-4/Comprehensive/03_Munday-2016_Ch3_Equivalence-and-Equivalent-Effect_Comprehensive.html'
+    },
+    {
+        id: 'tt-06-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 4 · Munday Ch3 · Equivalence and Equivalent Effect',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-4/Exam-Cram/03_Munday-2016_Ch3_Equivalence-and-Equivalent-Effect_Exam-Cram.html'
+    },
+    {
+        id: 'tt-07-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 5 · Nord Ch1 · Functionalism: A Historical Overview',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-5/Comprehensive/01_Nord_Ch1_Historical-Overview-of-Functionalism_Comprehensive.html'
+    },
+    {
+        id: 'tt-07-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 5 · Nord Ch1 · Functionalism: A Historical Overview',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-5/Exam-Cram/01_Nord_Ch1_Historical-Overview-of-Functionalism_Exam-Cram.html'
+    },
+    {
+        id: 'tt-08-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 5 · Nord Ch3 · Basic Aspects of Skopostheorie',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-5/Comprehensive/02_Nord_Ch3_Basic-Aspects-of-Skopostheorie_Comprehensive.html'
+    },
+    {
+        id: 'tt-08-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 5 · Nord Ch3 · Basic Aspects of Skopostheorie',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-5/Exam-Cram/02_Nord_Ch3_Basic-Aspects-of-Skopostheorie_Exam-Cram.html'
+    },
+    {
+        id: 'tt-09-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 6 · Nord Ch4 · Functionalism in Translator Training',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-6/Comprehensive/01_Nord_Ch4_Functionalism-in-Translator-Training_Comprehensive.html'
+    },
+    {
+        id: 'tt-09-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 6 · Nord Ch4 · Functionalism in Translator Training',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-6/Exam-Cram/01_Nord_Ch4_Functionalism-in-Translator-Training_Exam-Cram.html'
+    },
+    {
+        id: 'tt-10-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 6 · Nord Ch6 · Functionalist Approaches to Interpreting',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-6/Comprehensive/02_Nord_Ch6_Functionalist-Approaches-to-Interpreting_Comprehensive.html'
+    },
+    {
+        id: 'tt-10-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 6 · Nord Ch6 · Functionalist Approaches to Interpreting',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-6/Exam-Cram/02_Nord_Ch6_Functionalist-Approaches-to-Interpreting_Exam-Cram.html'
+    },
+    {
+        id: 'tt-11-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 7 · Toury Ch1 · Translations as Facts of a Target Culture',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-7/Comprehensive/01_Toury_Ch1_Translations-as-Facts-of-a-Target-Culture_Comprehensive.html'
+    },
+    {
+        id: 'tt-11-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 7 · Toury Ch1 · Translations as Facts of a Target Culture',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-7/Exam-Cram/01_Toury_Ch1_Translations-as-Facts-of-a-Target-Culture_Exam-Cram.html'
+    },
+    {
+        id: 'tt-12-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 7 · Toury Ch2 · The Notion of ‘Problem’',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-7/Comprehensive/02_Toury_Ch2_The-Notion-of-Problem-in-Translation-Studies_Comprehensive.html'
+    },
+    {
+        id: 'tt-12-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 7 · Toury Ch2 · The Notion of ‘Problem’',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-7/Exam-Cram/02_Toury_Ch2_The-Notion-of-Problem-in-Translation-Studies_Exam-Cram.html'
+    },
+    {
+        id: 'tt-13-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 7 · Toury Ch3 · Translation as a Norm-Governed Activity',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-7/Comprehensive/03_Toury_Ch3_Translation-as-a-Norm-Governed-Activity_Comprehensive.html'
+    },
+    {
+        id: 'tt-13-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 7 · Toury Ch3 · Translation as a Norm-Governed Activity',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-7/Exam-Cram/03_Toury_Ch3_Translation-as-a-Norm-Governed-Activity_Exam-Cram.html'
+    },
+    {
+        id: 'tt-14-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 8 · Bassnett Ch1 · Central Issues',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-8/Comprehensive/01_Bassnett_Ch1_Central-Issues_Comprehensive.html'
+    },
+    {
+        id: 'tt-14-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 8 · Bassnett Ch1 · Central Issues',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-8/Exam-Cram/01_Bassnett_Ch1_Central-Issues_Exam-Cram.html'
+    },
+    {
+        id: 'tt-15-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 8 · Bassnett Ch2 · History of Translation Theory',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-8/Comprehensive/02_Bassnett_Ch2_History-of-Translation-Theory_Comprehensive.html'
+    },
+    {
+        id: 'tt-15-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 8 · Bassnett Ch2 · History of Translation Theory',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-8/Exam-Cram/02_Bassnett_Ch2_History-of-Translation-Theory_Exam-Cram.html'
+    },
+    {
+        id: 'tt-16-full',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 8 · Bassnett Ch3 · Specific Problems of Literary Translation',
+        kind: 'Comprehensive',
+        path: 'assets/sem/semester-2/translation-theories/Week-8/Comprehensive/03_Bassnett_Ch3_Specific-Problems-of-Literary-Translation_Comprehensive.html'
+    },
+    {
+        id: 'tt-16-cram',
+        course: 'Translation Theories',
+        courseFa: 'نظریه‌های ترجمه',
+        chapter: 'Wk 8 · Bassnett Ch3 · Specific Problems of Literary Translation',
+        kind: 'Exam Cram',
+        path: 'assets/sem/semester-2/translation-theories/Week-8/Exam-Cram/03_Bassnett_Ch3_Specific-Problems-of-Literary-Translation_Exam-Cram.html'
     }
 ];
 
@@ -846,7 +1102,8 @@ export const COURSE_COLOR: Readonly<Record<string, string>> = {
     'The Way of Research': '#9384F2',
     'Online Journalism': '#5BA8F0',
     'Political Translation': '#5BC9A0',
-    'Translation of Islamic Texts': '#34CBB8'
+    'Translation of Islamic Texts': '#34CBB8',
+    'Translation Theories': '#7C6CF0'
 };
 
 /** Look up a document by id. */

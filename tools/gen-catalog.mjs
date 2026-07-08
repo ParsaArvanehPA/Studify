@@ -134,6 +134,113 @@ const COURSES = [
                 link: '/vocabulary'
             }
         ]
+    },
+    {
+        id: 'translation-theories',
+        name: 'Translation Theories',
+        fa: 'نظریه‌های ترجمه',
+        glyph: '🧠',
+        color: '#7C6CF0',
+        semester: 'Semester 2',
+        rtl: false,
+        dir: 'semester-2/translation-theories',
+        kind: 'theory',
+        prefix: 'tt',
+        description:
+            'The foundational theories of translation studies — from the discipline\u2019s birth and the literal/free debate through equivalence, Skopos and functionalism, to Toury\u2019s descriptive norms and Bassnett\u2019s cultural turn. Each core reading in a comprehensive study guide and an exam cram.',
+        readings: [
+            {
+                week: 'Week-1',
+                no: '01',
+                title: 'Munday Ch1 · Main Issues of Translation Studies',
+                slug: '01_Munday-2016_Ch1_Main-Issues-of-Translation-Studies'
+            },
+            {
+                week: 'Week-1',
+                no: '02',
+                title: 'Munday Ch2 · Translation Theory Before the 20th Century',
+                slug: '02_Munday-2016_Ch2_Translation-Theory-Before-the-Twentieth-Century'
+            },
+            {
+                week: 'Week-2',
+                no: '03',
+                title: 'Pym Ch1 · What Is a Translation Theory?',
+                slug: '01_Pym-2014_Ch1_What-Is-a-Translation-Theory'
+            },
+            {
+                week: 'Week-4',
+                no: '04',
+                title: 'Nida Ch1 · Toward a Science of Translating',
+                slug: '01_Nida_Ch1_Introduction-Science-of-Translating'
+            },
+            {
+                week: 'Week-4',
+                no: '05',
+                title: 'Nida Ch2 · The Western Tradition of Translation',
+                slug: '02_Nida_Ch2_Tradition-of-Translation-in-the-Western-World'
+            },
+            {
+                week: 'Week-4',
+                no: '06',
+                title: 'Munday Ch3 · Equivalence and Equivalent Effect',
+                slug: '03_Munday-2016_Ch3_Equivalence-and-Equivalent-Effect'
+            },
+            {
+                week: 'Week-5',
+                no: '07',
+                title: 'Nord Ch1 · Functionalism: A Historical Overview',
+                slug: '01_Nord_Ch1_Historical-Overview-of-Functionalism'
+            },
+            {
+                week: 'Week-5',
+                no: '08',
+                title: 'Nord Ch3 · Basic Aspects of Skopostheorie',
+                slug: '02_Nord_Ch3_Basic-Aspects-of-Skopostheorie'
+            },
+            {
+                week: 'Week-6',
+                no: '09',
+                title: 'Nord Ch4 · Functionalism in Translator Training',
+                slug: '01_Nord_Ch4_Functionalism-in-Translator-Training'
+            },
+            {
+                week: 'Week-6',
+                no: '10',
+                title: 'Nord Ch6 · Functionalist Approaches to Interpreting',
+                slug: '02_Nord_Ch6_Functionalist-Approaches-to-Interpreting'
+            },
+            {
+                week: 'Week-7',
+                no: '11',
+                title: 'Toury Ch1 · Translations as Facts of a Target Culture',
+                slug: '01_Toury_Ch1_Translations-as-Facts-of-a-Target-Culture'
+            },
+            {
+                week: 'Week-7',
+                no: '12',
+                title: 'Toury Ch2 · The Notion of \u2018Problem\u2019',
+                slug: '02_Toury_Ch2_The-Notion-of-Problem-in-Translation-Studies'
+            },
+            {
+                week: 'Week-7',
+                no: '13',
+                title: 'Toury Ch3 · Translation as a Norm-Governed Activity',
+                slug: '03_Toury_Ch3_Translation-as-a-Norm-Governed-Activity'
+            },
+            {week: 'Week-8', no: '14', title: 'Bassnett Ch1 · Central Issues', slug: '01_Bassnett_Ch1_Central-Issues'},
+            {
+                week: 'Week-8',
+                no: '15',
+                title: 'Bassnett Ch2 · History of Translation Theory',
+                slug: '02_Bassnett_Ch2_History-of-Translation-Theory'
+            },
+            {
+                week: 'Week-8',
+                no: '16',
+                title: 'Bassnett Ch3 · Specific Problems of Literary Translation',
+                slug: '03_Bassnett_Ch3_Specific-Problems-of-Literary-Translation'
+            }
+        ]
     }
 ];
 
@@ -161,6 +268,27 @@ for (const c of COURSES) {
     if (c.kind === 'tool') {
         for (const t of c.tools) {
             chapters.push({no: t.no, title: t.title, files: [{kind: t.kind, tag: t.tag, link: t.link}]});
+        }
+    } else if (c.kind === 'theory') {
+        for (const r of c.readings) {
+            const guideId = `${c.prefix}-${r.no}-full`;
+            const cramId = `${c.prefix}-${r.no}-cram`;
+            const wk = r.week.replace('Week-', 'Wk ');
+            push(
+                guideId,
+                `${wk} · ${r.title}`,
+                'Comprehensive',
+                `${served}/${r.week}/Comprehensive/${r.slug}_Comprehensive.html`
+            );
+            push(cramId, `${wk} · ${r.title}`, 'Exam Cram', `${served}/${r.week}/Exam-Cram/${r.slug}_Exam-Cram.html`);
+            chapters.push({
+                no: r.no,
+                title: r.title,
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: guideId},
+                    {kind: 'Exam Cram', tag: 'concise', docId: cramId}
+                ]
+            });
         }
     } else if (c.kind === 'chapters') {
         const byNum = new Map();

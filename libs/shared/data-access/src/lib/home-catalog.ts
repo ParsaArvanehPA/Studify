@@ -93,10 +93,18 @@ export const SEMESTERS: readonly Semester[] = [
                 color: '#34CBB8',
                 meta: 'Letter 53 · 300 terms',
                 courseId: 'translation-of-islamic-texts'
+            },
+            {
+                name: 'Translation Theories',
+                fa: 'نظریه‌های ترجمه',
+                glyph: '🧠',
+                color: '#7C6CF0',
+                meta: '16 readings · 32 files',
+                courseId: 'translation-theories'
             }
         ]
     }
 ];
 
 /** Headline stats for the hero. */
-export const HOME_STATS = {semesters: 2, courses: 8, files: 98} as const;
+export const HOME_STATS = {semesters: 2, courses: 9, files: 130} as const;

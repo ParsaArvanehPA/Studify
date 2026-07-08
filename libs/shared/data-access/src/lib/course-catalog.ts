@@ -424,6 +424,146 @@ export const COURSES: readonly Course[] = [
                 files: [{kind: 'Trilingual glossary', tag: 'concise', link: '/vocabulary'}]
             }
         ]
+    },
+    {
+        id: 'translation-theories',
+        name: 'Translation Theories',
+        fa: 'نظریه‌های ترجمه',
+        glyph: '🧠',
+        color: '#7C6CF0',
+        semester: 'Semester 2',
+        description:
+            'The foundational theories of translation studies — from the discipline’s birth and the literal/free debate through equivalence, Skopos and functionalism, to Toury’s descriptive norms and Bassnett’s cultural turn. Each core reading in a comprehensive study guide and an exam cram.',
+        chapters: [
+            {
+                no: '01',
+                title: 'Munday Ch1 · Main Issues of Translation Studies',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-01-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-01-cram'}
+                ]
+            },
+            {
+                no: '02',
+                title: 'Munday Ch2 · Translation Theory Before the 20th Century',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-02-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-02-cram'}
+                ]
+            },
+            {
+                no: '03',
+                title: 'Pym Ch1 · What Is a Translation Theory?',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-03-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-03-cram'}
+                ]
+            },
+            {
+                no: '04',
+                title: 'Nida Ch1 · Toward a Science of Translating',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-04-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-04-cram'}
+                ]
+            },
+            {
+                no: '05',
+                title: 'Nida Ch2 · The Western Tradition of Translation',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-05-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-05-cram'}
+                ]
+            },
+            {
+                no: '06',
+                title: 'Munday Ch3 · Equivalence and Equivalent Effect',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-06-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-06-cram'}
+                ]
+            },
+            {
+                no: '07',
+                title: 'Nord Ch1 · Functionalism: A Historical Overview',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-07-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-07-cram'}
+                ]
+            },
+            {
+                no: '08',
+                title: 'Nord Ch3 · Basic Aspects of Skopostheorie',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-08-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-08-cram'}
+                ]
+            },
+            {
+                no: '09',
+                title: 'Nord Ch4 · Functionalism in Translator Training',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-09-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-09-cram'}
+                ]
+            },
+            {
+                no: '10',
+                title: 'Nord Ch6 · Functionalist Approaches to Interpreting',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-10-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-10-cram'}
+                ]
+            },
+            {
+                no: '11',
+                title: 'Toury Ch1 · Translations as Facts of a Target Culture',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-11-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-11-cram'}
+                ]
+            },
+            {
+                no: '12',
+                title: 'Toury Ch2 · The Notion of ‘Problem’',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-12-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-12-cram'}
+                ]
+            },
+            {
+                no: '13',
+                title: 'Toury Ch3 · Translation as a Norm-Governed Activity',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-13-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-13-cram'}
+                ]
+            },
+            {
+                no: '14',
+                title: 'Bassnett Ch1 · Central Issues',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-14-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-14-cram'}
+                ]
+            },
+            {
+                no: '15',
+                title: 'Bassnett Ch2 · History of Translation Theory',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-15-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-15-cram'}
+                ]
+            },
+            {
+                no: '16',
+                title: 'Bassnett Ch3 · Specific Problems of Literary Translation',
+                files: [
+                    {kind: 'Comprehensive', tag: 'guide', docId: 'tt-16-full'},
+                    {kind: 'Exam Cram', tag: 'concise', docId: 'tt-16-cram'}
+                ]
+            }
+        ]
     }
 ];
 

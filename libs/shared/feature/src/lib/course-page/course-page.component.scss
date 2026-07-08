@@ -279,7 +279,9 @@ header.nav.stuck {
     line-height: 1.05;
     position: relative;
     transition: transform 0.3s;
-    flex: none;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 .ch-row:hover .ch-title {
     transform: translateX(6px);
@@ -291,6 +293,7 @@ header.nav.stuck {
     position: relative;
     flex-wrap: wrap;
     justify-content: flex-end;
+    flex: none;
 }
 .ch-files .pill {
     font-family: var(--mono);
