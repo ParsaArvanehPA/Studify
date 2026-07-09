@@ -47,12 +47,6 @@ export class CoursePageComponent implements OnInit {
     protected readonly revealed = signal(false);
     protected readonly resume = signal<ResumeChip | undefined>(undefined);
     protected readonly mood = signal<Mood>('midnight');
-    protected readonly activeVideo = signal<string | null>(null);
-
-    protected toggleVideo(url: string | undefined): void {
-        if (!url) return;
-        this.activeVideo.update((v) => (v === url ? null : url));
-    }
 
     constructor() {
         afterNextRender(() => {
