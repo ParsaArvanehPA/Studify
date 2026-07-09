@@ -18,6 +18,8 @@ export interface StudyDoc {
     path: string;
     /** Source is right-to-left (Persian / Arabic). */
     rtl?: boolean;
+    /** Google Drive embed URL for a lecture video. */
+    video?: string;
 }
 
 /** Reading surface used by the reader. */
