@@ -315,6 +315,25 @@ header.nav.stuck {
     color: var(--gold);
     border-color: color-mix(in srgb, var(--gold) 40%, transparent);
 }
+.ch-files .pill.video {
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    cursor: pointer;
+    font-family: inherit;
+    background: none;
+}
+.ch-files .pill.video:hover {
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.ch-video {
+    padding: 0 8px 24px;
+}
+.ch-video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+}
 .ch-arrow {
     font-size: 22px;
     color: var(--ink-faint);

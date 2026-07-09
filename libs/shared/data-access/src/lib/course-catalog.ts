@@ -441,7 +441,8 @@ export const COURSES: readonly Course[] = [
                 files: [
                     {kind: 'Comprehensive', tag: 'guide', docId: 'tt-01-full'},
                     {kind: 'Exam Cram', tag: 'concise', docId: 'tt-01-cram'}
-                ]
+                ],
+                video: 'https://drive.google.com/file/d/1bjf--seiKKRx6gqL9W7q3Jq3n9AFX8Wc/preview'
             },
             {
                 no: '02',

@@ -17,6 +17,8 @@ export interface Chapter {
     /** Chapter title, e.g. "Paragraph Structure". */
     title: string;
     files: CourseFileRef[];
+    /** Google Drive embed URL for a lecture video. */
+    video?: string;
 }
 
 /** A course — the data the course page renders (mirrors the old structure.ts). */

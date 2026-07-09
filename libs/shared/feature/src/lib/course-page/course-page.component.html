@@ -54,6 +54,11 @@
                         <span class="ch-no">{{ ch.no }}</span>
                         <span class="ch-title">{{ ch.title }}</span>
                         <span class="ch-files">
+                            @if (ch.video) {
+                                <button class="pill video" (click)="$event.preventDefault(); toggleVideo(ch.video)">{{
+                                    activeVideo() === ch.video ? 'Close video' : 'Lecture video'
+                                }}</button>
+                            }
                             @for (f of ch.files; track f.kind) {
                                 <a class="pill {{ f.tag }}" [routerLink]="f.link ? [f.link] : ['/reader', f.docId]">{{
                                     f.kind
@@ -62,6 +67,16 @@
                         </span>
                         <span class="ch-arrow">→</span>
                     </div>
+                    @if (ch.video && activeVideo() === ch.video) {
+                        <div class="ch-video">
+                            <iframe
+                                src="{{ ch.video }}"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    }
                 </div>
             }
         </section>

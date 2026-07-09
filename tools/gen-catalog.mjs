@@ -153,7 +153,8 @@ const COURSES = [
                 week: 'Week-1',
                 no: '01',
                 title: 'Munday Ch1 · Main Issues of Translation Studies',
-                slug: '01_Munday-2016_Ch1_Main-Issues-of-Translation-Studies'
+                slug: '01_Munday-2016_Ch1_Main-Issues-of-Translation-Studies',
+                video: 'https://drive.google.com/file/d/1bjf--seiKKRx6gqL9W7q3Jq3n9AFX8Wc/preview'
             },
             {
                 week: 'Week-1',
@@ -282,14 +283,16 @@ for (const c of COURSES) {
             );
             push(cramId, `${wk} · ${r.title}`, 'Exam Cram', `${served}/${r.week}/Exam-Cram/${r.slug}_Exam-Cram.html`);
             const wkLabel = r.week.replace('Week-', 'Week ');
-            chapters.push({
+            const ch = {
                 no: r.no,
                 title: `${wkLabel} · ${r.title}`,
                 files: [
                     {kind: 'Comprehensive', tag: 'guide', docId: guideId},
                     {kind: 'Exam Cram', tag: 'concise', docId: cramId}
                 ]
-            });
+            };
+            if (r.video) ch.video = r.video;
+            chapters.push(ch);
         }
     } else if (c.kind === 'chapters') {
         const byNum = new Map();
@@ -478,7 +481,7 @@ const courseLines = courseData
                         return `{${parts.join(', ')}}`;
                     })
                     .join(', ');
-                return `            {no: ${j(ch.no)}, title: ${j(ch.title)}, files: [${fs}]}`;
+                return `            {no: ${j(ch.no)}, title: ${j(ch.title)}, files: [${fs}]${ch.video ? `, video: ${j(ch.video)}` : ''}}`;
             })
             .join(',\n');
         return `    {\n        id: ${j(c.id)}, name: ${j(c.name)}, fa: ${j(c.fa)}, glyph: ${j(c.glyph)}, color: ${j(c.color)},\n        semester: ${j(c.semester)},\n        description: ${j(c.description)},\n        chapters: [\n${chaps}\n        ]\n    }`;
