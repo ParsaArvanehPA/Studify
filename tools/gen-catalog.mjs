@@ -160,67 +160,78 @@ const COURSES = [
                 week: 'Week-1',
                 no: '02',
                 title: 'Munday Ch2 · Translation Theory Before the 20th Century',
-                slug: '02_Munday-2016_Ch2_Translation-Theory-Before-the-Twentieth-Century'
+                slug: '02_Munday-2016_Ch2_Translation-Theory-Before-the-Twentieth-Century',
+                video: 'https://drive.google.com/file/d/1mxO1yhTXVYiknQR3Ebo8jXrn_u8LZR_0/preview'
             },
             {
                 week: 'Week-2',
                 no: '03',
                 title: 'Pym Ch1 · What Is a Translation Theory?',
-                slug: '01_Pym-2014_Ch1_What-Is-a-Translation-Theory'
+                slug: '01_Pym-2014_Ch1_What-Is-a-Translation-Theory',
+                video: 'https://drive.google.com/file/d/1slMCIwcs5ksYIF3gURdzoSpVW5r7j_IW/preview'
             },
             {
                 week: 'Week-4',
                 no: '04',
                 title: 'Nida Ch1 · Toward a Science of Translating',
-                slug: '01_Nida_Ch1_Introduction-Science-of-Translating'
+                slug: '01_Nida_Ch1_Introduction-Science-of-Translating',
+                video: 'https://drive.google.com/file/d/1ltcAXBXHM98lnY3Nav9gvV6JEga8Vy1N/preview'
             },
             {
                 week: 'Week-4',
                 no: '05',
                 title: 'Nida Ch2 · The Western Tradition of Translation',
-                slug: '02_Nida_Ch2_Tradition-of-Translation-in-the-Western-World'
+                slug: '02_Nida_Ch2_Tradition-of-Translation-in-the-Western-World',
+                video: 'https://drive.google.com/file/d/1eRR25LjLs_SreZiyNbtxM4-Lde2rmOg_/preview'
             },
             {
                 week: 'Week-4',
                 no: '06',
                 title: 'Munday Ch3 · Equivalence and Equivalent Effect',
-                slug: '03_Munday-2016_Ch3_Equivalence-and-Equivalent-Effect'
+                slug: '03_Munday-2016_Ch3_Equivalence-and-Equivalent-Effect',
+                video: 'https://drive.google.com/file/d/1HqpgX04Up1KpItCBDwGSSvUcdr4Wcv7l/preview'
             },
             {
                 week: 'Week-5',
                 no: '07',
                 title: 'Nord Ch1 · Functionalism: A Historical Overview',
-                slug: '01_Nord_Ch1_Historical-Overview-of-Functionalism'
+                slug: '01_Nord_Ch1_Historical-Overview-of-Functionalism',
+                video: 'https://drive.google.com/file/d/1-rELCpkf3q3LVvTv4doonIUvoRXB39Do/preview'
             },
             {
                 week: 'Week-5',
                 no: '08',
                 title: 'Nord Ch3 · Basic Aspects of Skopostheorie',
-                slug: '02_Nord_Ch3_Basic-Aspects-of-Skopostheorie'
+                slug: '02_Nord_Ch3_Basic-Aspects-of-Skopostheorie',
+                video: 'https://drive.google.com/file/d/11uh6WiE_OKBfozgCAO7bZPc80yGBqAYX/preview'
             },
             {
                 week: 'Week-6',
                 no: '09',
                 title: 'Nord Ch4 · Functionalism in Translator Training',
-                slug: '01_Nord_Ch4_Functionalism-in-Translator-Training'
+                slug: '01_Nord_Ch4_Functionalism-in-Translator-Training',
+                video: 'https://drive.google.com/file/d/1NjOTf7Fek7fCnhNGF-mpakA2eUy2ycT5/preview'
             },
             {
                 week: 'Week-6',
                 no: '10',
                 title: 'Nord Ch6 · Functionalist Approaches to Interpreting',
-                slug: '02_Nord_Ch6_Functionalist-Approaches-to-Interpreting'
+                slug: '02_Nord_Ch6_Functionalist-Approaches-to-Interpreting',
+                video: 'https://drive.google.com/file/d/1vtyW_nAXBHSkSm6YNFee1dkwtHcGjYh2/preview'
             },
             {
                 week: 'Week-7',
                 no: '11',
                 title: 'Toury Ch1 · Translations as Facts of a Target Culture',
-                slug: '01_Toury_Ch1_Translations-as-Facts-of-a-Target-Culture'
+                slug: '01_Toury_Ch1_Translations-as-Facts-of-a-Target-Culture',
+                video: 'https://drive.google.com/file/d/1fhAxV0hQg05IR0SrlsT2WVXOtjYWVSpq/preview'
             },
             {
                 week: 'Week-7',
                 no: '12',
                 title: 'Toury Ch2 · The Notion of \u2018Problem\u2019',
-                slug: '02_Toury_Ch2_The-Notion-of-Problem-in-Translation-Studies'
+                slug: '02_Toury_Ch2_The-Notion-of-Problem-in-Translation-Studies',
+                video: 'https://drive.google.com/file/d/1ewGcywXuKJe0Q29RkJznAkb19U5Lt31D/preview'
             },
             {
                 week: 'Week-7',
