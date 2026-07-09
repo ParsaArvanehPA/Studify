@@ -273,7 +273,7 @@ for (const c of COURSES) {
         for (const r of c.readings) {
             const guideId = `${c.prefix}-${r.no}-full`;
             const cramId = `${c.prefix}-${r.no}-cram`;
-            const wk = r.week.replace('Week-', 'Wk ');
+            const wk = r.week.replace('Week-', 'Week ');
             push(
                 guideId,
                 `${wk} · ${r.title}`,
@@ -281,9 +281,10 @@ for (const c of COURSES) {
                 `${served}/${r.week}/Comprehensive/${r.slug}_Comprehensive.html`
             );
             push(cramId, `${wk} · ${r.title}`, 'Exam Cram', `${served}/${r.week}/Exam-Cram/${r.slug}_Exam-Cram.html`);
+            const wkLabel = r.week.replace('Week-', 'Week ');
             chapters.push({
                 no: r.no,
-                title: r.title,
+                title: `${wkLabel} · ${r.title}`,
                 files: [
                     {kind: 'Comprehensive', tag: 'guide', docId: guideId},
                     {kind: 'Exam Cram', tag: 'concise', docId: cramId}
