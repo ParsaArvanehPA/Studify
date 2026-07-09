@@ -40,6 +40,8 @@
   .dochead .dfa{font-family:var(--farsi);direction:rtl;font-size:18px;color:var(--paper-soft);margin-top:10px}
   .dochead .dmeta{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
   .dochead .dmeta span{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--paper-soft);border:1px solid var(--paper-line);border-radius:999px;padding:6px 11px}
+  .dochead .dmeta a.dvid{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--paper-accent);border:1px solid color-mix(in srgb,var(--paper-accent) 40%,transparent);border-radius:999px;padding:6px 11px;text-decoration:none;transition:.25s;white-space:nowrap}
+  .dochead .dmeta a.dvid:hover{background:color-mix(in srgb,var(--paper-accent) 14%,transparent)}
 
   /* loading + error */
   .rstate{max-width:var(--readw);margin:0 auto;text-align:center;padding:60px 20px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper-soft)}

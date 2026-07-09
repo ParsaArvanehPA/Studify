@@ -131,10 +131,13 @@ export class ReaderComponent implements OnInit {
 
     private buildHead(d: StudyDoc, minutes: number): string {
         const fa = d.courseFa ? `<div class="dfa">${d.courseFa}</div>` : '';
+        const vid = d.video
+            ? `<a class="dvid" href="${d.video}" target="_blank" rel="noopener">▶ Lecture video</a>`
+            : '';
         return (
             `<header class="dochead"><div class="dk">${d.course} · ${d.chapter}</div>` +
             `<h1>${d.chapter}</h1>${fa}` +
-            `<div class="dmeta"><span>${d.kind}</span><span>${minutes} min read</span></div></header>`
+            `<div class="dmeta"><span>${d.kind}</span><span>${minutes} min read</span>${vid}</div></header>`
         );
     }
 

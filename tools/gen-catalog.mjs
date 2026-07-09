@@ -262,8 +262,10 @@ for (const c of COURSES) {
     const base = c.dir ? join(FS, ASSETS, c.dir) : '';
     const served = c.dir ? `${ASSETS}/${c.dir}` : '';
     const chapters = [];
-    const push = (id, chapter, kind, relPath, rtl = c.rtl) => {
-        docs.push({id, course: c.name, courseFa: c.fa, chapter, kind, path: relPath, rtl});
+    const push = (id, chapter, kind, relPath, rtl = c.rtl, video) => {
+        const doc = {id, course: c.name, courseFa: c.fa, chapter, kind, path: relPath, rtl};
+        if (video) doc.video = video;
+        docs.push(doc);
     };
 
     if (c.kind === 'tool') {
@@ -279,9 +281,18 @@ for (const c of COURSES) {
                 guideId,
                 `${wk} · ${r.title}`,
                 'Comprehensive',
-                `${served}/${r.week}/Comprehensive/${r.slug}_Comprehensive.html`
+                `${served}/${r.week}/Comprehensive/${r.slug}_Comprehensive.html`,
+                c.rtl,
+                r.video
             );
-            push(cramId, `${wk} · ${r.title}`, 'Exam Cram', `${served}/${r.week}/Exam-Cram/${r.slug}_Exam-Cram.html`);
+            push(
+                cramId,
+                `${wk} · ${r.title}`,
+                'Exam Cram',
+                `${served}/${r.week}/Exam-Cram/${r.slug}_Exam-Cram.html`,
+                c.rtl,
+                r.video
+            );
             const wkLabel = r.week.replace('Week-', 'Week ');
             const ch = {
                 no: r.no,
@@ -453,7 +464,7 @@ const j = (v) => JSON.stringify(v);
 const docLines = docs
     .map(
         (d) =>
-            `    {id: ${j(d.id)}, course: ${j(d.course)}, courseFa: ${j(d.courseFa)}, chapter: ${j(d.chapter)}, kind: ${j(d.kind)}, path: ${j(d.path)}${d.rtl ? ', rtl: true' : ''}}`
+            `    {id: ${j(d.id)}, course: ${j(d.course)}, courseFa: ${j(d.courseFa)}, chapter: ${j(d.chapter)}, kind: ${j(d.kind)}, path: ${j(d.path)}${d.rtl ? ', rtl: true' : ''}${d.video ? `, video: ${j(d.video)}` : ''}}`
     )
     .join(',\n');
 const colorLines = COURSES.map((c) => `    ${j(c.name)}: ${j(c.color)}`).join(',\n');
