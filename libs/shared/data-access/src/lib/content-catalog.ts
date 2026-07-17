@@ -716,7 +716,7 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         chapter: 'Session 1',
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/online-journalism/session-1/session-1-study-guide.html',
-        rtl: true
+        video: 'https://notebooklm.google.com/notebook/105a69a6-2145-41f8-a49d-1cea9a57a94b/artifact/8e86deea-c822-4879-a4c1-496cb11df213'
     },
     {
         id: 'oj-2-guide',
@@ -725,7 +725,7 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         chapter: 'Session 2',
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/online-journalism/session-2/session-2-study-guide.html',
-        rtl: true
+        video: 'https://notebooklm.google.com/notebook/5b28e355-aa66-4857-bd24-fefddfe1b656/artifact/0d6d3b9a-ec61-4b29-a0ed-98df16e19c52'
     },
     {
         id: 'oj-3-guide',
@@ -734,7 +734,7 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         chapter: 'Session 3',
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/online-journalism/session-3/session-3-study-guide.html',
-        rtl: true
+        video: 'https://notebooklm.google.com/notebook/d2c6a055-e913-4316-a8df-5c5617879f54/artifact/354ca452-0538-4332-b293-42351faf9a7e'
     },
     {
         id: 'oj-4-guide',
@@ -743,7 +743,7 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         chapter: 'Session 4',
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/online-journalism/session-4/session-4-study-guide.html',
-        rtl: true
+        video: 'https://notebooklm.google.com/notebook/c65b5f3b-376f-4a1c-8fd4-d719a73cb731/artifact/1c03c7a0-f79e-44bd-a93e-01fd53ad2b6e'
     },
     {
         id: 'oj-5-guide',
@@ -752,7 +752,7 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         chapter: 'Session 5',
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/online-journalism/session-5/session-5-study-guide.html',
-        rtl: true
+        video: 'https://notebooklm.google.com/notebook/ceb95b8d-261f-49e8-a49e-716a43bab5c5/artifact/ff1ef64d-14a6-46af-bdd9-d693322e7565'
     },
     {
         id: 'oj-6-guide',
@@ -761,7 +761,7 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         chapter: 'Session 6',
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/online-journalism/session-6/session-6-study-guide.html',
-        rtl: true
+        video: 'https://notebooklm.google.com/notebook/31eb61f5-ca9b-4f50-813b-17b7c3f15976/artifact/93237143-fa6c-42fe-867e-184dce3c1828'
     },
     {
         id: 'oj-7-guide',
@@ -770,7 +770,7 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         chapter: 'Session 7',
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/online-journalism/session-7/session-7-study-guide.html',
-        rtl: true
+        video: 'https://notebooklm.google.com/notebook/fbdc7426-2f27-4052-8c9f-0f57208ec4db/artifact/61a0fc71-540c-4b9b-ae24-6b048a3a50c9'
     },
     {
         id: 'oj-8-guide',
@@ -779,7 +779,7 @@ export const CONTENT_CATALOG: readonly StudyDoc[] = [
         chapter: 'Session 8',
         kind: 'Study Guide',
         path: 'assets/sem/semester-2/online-journalism/session-8/session-8-study-guide.html',
-        rtl: true
+        video: 'https://notebooklm.google.com/notebook/f505ada7-7a6c-43b0-a69c-ba3fcd56c7a8/artifact/a149e376-689e-4e7f-81e5-ebed3a002d8d'
     },
     {
         id: 'pt-1-guide',

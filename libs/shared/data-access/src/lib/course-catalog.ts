@@ -373,16 +373,56 @@ export const COURSES: readonly Course[] = [
         color: '#5BA8F0',
         semester: 'Semester 2',
         description:
-            'Online journalism and translation in the digital space — media, audiences, genres and the politics of the network, in detailed Persian study guides.',
+            'Translation strategies in global news — domestication and foreignisation in the coverage of foreign quotation and culture-specific concepts, examined through the Reuters news agency and the Sarkozy banlieue case study.',
         chapters: [
-            {no: '01', title: 'Session 1', files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-1-guide'}]},
-            {no: '02', title: 'Session 2', files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-2-guide'}]},
-            {no: '03', title: 'Session 3', files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-3-guide'}]},
-            {no: '04', title: 'Session 4', files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-4-guide'}]},
-            {no: '05', title: 'Session 5', files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-5-guide'}]},
-            {no: '06', title: 'Session 6', files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-6-guide'}]},
-            {no: '07', title: 'Session 7', files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-7-guide'}]},
-            {no: '08', title: 'Session 8', files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-8-guide'}]}
+            {
+                no: '01',
+                title: 'Session 1',
+                files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-1-guide'}],
+                video: 'https://notebooklm.google.com/notebook/105a69a6-2145-41f8-a49d-1cea9a57a94b/artifact/8e86deea-c822-4879-a4c1-496cb11df213'
+            },
+            {
+                no: '02',
+                title: 'Session 2',
+                files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-2-guide'}],
+                video: 'https://notebooklm.google.com/notebook/5b28e355-aa66-4857-bd24-fefddfe1b656/artifact/0d6d3b9a-ec61-4b29-a0ed-98df16e19c52'
+            },
+            {
+                no: '03',
+                title: 'Session 3',
+                files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-3-guide'}],
+                video: 'https://notebooklm.google.com/notebook/d2c6a055-e913-4316-a8df-5c5617879f54/artifact/354ca452-0538-4332-b293-42351faf9a7e'
+            },
+            {
+                no: '04',
+                title: 'Session 4',
+                files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-4-guide'}],
+                video: 'https://notebooklm.google.com/notebook/c65b5f3b-376f-4a1c-8fd4-d719a73cb731/artifact/1c03c7a0-f79e-44bd-a93e-01fd53ad2b6e'
+            },
+            {
+                no: '05',
+                title: 'Session 5',
+                files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-5-guide'}],
+                video: 'https://notebooklm.google.com/notebook/ceb95b8d-261f-49e8-a49e-716a43bab5c5/artifact/ff1ef64d-14a6-46af-bdd9-d693322e7565'
+            },
+            {
+                no: '06',
+                title: 'Session 6',
+                files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-6-guide'}],
+                video: 'https://notebooklm.google.com/notebook/31eb61f5-ca9b-4f50-813b-17b7c3f15976/artifact/93237143-fa6c-42fe-867e-184dce3c1828'
+            },
+            {
+                no: '07',
+                title: 'Session 7',
+                files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-7-guide'}],
+                video: 'https://notebooklm.google.com/notebook/fbdc7426-2f27-4052-8c9f-0f57208ec4db/artifact/61a0fc71-540c-4b9b-ae24-6b048a3a50c9'
+            },
+            {
+                no: '08',
+                title: 'Session 8',
+                files: [{kind: 'Study Guide', tag: 'guide', docId: 'oj-8-guide'}],
+                video: 'https://notebooklm.google.com/notebook/f505ada7-7a6c-43b0-a69c-ba3fcd56c7a8/artifact/a149e376-689e-4e7f-81e5-ebed3a002d8d'
+            }
         ]
     },
     {
