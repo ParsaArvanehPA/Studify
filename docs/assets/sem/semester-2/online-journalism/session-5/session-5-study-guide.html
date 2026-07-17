@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>راهنمای مطالعه: جلسه پنجم - نسبیت زبانی و بومی‌سازی</title>
+    <title>Study Guide: Session 5 - Investigating Translation Strategy in the News</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -84,10 +84,10 @@
 
         .concept-box {
             background-color: var(--box-background);
-            border-right: 5px solid var(--primary-color);
+            border-left: 5px solid var(--primary-color);
             padding: 20px 24px;
             margin: 24px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .concept-box h3, .concept-box h4 {
@@ -97,10 +97,10 @@
 
         .key-term {
             background-color: #fef3e2;
-            border-right: 5px solid var(--key-term-color);
+            border-left: 5px solid var(--key-term-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .key-term strong {
@@ -109,10 +109,10 @@
 
         .important {
             background-color: #fdf2f8;
-            border-right: 5px solid var(--important-color);
+            border-left: 5px solid var(--important-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .important strong, .important h3 {
@@ -121,10 +121,10 @@
 
         .case-study {
             background-color: #f0fdf4;
-            border-right: 5px solid var(--case-study-color);
+            border-left: 5px solid var(--case-study-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .case-study strong, .case-study h4 {
@@ -133,10 +133,10 @@
 
         .example {
             background-color: #fffbeb;
-            border-right: 5px solid var(--example-color);
+            border-left: 5px solid var(--example-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .example strong {
@@ -145,10 +145,10 @@
 
         .scholar-box {
             background-color: #f8f9fa;
-            border-right: 5px solid var(--scholar-color);
+            border-left: 5px solid var(--scholar-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .scholar-box strong, .scholar-box h3, .scholar-box h4 {
@@ -157,10 +157,10 @@
 
         .ai-box {
             background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
-            border-right: 5px solid var(--ai-color);
+            border-left: 5px solid var(--ai-color);
             padding: 20px 24px;
             margin: 24px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
             box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
         }
 
@@ -183,7 +183,7 @@
 
         .ai-box ul, .ai-box ol {
             color: #4c1d95;
-            margin: 12px 24px 12px 0;
+            margin: 12px 0 12px 24px;
         }
 
         .ai-box li {
@@ -196,10 +196,10 @@
 
         .question-box {
             background-color: #ebf8ff;
-            border-right: 5px solid var(--primary-color);
+            border-left: 5px solid var(--primary-color);
             padding: 20px 24px;
             margin: 24px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .question-box strong {
@@ -208,10 +208,10 @@
 
         .answer-box {
             background-color: #f0fdf4;
-            border-right: 5px solid var(--case-study-color);
+            border-left: 5px solid var(--case-study-color);
             padding: 20px 24px;
             margin: 8px 0 24px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .answer-box strong {
@@ -219,7 +219,7 @@
         }
 
         ul, ol {
-            margin: 16px 24px 16px 0;
+            margin: 16px 0 16px 24px;
         }
 
         li {
@@ -259,7 +259,7 @@
         th, td {
             border: 1px solid #ddd;
             padding: 12px;
-            text-align: right;
+            text-align: left;
         }
 
         th {
@@ -272,8 +272,8 @@
         }
 
         blockquote {
-            border-right: 4px solid var(--accent-color);
-            padding-right: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
             margin: 20px 0;
             font-style: italic;
             color: #555;
@@ -315,133 +315,191 @@
 </head>
 <body>
     <div class="container">
-        <h1>روزنامه‌نگاری برخط و ترجمه در فضای دیجیتال</h1>
-        <p class="subtitle">جلسه پنجم: نسبیت زبانی، زبان و فرهنگ، رجیستر و طیف بومی‌سازی/بیگانه‌سازی | کارشناسی ارشد مطالعات ترجمه - دانشگاه علامه طباطبایی</p>
+        <h1>Translation Strategies in Global News</h1>
+        <p class="subtitle">Session 5: Investigating Translation Strategy in the News | Based on Claire Scammell, <em>Translation Strategies in Global News</em> (2018), Ch. 5 | MA Translation Studies</p>
 
-        <div class="chapter-divider"><span>مروری بر محتوای جلسه</span></div>
-
-        <div class="concept-box">
-            <h3>درباره این جلسه</h3>
-            <p>این جلسه به رابطهٔ <strong>زبان، اندیشه و فرهنگ</strong> می‌پردازد و نشان می‌دهد چرا ترجمه صرفاً جایگزینیِ واژه‌ها نیست. مفاهیم کلیدی: نسبیت زبانی (فرضیهٔ ساپیر-وورف)، تنیدگیِ فرهنگ در واژگان، تنوع رجیستر (سطح گفتار)، و دو سرِ طیفِ ترجمه — <strong>بومی‌سازی</strong> در برابر <strong>بیگانه‌سازی</strong> — به‌ویژه در ترجمهٔ خبر.</p>
-        </div>
-
-        <h2>۱. نسبیت زبانی (Linguistic Relativity)</h2>
-
-        <div class="scholar-box">
-            <h4>فرضیهٔ ساپیر-وورف (Sapir–Whorf)</h4>
-            <p>بر اساس <strong>نسبیت زبانی</strong>، زبانی که با آن سخن می‌گوییم، شیوهٔ ادراک و اندیشهٔ ما را شکل می‌دهد. گویشورانِ زبان‌های متفاوت، جهان را اندکی متفاوت «می‌بینند» و دسته‌بندی می‌کنند. نتیجهٔ مهم برای ترجمه: گاه مفهومی که در زبان مبدأ هست، در زبان مقصد «وجود ندارد» و باید بازسازی شود.</p>
-        </div>
-
-        <div class="example">
-            <strong>نمونهٔ رنگ‌های فرش:</strong> قالی‌بافان فارسی‌زبان برای طیف‌های یک رنگ، واژه‌های متمایز دارند؛ آنچه برای یک ناآشنا «سبز» است، برای آن‌ها «زیتونی»، «لیمویی» یا «پسته‌ای» است. تجربهٔ زیستهٔ آنان، تمایزهای واژگانیِ ظریف‌تری پدید آورده است — مصداق روشنِ پیوند زبان و تجربه.
-        </div>
-
-        <div class="example">
-            <strong>نمونهٔ دامداری و خوراک:</strong> فرهنگ‌هایی که زندگی‌شان به دام (گاو، گوسفند) یا کشت‌وکار وابسته است، برای اجزای ریزِ این حوزه‌ها واژگان پرشمار دارند (نام‌های متمایز بر اساس سن، جنس، رنگ). همین تنوع، در زبانی دیگر معادل دقیق ندارد.
-        </div>
-
-        <h2>۲. رجیستر و انتخاب آگاهانهٔ واژه</h2>
+        <div class="chapter-divider"><span>Session Overview</span></div>
 
         <div class="concept-box">
-            <h3>رجیستر (Register) چیست؟</h3>
-            <p>رجیستر یعنی «سطح و لحنِ» زبان متناسب با موقعیت و مخاطب. برای یک کنشِ واحد، زنجیره‌ای از گزینه‌ها داریم که بارِ ادب و رسمیتِ متفاوتی دارند:</p>
-            <ul>
-                <li>«بخور» (خنثی/عامیانه) — «کوفت کن» (تحقیرآمیز) — «میل کن / نوش جان کن / تناول کن» (محترمانه/رسمی).</li>
-            </ul>
-            <p>انتخاب هر گزینه، یک معنای ضمنی و موضع‌گیری را منتقل می‌کند؛ مترجم با گزینش رجیستر، عملاً رابطهٔ متن با مخاطب را تعریف می‌کند.</p>
+            <h3>About this session</h3>
+            <p>This chapter defines "strategy" as the book uses it, surveys the methods available for investigating translation strategy, and introduces the analytical tool used in the next session: <strong>Pedersen's (2005) taxonomy</strong> for rendering culture in subtitling — borrowed and adapted to examine how Reuters journalists handle culture-specific concepts.</p>
+        </div>
+
+        <h2>1. Defining "Strategy": Global vs. Local</h2>
+
+        <div class="concept-box">
+            <h3>Chesterman's (1997) distinction</h3>
+            <p>"Strategy" can refer either to the <strong>overall approach</strong> taken to translating a whole text (a "global" strategy), or to <strong>individual decisions</strong> made at word, phrase or sentence level to resolve "local problems" (a "local" strategy). Example: a client might commission a "creative" translation of a marketing text (global strategy = creative) while also specifying non-technical language for a key term (a local strategy applied wherever that term appears).</p>
         </div>
 
         <div class="key-term">
-            <strong>اصلِ «گزینه‌های کنارگذاشته»:</strong> هر بار که یک واژه یا اصطلاح را انتخاب می‌کنید، ده‌ها گزینهٔ مشابه را «کنار گذاشته‌اید» (Left out). همین انتخاب و طردِ گزینه‌ها، منظور و موضع شما را آشکار می‌کند؛ پس هیچ انتخابی تصادفی یا بی‌معنا نیست.
+            <strong>Davier's (2013) parallel:</strong> macro-level domestication (e.g. "rewriting" a whole report) vs. micro-level domestication (e.g. "omission" of a single detail) — mirroring Chesterman's global/local split in a specifically news-translation context.
         </div>
-
-        <h2>۳. طیف ترجمه: بومی‌سازی در برابر بیگانه‌سازی</h2>
 
         <div class="scholar-box">
-            <h4>دو رویکرد (در امتداد بحث ونوتی)</h4>
-            <table>
-                <tr>
-                    <th>رویکرد</th>
-                    <th>توضیح</th>
-                </tr>
-                <tr>
-                    <td><strong>بومی‌سازی</strong><br>(Domestication)</td>
-                    <td>متن چنان «طبیعی» و آشنا ترجمه می‌شود که خواننده احساس کند در فرهنگ خودش نوشته شده و حسِ غریبگی نکند.</td>
-                </tr>
-                <tr>
-                    <td><strong>بیگانه‌سازی</strong><br>(Foreignization)</td>
-                    <td>ردِ پای فرهنگ و زبان مبدأ در متن حفظ می‌شود؛ خواننده آگاه است که با متنی «بیگانه» روبه‌روست.</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="case-study">
-            <h4>نمونه: «منطقِ پشتِ جمله‌ها»</h4>
-            <p>گاه متنی به انگلیسی نوشته شده اما خواننده حس می‌کند ذهنِ پشتِ آن فارسی است (یا برعکس): واژه‌ها و ساختار بی‌ایراد است، اما «منطق و حسی» که جمله‌ها را روی کاغذ آورده با زبانِ ظاهری هماهنگ نیست. وقتی مترجم بکوشد متن چنان طبیعی شود که خواننده احساس غریبگی نکند، <strong>بومی‌سازی</strong> رخ داده است.</p>
+            <h4>Lörscher (1991) — strategy as problem-solving</h4>
+            <blockquote>"A translation strategy is a potentially conscious procedure for the solution of a problem which an individual is faced with when translating a text segment from one language into another."</blockquote>
+            <p>Like Chesterman, Lörscher's definition is exclusively about the <strong>local</strong> level, and emphasises that translators only apply a strategy when the text presents a genuine problem — echoing Pedersen's (2005) idea of "crisis points" where a subtitler must make a translation choice.</p>
         </div>
 
         <div class="important">
-            <h3>کاربرد در ترجمهٔ خبر در برابر ترجمهٔ ادبی</h3>
-            <ul>
-                <li><strong>ترجمهٔ خبر:</strong> معمولاً به سمت <strong>بومی‌سازی</strong> می‌رود؛ مرزِ میان زبان مبدأ و مقصد کم‌رنگ می‌شود تا خواننده تفاوت چندانی حس نکند و پیام روان منتقل شود.</li>
-                <li><strong>ترجمهٔ ادبی:</strong> بیشتر رگه‌ها و ردِ پای زبان اصلی را نگه می‌دارد (گرایش بیشتر به بیگانه‌سازی).</li>
-            </ul>
+            <p><strong>This book's usage:</strong> Reuters' current "global" approach to translation is simply referred to as its current "approach" (rather than "strategy"), since the limited guidance in the Handbook doesn't amount to an explicit, deliberate global strategy Reuters would necessarily recognise as such. "Strategy" is reserved for the <strong>local</strong> strategies used to translate foreign-language quotations and culture-specific concepts — the level Pedersen's taxonomy examines.</p>
         </div>
 
-        <div class="important">
-            <p><strong>اثر ترجمه بر ادراک:</strong> مردم برداشت خود از مفاهیم، فرهنگ‌ها و حتی سیاستمداران را اغلب نه از «اصلِ» آن‌ها، بلکه از <strong>ترجمه‌هایی</strong> می‌گیرند که دریافت می‌کنند؛ پس مترجم در شکل‌دادن به تصورِ جمعی نقش دارد.</p>
-        </div>
+        <h2>2. A Brief Survey of Methods</h2>
 
-        <div class="chapter-divider"><span>سوالات امتحانی</span></div>
-
-        <h2>پرسش و پاسخ برای آمادگی امتحان</h2>
-
-        <div class="question-box">
-            <strong>سؤال ۱:</strong> فرضیهٔ نسبیت زبانی (ساپیر-وورف) چه می‌گوید و چه پیامدی برای ترجمه دارد؟
-        </div>
-        <div class="answer-box">
-            <strong>پاسخ:</strong> زبانی که با آن سخن می‌گوییم، ادراک و اندیشهٔ ما را شکل می‌دهد؛ گویشورانِ زبان‌های مختلف جهان را متفاوت دسته‌بندی می‌کنند. پیامد برای ترجمه: گاه مفهومی که در زبان مبدأ هست در زبان مقصد معادل ندارد و باید بازسازی شود (مثل واژه‌های متعدد قالی‌بافان برای طیف‌های یک رنگ).
-        </div>
-
-        <div class="question-box">
-            <strong>سؤال ۲:</strong> «رجیستر» چیست؟ با مثالِ یک کنش واحد توضیح دهید.
-        </div>
-        <div class="answer-box">
-            <strong>پاسخ:</strong> رجیستر یعنی سطح و لحنِ زبان متناسب با موقعیت و مخاطب. برای کنشِ «خوردن» می‌توان گفت «بخور» (خنثی)، «کوفت کن» (تحقیرآمیز)، «میل کن/نوش جان کن/تناول کن» (محترمانه). هر گزینه بارِ ادب و موضع‌گیریِ متفاوتی منتقل می‌کند.
-        </div>
-
-        <div class="question-box">
-            <strong>سؤال ۳:</strong> تفاوت بومی‌سازی و بیگانه‌سازی را تعریف کنید.
-        </div>
-        <div class="answer-box">
-            <strong>پاسخ:</strong> در <strong>بومی‌سازی (Domestication)</strong> متن چنان طبیعی ترجمه می‌شود که خواننده احساس کند در فرهنگ خودش نوشته شده و حسِ غریبگی نکند. در <strong>بیگانه‌سازی (Foreignization)</strong> ردِ پای فرهنگ و زبان مبدأ حفظ می‌شود و خواننده می‌داند با متنی بیگانه روبه‌روست.
-        </div>
-
-        <div class="question-box">
-            <strong>سؤال ۴:</strong> چرا ترجمهٔ خبر معمولاً به سمت بومی‌سازی می‌رود ولی ترجمهٔ ادبی کمتر؟
-        </div>
-        <div class="answer-box">
-            <strong>پاسخ:</strong> در ترجمهٔ خبر هدف انتقالِ روان و سریعِ پیام است؛ پس مرزِ میان زبان مبدأ و مقصد کم‌رنگ می‌شود تا خواننده تفاوت و غریبگی حس نکند (بومی‌سازی). در ترجمهٔ ادبی، حفظِ سبک و ردِ پای زبان اصلی ارزشمند است، پس رگه‌های بیگانه‌سازی بیشتر دیده می‌شود.
-        </div>
-
-        <div class="question-box">
-            <strong>سؤال ۵:</strong> منظور از «اصلِ گزینه‌های کنارگذاشته» در انتخاب واژگان چیست؟
-        </div>
-        <div class="answer-box">
-            <strong>پاسخ:</strong> هر بار که یک واژه را انتخاب می‌کنیم، ده‌ها گزینهٔ مشابه را کنار گذاشته‌ایم؛ همین انتخاب و طرد، منظور و موضع ما را آشکار می‌کند. پس هیچ انتخاب واژگانی خنثی یا تصادفی نیست و تحلیل آن، مقاصد پنهان مترجم/نویسنده را نشان می‌دهد.
+        <div class="concept-box">
+            <h3>Method 1 — Text-based comparison</h3>
+            <p>The most common method across translation studies: comparing a translated (target) text against its original (source) text, sometimes alongside documentation like the translation brief or a commissioner's style guide. Combined with staff interviews, this method has produced the field's key findings on agency translation practice (Bielsa and Bassnett 2009; Davier 2014) — including the finding (Session 3) that agency journalists don't recognise translation as separate from editing.</p>
         </div>
 
         <div class="concept-box">
-            <h4>نکات کلیدی برای مرور</h4>
+            <h3>Method 2 — Think-aloud protocols (TAP)</h3>
+            <p>Asking a translator to talk through their decision-making live while translating, then analysing the recording (Bernardini 2003; Lörscher 1992). No published research has used TAP specifically with news professionals — likely because TAP slows down the translation process considerably (Jääskeläinen 2010), and time-pressured news professionals are unlikely to have the time or willingness to complete one.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>Method 3 — Textual analysis (the most common by far)</h3>
+            <p>Used most widely to examine local translation strategies, often in relation to ideological issues like news framing. Also used to study "recontextualisation" (Session 3) — but existing categorisations of this process describe the general <em>transformations</em> that accompany translation, rather than the specific <em>range of local strategies</em> used.</p>
+        </div>
+
+        <h2>3. Existing Categorisations of Intra-Lingual Change</h2>
+
+        <table>
+            <tr><th>Researcher(s)</th><th>Categorisation</th></tr>
+            <tr><td>Bielsa and Bassnett (2009)</td><td>Five types of "textual intervention" comparing an AFP Latin-America report against its Spanish-wire version — "the usual modifications of a translation that relies on a domesticating strategy which privileges fluency and transparency and conformance to the expectations of the target reader" (p. 101).</td></tr>
+            <tr><td>Hursti (2001)</td><td>Distinguishes <strong>Editing</strong> (transforming language/structure via deletion, addition, substitution, reorganization) from <strong>Translation</strong> (rendering newsworthy parts of the original into the target language).</td></tr>
+            <tr><td>Franjié (2009)</td><td>Analysing Arabic-to-French translations in <em>Courrier International</em>: omission, summarisation, and explicitation — intra-lingual editing practices occurring <em>alongside</em> translation.</td></tr>
+            <tr><td>Bani (2006)</td><td>Analysing Italian translations in <em>Internazionale</em>: four most common strategies for rendering culture-specific information — cutting/summary, inclusion of explanations, generalization, and substitution.</td></tr>
+        </table>
+
+        <div class="important">
+            <p><strong>The gap these approaches leave:</strong> all describe intra-lingual changes that happen <em>around</em> translation, not the local strategies used <em>at the point of translation itself</em>. Pedersen's (2005) taxonomy, developed for subtitling, is adopted precisely because it targets this gap.</p>
+        </div>
+
+        <h2>4. Pedersen's Strategies for Rendering Culture</h2>
+
+        <div class="concept-box">
+            <h3>Extralinguistic Culture-bound References (ECRs)</h3>
+            <blockquote>"An Extralinguistic Culture-bound Reference (ECR) is defined as reference that is attempted by means of any culture-bound linguistic expression, which refers to an extralinguistic entity or process, and which is assumed to have a discourse referent that is identifiable to a relevant audience as this referent is within the encyclopedic knowledge of this audience." (Pedersen 2005, p. 2)</blockquote>
+            <p>Example from subtitling: the American "Prison board" (a source-language ECR) replaced with the Swedish <em>kriminalvårdsstyrelsen</em>, naming a distinct Swedish institution (a target-language ECR). This is directly analogous to <em>banlieue</em> and its translation "suburb" — two terms designating two distinct realities.</p>
+        </div>
+
+        <div class="key-term">
+            <strong>Why Pedersen's taxonomy fits news translation:</strong> (1) it deals specifically with strategies for rendering cultural specificity; (2) it places strategies along a "Venutian" scale of foreignising/domesticating; (3) subtitlers and news agency journalists share very similar constraints — space (subtitling: screen space; news: word/character limits) and time (subtitling: seconds on screen; news: tight deadlines, multiple stories per day).
+        </div>
+
+        <div class="concept-box">
+            <h3>The six strategies, from most foreignising (SL-oriented) to most domesticating (TL-oriented)</h3>
+            <table>
+                <tr><th>Strategy</th><th>Orientation</th><th>Description</th></tr>
+                <tr><td><strong>Retention</strong></td><td>SL-oriented (most foreignising)</td><td>Keeps the ECR in its untranslated form, with no added help for the reader.</td></tr>
+                <tr><td><strong>Specification</strong></td><td>SL-oriented</td><td>Keeps the ECR untranslated but makes it more specific, via <em>explicitation</em> (e.g. adding a first name) or <em>addition</em> (adding latent/connotative information, e.g. "the estates, as they are known").</td></tr>
+                <tr><td><strong>Direct translation</strong></td><td>SL-oriented (can be "Calque" or "Shifted")</td><td>"Nothing is added or subtracted. No effort made to transfer connotations or guide the TT audience." A Calque translation is literal/exotic-sounding; a Shifted translation is more unobtrusive.</td></tr>
+                <tr><td><strong>Generalization</strong></td><td>TL-oriented</td><td>Replaces an ECR referring to something specific with something more general (e.g. <em>quartiers sensibles</em> → "problem neighbourhoods").</td></tr>
+                <tr><td><strong>Substitution</strong></td><td>TL-oriented (most domesticating)</td><td>Removes the source ECR and replaces it with either a different (target-culture) ECR ("Cultural" substitution) or a paraphrase.</td></tr>
+                <tr><td><strong>Omission</strong></td><td>Neither (sits outside the scale)</td><td>The ECR is simply removed without replacement — a standard, intra-lingual feature of "recontextualising" a story, so it is not counted as a translation strategy in this book's analysis.</td></tr>
+            </table>
+            <p>A seventh strategy, "Official Equivalent," applies only when an ECR already has a recognised official translation (Pedersen's example: Donald Duck → the Swedish "Kalle Anka") — the subtitler/journalist has no real decision to make in that case.</p>
+        </div>
+
+        <h2>5. Shared Constraints: Subtitling and News Agency Journalism</h2>
+
+        <div class="concept-box">
+            <p>Both the subtitler and the news agency journalist face the dual constraints of <strong>space</strong> and <strong>time</strong>:</p>
             <ul>
-                <li>نسبیت زبانی (ساپیر-وورف): زبان، اندیشه را شکل می‌دهد</li>
-                <li>زبان و فرهنگ تنیده‌اند: رنگ‌های فرش، واژگان دامداری</li>
-                <li>رجیستر: بخور/کوفت کن/میل کن — انتخاب آگاهانهٔ سطح زبان</li>
-                <li>بومی‌سازی در برابر بیگانه‌سازی</li>
-                <li>خبر ← بومی‌سازی؛ ادبیات ← بیگانه‌سازیِ بیشتر</li>
-                <li>ترجمه، ادراک مردم از مفاهیم و افراد را می‌سازد</li>
+                <li><strong>Space:</strong> the subtitler is limited by screen space; the news journalist by the norm of brevity (particularly in the lead paragraph) and the need for a report that can be read and understood quickly.</li>
+                <li><strong>Time:</strong> the subtitler has limited time to spend per subtitle under tight deadlines and low pay; the news journalist must produce multiple reports a day and get stories onto the wire before competitors break the story.</li>
+            </ul>
+            <p>Both practices are further shaped by <strong>national norms</strong> and audience expectations — subtitling norms and commissioning guidelines for the subtitler; newswriting conventions (e.g. the norm of using "said" as the reporting verb — Cotter 2010, p. 26) and agency-specific style guides for the journalist. These shared pressures both push toward translations that can be read and understood quickly — a domesticating tendency common to both fields.</p>
+        </div>
+
+        <div class="ai-box">
+            <div class="ai-box-header">
+                <span>✦ Why This Matters for a Translator</span>
+            </div>
+            <p>This is the chapter that gives you the actual analytical toolkit used in the rest of the book — worth learning precisely, since Session 6 applies it directly to real Reuters text.</p>
+            <ul>
+                <li>Notice the taxonomy is a genuine <strong>scale</strong>, not three domesticating vs. three foreignising boxes: Retention is the most extreme foreignising choice, Substitution the most extreme domesticating one, with Specification, Direct Translation and Generalization occupying graduated middle positions.</li>
+                <li>Omission sitting <em>outside</em> the scale is a subtle but important point: removing information entirely isn't more or less "foreignising" — it just isn't a translation strategy for handling an ECR at all.</li>
+                <li>The subtitling/news parallel is not superficial — Pedersen's taxonomy transfers so well precisely because both fields share the same two structural constraints (space, time), which is exactly why domestication tends to dominate in both.</li>
+            </ul>
+            <p><strong>Why it matters for you:</strong> when you read the Reuters corpus results in Session 6, try to place each translation choice on this six-point scale yourself before checking the book's classification — that's the skill this course is ultimately training.</p>
+        </div>
+
+        <div class="chapter-divider"><span>Review Questions</span></div>
+
+        <h2>Q&A for Exam Preparation</h2>
+
+        <div class="question-box">
+            <strong>Q1:</strong> Distinguish Chesterman's "global" and "local" translation strategies, with an example.
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> A global strategy is the overall approach taken to a whole text (e.g. a "creative" translation of a marketing text); a local strategy is an individual decision made at word/phrase/sentence level to resolve a specific problem (e.g. using non-technical language for one key term wherever it appears). A global strategy can specify constraints on the local strategies used within it.
+        </div>
+
+        <div class="question-box">
+            <strong>Q2:</strong> Why does this book avoid describing Reuters' overall approach to translation as a "global strategy"?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> Because Chesterman notes that a "strategy" implies at least a potentially conscious choice, and the limited translation guidance in the Reuters Handbook doesn't constitute an explicit, deliberate global strategy that Reuters would necessarily recognise as such. The book therefore calls it Reuters' current "approach," reserving "strategy" for local-level choices.
+        </div>
+
+        <div class="question-box">
+            <strong>Q3:</strong> Why is think-aloud protocol (TAP) unlikely to be a useful method for studying news translation?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> TAP requires a translator to narrate their decision-making live, which significantly slows down the translation process. Given the severe time pressure news professionals face (multiple stories a day, urgent deadlines), it is unlikely a professional would have the time or willingness to complete a think-aloud protocol.
+        </div>
+
+        <div class="question-box">
+            <strong>Q4:</strong> Define "Extralinguistic Culture-bound Reference" (ECR) and give the example used to illustrate it.
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> An ECR is a reference made via a culture-bound linguistic expression, referring to an extralinguistic entity or process assumed to be within the audience's encyclopedic (background) knowledge. Example: the American "Prison board" (source-language ECR) replaced with Swedish <em>kriminalvårdsstyrelsen</em> (target-language ECR) — two terms for two genuinely distinct institutions.
+        </div>
+
+        <div class="question-box">
+            <strong>Q5:</strong> List Pedersen's six main strategies for rendering ECRs, from most foreignising to most domesticating.
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> Retention (most SL/foreignising-oriented) → Specification → Direct Translation → Generalization → Substitution (most TL/domesticating-oriented), with Omission sitting outside the scale as neither.
+        </div>
+
+        <div class="question-box">
+            <strong>Q6:</strong> Why is "Omission" excluded from Pedersen's foreignising/domesticating scale?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> Because omission simply removes the ECR without replacing it in any way — it is treated as a standard, intra-lingual feature of "recontextualising" a story for a new audience, rather than a strategy for actually rendering (translating) the culture-specific content.
+        </div>
+
+        <div class="question-box">
+            <strong>Q7:</strong> Why does Pedersen's taxonomy — developed for subtitling — transfer well to news translation research?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> Because the subtitler and the news agency journalist face closely comparable constraints: both must work within tight <strong>space</strong> limits (screen space vs. word/character limits and newswriting brevity norms) and tight <strong>time</strong> limits (seconds on screen and low pay vs. urgent deadlines and multiple daily stories) — constraints that in both fields push practice toward domestication.
+        </div>
+
+        <div class="question-box">
+            <strong>Q8:</strong> What is the "Official Equivalent" strategy, and why is it treated as a special case?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> It applies when an ECR already has a recognised, official translation in the target language/culture (Pedersen's example: Donald Duck → the Swedish "Kalle Anka"). It is a special case because the subtitler/journalist isn't really making a foreignising-vs-domesticating decision at all — the equivalent is simply given.
+        </div>
+
+        <div class="concept-box">
+            <h4>Key Points to Review</h4>
+            <ul>
+                <li>Chesterman: global strategy (whole-text approach) vs. local strategy (word/phrase-level problem-solving)</li>
+                <li>Lörscher: a translation strategy is a "potentially conscious procedure" for solving a specific translation problem</li>
+                <li>Methods surveyed: text-based comparison (most common), interviews, think-aloud protocol (rarely used in news), textual analysis (used most for local strategies)</li>
+                <li>Existing categorisations (Bielsa & Bassnett; Hursti; Franjié; Bani) describe intra-lingual change around translation, not local translation strategies themselves — the gap Pedersen fills</li>
+                <li>ECR (Extralinguistic Culture-bound Reference) — Pedersen's (2005) unit of analysis</li>
+                <li>Six strategies on the Venutian scale: Retention → Specification → Direct Translation → Generalization → Substitution; Omission sits outside the scale</li>
+                <li>Subtitling and news agency journalism share space and time constraints, both pushing toward domestication</li>
             </ul>
         </div>
+
     </div>
 </body>
 </html>

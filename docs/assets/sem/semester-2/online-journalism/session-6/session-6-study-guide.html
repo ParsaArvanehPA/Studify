@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>راهنمای مطالعه: جلسه ششم - جهانی‌شدن و زبان میانجی</title>
+    <title>Study Guide: Session 6 - The Domestication Norm in Reuters Journalism</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -84,10 +84,10 @@
 
         .concept-box {
             background-color: var(--box-background);
-            border-right: 5px solid var(--primary-color);
+            border-left: 5px solid var(--primary-color);
             padding: 20px 24px;
             margin: 24px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .concept-box h3, .concept-box h4 {
@@ -97,10 +97,10 @@
 
         .key-term {
             background-color: #fef3e2;
-            border-right: 5px solid var(--key-term-color);
+            border-left: 5px solid var(--key-term-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .key-term strong {
@@ -109,10 +109,10 @@
 
         .important {
             background-color: #fdf2f8;
-            border-right: 5px solid var(--important-color);
+            border-left: 5px solid var(--important-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .important strong, .important h3 {
@@ -121,10 +121,10 @@
 
         .case-study {
             background-color: #f0fdf4;
-            border-right: 5px solid var(--case-study-color);
+            border-left: 5px solid var(--case-study-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .case-study strong, .case-study h4 {
@@ -133,10 +133,10 @@
 
         .example {
             background-color: #fffbeb;
-            border-right: 5px solid var(--example-color);
+            border-left: 5px solid var(--example-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .example strong {
@@ -145,10 +145,10 @@
 
         .scholar-box {
             background-color: #f8f9fa;
-            border-right: 5px solid var(--scholar-color);
+            border-left: 5px solid var(--scholar-color);
             padding: 16px 20px;
             margin: 20px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .scholar-box strong, .scholar-box h3, .scholar-box h4 {
@@ -157,10 +157,10 @@
 
         .ai-box {
             background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
-            border-right: 5px solid var(--ai-color);
+            border-left: 5px solid var(--ai-color);
             padding: 20px 24px;
             margin: 24px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
             box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
         }
 
@@ -183,7 +183,7 @@
 
         .ai-box ul, .ai-box ol {
             color: #4c1d95;
-            margin: 12px 24px 12px 0;
+            margin: 12px 0 12px 24px;
         }
 
         .ai-box li {
@@ -196,10 +196,10 @@
 
         .question-box {
             background-color: #ebf8ff;
-            border-right: 5px solid var(--primary-color);
+            border-left: 5px solid var(--primary-color);
             padding: 20px 24px;
             margin: 24px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .question-box strong {
@@ -208,10 +208,10 @@
 
         .answer-box {
             background-color: #f0fdf4;
-            border-right: 5px solid var(--case-study-color);
+            border-left: 5px solid var(--case-study-color);
             padding: 20px 24px;
             margin: 8px 0 24px 0;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .answer-box strong {
@@ -219,7 +219,7 @@
         }
 
         ul, ol {
-            margin: 16px 24px 16px 0;
+            margin: 16px 0 16px 24px;
         }
 
         li {
@@ -259,7 +259,7 @@
         th, td {
             border: 1px solid #ddd;
             padding: 12px;
-            text-align: right;
+            text-align: left;
         }
 
         th {
@@ -272,8 +272,8 @@
         }
 
         blockquote {
-            border-right: 4px solid var(--accent-color);
-            padding-right: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
             margin: 20px 0;
             font-style: italic;
             color: #555;
@@ -315,142 +315,186 @@
 </head>
 <body>
     <div class="container">
-        <h1>روزنامه‌نگاری برخط و ترجمه در فضای دیجیتال</h1>
-        <p class="subtitle">جلسه ششم: جهانی‌شدن، فشردگی زمان-مکان، انگلیسی به‌مثابه زبان میانجی و مناقشهٔ بومی‌سازی | کارشناسی ارشد مطالعات ترجمه - دانشگاه علامه طباطبایی</p>
+        <h1>Translation Strategies in Global News</h1>
+        <p class="subtitle">Session 6: The Domestication Norm in Reuters Journalism | Based on Claire Scammell, <em>Translation Strategies in Global News</em> (2018), Ch. 6 | MA Translation Studies</p>
 
-        <div class="chapter-divider"><span>مروری بر محتوای جلسه</span></div>
+        <div class="chapter-divider"><span>Session Overview</span></div>
 
         <div class="concept-box">
-            <h3>درباره این جلسه</h3>
-            <p>این جلسه ترجمه را در بستر <strong>جهانی‌شدن</strong> می‌نشاند: فشردگی زمان-مکان، دهکدهٔ جهانی و شهرهای جهانی، سلطهٔ انگلیسی به‌مثابه زبان میانجی و «امپریالیسم زبانی»، و عدم‌تقارنِ جریان ترجمه. بخش پایانی، مناقشه‌ای زنده دربارهٔ <strong>افراط در بومی‌سازی</strong> و پیامدهای فرهنگیِ آن است.</p>
+            <h3>About this session</h3>
+            <p>This chapter applies Pedersen's taxonomy (Session 5) to the five-report Reuters corpus, to locate exactly how foreignising or domesticating Reuters' current translations of culture-specific concepts really are. It then examines the <em>Reuters Handbook of Journalism</em>'s own guidance on translation, and how closely Reuters' actual reporting follows it.</p>
         </div>
 
-        <h2>۱. فشردگی زمان-مکان (Time–Space Compression)</h2>
+        <h2>1. Strategies Used in the Reuters Corpus: The Numbers</h2>
 
-        <div class="scholar-box">
-            <h4>مفهوم (در امتداد دیوید هاروی)</h4>
-            <p>فناوری و اینترنت، فاصلهٔ زمانی و مکانی را «فشرده» کرده‌اند؛ انتقال اطلاعات و جابه‌جایی با هزینه و زمانِ بسیار کمتر ممکن شده است. زندگی «شتاب» گرفته و سبک زندگیِ پرشتاب شکل گرفته است. این فشردگی، بسترِ تولید و مصرفِ لحظه‌ایِ خبر و ترجمهٔ برخط است.</p>
+        <div class="concept-box">
+            <p>Pedersen's taxonomy is applied to English translations of French culture-specific concepts across the five-report corpus. Since only <em>five</em> of Pedersen's six main strategies apply to translation proper (Omission is intra-lingual, not a translation choice — Session 5), the results are:</p>
+            <table>
+                <tr><th colspan="3">SL-oriented (foreignising) — Total: 8</th><th colspan="2">TL-oriented (domesticating) — Total: 21</th></tr>
+                <tr><th>Retention</th><th>Specification</th><th>Direct Translation</th><th>Generalization</th><th>Substitution</th></tr>
+                <tr><td>1</td><td>6</td><td>1</td><td>7</td><td>14</td></tr>
+            </table>
+        </div>
+
+        <div class="important">
+            <p><strong>Headline finding:</strong> the TL-oriented (domesticating) strategies (21 instances) considerably outnumber the SL-oriented (foreignising) strategies (8 instances). <strong>Substitution</strong> — the most domesticating strategy — is by far the most common (14 instances); <strong>Retention</strong> — the most foreignising — is the least common (just 1 instance).</p>
+        </div>
+
+        <h2>2. SL-Oriented (Foreignising) Strategies in Practice</h2>
+
+        <div class="case-study">
+            <h4>Retention — the single instance</h4>
+            <p>Only once in the whole corpus is retention used: in the THUGOCRACY report, <em>quartier</em> and <em>cité</em> are kept untranslated, combined with an "Addition" — "The 'quartiers' or 'cites', as the estates are known..." The added phrase ensures the ECRs remain intelligible, which somewhat reduces the foreignising effect, but the choice to retain foreign language at all is unique in the corpus — no other instance of retained foreign language appears anywhere else.</p>
+        </div>
+
+        <div class="example">
+            <strong>Specification (Addition) — 6 instances:</strong> the ECR is kept untranslated but made more specific with latent/connotative information a French reader wouldn't need. Examples: "the <em>northern area of</em> La Courneuve," "Florange <em>in eastern France</em>," "Villiers-le-Bel... <em>to the north of Paris</em>," and — in the CRIME POLICIES report — "the northeastern Clichy-sous-Bois suburb of the French capital, where many immigrants and poor families live in high-rise housing estates notorious for youth violence." In one instance (the SECURITY report), named institutions — <em>Henri IV</em> and <em>ENA</em> — become "the Henri IV <strong>high school</strong>" and "the ENA <strong>civil servant training school</strong>."
+        </div>
+
+        <div class="example">
+            <strong>Direct Translation — 1 instance:</strong> in the IMMIGRATION report, <em>immigration choisie</em> is translated literally as "selected immigration" — a "Calque" (stringently literal, may appear exotic to the reader), rather than the more natural "Shifted" alternative "selective immigration." The book suggests this may be an oversight rather than a deliberate foreignising choice.</p>
+        </div>
+
+        <h2>3. TL-Oriented (Domesticating) Strategies in Practice</h2>
+
+        <div class="case-study">
+            <h4>Generalization — 7 instances</h4>
+            <p>Replaces a specific ECR with something more general — detaching it from the source-culture reality entirely. Four instances involve pejorative expressions used in French media to represent the banlieues negatively: <em>quartiers sensibles</em> → "problem neighbourhoods"; <em>quartiers difficiles</em>/<em>en difficulté</em> → "difficult areas"; <em>jeunes des cités</em> → "suburban youths" (see Session 4). The remaining three instances all involve <strong>CRS</strong> (<em>Compagnies Républicaines de Sécurité</em>, France's notorious riot police reserve, created 1945), rendered simply as "riot police" or "specially trained police," with the French institutional name dropped entirely.</p>
+        </div>
+
+        <div class="case-study">
+            <h4>Substitution — 14 instances (the most common strategy overall)</h4>
+            <p>Removes the source ECR entirely and replaces it with either a different, target-culture ECR ("Cultural" substitution — all 14 instances in the corpus are this type) or a paraphrase. Every rendering of <em>banlieue</em> uses "suburb"; every rendering of <em>cité</em> and <em>quartier</em> uses "housing estate" or "neighbourhood." In 6 of the 14 instances, Substitution is combined with Addition (e.g. "France's poor suburbs, residential areas on the outskirts of big cities" for <em>banlieue</em> in the SECURITY report's lead) — arguably somewhat less domesticating, since it gives the reader extra source-culture context beyond just the English substitute term.</p>
         </div>
 
         <div class="key-term">
-            <strong>نکته:</strong> ادراک از «زمان» خود فرهنگی است؛ فرهنگ‌های مختلف ارزش و سرعتِ متفاوتی به زمان می‌دهند. فشردگی زمان-مکان، این ادراک را نیز دگرگون می‌کند.
+            <strong>Why calling English "suburb" an ECR is complex:</strong> the Reuters journalists aren't writing for a single national target culture — "housing estate," for instance, means something different depending which English-speaking country the reader is in. But the terms still carry <em>some</em> culture-bound reality wherever read, which is enough to warrant treating them as ECRs for this analysis.
         </div>
 
-        <h2>۲. دهکدهٔ جهانی و شهرهای جهانی</h2>
+        <h2>4. Translation Guidance in the Reuters Handbook</h2>
 
         <div class="concept-box">
-            <h3>دهکدهٔ جهانی (Global Village)</h3>
-            <p>با درهم‌تنیدگیِ رسانه‌ای، جهان به «دهکده‌ای» بدل شده که رویدادها و فرهنگ‌ها در آن به‌سرعت به هم می‌رسند.</p>
-            <h3>شهرهای جهانی (Global Cities)</h3>
-            <p>در امتداد ایدهٔ <strong>ساسکیا ساسن (Saskia Sassen)</strong>، شهرهای جهانی گره‌گاه‌هایی هستند که حکمرانیِ پیچیده و فرماندهیِ اقتصاد جهانی در آن‌ها متمرکز می‌شود. در این بستر، رابطهٔ <strong>جهانی و محلی (Global vs Local)</strong> پیوسته در کشاکش است.</p>
+            <p>The 578-page <em>Reuters Handbook of Journalism</em> does not include a dedicated section on translation — consistent with the finding (Session 3) that agencies don't formally recognise translation as separate from editing. The only explicit guidance on translating quotation appears in two near-identical paragraphs:</p>
+            <blockquote>
+                <strong>Standards & Values &gt; Accuracy &gt; Quotes:</strong> "When translating quotes from one language into another, we should do so in an idiomatic way rather than with pedantic literalness. Care must be taken to ensure that the tone of the translation is equivalent to the tone of the original."<br><br>
+                <strong>General Style Guide &gt; quotations:</strong> "When translating quotes from another language into English, do so in an idiomatic way rather than with pedantic literalness. However, give a literal translation if a statement is tendentious and likely to be the subject of close analysis."
+            </blockquote>
         </div>
 
-        <h2>۳. انگلیسی به‌مثابه زبان میانجی و امپریالیسم زبانی</h2>
-
         <div class="important">
-            <h3>انگلیسی، زبان میانجی (Lingua Franca)</h3>
-            <p>انگلیسی به زبان میانجیِ جهانی بدل شده است. شمارِ کسانی که انگلیسی را به‌عنوان <strong>زبان دوم</strong> سخن می‌گویند از گویشوران بومیِ آن بیشتر است. همین گستردگی، به آن قدرتِ شکل‌دادن به روایت جهانی می‌دهد.</p>
+            <p><strong>An idiomatic default:</strong> in both paragraphs, journalists are instructed to translate "idiomatically" as the general rule — prioritising natural, comprehensible meaning over literal form — which qualifies as a <strong>domesticating</strong> approach. Literal translation is specified only as an <em>exception</em>, for tendentious statements likely to face close scrutiny.</p>
+        </div>
+
+        <div class="concept-box">
+            <h4>Other relevant guidance</h4>
+            <ul>
+                <li>"Avoid excessive use of direct quotes in English when a speaker has spoken in another language" (General Style Guide, 12th paragraph) — an institutional awareness of translation's impact on quotation accuracy, without naming translation directly.</li>
+                <li>"Use such phrases or quotes only in <strong>exceptional cases</strong>, for instance where no generally recognised English equivalent exists" (foreign language phrases entry) — explicitly discouraging retention of foreign language, which is consistent with retention being the rarest strategy found in the corpus (just 1 instance).</li>
+                <li>If a French politician gives an interview to an American newspaper, "it is almost certain that the translation back into French will be wrong... the fewer quotes and the more reported speech, the better" — an institutional acknowledgment that translation can distort quotation.</li>
+            </ul>
+        </div>
+
+        <h2>5. "Golden Quotes" and Broken Quotes</h2>
+
+        <div class="concept-box">
+            <p>The Handbook advises journalists to open with a strong direct quote — the "golden quote" that "will best illustrate the main point of the story." In four of the five corpus reports, this golden quote appears as a <strong>"broken" quote</strong> (only the sensitive/colourful word itself in quotation marks, e.g. Bloggs said she was "angry enough to kill"). Advice on broken quotes: "Avoid 'broken' quotes unless the words are unusual, contentious or highly colorful."</p>
+        </div>
+
+        <div class="example">
+            <strong>The THUGOCRACY report is the exception</strong> that most closely matches the book's later "foreignised" proposal: its broken quote keeps the French word in brackets alongside <em>two</em> possible translations — <em>"racaille"</em> ("scum" or "rabble") — the only instance in the corpus where original French wording is retained within a quotation at all.
         </div>
 
         <div class="scholar-box">
-            <h4>دیوید کریستال و «انگلیسی‌های جهان» (David Crystal — World Englishes)</h4>
-            <ul>
-                <li>به‌جای یک «انگلیسیِ استاندارد»، گونه‌های متعددی از انگلیسی وجود دارد (انگلیسیِ بریتانیایی، آمریکایی، استرالیایی، انگلیسیِ سیاهان/Ebonics و...).</li>
-                <li>زبان میانجی لزوماً «استاندارد» نیست؛ آنچه رواج دارد و شمار زیادی به‌کارش می‌برند، اهمیت می‌یابد.</li>
-            </ul>
-        </div>
-
-        <div class="important">
-            <h3>امپریالیسم زبانی (Linguistic Imperialism)</h3>
-            <p>سلطهٔ انگلیسی فقط زبانی نیست؛ همراه آن، <strong>مقوله‌ها و ارزش‌های فرهنگیِ آمریکایی/غربی جهان‌شمول‌سازی می‌شوند</strong> (US categories universalized). کتاب‌های آموزشی، فیلم‌ها و محتوای انگلیسی‌زبان، فرهنگِ همراهِ خود را نیز منتقل و ترویج می‌کنند. این همان «امپریالیسم زبانی» است.</p>
-        </div>
-
-        <h2>۴. عدم‌تقارن در جریان ترجمه (Translation Asymmetry)</h2>
-
-        <div class="concept-box">
-            <p>جریان ترجمه در جهان <strong>نامتقارن</strong> است: حجمِ بسیار بیشتری از انگلیسی به زبان‌های دیگر ترجمه می‌شود تا برعکس. این عدم‌توازن، انگلیسی را در جایگاه «زبانِ مبدأِ غالب» می‌نشاند و توزیعِ قدرتِ فرهنگی را بازتاب می‌دهد.</p>
-        </div>
-
-        <h2>۵. مناقشه: افراط در بومی‌سازی</h2>
-
-        <div class="case-study">
-            <h4>نمونه‌ها: دوبله‌های بیش‌ازحد بومی‌شده</h4>
-            <p>در بحث کلاسی، نمونه‌هایی از بومی‌سازیِ افراطی مطرح شد: در دوبلهٔ انیمیشن‌هایی مانند «در جست‌وجوی نیمو» یا انیمیشن‌های مزرعه‌ای، شخصیت‌ها به‌جای آهنگ اصلی، ترانه‌های فارسی (مثلاً سبکِ هایده) می‌خوانند و متلک‌ها و شوخی‌ها کاملاً فارسی‌سازی می‌شوند. گاه این کار ماهرانه و بامزه است و گاه چنان «خارج از بافت» می‌شود که مسخره به نظر می‌رسد.</p>
-        </div>
-
-        <div class="important">
-            <h3>دو دیدگاه در مناقشه</h3>
-            <ul>
-                <li><strong>موافقان بومی‌سازی:</strong> خواننده/بیننده باید احساس کند اثر در فرهنگ خودش رخ می‌دهد و بدون چالش پیش برود.</li>
-                <li><strong>منتقدان (طرفداران حفظ اصالت):</strong> هر فرهنگ و زبان ظرافت‌ها و ریزه‌کاری‌های خاص خود را دارد؛ رساندنِ این ظرافت‌ها به مخاطب، بخشی از <strong>امانت‌داریِ مترجم</strong> است. بومی‌سازیِ افراطی حتی «سطح و لحنِ» اثر را تغییر می‌دهد (مثلاً واژگان عامیانه در دهان یک شخصیت فرهیخته) و گنجینهٔ فرهنگی-زبانی را کم‌رنگ می‌کند.</li>
-            </ul>
+            <h4>How rare is retention really? A Factiva check</h4>
+            <p>Searching all Reuters English-language reporting (via the Factiva database) found <em>banlieue</em> retained in only 27 reports total, and <em>quartier</em> retained in just 3 — despite Reuters publishing around 45 France-related reports <em>per day</em>. This confirms that the THUGOCRACY report's retention of <em>quartier</em>/<em>cité</em> is highly atypical of Reuters' broader current practice, not a hidden norm.</p>
         </div>
 
         <div class="ai-box">
             <div class="ai-box-header">
-                <span>✦ جمع‌بندی استاد: نگاه توصیفی، نه تجویزی</span>
+                <span>✦ Why This Matters for a Translator</span>
             </div>
-            <p>استاد بحث را با چند نکتهٔ روش‌شناختی جمع‌بندی کرد:</p>
+            <p>This chapter converts everything theoretical from Sessions 3–5 into hard evidence: <strong>21 domesticating choices to 8 foreignising ones</strong>, and only a single instance of true retention across a whole corpus.</p>
             <ul>
-                <li>هدف، داوری دربارهٔ «درست یا غلط» نیست؛ بلکه مطالعهٔ <strong>توصیفی و بی‌طرفانهٔ ترندهای واقعی</strong> ترجمه است (آیا بومی‌سازی رخ داده یا بیگانه‌سازی، و چرا).</li>
-                <li>انتخابِ هر تکنیک را می‌توان از زوایای مختلف بررسی کرد: هدفِ پنهانِ مترجم، اثر بر مخاطب، و گزینه‌های کنارگذاشته‌شده.</li>
-                <li><strong>مخاطب تعیین‌کننده است:</strong> خوانندهٔ رمان (مخاطبِ فرهیخته و اهلِ تحلیل) انتظاری متفاوت از کسی دارد که صرفاً برای گرفتنِ یک اطلاعِ خبری (مثلاً قیمت دلار و طلا یا قیمت چرم) خبر را دنبال می‌کند؛ دومی به ظرافتِ ترجمه کاری ندارد.</li>
-                <li>تناسبِ تکنیک با <strong>بافت</strong> مهم است: بومی‌سازی در یک متن جواب می‌دهد و در متنی دیگر نه.</li>
+                <li>The Handbook's own wording — "idiomatic... rather than pedantic literalness" as the default, literal translation only for "tendentious" statements — already tells you which way Reuters leans <em>before</em> you even look at the corpus data. The corpus simply confirms the Handbook is followed closely in practice.</li>
+                <li>The THUGOCRACY report's double-translation of <em>racaille</em> is important because it shows Reuters journalists are <em>capable</em> of a more foreignising choice when a word is genuinely untranslatable — it isn't a technical impossibility, just an exception to current practice.</li>
+                <li>The Factiva check matters methodologically: it proves the single retained instance in the corpus isn't cherry-picked evidence of a broader hidden tendency — it really is exceptional across Reuters' entire output.</li>
             </ul>
-            <p><strong>نگرانی فرهنگی:</strong> روند کنونی به‌سوی بومی‌سازی و ساده‌سازیِ بیش‌ازحد است؛ همراه با کم‌رنگ‌شدنِ ضرب‌المثل‌ها، نشانه‌های احترام (مثل صیغهٔ جمع) و ظرافت‌های زبان فارسی. این یک «حرکت پاندولیِ» فرهنگی است که سمت‌وسوی آن را زمان روشن می‌کند.</p>
+            <p><strong>Why it matters for you:</strong> this chapter is the direct evidentiary basis for the five concrete Handbook updates proposed in the next session — each update targets a specific pattern identified here (e.g. the "foreign language phrases" entry's exceptions-only wording, or the "idiomatic... unless tendentious" quotes guidance).</p>
         </div>
 
-        <div class="chapter-divider"><span>سوالات امتحانی</span></div>
+        <div class="chapter-divider"><span>Review Questions</span></div>
 
-        <h2>پرسش و پاسخ برای آمادگی امتحان</h2>
-
-        <div class="question-box">
-            <strong>سؤال ۱:</strong> «فشردگی زمان-مکان» چیست و چه نسبتی با ترجمهٔ برخط دارد؟
-        </div>
-        <div class="answer-box">
-            <strong>پاسخ:</strong> یعنی فناوری و اینترنت فاصلهٔ زمانی و مکانی را فشرده کرده‌اند و انتقال اطلاعات و جابه‌جایی با هزینه و زمانِ بسیار کمتر ممکن شده است. این فشردگی، بسترِ تولید و مصرفِ لحظه‌ایِ خبر و ترجمهٔ برخط (سرعت و هم‌زمانی) است و سبک زندگیِ پرشتاب را شکل می‌دهد.
-        </div>
+        <h2>Q&A for Exam Preparation</h2>
 
         <div class="question-box">
-            <strong>سؤال ۲:</strong> منظور از «انگلیسی به‌مثابه زبان میانجی» چیست و چرا این جایگاه را یافته است؟
+            <strong>Q1:</strong> Summarise the overall balance of foreignising vs. domesticating strategies found in the Reuters corpus.
         </div>
         <div class="answer-box">
-            <strong>پاسخ:</strong> انگلیسی زبان میانجیِ (Lingua Franca) ارتباطات جهانی است؛ شمارِ گویشورانِ زبانِ دومِ آن از گویشوران بومی بیشتر است و بیشترین حجم انتشار و ترجمه به/از این زبان است. همین گستردگی، به آن قدرتِ شکل‌دادن به روایت جهانی می‌بخشد.
+            <strong>A:</strong> SL-oriented (foreignising) strategies total 8 instances (Retention: 1, Specification: 6, Direct translation: 1); TL-oriented (domesticating) strategies total 21 instances (Generalization: 7, Substitution: 14). Domesticating strategies considerably outnumber foreignising ones, and Substitution is by far the single most common strategy.
         </div>
 
         <div class="question-box">
-            <strong>سؤال ۳:</strong> «امپریالیسم زبانی» را با اشاره به دیدگاه دیوید کریستال دربارهٔ «انگلیسی‌های جهان» توضیح دهید.
+            <strong>Q2:</strong> Describe the one instance of Retention found in the corpus.
         </div>
         <div class="answer-box">
-            <strong>پاسخ:</strong> امپریالیسم زبانی یعنی سلطهٔ انگلیسی همراه با جهان‌شمول‌سازیِ مقوله‌ها و ارزش‌های فرهنگیِ غربی است؛ محتوای انگلیسی‌زبان فرهنگِ همراهِ خود را نیز ترویج می‌کند. دیوید کریستال نشان می‌دهد به‌جای یک «انگلیسیِ استاندارد»، گونه‌های متعددی از انگلیسی (World Englishes) وجود دارد و زبان میانجی لزوماً استاندارد نیست.
+            <strong>A:</strong> In the THUGOCRACY report, <em>quartier</em> and <em>cité</em> are kept untranslated, combined with an Addition explaining them: "The 'quartiers' or 'cites', as the estates are known..." It is the only instance of retained foreign language anywhere in the corpus.
         </div>
 
         <div class="question-box">
-            <strong>سؤال ۴:</strong> «عدم‌تقارن در جریان ترجمه» یعنی چه؟
+            <strong>Q3:</strong> How are <em>quartiers sensibles</em> and CRS both examples of Generalization?
         </div>
         <div class="answer-box">
-            <strong>پاسخ:</strong> یعنی جریان ترجمه نامتوازن است: حجمِ بسیار بیشتری از انگلیسی به زبان‌های دیگر ترجمه می‌شود تا برعکس. این عدم‌توازن، انگلیسی را در جایگاه زبانِ مبدأِ غالب می‌نشاند و توزیعِ نابرابرِ قدرتِ فرهنگی را بازتاب می‌دهد.
+            <strong>A:</strong> <em>Quartiers sensibles</em> (a specific, officially defined French urban-policy category) is rendered as the more general "problem neighbourhoods," losing its specific institutional meaning. CRS (a named French riot-police institution created in 1945) is rendered simply as "riot police" or "specially trained police," dropping the specific French institutional name in favour of a general description.
         </div>
 
         <div class="question-box">
-            <strong>سؤال ۵:</strong> دو دیدگاه در مناقشهٔ «افراط در بومی‌سازی» را بیان کنید و موضع روش‌شناختیِ استاد را توضیح دهید.
+            <strong>Q4:</strong> Why is "Cultural substitution" the most domesticating type of Substitution, and how does it apply to <em>banlieue</em>?
         </div>
         <div class="answer-box">
-            <strong>پاسخ:</strong> <strong>موافقان</strong> می‌گویند مخاطب باید احساس کند اثر در فرهنگ خودش رخ می‌دهد. <strong>منتقدان</strong> می‌گویند رساندنِ ظرافت‌های فرهنگ مبدأ بخشی از امانت‌داریِ مترجم است و بومی‌سازیِ افراطی حتی لحن و سطحِ اثر را تغییر می‌دهد. موضعِ استاد <strong>توصیفی و بی‌طرفانه</strong> است: هدف داوریِ درست/غلط نیست، بلکه مطالعهٔ ترندهای واقعیِ ترجمه و تناسبِ تکنیک با بافت و مخاطب است.
+            <strong>A:</strong> Cultural substitution replaces the source-culture ECR with a different, target-culture ECR — obscuring the foreign reality entirely by presenting a "local" equivalent instead. Every instance of <em>banlieue</em> in the corpus is translated as "suburb," a term that designates a genuinely different socio-economic reality in English (see Session 4).
+        </div>
+
+        <div class="question-box">
+            <strong>Q5:</strong> What does the Reuters Handbook instruct journalists to do when translating quotes, and what is the stated exception?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> Translate "in an idiomatic way rather than with pedantic literalness" as the general rule (a domesticating instruction), but "give a literal translation if a statement is tendentious and likely to be the subject of close analysis" as the exception.
+        </div>
+
+        <div class="question-box">
+            <strong>Q6:</strong> What is a "golden quote," and what is unusual about how it appears in four of the five corpus reports?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> The Handbook's term for the strongest direct quote in a report, ideally used early to "best illustrate the main point of the story." In four of the five corpus reports, the golden quote takes the form of a "broken" quote (only the most sensitive word or phrase in quotation marks) — advised only for words that are "unusual, contentious or highly colorful."
+        </div>
+
+        <div class="question-box">
+            <strong>Q7:</strong> How does the THUGOCRACY report's handling of "racaille" differ from the rest of the corpus, and why is it significant?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> It retains the French word <em>racaille</em> in the quotation and offers two possible translations ("scum" or "rabble"), rather than silently choosing one. It is significant because it is the only instance in the corpus where original French wording is preserved inside a quotation — showing Reuters journalists can and occasionally do use a more foreignising strategy.
+        </div>
+
+        <div class="question-box">
+            <strong>Q8:</strong> What did the Factiva search across all Reuters reporting confirm about the retention of <em>banlieue</em> and <em>quartier</em>?
+        </div>
+        <div class="answer-box">
+            <strong>A:</strong> <em>Banlieue</em> was retained in only 27 Reuters reports total, and <em>quartier</em> in just 3 — despite roughly 45 France-related Reuters reports being published per day. This confirms the corpus's single retention instance is genuinely atypical of Reuters' broader current practice, not evidence of a hidden, more common tendency.
         </div>
 
         <div class="concept-box">
-            <h4>نکات کلیدی برای مرور</h4>
+            <h4>Key Points to Review</h4>
             <ul>
-                <li>فشردگی زمان-مکان (هاروی) و سبک زندگیِ پرشتاب</li>
-                <li>دهکدهٔ جهانی؛ شهرهای جهانی (ساسن)؛ جهانی در برابر محلی</li>
-                <li>انگلیسی زبان میانجی؛ گویشورانِ زبان دوم بیش از بومی</li>
-                <li>دیوید کریستال: انگلیسی‌های جهان (World Englishes)</li>
-                <li>امپریالیسم زبانی: جهان‌شمول‌سازیِ ارزش‌های فرهنگی غرب</li>
-                <li>عدم‌تقارن جریان ترجمه (غلبهٔ مبدأِ انگلیسی)</li>
-                <li>مناقشهٔ بومی‌سازیِ افراطی؛ نگاه توصیفی نه تجویزی؛ نقش مخاطب و بافت</li>
+                <li>Corpus totals: SL-oriented (foreignising) = 8 (Retention 1, Specification 6, Direct translation 1); TL-oriented (domesticating) = 21 (Generalization 7, Substitution 14)</li>
+                <li>Substitution (most domesticating) is the most common strategy; Retention (most foreignising) is the rarest</li>
+                <li>THUGOCRACY's retention of <em>quartier</em>/<em>cité</em>, and its double-translation of <em>racaille</em>, are unique in the corpus</li>
+                <li>Reuters Handbook: "idiomatic... rather than pedantic literalness" is the default (domesticating); literal translation only for "tendentious" statements</li>
+                <li>Foreign language phrases discouraged except in "exceptional cases" — consistent with retention being rare in practice</li>
+                <li>"Golden quotes" often appear as "broken" quotes in the corpus, used for unusual/contentious/colourful words</li>
+                <li>Factiva check: banlieue retained in only 27 Reuters reports total, quartier in just 3 — confirms retention is genuinely atypical</li>
             </ul>
         </div>
+
     </div>
 </body>
 </html>
