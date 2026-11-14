@@ -201,7 +201,8 @@ export class PoetryComponent {
 
     protected copy(poem: Poem, c: IndexedCouplet): void {
         const [a, b] = c.lines;
-        void copyText(`${a.fa}\n${b.fa}\n\n${a.en}\n${b.en}`).then((ok) => {
+        // Each Persian hemistich followed by its own English line.
+        void copyText(`${a.fa}\n${a.en}\n\n${b.fa}\n${b.en}`).then((ok) => {
             if (!ok) {
                 return;
             }
