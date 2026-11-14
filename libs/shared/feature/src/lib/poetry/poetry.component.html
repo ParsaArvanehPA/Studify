@@ -1,0 +1,137 @@
+<div class="ds-field">
+    <div class="ds-blob b1"></div>
+    <div class="ds-blob b2"></div>
+    <div class="ds-blob b3"></div>
+</div>
+<div class="ds-vign"></div>
+<div class="ds-cursor"></div>
+
+<header class="ref-head" [class.stuck]="stuck()">
+    <a class="brand" routerLink="/"><span class="wm">Studify</span><span class="acc">.</span></a>
+    <a class="back" routerLink="/">← <span class="lbl">Home</span></a>
+</header>
+
+<main class="ref-shell">
+    <section class="ref-hero">
+        <div class="rk"><span class="dotpulse"></span>Semester 3 · Mid-term cheat sheet</div>
+        <h1>Poetry<br />Translation <span class="ar">ترجمهٔ شعر</span></h1>
+        <p class="rsub">
+            The poems from sessions 1–6, couplet by couplet — every Persian hemistich beside its English rendering. Type
+            any word you remember, in Persian or English; diacritics, ی/ي and half-spaces don’t matter.
+        </p>
+    </section>
+
+    <div class="ref-langs">
+        <span class="ll">Show</span>
+        <button [class.on]="langs().fa" (click)="toggleLang('fa')">Persian</button>
+        <button [class.on]="langs().en" (click)="toggleLang('en')">English</button>
+    </div>
+
+    <div class="ref-search-wrap">
+        <div class="ref-search" [class.has-q]="!!query()">
+            <span class="mag">⌕</span>
+            <input
+                #searchInput
+                type="text"
+                dir="auto"
+                enterkeyhint="search"
+                placeholder="Search a Persian or English word…  جستجو"
+                aria-label="Search couplets"
+                autocomplete="off"
+                [value]="query()"
+                (input)="onQuery($any($event.target).value)"
+            />
+            <button class="clear" aria-label="Clear" (click)="clear()">✕</button>
+            <span class="count">{{ query() ? shown() + ' found' : '' }}</span>
+        </div>
+    </div>
+
+    <nav class="ref-sections" aria-label="Poems">
+        <button [class.on]="activePoem() === 'all'" (click)="setPoem('all')">All poems</button>
+        @for (p of poems(); track p.id) {
+            <button [class.on]="activePoem() === p.id" [title]="p.en" (click)="setPoem(p.id)">
+                <span class="cs">S{{ p.session }}</span
+                ><span class="cfa">{{ p.fa }}</span>
+            </button>
+        }
+    </nav>
+
+    <div class="poems" id="poems">
+        @for (g of groups(); track g.poem.id) {
+            <div class="poem-head">
+                <div class="ph-l">
+                    <span class="ph-k"
+                        >Session {{ g.poem.session }} ·
+                        {{
+                            query() && g.hits.length !== g.couplets.length
+                                ? g.hits.length + ' of ' + g.couplets.length
+                                : g.couplets.length
+                        }}
+                        couplets</span
+                    >
+                    <span class="ph-en"
+                        ><span [innerHTML]="hl(g.poem.en)"></span>
+                        @if (g.poem.ref) {
+                            <span class="ph-ref">({{ g.poem.ref }})</span>
+                        }
+                    </span>
+                </div>
+                <div class="ph-r">
+                    <span class="ph-sfa">{{ g.session.fa }}</span>
+                    <span class="ph-fa" [innerHTML]="hl(g.poem.fa)"></span>
+                </div>
+            </div>
+            @for (c of g.hits; track c.n) {
+                <article class="bayt" [class.hide-fa]="!langs().fa" [class.hide-en]="!langs().en">
+                    <div class="b-top">
+                        <span class="b-id">Couplet {{ c.n }}</span>
+                        <span class="b-fid">بیت {{ faNum(c.n) }}</span>
+                        <div class="b-actions">
+                            <button
+                                title="Copy couplet"
+                                aria-label="Copy couplet"
+                                [class.copied]="copied() === copyKey(g.poem, c.n)"
+                                (click)="copy(g.poem, c)"
+                            >
+                                {{ copied() === copyKey(g.poem, c.n) ? '✓' : '⧉' }}
+                            </button>
+                        </div>
+                    </div>
+                    @for (line of c.lines; track $index) {
+                        <div class="b-row">
+                            <p class="b-fa" lang="fa" dir="rtl" [innerHTML]="hl(line.fa)"></p>
+                            <p class="b-en" lang="en" [innerHTML]="hl(line.en)"></p>
+                        </div>
+                    }
+                </article>
+            }
+        }
+    </div>
+
+    @if (loadError()) {
+        <div class="ref-empty"><div class="big">Couldn’t load the poems</div>Please try again.</div>
+    } @else if (loaded() && shown() === 0) {
+        <div class="ref-empty">
+            <div class="big">No couplets found</div>
+            Try one or two words, or a different spelling.
+            @if (activePoem() !== 'all') {
+                <button class="ref-reset" (click)="setPoem('all')">Search all poems</button>
+            }
+        </div>
+    }
+
+    @if (loaded()) {
+        <div class="ref-foot"
+            ><bdi>ترجمهٔ شعر</bdi> · {{ poems().length }} poems · {{ total() }} couplets · Sessions 1–{{
+                sessionCount()
+            }}</div
+        >
+    }
+</main>
+
+<div class="ds-moods">
+    <span class="lbl">Mood</span>
+    @for (m of moods; track m) {
+        <button [class]="moodSwatch(m)" [title]="m" [attr.aria-label]="m" (click)="setMood(m)"></button>
+    }
+</div>

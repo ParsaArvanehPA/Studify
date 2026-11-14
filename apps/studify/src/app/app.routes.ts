@@ -4,6 +4,7 @@ import {
     CoursePageComponent,
     HomeComponent,
     Letter53Component,
+    PoetryComponent,
     ReaderComponent,
     VocabularyComponent
 } from '@studify/shared/feature';
@@ -14,5 +15,6 @@ export const appRoutes: Route[] = [
     {path: 'reader/:docId', component: ReaderComponent},
     {path: 'letter-53', component: Letter53Component},
     {path: 'vocabulary', component: VocabularyComponent},
+    {path: 'poetry-translation', component: PoetryComponent},
     {path: '**', redirectTo: ''}
 ];

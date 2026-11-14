@@ -616,6 +616,23 @@ export const COURSES: readonly Course[] = [
                 ]
             }
         ]
+    },
+    {
+        id: 'poetry-translation',
+        name: 'Poetry Translation',
+        fa: 'ترجمهٔ شعر',
+        glyph: '🌹',
+        color: '#E2729B',
+        semester: 'Semester 3',
+        description:
+            'Translating Persian poetry into English — the eleven poems from sessions 1–6, couplet by couplet, each hemistich beside its English rendering. A searchable mid-term cheat sheet across Persian and English.',
+        chapters: [
+            {
+                no: '01',
+                title: 'Mid-term · Sessions 1–6 · 11 poems',
+                files: [{kind: 'Cheat sheet', tag: 'guide', link: '/poetry-translation'}]
+            }
+        ]
     }
 ];
 

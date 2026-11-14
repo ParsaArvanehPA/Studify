@@ -1127,7 +1127,8 @@ export const COURSE_COLOR: Readonly<Record<string, string>> = {
     'Online Journalism': '#5BA8F0',
     'Political Translation': '#5BC9A0',
     'Translation of Islamic Texts': '#34CBB8',
-    'Translation Theories': '#7C6CF0'
+    'Translation Theories': '#7C6CF0',
+    'Poetry Translation': '#E2729B'
 };
 
 /** Look up a document by id. */

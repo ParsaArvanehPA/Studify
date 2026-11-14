@@ -6,3 +6,5 @@ export * from './lib/course-catalog';
 export * from './lib/home-catalog';
 export * from './lib/islamic-texts.model';
 export * from './lib/islamic-texts.service';
+export * from './lib/poetry.model';
+export * from './lib/poetry.service';

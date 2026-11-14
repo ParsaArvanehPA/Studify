@@ -320,6 +320,46 @@ body.cursor-on .ds-cursor{opacity:1}
 .vocab-card mark{background:color-mix(in srgb,var(--accent) 32%,transparent);color:inherit;border-radius:3px;padding:0 2px}
 .vocab-card.dim{display:none}
 
+/* poetry cheat sheet — poem chips, poem heading, couplet (بیت) cards: Persian hemistich ⇄ English */
+.ref-sections .cs{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;opacity:.6;margin-right:7px}
+.ref-sections .cfa{font-family:var(--farsi);font-size:13px;letter-spacing:0}
+.poems{scroll-margin-top:150px;padding-bottom:10px}
+.poem-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px 20px;flex-wrap:wrap;margin:46px 0 16px;padding-bottom:13px;border-bottom:1px solid var(--line)}
+.poems>.poem-head:first-child{margin-top:16px}
+.poem-head .ph-l,.poem-head .ph-r{display:flex;flex-direction:column;gap:6px;min-width:0}
+.poem-head .ph-r{align-items:flex-end;text-align:right;margin-left:auto}
+.poem-head .ph-k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.poem-head .ph-en{font-family:var(--serif);font-size:clamp(20px,2.6vw,28px);letter-spacing:-.01em;line-height:1.15;color:var(--ink)}
+.poem-head .ph-ref{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink-faint);margin-left:6px;vertical-align:middle}
+.poem-head .ph-sfa{font-family:var(--farsi);font-size:12.5px;color:var(--ink-faint);direction:rtl}
+.poem-head .ph-fa{font-family:var(--farsi);font-weight:700;font-size:clamp(22px,2.9vw,31px);line-height:1.3;color:var(--gold);direction:rtl}
+.poem-head mark,.bayt mark{background:color-mix(in srgb,var(--accent) 32%,transparent);color:inherit;border-radius:3px;padding:0 2px}
+.bayt{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:color-mix(in srgb,var(--bg2) 60%,transparent);margin-bottom:12px;transition:border-color .25s}
+.bayt:hover{border-color:color-mix(in srgb,var(--accent) 30%,transparent)}
+.bayt .b-top{display:flex;align-items:center;gap:10px;padding:7px 10px 7px 16px;border-bottom:1px solid var(--line);background:var(--glass)}
+.bayt .b-id{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.bayt .b-fid{font-family:var(--farsi);font-size:11.5px;color:var(--ink-faint);direction:rtl}
+.bayt .b-actions{margin-left:auto;display:flex;gap:6px}
+.bayt .b-actions button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:none;color:var(--ink-soft);cursor:pointer;display:grid;place-items:center;font-size:13px;transition:.2s}
+.bayt .b-actions button:hover{color:var(--ink);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.bayt .b-actions button.copied{color:var(--accent-2);border-color:var(--accent-2)}
+.bayt .b-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.bayt .b-row+.b-row{border-top:1px dashed var(--line)}
+.bayt .b-fa{grid-column:2;grid-row:1;direction:rtl;text-align:right;font-family:var(--farsi);font-weight:500;font-size:clamp(17px,1.8vw,19.5px);line-height:1.9;color:var(--ink);padding:14px 20px}
+.bayt .b-en{grid-column:1;grid-row:1;font-family:var(--serif);font-size:16px;line-height:1.6;color:var(--ink-soft);padding:15px 20px;border-right:1px solid var(--line);white-space:pre-line}
+.bayt.hide-fa .b-row,.bayt.hide-en .b-row{grid-template-columns:minmax(0,1fr)}
+.bayt.hide-fa .b-fa,.bayt.hide-en .b-en{display:none}
+.bayt.hide-fa .b-en{border-right:none}
+.bayt.hide-en .b-fa{grid-column:1}
+@media(max-width:720px){
+  .bayt .b-row{grid-template-columns:minmax(0,1fr)}
+  .bayt .b-fa{grid-column:1;grid-row:auto;padding:12px 16px 2px}
+  .bayt .b-en{grid-column:1;grid-row:auto;border-right:none;font-size:15px;padding:4px 16px 13px}
+  .bayt.hide-fa .b-en{padding-top:13px}
+  .bayt.hide-en .b-fa{padding-bottom:12px}
+}
+.ref-empty .ref-reset{display:block;margin:18px auto 0;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--bg);background:var(--accent);border:none;border-radius:999px;padding:9px 16px;cursor:pointer}
+
 .ref-empty{text-align:center;padding:70px 20px;color:var(--ink-faint);font-family:var(--mono);font-size:13px;letter-spacing:.04em}
 .ref-empty .big{font-family:var(--serif);font-size:22px;color:var(--ink-soft);margin-bottom:10px;letter-spacing:0}
 

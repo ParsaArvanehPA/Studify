@@ -103,8 +103,22 @@ export const SEMESTERS: readonly Semester[] = [
                 courseId: 'translation-theories'
             }
         ]
+    },
+    {
+        name: 'Semester 3',
+        fa: 'نیم‌سال سوم',
+        courses: [
+            {
+                name: 'Poetry Translation',
+                fa: 'ترجمهٔ شعر',
+                glyph: '🌹',
+                color: '#E2729B',
+                meta: 'Mid-term · 11 poems',
+                courseId: 'poetry-translation'
+            }
+        ]
     }
 ];
 
 /** Headline stats for the hero. */
-export const HOME_STATS = {semesters: 2, courses: 9, files: 130} as const;
+export const HOME_STATS = {semesters: 3, courses: 10, files: 131} as const;

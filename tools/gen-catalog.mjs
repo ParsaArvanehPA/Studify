@@ -263,6 +263,27 @@ const COURSES = [
                 slug: '03_Bassnett_Ch3_Specific-Problems-of-Literary-Translation'
             }
         ]
+    },
+    {
+        id: 'poetry-translation',
+        name: 'Poetry Translation',
+        fa: 'ترجمهٔ شعر',
+        glyph: '🌹',
+        color: '#E2729B',
+        semester: 'Semester 3',
+        rtl: true,
+        kind: 'tool',
+        description:
+            'Translating Persian poetry into English — the eleven poems from sessions 1–6, couplet by couplet, each hemistich beside its English rendering. A searchable mid-term cheat sheet across Persian and English.',
+        tools: [
+            {
+                no: '01',
+                title: 'Mid-term · Sessions 1–6 · 11 poems',
+                kind: 'Cheat sheet',
+                tag: 'guide',
+                link: '/poetry-translation'
+            }
+        ]
     }
 ];
 

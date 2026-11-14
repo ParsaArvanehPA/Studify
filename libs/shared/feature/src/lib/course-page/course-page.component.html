@@ -24,8 +24,8 @@
             <div class="cfa" data-reveal style="animation-delay: 0.16s">{{ c.fa }}</div>
             <p class="cdesc" data-reveal style="animation-delay: 0.22s">{{ c.description }}</p>
             <div class="cmeta" data-reveal style="animation-delay: 0.28s">
-                <span>{{ c.chapters.length }} chapters</span>
-                <span>{{ fileCount() }} study files</span>
+                <span>{{ c.chapters.length }} chapter{{ c.chapters.length === 1 ? '' : 's' }}</span>
+                <span>{{ fileCount() }} study file{{ fileCount() === 1 ? '' : 's' }}</span>
                 <span>{{ c.semester }}</span>
             </div>
             @if (resume(); as r) {
