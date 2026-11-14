@@ -21,3 +21,7 @@
 - The `nx-generate` skill handles generator discovery internally - don't call nx_docs just to look up generator syntax
 
 <!-- nx configuration end-->
+
+# Studify project
+
+Static study-material site (Angular 21 / Nx 22, prerendered, hosted on GitHub Pages from `main` / `docs/`). How to publish, regenerate the course catalogs and add a cheat-sheet page: see [PUBLISHING.md](PUBLISHING.md).
